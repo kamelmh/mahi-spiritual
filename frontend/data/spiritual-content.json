@@ -1,0 +1,473 @@
+{
+  "system": {
+    "name": "MAHI Spiritual System",
+    "description": "Integrated spiritual practice system for Kamel Mahi",
+    "owner": "Kamel Mahi",
+    "started": "2026-07-28",
+    "components": {
+      "mahi_method": {
+        "times": ["Fajr", "ASR", "Maghrib", "Isha"],
+        "purpose": "Daily spiritual rhythm aligned with prayer times"
+      },
+      "core_verses": [
+        {
+          "surah": "Al-Anbiya",
+          "verse": "21:87",
+          "text": "La ilaha illa Anta, Subhanaka, inni kuntu min al-dhalimeen",
+          "purpose": "Yunus dhikr — emotional protection, patience"
+        },
+        {
+          "surah": "Ar-Rahman",
+          "verse": "55:1-4",
+          "text": "Ar-Rahman, allamal-quran, khalaqal-insan, allamahu'l-bayan",
+          "purpose": "Teaching invocation — activate Jupiter, wisdom"
+        },
+        {
+          "surah": "Al-Qalam",
+          "verse": "68:1",
+          "text": "Nun, wal-qalami wa ma yasturun",
+          "purpose": "Writing invocation — activate Mercury, divine inspiration"
+        }
+      ],
+      "divine_names": ["Ya Hafiz", "Ya Rahman", "Ya Alim"],
+      "power_day": "Thursday"
+    },
+    "files": [
+      "DAILY_PRACTICE_TRACKER.md",
+      "LUNAR_RECITATION_SCHEDULE.md",
+      "MAHI_Spiritual_System.md",
+      "13_Spiritual.md"
+    ],
+    "source_location": "C:\\Users\\Admin\\My Drive\\LifeWorkspace\\13_Spiritual\\"
+  },
+  "practice_tracker": {
+    "name": "Daily Spiritual Practice Tracker",
+    "started": "2026-07-28",
+    "purpose": "Activate planetary strengths, protect Moon in Pisces, build spiritual foundation",
+    "practices": [
+      {
+        "name": "Fajr — Yunus Dhikr",
+        "time": "Before sunrise (Fajr prayer)",
+        "duration": "~15 minutes",
+        "count": 100,
+        "invocation": "La ilaha illa Anta, Subhanaka, inni kuntu min al-dhalimeen",
+        "source": "Surah Al-Anbiya 21:87",
+        "method": [
+          "After Fajr prayer, sit in prayer mat",
+          "Say Astaghfirullah 3x",
+          "Begin Yunus dhikr with tasbih (108 beads recommended)",
+          "Complete 100 repetitions",
+          "Make dua for emotional protection and clarity"
+        ],
+        "benefits": [
+          "Protection from anxiety and emotional turmoil",
+          "Purification of Moon (debilitated in Pisces)",
+          "Connection to Prophet Yunus's patience and gratitude"
+        ]
+      },
+      {
+        "name": "Dhuhr — Ar-Rahman Reflection",
+        "time": "After Dhuhr prayer (midday)",
+        "duration": "~5 minutes",
+        "invocation": "Ar-Rahman, allamal-quran, khalaqal-insan, allamahu'l-bayan",
+        "source": "Surah Ar-Rahman 55:1-4",
+        "reflection_questions": [
+          "What did Allah teach me today?",
+          "How am I teaching others?",
+          "What wisdom am I sharing?"
+        ],
+        "method": [
+          "After Dhuhr prayer, sit quietly",
+          "Recite Ar-Rahman 55:1-4",
+          "Journal one insight from the morning",
+          "Identify one teaching moment from today",
+          "Make dua for wisdom and teaching ability"
+        ],
+        "benefits": [
+          "Activates Jupiter exalted in Cancer (12°47')",
+          "Aligns with teaching purpose (Sun in Purva Bhadra)",
+          "Connects to Quran as source of wisdom"
+        ]
+      },
+      {
+        "name": "Writing — Al-Qalam Invocation",
+        "time": "Before any writing session",
+        "duration": "~1 minute",
+        "invocation": "Nun, wal-qalami wa ma yasturun",
+        "source": "Surah Al-Qalam 68:1",
+        "method": [
+          "Before opening document or starting to write",
+          "Say Bismillah 3x",
+          "Recite Al-Qalam 68:1",
+          "Ask Allah to bless the writing",
+          "Begin writing"
+        ],
+        "benefits": [
+          "Blesses all writing sessions",
+          "Activates Mercury in Dhanishta (writing innovation)",
+          "Connects writing to divine inspiration"
+        ]
+      }
+    ],
+    "tracking": {
+      "daily": "3 checkboxes per day (Fajr, Dhuhr, Writing)",
+      "weekly": "7-day review every Friday",
+      "monthly": "30-day review at end of each lunar month"
+    },
+    "tips": [
+      "Start Small: Begin with 33 repetitions, increase to 100",
+      "Set Alarms: Fajr, Dhuhr, and Writing time reminders",
+      "Journal: Keep a small notebook for Ar-Rahman reflections",
+      "Consistency: Missing one day is okay, don't miss two",
+      "Flexibility: If Fajr is missed, do Yunus dhikr after sunrise",
+      "Gratitude: End each day with Alhamdulillah 10x"
+    ]
+  },
+  "lunar_schedule": {
+    "name": "Lunar Quran Recitation Schedule",
+    "method": "Imran Hosein — One complete Surah per day (NO CHOPPING)",
+    "start_date": "2026-08-13",
+    "end_date": "2026-09-11",
+    "islamic_start": "Rabi al-Awwal 1, 1448",
+    "islamic_end": "Rabi al-Thani 1, 1448",
+    "total_days": 30,
+    "purpose": [
+      "Activate Mercury in Aquarius (4°39' Dhanishta)",
+      "Align with Prophetic tradition",
+      "Build spiritual foundation — prepare for Ketu Mahadasha (2028)",
+      "Connect to Quranic wisdom"
+    ],
+    "weeks": [
+      {
+        "week": 1,
+        "theme": "Foundation",
+        "dates": "Aug 13-19",
+        "surahs": [
+          {"day": 1, "date": "2026-08-13", "surah": "Al-Fatiha", "ayat": 7, "theme": "Opening, Guidance", "connection": "Moon protection, emotional clarity"},
+          {"day": 2, "date": "2026-08-14", "surah": "An-Nas", "ayat": 114, "theme": "Protection from whisperings", "connection": "Mercury in Aquarius — mental protection"},
+          {"day": 3, "date": "2026-08-15", "surah": "Al-Falaq", "ayat": 5, "theme": "Protection from darkness", "connection": "Moon in Pisces — emotional protection"},
+          {"day": 4, "date": "2026-08-16", "surah": "Al-Ikhlas", "ayat": 4, "theme": "Sincerity, Tawhid", "connection": "Sun in Purva Bhadra — spiritual fire"},
+          {"day": 5, "date": "2026-08-17", "surah": "Al-Asr", "ayat": 3, "theme": "Time, Loss", "connection": "Saturn in Gemini — discipline, time"},
+          {"day": 6, "date": "2026-08-18", "surah": "Al-Humazah", "ayat": 9, "theme": "Slander, Mockery", "connection": "Rahu in Chitra — illusion vs truth"},
+          {"day": 7, "date": "2026-08-19", "surah": "Al-Fil", "ayat": 5, "theme": "Elephant, Protection", "connection": "Jupiter in Sagittarius — divine protection"}
+        ]
+      },
+      {
+        "week": 2,
+        "theme": "Purification",
+        "dates": "Aug 20-26",
+        "surahs": [
+          {"day": 8, "date": "2026-08-20", "surah": "Quraysh", "ayat": 4, "theme": "Security, Blessings", "connection": "Moon in Pisces — emotional security"},
+          {"day": 9, "date": "2026-08-21", "surah": "Al-Ma'un", "ayat": 7, "theme": "Small kindnesses", "connection": "Mars in Aquarius — action through service"},
+          {"day": 10, "date": "2026-08-22", "surah": "Al-Kawthar", "ayat": 3, "theme": "Abundance, Gratitude", "connection": "Jupiter in Sagittarius — abundance"},
+          {"day": 11, "date": "2026-08-23", "surah": "Al-Kafirun", "ayat": 6, "theme": "Disbelief, Rejection", "connection": "Rahu in Chitra — rejecting illusions"},
+          {"day": 12, "date": "2026-08-24", "surah": "An-Nasr", "ayat": 3, "theme": "Victory, Help", "connection": "Saturn in Gemini — patience brings victory"},
+          {"day": 13, "date": "2026-08-25", "surah": "Al-Masad", "ayat": 5, "theme": "Palm fiber, Protection", "connection": "Mars in Aquarius — protection from enemies"},
+          {"day": 14, "date": "2026-08-26", "surah": "Al-Ikhlas", "ayat": 4, "theme": "Sincerity (repeat for depth)", "connection": "Sun in Purva Bhadra — deepening sincerity"}
+        ]
+      },
+      {
+        "week": 3,
+        "theme": "Wisdom",
+        "dates": "Aug 27 - Sep 2",
+        "surahs": [
+          {"day": 15, "date": "2026-08-27", "surah": "Al-Baqarah", "ayat": 286, "theme": "Patience, Gratitude", "connection": "Saturn in Gemini — patience practice"},
+          {"day": 16, "date": "2026-08-28", "surah": "Ali Imran", "ayat": 200, "theme": "Patience, Perseverance", "connection": "Saturn in Aquarius — endurance"},
+          {"day": 17, "date": "2026-08-29", "surah": "An-Nisa", "ayat": 176, "theme": "Justice, Equality", "connection": "Mars in Aquarius — justice through innovation"},
+          {"day": 18, "date": "2026-08-30", "surah": "Al-Ma'idah", "ayat": 120, "theme": "Fulfillment, Covenant", "connection": "Jupiter in Sagittarius — divine fulfillment"},
+          {"day": 19, "date": "2026-08-31", "surah": "Al-An'am", "ayat": 165, "theme": "Guidance, Gratitude", "connection": "Moon in Pisces — gratitude for guidance"},
+          {"day": 20, "date": "2026-09-01", "surah": "Al-A'raf", "ayat": 206, "theme": "Patience, Humility", "connection": "Saturn in Gemini — humble patience"},
+          {"day": 21, "date": "2026-09-02", "surah": "Al-Anfal", "ayat": 75, "theme": "Trust, Reliance", "connection": "Rahu in Chitra — trusting divine plan"}
+        ]
+      },
+      {
+        "week": 4,
+        "theme": "Transformation",
+        "dates": "Sep 3-9",
+        "surahs": [
+          {"day": 22, "date": "2026-09-03", "surah": "At-Tawbah", "ayat": 129, "theme": "Repentance, Mercy", "connection": "Moon in Pisces — seeking mercy"},
+          {"day": 23, "date": "2026-09-04", "surah": "Yunus", "ayat": 109, "theme": "Patience, Gratitude", "connection": "CORE VERSE — Yunus dhikr connection"},
+          {"day": 24, "date": "2026-09-05", "surah": "Hud", "ayat": 123, "theme": "Patience, Trust", "connection": "Saturn in Gemini — patient trust"},
+          {"day": 25, "date": "2026-09-06", "surah": "Yusuf", "ayat": 111, "theme": "Dreams, Interpretation", "connection": "Mercury in Aquarius — dream wisdom"},
+          {"day": 26, "date": "2026-09-07", "surah": "Ar-Ra'd", "ayat": 43, "theme": "Thunder, Signs", "connection": "Mars in Aquarius — divine signs"},
+          {"day": 27, "date": "2026-09-08", "surah": "Ibrahim", "ayat": 52, "theme": "Prayer, Gratitude", "connection": "Jupiter in Sagittarius — prayer power"},
+          {"day": 28, "date": "2026-09-09", "surah": "Al-Hijr", "ayat": 99, "theme": "Preservation, Protection", "connection": "Moon in Pisces — emotional preservation"}
+        ]
+      },
+      {
+        "week": 5,
+        "theme": "Completion",
+        "dates": "Sep 10-11",
+        "surahs": [
+          {"day": 29, "date": "2026-09-10", "surah": "An-Nahl", "ayat": 128, "theme": "Bee, Organization", "connection": "Mercury in Aquarius — organized communication"},
+          {"day": 30, "date": "2026-09-11", "surah": "Al-Isra", "ayat": 111, "theme": "Night Journey, Ascension", "connection": "CORE VERSE — spiritual ascension"}
+        ]
+      }
+    ],
+    "daily_practice": {
+      "morning_fajr": ["Al-Fatiha (1x)", "Day's Surah (1x)", "Yunus Dhikr (100x)"],
+      "afternoon_dhuhr": ["Ar-Rahman 55:1-4 (3x)", "Day's Surah (1x)"],
+      "evening_maghrib": ["Al-Qalam 68:1 (3x)", "Day's Surah (1x)", "Al-Ikhlas (3x)"],
+      "night_isha": ["Al-Mu'awwidhatayn (An-Nas + Al-Falaq)", "Ayat al-Kursi (1x)", "Day's Surah (1x)"]
+    },
+    "key_surahs": {
+      "core_verses": ["Yunus (Day 23)", "Ar-Rahman (Throughout)", "Al-Qalam (Throughout)"],
+      "planetary_activation": [
+        {"surah": "Al-Fatiha", "planet": "Moon in Pisces", "purpose": "emotional protection"},
+        {"surah": "Al-Baqarah", "planet": "Saturn in Gemini", "purpose": "patience, discipline"},
+        {"surah": "Yunus", "planet": "Jupiter in Sagittarius", "purpose": "wisdom, gratitude"},
+        {"surah": "Al-Qalam", "planet": "Mercury in Aquarius", "purpose": "writing, communication"},
+        {"surah": "Al-Asr", "planet": "Saturn in Aquarius", "purpose": "time, transformation"}
+      ]
+    },
+    "tips": [
+      "No Chopping: Each Surah recited COMPLETE — never split",
+      "Consistency: Recite at the same time each day",
+      "Understanding: Read translation after Arabic recitation",
+      "Journaling: Write one insight after each recitation",
+      "Flexibility: If missed, continue next day — don't skip Surahs",
+      "Community: Share insights with family or study group"
+    ]
+  },
+  "topics": [
+    {
+      "file": "13_Spiritual.md",
+      "type": "moc",
+      "description": "Spiritual workspace root — Islamic spirituality, books, daily practices"
+    },
+    {
+      "file": "MAHI_Spiritual_System.md",
+      "type": "system",
+      "description": "Integrated spiritual practice system with MAHI Method, core verses, divine names"
+    },
+    {
+      "file": "DAILY_PRACTICE_TRACKER.md",
+      "type": "tracker",
+      "description": "3 core practices: Yunus dhikr, Ar-Rahman reflection, Al-Qalam invocation"
+    },
+    {
+      "file": "LUNAR_RECITATION_SCHEDULE.md",
+      "type": "schedule",
+      "description": "30-day lunar Quran recitation plan (Aug 13 - Sep 11, 2026)"
+    },
+    {
+      "file": "Quranic_Studies.md",
+      "type": "topic",
+      "description": "Quranic study notes"
+    },
+    {
+      "file": "Angelic-Influence.md",
+      "type": "topic",
+      "description": "Angelic influence in Islamic spirituality"
+    },
+    {
+      "file": "Ayat-al-Kursi-2-255.md",
+      "type": "verse",
+      "description": "Throne verse — Quran 2:255"
+    },
+    {
+      "file": "Barzakh.md",
+      "type": "topic",
+      "description": "Intermediate realm between death and resurrection"
+    },
+    {
+      "file": "Body-and-Health.md",
+      "type": "topic",
+      "description": "Body and health in spiritual context"
+    },
+    {
+      "file": "Conditions-for-Valid-Ruqya.md",
+      "type": "topic",
+      "description": "Conditions for valid Islamic spiritual healing (ruqya)"
+    },
+    {
+      "file": "Distance-Ruqya.md",
+      "type": "topic",
+      "description": "Remote spiritual healing"
+    },
+    {
+      "file": "Emotional-Healing.md",
+      "type": "topic",
+      "description": "Emotional healing through Islamic spirituality"
+    },
+    {
+      "file": "Evil-Eye.md",
+      "type": "topic",
+      "description": "Evil eye protection and remedies"
+    },
+    {
+      "file": "Green-Lane-Masjid.md",
+      "type": "reference",
+      "description": "Green Lane Masjid reference"
+    },
+    {
+      "file": "Healing-Happiness-Channel.md",
+      "type": "reference",
+      "description": "Healing Happiness Channel reference"
+    },
+    {
+      "file": "Ibn-Qayyim.md",
+      "type": "scholar",
+      "description": "Ibn Qayyim — Islamic scholar reference"
+    },
+    {
+      "file": "Ibn-Taymiyyah.md",
+      "type": "scholar",
+      "description": "Ibn Taymiyyah — Islamic scholar reference"
+    },
+    {
+      "file": "Jinn-Possession.md",
+      "type": "topic",
+      "description": "Jinn possession — Islamic perspective"
+    },
+    {
+      "file": "Medicine-and-Ruqya.md",
+      "type": "topic",
+      "description": "Medicine and ruqya integration"
+    },
+    {
+      "file": "Morning-Evening-Protection.md",
+      "type": "practice",
+      "description": "Morning and evening protection prayers"
+    },
+    {
+      "file": "Mufti-Muhammad-Israfil-Ashrafi.md",
+      "type": "reference",
+      "description": "Mufti Muhammad Israfil Ashrafi reference"
+    },
+    {
+      "file": "Overdiagnosis.md",
+      "type": "topic",
+      "description": "Overdiagnosis in spiritual/medical context"
+    },
+    {
+      "file": "Patience-and-Tawakkul.md",
+      "type": "topic",
+      "description": "Patience (Sabr) and trust in Allah (Tawakkul)"
+    },
+    {
+      "file": "Practitioner-Ruqya.md",
+      "type": "topic",
+      "description": "Practitioner ruqya — professional spiritual healing"
+    },
+    {
+      "file": "Quran-10-81.md",
+      "type": "verse",
+      "description": "Quran 10:81"
+    },
+    {
+      "file": "Quran-17-82.md",
+      "type": "verse",
+      "description": "Quran 17:82 — healing and mercy"
+    },
+    {
+      "file": "Quran-2-102.md",
+      "type": "verse",
+      "description": "Quran 2:102 — magic and Harut/Marut"
+    },
+    {
+      "file": "Ruqya-vs-Shirk.md",
+      "type": "topic",
+      "description": "Ruqya vs shirk — proper Islamic healing"
+    },
+    {
+      "file": "Self-Ruqya.md",
+      "type": "practice",
+      "description": "Self-ruqya — performing spiritual healing on oneself"
+    },
+    {
+      "file": "Sihr-Magic.md",
+      "type": "topic",
+      "description": "Sihr (magic/sorcery) in Islamic perspective"
+    },
+    {
+      "file": "Spiritual-Diseases.md",
+      "type": "topic",
+      "description": "Spiritual diseases and their cures"
+    },
+    {
+      "file": "Surah-Al-Baqarah-Exorcism.md",
+      "type": "practice",
+      "description": "Al-Baqarah for exorcism purposes"
+    },
+    {
+      "file": "Surah-Al-Falaq-113.md",
+      "type": "verse",
+      "description": "Surah Al-Falaq — protection from darkness"
+    },
+    {
+      "file": "Surah-Al-Fatiha-1.md",
+      "type": "verse",
+      "description": "Surah Al-Fatiha — the opening"
+    },
+    {
+      "file": "Surah-An-Naas-114.md",
+      "type": "verse",
+      "description": "Surah An-Nas — protection from whisperings"
+    },
+    {
+      "file": "Tawheed-in-Ruqya.md",
+      "type": "topic",
+      "description": "Monotheism (Tawheed) in ruqya practice"
+    },
+    {
+      "file": "World-of-the-Jinn.md",
+      "type": "topic",
+      "description": "World of the Jinn — Islamic cosmology"
+    },
+    {
+      "file": "Yasir-Qadhi.md",
+      "type": "reference",
+      "description": "Yasir Qadhi — Islamic scholar reference"
+    }
+  ],
+  "family_charts": [
+    {
+      "file": "FAMILY_KARMIC_PATTERNS.md",
+      "description": "Family karmic patterns and spiritual inheritance"
+    },
+    {
+      "file": "FAMILY_SYNASTRY.md",
+      "description": "Family synastry — astrological relationship analysis"
+    },
+    {
+      "file": "FATHER_CHART.md",
+      "description": "Father's natal chart — March 31, 1961"
+    },
+    {
+      "file": "GHOFRAN_CHART.md",
+      "description": "Ghofran's natal chart"
+    },
+    {
+      "file": "IKRAM_CHART.md",
+      "description": "Ikram's natal chart"
+    },
+    {
+      "file": "KHEIREDDINE_CHART.md",
+      "description": "Kheireddine's natal chart"
+    },
+    {
+      "file": "OUMKELTOUM_CHART.md",
+      "description": "Oumkeltoum's natal chart — Sun Cancer 18° Ashlesha"
+    },
+    {
+      "file": "SARA_CHART.md",
+      "description": "Sara's natal chart — Version A (May 24, 2004)"
+    },
+    {
+      "file": "ZOHRA_CHART.md",
+      "description": "Zohra's natal chart"
+    },
+    {
+      "file": "DATA_COLLECTION_GUIDE.md",
+      "description": "Guide for collecting family birth data"
+    }
+  ],
+  "pdfs": [
+    {
+      "file": "Mushabihat_Quran_Complete.pdf",
+      "size_bytes": 8766187,
+      "description": "Complete Mushabihat Quran — Quranic verses with similar meanings"
+    }
+  ]
+}

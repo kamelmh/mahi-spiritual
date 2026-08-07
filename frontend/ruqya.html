@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Ruqya Guide — MAHI Spiritual</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .ruqya-hero {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0d1f3c 50%, #0a2e1a 100%);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .ruqya-hero h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, #f0c27f, #4b6cb7, #a8edea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .ruqya-hero .subtitle {
+            color: #8b9dc3;
+            font-size: 1.1rem;
+        }
+        .stage-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .stage-card h3 {
+            color: #f0c27f;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .stage-card .arabic-header {
+            color: #a8edea;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            text-align: right;
+            font-family: 'Amiri', serif;
+        }
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+        .step-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            gap: 0.8rem;
+        }
+        .step-num {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .quran-box {
+            background: rgba(74, 107, 183, 0.1);
+            border: 1px solid rgba(74, 107, 183, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .quran-box .arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            line-height: 2;
+            text-align: right;
+            direction: rtl;
+            color: #e8d5b7;
+        }
+        .quran-box .translation {
+            color: #8b9dc3;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        .warning-box {
+            background: rgba(220, 53, 69, 0.1);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .warning-box h4 {
+            color: #dc3545;
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .info-box h4 {
+            color: #28a745;
+            margin-bottom: 0.5rem;
+        }
+        .daily-practice {
+            background: linear-gradient(135deg, rgba(240,194,127,0.1), rgba(75,108,183,0.1));
+            border: 1px solid rgba(240,194,127,0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .daily-practice h3 {
+            color: #f0c27f;
+            margin-bottom: 1rem;
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .practice-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .practice-card h4 {
+            color: #a8edea;
+            margin-bottom: 0.5rem;
+        }
+        .surah-ref {
+            background: rgba(74, 107, 183, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #8b9dc3;
+            text-decoration: none;
+        }
+        .back-link:hover { color: #f0c27f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Dashboard</a>
+
+        <div class="ruqya-hero">
+            <h1>Advanced Ruqya Guide</h1>
+            <div class="subtitle">Based on the methodology of Ben Halima Abderraouf — Complete Ruqya methodology</div>
+            <p style="color: #6b7db3; margin-top: 0.5rem;">Recitation of the Quran as healing and protection from spiritual afflictions</p>
+        </div>
+
+        <!-- STAGE 1: Self-Ruqya -->
+        <div class="stage-card">
+            <h3>🕌 Stage 1: Self-Ruqya (الرقية على النفس)</h3>
+            <div class="arabic-header">الرقية الشرعية — الشرعية هي المعتبرة</div>
+            <p>You must perform Ruqya on yourself before anyone else. This is your first line of defense. The Prophet (ﷺ) said: <em>"Show me your ruqya, for indeed the jinn do not object to the Quran."</em></p>
+
+            <div class="quran-box">
+                <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>قُلْ هُوَ اللَّهُ أَحَدٌ (×3)<br>قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (×3)<br>قُلْ أَعُوذُ بِرَبِّ النَّاسِ (×3)</div>
+                <div class="translation">Start with Basmala, then recite Surah Al-Ikhlas, Al-Falaq, and An-Nas × 3 each</div>
+            </div>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">Daily Self-Ruqya Protocol:</h4>
+            <ul class="step-list">
+                <li><span class="step-num">1</span><div><strong>Morning Adhkar:</strong> Recite Ayat al-Kursi × 1 after each of the 5 prayers. Recite Surah Al-Baqarah (286 verses) — if too long, recite the last 2 verses. Recite Al-Mu'awwidhatayn × 3.</div></li>
+                <li><span class="step-num">2</span><div><strong>Evening Adhkar:</strong> Recite Ayat al-Kursi × 1 after Maghrib. Recite Surah Al-Mulk (67). Recite Surah As-Sajdah (32). Recite Al-Mu'awwidhatayn × 3.</div></li>
+                <li><span class="step-num">3</span><div><strong>Before Sleep:</strong> Recite Ayat al-Kursi × 1. Recite Surah Al-Ikhlas × 3, Al-Falaq × 3, An-Nas × 3. Blow into hands and wipe over body × 3. Recite the last 2 verses of Surah Al-Baqarah.</div></li>
+                <li><span class="step-num">4</span><div><strong>Upon Waking:</strong> Recite "Bismillah ir-Rahman ir-Rahim" × 3. Recite "La ilaha illa Anta, Subhanaka, inni kuntu min ad-dhalimin" × 3 (Surah Al-Anbiya 21:87 — Yunus).</div></li>
+            </ul>
+        </div>
+
+        <!-- STAGE 2: Ruqya on Others -->
+        <div class="stage-card">
+            <h3>🤲 Stage 2: Ruqya on Others (الرقية على غيره)</h3>
+            <div class="arabic-header">إذا رقى فليقل: بسم الله</div>
+            <p>When performing Ruqya on someone else, recite with your right hand placed on the affected area. Blow gently after each recitation.</p>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">Key Ruqya Sessions for Others:</h4>
+            <ul class="step-list">
+                <li><span class="step-num">1</span><div><strong>Session Setup:</strong> Face Qibla if possible. Begin with Basmala. Place right hand on the person's forehead or affected area. Recite with conviction and authority.</div></li>
+                <li><span class="step-num">2</span><div><strong>Opening Verses:</strong> Ayat al-Kursi × 3. Surah Al-Baqarah:255-257. Surah Al-Baqarah:286 (last 2 verses).</div></li>
+                <li><span class="step-num">3</span><div><strong>Core Ruqya:</strong> Surah Al-Fatihah × 7. Surah Ya-Sin × 3. Surah Al-Anbiya (21:87) × 100 if necessary.</div></li>
+                <li><span class="step-num">4</span><div><strong>Protection Surahs:</strong> Surah Al-Mu'awwidhatayn × 3. Surah Al-Falaq × 3. Surah An-Nas × 3.</div></li>
+                <li><span class="step-num">5</span><div><strong>Closing:</strong> Blow gently into hands and wipe over the person. Repeat Basmala × 3. Make du'a for healing.</div></li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>⚠️ Important Warnings</h4>
+                <ul>
+                    <li>Never use names of jinn or shayateen — only use names of Allah</li>
+                    <li>Never ask jinn to leave — command them in the name of Allah</li>
+                    <li>Never perform Ruqya on someone without their knowledge or consent</li>
+                    <li>The Ruqi (one who performs Ruqya) must be a practicing Muslim</li>
+                    <li>Never use talismans (taweez) with Quran — only use water or oil</li>
+                    <li>The person being treated must also increase their own worship</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- STAGE 3: Captage (الكبت) -->
+        <div class="stage-card">
+            <h3>🔒 Stage 3: Captage — Binding Jinn (الكبت)</h3>
+            <div class="arabic-header">الكبت — أسر الجن بالرقية الشرعية</div>
+            <p>Captage is the process of binding jinn using Quranic verses. This is done when a jinn refuses to leave after standard Ruqya. <strong>This is NOT the first resort — it is the last resort.</strong></p>
+
+            <div class="info-box">
+                <h4>✅ When to Use Captage</h4>
+                <ul>
+                    <li>The jinn has been identified through symptoms and responds to Ruqya</li>
+                    <li>Standard Ruqya has failed after multiple sessions (7+ sessions)</li>
+                    <li>The jinn speaks through the person and refuses to leave</li>
+                    <li>The practitioner is qualified and experienced</li>
+                </ul>
+            </div>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">Captage Procedure:</h4>
+            <ul class="step-list">
+                <li><span class="step-num">1</span><div><strong>Preparation:</strong> The person must be in a state of wudu. The practitioner must have strong iman and be free from major sins. The environment must be clean and free from haram items.</div></li>
+                <li><span class="step-num">2</span><div><strong>Identification:</strong> Ask the jinn (through the person): "Who are you? Why are you here? What do you want?" The jinn must answer in the name of Allah. If it refuses, recite stronger verses.</div></li>
+                <li><span class="step-num">3</span><div><strong>Negotiation:</strong> If the jinn speaks, negotiate. Ask what it wants. If it wants to leave, let it leave with Basmala. If it refuses, proceed to binding.</div></li>
+                <li><span class="step-num">4</span><div><strong>Binding (Al-Kabt):</strong> Recite Surah Al-Baqarah:255-257 × 3. Recite Ayat al-Kursi × 7. Recite Surah Al-Baqarah:286 × 7. Command: "In the name of Allah, I bind you and prevent you from harming this person."</div></li>
+                <li><span class="step-num">5</span><div><strong>Sealing:</strong> Recite Surah Al-Fatihah × 1. Blow into water or oil. The person drinks the water or applies the oil. The jinn is bound until it agrees to leave or until Allah wills.</div></li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>⛔ Dangers of Captage</h4>
+                <ul>
+                    <li>Only qualified practitioners should attempt captage</li>
+                    <li>A weak practitioner may be attacked by the jinn</li>
+                    <li>The jinn may become violent during binding</li>
+                    <li>Never use force — use authority of Quran only</li>
+                    <li>The person must maintain their salah and dhikr throughout</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Surahs for Specific Needs -->
+        <div class="stage-card">
+            <h3>📖 Surahs for Specific Needs</h3>
+            <p>The Quran contains specific surahs and verses for different types of afflictions. Here are the key ones:</p>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">For Spiritual Protection:</h4>
+            <ul class="step-list">
+                <li><span class="surah-ref">Al-Fatihah</span><div>Recite × 7 for overall spiritual cleansing and protection</div></li>
+                <li><span class="surah-ref">Al-Baqarah</span><div>Recite entire surah for house protection — the Prophet (ﷺ) said: "The house in which Surah Al-Baqarah is recited is not visited by Shaytan"</div></li>
+                <li><span class="surah-ref">Ayat al-Kursi</span><div>Recite × 1 after each prayer for constant protection</div></li>
+                <li><span class="surah-ref">Al-Mu'awwidhatayn</span><div>Recite × 3 morning and evening for complete protection</div></li>
+            </ul>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">For Healing (Shifa):</h4>
+            <ul class="step-list">
+                <li><span class="surah-ref">Al-Isra 17:82</span><div>"We send down of the Quran that which is a healing and a mercy" — Recite over water and drink</div></li>
+                <li><span class="surah-ref">Ash-Shu'ara 26:80</span><div>"When I am ill, He cures me" — Personal healing verse</div></li>
+                <li><span class="surah-ref">Al-Anbiya 21:87</span><div>"La ilaha illa Anta, Subhanaka" — Yunus's prayer — × 100 for deep spiritual healing</div></li>
+            </ul>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">For Jinn Affliction:</h4>
+            <ul class="step-list">
+                <li><span class="surah-ref">Al-Baqarah 2:255-257</span><div>Ayat al-Kursi and surrounding verses — the most powerful for jinn</div></li>
+                <li><span class="surah-ref">Al-Baqarah 2:286</span><div>Last 2 verses — "Our Lord, do not impose blame upon us" — protection from Shaytan</div></li>
+                <li><span class="surah-ref">Al-Baqarah 2:102</span><div>Reference to Solomon and the jinn — establishes authority</div></li>
+                <li><span class="surah-ref">An-Naml 27:17-19</span><div>Sulayman's authority over jinn — establishing prophetic authority</div></li>
+                <li><span class="surah-ref">Al-Saffat 37:1-10</span><div>The angels who drive away Shaytan — spiritual warfare</div></li>
+            </ul>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">For Evil Eye (Al-'Ayn):</h4>
+            <ul class="step-list">
+                <li><span class="surah-ref">Al-Qalam 68:51</span><div>"They want to extinguish the light of Allah with their mouths" — protection from envious eyes</div></li>
+                <li><span class="surah-ref">Al-Falaq 113</span><div>"From the evil of an envier when he envies" — direct protection</div></li>
+                <li><span class="surah-ref">Yunus 10:57</span><div>"He is the one who sent down tranquility" — healing from eye affliction</div></li>
+            </ul>
+
+            <h4 style="color: #f0c27f; margin: 1.5rem 0 1rem;">For Spiritual Authority & Wisdom:</h4>
+            <ul class="step-list">
+                <li><span class="surah-ref">An-Naml 27:40</span><div>Sulayman's throne verse — divine wisdom and authority</div></li>
+                <li><span class="surah-ref">Al-Kahf 18:10</span><div>Cave sleepers' prayer — seeking guidance and protection</div></li>
+                <li><span class="surah-ref">Ya-Sin 36:82</span><div>"Kun fayakun" — creative power through divine command</div></li>
+            </ul>
+        </div>
+
+        <!-- Daily Ruqya Practice -->
+        <div class="daily-practice">
+            <h3>☀️ Daily Ruqya Practice for You (MAHI)</h3>
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <h4>🌅 After Fajr (Dawn Prayer)</h4>
+                    <ul class="step-list">
+                        <li>Surah Al-Mulk × 1</li>
+                        <li>Surah As-Sajdah × 1</li>
+                        <li>Ayat al-Kursi × 1</li>
+                        <li>Surah Al-Ikhlas × 3</li>
+                        <li>Surah Al-Falaq × 3</li>
+                        <li>Surah An-Nas × 3</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <h4>🌅 After Dhuhr (Noon Prayer)</h4>
+                    <ul class="step-list">
+                        <li>Ayat al-Kursi × 1</li>
+                        <li>Surah Al-Fatihah × 1</li>
+                        <li>Surah Yunus 21:87 × 100</li>
+                        <li>Surah Ar-Rahman 55:1-4 × 1</li>
+                        <li>Surah Al-Qalam 68:1-4 × 1</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <h4>🌅 After Asr (Afternoon Prayer)</h4>
+                    <ul class="step-list">
+                        <li>Ayat al-Kursi × 1</li>
+                        <li>Surah Al-Qalam 68:1-4 × 1</li>
+                        <li>Surah Al-Isra 17:82 × 1</li>
+                        <li>Surah Ash-Shu'ara 26:80 × 1</li>
+                        <li>Surah Ar-Rahman 55:1-4 × 1</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <h4>🌅 After Maghrib (Sunset Prayer)</h4>
+                    <ul class="step-list">
+                        <li>Ayat al-Kursi × 1</li>
+                        <li>Surah Ar-Rahman 55:1-4 × 1</li>
+                        <li>Surah Al-Waqi'ah 56:1-3 × 1</li>
+                        <li>Surah Al-Kawthar 108:1-3 × 100</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <h4>🌙 After Isha (Night Prayer)</h4>
+                    <ul class="step-list">
+                        <li>Ayat al-Kursi × 1</li>
+                        <li>Surah Al-Kahf 18:10 × 1</li>
+                        <li>Surah Al-Fatihah × 1</li>
+                        <li>Surah Al-Ikhlas × 3</li>
+                        <li>Surah Al-Falaq × 3</li>
+                        <li>Surah An-Nas × 3</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <h4>🌙 Before Sleep</h4>
+                    <ul class="step-list">
+                        <li>Ayat al-Kursi × 1</li>
+                        <li>Surah Al-Baqarah:285-286 × 1</li>
+                        <li>Surah Al-Ikhlas × 3</li>
+                        <li>Surah Al-Falaq × 3</li>
+                        <li>Surah An-Nas × 3</li>
+                        <li>Blow into hands and wipe × 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Ruqya -->
+        <div class="stage-card">
+            <h3>🚨 Emergency Ruqya — When You Feel Afflicted</h3>
+            <p>If you feel sudden spiritual affliction, fear, or disturbance:</p>
+
+            <ul class="step-list">
+                <li><span class="step-num">!</span><div><strong>Immediate:</strong> Say "A'udhu billahi min ash-shaytan ir-rajim" × 7. Say "Bismillah ir-Rahman ir-Rahim" × 3. Recite Surah Al-Fatihah × 1.</div></li>
+                <li><span class="step-num">!</span><div><strong>Power Verses:</strong> Ayat al-Kursi × 7. Surah Al-Anbiya 21:87 × 100: "La ilaha illa Anta, Subhanaka, inni kuntu min ad-dhalimin" — This is the prayer of Yunus (AS) in the belly of the whale.</div></li>
+                <li><span class="step-num">!</span><div><strong>Protection:</strong> Surah Al-Falaq × 3. Surah An-Nas × 3. Surah Al-Ikhlas × 3. Blow into hands and wipe over entire body × 3.</div></li>
+                <li><span class="step-num">!</span><div><strong>Closing:</strong> Say "La ilaha illa Allah wahdahu la sharika lah, lahul-mulku wa lahul-hamdu wa huwa 'ala kulli shay'in qadir" × 7. Make du'a for Allah's protection and healing.</div></li>
+            </ul>
+        </div>
+
+        <!-- Ben Halima Methodology -->
+        <div class="stage-card">
+            <h3>📚 Ben Halima Abderraouf — Key Teachings</h3>
+            <p>Ben Halima's methodology emphasizes these principles:</p>
+
+            <ul class="step-list">
+                <li><span class="step-num">1</span><div><strong>Pure Quranic Ruqya Only:</strong> Use only Quranic verses and prophetic du'as. No sihr, no amulets, no names of jinn. The Quran is sufficient.</div></li>
+                <li><span class="step-num">2</span><div><strong>Stages of Treatment:</strong> (1) Self-Ruqya first, (2) Ruqya on others with consent, (3) Captage only when necessary. Never skip stages.</div></li>
+                <li><span class="step-num">3</span><div><strong>The Jinn Must Answer in Allah's Name:</strong> If a jinn speaks through the person, it must answer questions "Bi-ismillah" (In the name of Allah). If it refuses, it is a Shaytan.</div></li>
+                <li><span class="step-num">4</span><div><strong>Identify Before Treating:</strong> Determine if the affliction is jinn, evil eye, or waswas (whispering). Each has different treatment.</div></li>
+                <li><span class="step-num">5</span><div><strong>Patience and Persistence:</strong> Ruqya is not instant. It requires multiple sessions, sometimes months. The patient must maintain salah and dhikr.</div></li>
+                <li><span class="step-num">6</span><div><strong>Water and Oil Method:</strong> Recite Quran into water (for drinking) or oil (for applying). This is the sunnah method. Never use taweez (paper amulets).</div></li>
+                <li><span class="step-num">7</span><div><strong>The Strong Believer:</strong> A believer with strong iman is protected. Ruqya works best when the patient increases their ibadah (worship).</div></li>
+            </ul>
+        </div>
+
+        <!-- Related Surahs -->
+        <div class="stage-card">
+            <h3>🔗 Related Surahs for Your Chart</h3>
+            <p>Based on your chart (Gemini ASC, Moon Scorpio, Sun Aquarius):</p>
+
+            <ul class="step-list">
+                <li><span class="surah-ref">Al-Fatihah</span><div><strong>Your ASC ruler (Mercury)</strong> connects to divine guidance — recite × 7 daily</div></li>
+                <li><span class="surah-ref">Al-Baqarah</span><div><strong>Protection for your home</strong> — the Prophet (ﷺ) said the house where it is recited is not visited by Shaytan</div></li>
+                <li><span class="surah-ref">Ya-Sin</span><div><strong>The heart of the Quran</strong> — recite for spiritual opening and connection to divine truth</div></li>
+                <li><span class="surah-ref">Al-Kahf</span><div><strong>Protection from Dajjal</strong> — recite on Friday for weekly spiritual protection</div></li>
+                <li><span class="surah-ref">Al-Mulk</span><div><strong>Night protection</strong> — recite before sleep for divine guardianship</div></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+    // Dark mode toggle
+    const toggle = document.getElementById('darkModeToggle');
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    }
+    </script>
+</body>
+</html>

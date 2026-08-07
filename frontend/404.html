@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // SPA routing fallback for GitHub Pages
+        // Redirects to index.html while preserving the path
+        (function() {
+            var repo = '/mahi-spiritual';
+            var path = window.location.pathname;
+            
+            // If path starts with repo name, strip it
+            if (path.startsWith(repo)) {
+                path = path.substring(repo.length);
+            }
+            
+            // Redirect to index.html with the original path as a hash
+            // This allows the SPA to handle the routing
+            var redirectUrl = repo + '/index.html';
+            if (path && path !== '/' && path !== '/index.html') {
+                // Use hash-based routing for GitHub Pages
+                redirectUrl = repo + '/index.html#' + path;
+            }
+            
+            window.location.replace(redirectUrl);
+        })();
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #0a0a0f;
+            color: #d4a574;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #333;
+            border-top-color: #d4a574;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Redirecting to MAHI Spiritual System...</p>
+    </div>
+</body>
+</html>

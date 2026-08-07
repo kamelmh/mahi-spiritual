@@ -1,0 +1,379 @@
+{
+  "stages": [
+    {
+      "id": 1,
+      "name": "Self-Ruqya",
+      "name_arabic": "الرقية على النفس",
+      "description": "Your daily defense — before anything touches you",
+      "hadiith": "Show me your ruqya, for indeed the jinn do not object to the Quran",
+      "force_level": 1,
+      "risk_level": 1,
+      "practitioner": "Anyone with iman",
+      "when_to_use": "First attempt, daily protection",
+      "goal": "Heal, repel, comfort",
+      "jinn_reaction": "May leave or resist",
+      "daily_practice": [
+        {"time": "After Fajr", "verses": ["Ayat al-Kursi × 1", "Al-Mu'awwidhatayn × 3"]},
+        {"time": "After Maghrib", "verses": ["Ayat al-Kursi × 1", "Al-Mulk × 1", "As-Sajdah × 1"]},
+        {"time": "Before Sleep", "verses": ["Ayat al-Kursi × 1", "Al-Ikhlas × 3", "Al-Falaq × 3", "An-Nas × 3", "Blow into hands and wipe body × 3"]},
+        {"time": "Upon Waking", "verses": ["Bismillah × 3", "La ilaha illa Anta (21:87) × 3"]}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ruqya on Others",
+      "name_arabic": "الرقية على غيره",
+      "description": "When someone else is afflicted and asks for help",
+      "hadiith": "If you recite, then say: Bismillah",
+      "force_level": 2,
+      "risk_level": 2,
+      "practitioner": "Practicing Muslim with consent",
+      "when_to_use": "When someone asks for help",
+      "goal": "Heal, repel, comfort",
+      "jinn_reaction": "May leave or resist",
+      "key_rules": [
+        "Consent required — never without permission",
+        "Right hand on affected area",
+        "Blow gently after each recitation",
+        "Begin with Basmala"
+      ],
+      "session_structure": [
+        {"step": "Opening", "verses": "Ayat al-Kursi × 3", "purpose": "Establish authority"},
+        {"step": "Core", "verses": "Al-Fatihah × 7, Ya-Sin × 3", "purpose": "Healing"},
+        {"step": "Protection", "verses": "Al-Mu'awwidhatayn × 3", "purpose": "Shield"},
+        {"step": "Closing", "verses": "Blow gently, make du'a", "purpose": "Seal"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Captive",
+      "name_arabic": "الكبت",
+      "description": "Binding jinn with Quranic authority — the nuclear option",
+      "hadiith": "Use only Quran — the jinn must submit to Allah's authority",
+      "force_level": 3,
+      "risk_level": 3,
+      "practitioner": "Experienced specialist ONLY",
+      "when_to_use": "After 7+ failed standard Ruqya sessions",
+      "goal": "Bind, trap, contain",
+      "jinn_reaction": "MUST submit",
+      "is_last_resort": true,
+      "danger_warnings": [
+        "Weak practitioner → jinn can attack you",
+        "Jinn may become violent during binding",
+        "Must use authority of Quran ONLY",
+        "Patient must maintain salah and dhikr"
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "name": "Preparation",
+          "name_arabic": "الاستعداد",
+          "requirements": [
+            "In wudu (ritual purity)",
+            "Strong iman (faith)",
+            "Free from major sins",
+            "Environment clean, no haram items"
+          ]
+        },
+        {
+          "step": 2,
+          "name": "Identification",
+          "name_arabic": "التعرف",
+          "questions": ["Who are you?", "Why are you here?", "What do you want?"],
+          "rule": "Jinn MUST answer Bi-ismillah",
+          "outcome_if_refuses": "It's a Shaytan — proceed to binding",
+          "outcome_if_answers": "Proceed to negotiation"
+        },
+        {
+          "step": 3,
+          "name": "Negotiation",
+          "name_arabic": "التفاوض",
+          "question": "What do you want?",
+          "if_wants_to_leave": "Let it leave with Basmala",
+          "if_refuses": "Proceed to Step 4 (binding)"
+        },
+        {
+          "step": 4,
+          "name": "Binding",
+          "name_arabic": "الكبت",
+          "verses": [
+            "Al-Baqarah:255-257 × 3",
+            "Ayat al-Kursi × 7",
+            "Al-Baqarah:286 × 7"
+          ],
+          "command": "In the name of Allah, I bind you and prevent you from harming this person",
+          "is_core": true
+        },
+        {
+          "step": 5,
+          "name": "Sealing",
+          "name_arabic": "الختم",
+          "verses": ["Al-Fatihah × 1"],
+          "method": "Blow into water or oil",
+          "delivery": "Person drinks water or applies oil",
+          "result": "Jinn bound until it agrees to leave or Allah wills"
+        }
+      ]
+    }
+  ],
+  "jinn_authority_surahs": [
+    {"surah": "Al-Baqarah:255-257", "name": "Ayat al-Kursi + surrounding", "power": "Supreme authority", "level": "highest"},
+    {"surah": "Al-Baqarah:286", "name": "Last 2 verses", "power": "Protection from Shaytan", "level": "highest"},
+    {"surah": "Al-Baqarah:102", "name": "Solomon and jinn", "power": "Establishing authority", "level": "high"},
+    {"surah": "An-Naml:17-19", "name": "Sulayman's authority", "power": "Prophetic power", "level": "high"},
+    {"surah": "As-Saffat:1-10", "name": "Angels driving away Shaytan", "power": "Spiritual warfare", "level": "high"}
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "category": "stages",
+      "front": "What are the 3 stages of Ruqya in order?",
+      "back": "1. Self-Ruqya (الرقية على النفس)\n2. Ruqya on Others (الرقية على غيره)\n3. Captive (الكبت)",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "category": "stages",
+      "front": "What is Stage 1 — Self-Ruqya?",
+      "back": "Your daily defense before anything touches you. Recite Ayat al-Kursi, Al-Mu'awwidhatayn daily. Build your own fortress first.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "category": "stages",
+      "front": "What is Stage 3 — Captive (الكبت)?",
+      "back": "Binding jinn with Quranic authority — the LAST RESORT after 7+ failed standard Ruqya sessions. Uses Ayat al-Kursi × 7 to bind the jinn.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 4,
+      "category": "captage",
+      "front": "What are the 5 steps of Captive?",
+      "back": "1. Preparation (wudu, strong iman)\n2. Identification (interrogate the jinn)\n3. Negotiation (ask what it wants)\n4. Binding (Al-Kabt — the actual captive)\n5. Sealing (blow into water/oil)",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "category": "captage",
+      "front": "What is the RULE for jinn identification?",
+      "back": "The jinn MUST answer questions 'Bi-ismillah' (In the name of Allah). If it refuses → it's a Shaytan (devil), not regular jinn.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "category": "captage",
+      "front": "What verses are used in Step 4 — Binding?",
+      "back": "Al-Baqarah:255-257 × 3\nAyat al-Kursi × 7\nAl-Baqarah:286 × 7\n\nCommand: 'In the name of Allah, I bind you and prevent you from harming this person'",
+      "difficulty": "hard"
+    },
+    {
+      "id": 7,
+      "category": "captage",
+      "front": "How is the jinn sealed after binding?",
+      "back": "Recite Al-Fatihah × 1, blow into water or oil. Person drinks the water or applies the oil. The jinn is bound until it agrees to leave or Allah wills.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "category": "surahs",
+      "front": "What are the 5 most powerful surahs for jinn authority?",
+      "back": "1. Al-Baqarah:255-257 (Ayat al-Kursi) — supreme authority\n2. Al-Baqarah:286 (last 2 verses) — protection from Shaytan\n3. Al-Baqarah:102 (Solomon and jinn)\n4. An-Naml:17-19 (Sulayman's authority)\n5. As-Saffat:1-10 (Angels driving away Shaytan)",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "category": "daily",
+      "front": "What to recite after Fajr?",
+      "back": "Ayat al-Kursi × 1\nAl-Mu'awwidhatayn × 3",
+      "difficulty": "easy"
+    },
+    {
+      "id": 10,
+      "category": "daily",
+      "front": "What to recite before sleep?",
+      "back": "Ayat al-Kursi × 1\nAl-Ikhlas × 3\nAl-Falaq × 3\nAn-Nas × 3\nBlow into hands and wipe body × 3",
+      "difficulty": "easy"
+    },
+    {
+      "id": 11,
+      "category": "daily",
+      "front": "What to recite after Maghrib?",
+      "back": "Ayat al-Kursi × 1\nAl-Mulk × 1\nAs-Sajdah × 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": 12,
+      "category": "rules",
+      "front": "What are the 4 key rules for Ruqya on Others?",
+      "back": "1. Consent required — never without permission\n2. Right hand on affected area\n3. Blow gently after each recitation\n4. Begin with Basmala",
+      "difficulty": "easy"
+    },
+    {
+      "id": 13,
+      "category": "captage",
+      "front": "When is Captive used?",
+      "back": "ONLY after 7+ failed standard Ruqya sessions. When the jinn refuses to leave, speaks through the person, and is stubborn/defiant.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 14,
+      "category": "captage",
+      "front": "Why is Captive dangerous?",
+      "back": "1. Weak practitioner → jinn can attack you\n2. Jinn may become violent during binding\n3. Must use authority of Quran ONLY\n4. Patient must maintain salah and dhikr",
+      "difficulty": "medium"
+    },
+    {
+      "id": 15,
+      "category": "personal",
+      "front": "What is your most powerful verse for captage?",
+      "back": "Surah Al-Anbiya 21:87 (Yunus dhikr):\n'La ilaha illa Anta, Subhanaka, inni kuntu min ad-dhalimin'\n× 100 — This freed Yunus from the whale",
+      "difficulty": "medium"
+    },
+    {
+      "id": 16,
+      "category": "personal",
+      "front": "How does your chart connect to captage?",
+      "back": "Gemini ASC (Mercury) → communication and binding words\nMoon Virgo → analytical, methodical identification\nSun Aquarius → authority through innovation, not brute force",
+      "difficulty": "hard"
+    },
+    {
+      "id": 17,
+      "category": "stages",
+      "front": "What is the difference between Ruqya and Captive?",
+      "back": "Ruqya = 'Leave this person alone' (polite request)\nCaptive = 'You are now bound and cannot move' (authoritative command)",
+      "difficulty": "medium"
+    },
+    {
+      "id": 18,
+      "category": "daily",
+      "front": "What is the Yunus dhikr (21:87)?",
+      "back": "La ilaha illa Anta, Subhanaka, inni kuntu min ad-dhalimin\n\n'There is no god but You, Glory be to You, I have been among the wrongdoers'\n\nRecite × 100 for protection",
+      "difficulty": "easy"
+    },
+    {
+      "id": 19,
+      "category": "captage",
+      "front": "What are the 3 questions asked during identification?",
+      "back": "1. Who are you?\n2. Why are you here?\n3. What do you want?",
+      "difficulty": "easy"
+    },
+    {
+      "id": 20,
+      "category": "rules",
+      "front": "What happens if the jinn refuses to answer Bi-ismillah?",
+      "back": "It is a Shaytan (devil), not a regular jinn. Proceed directly to binding (Step 4) — do not negotiate.",
+      "difficulty": "medium"
+    }
+  ],
+  "quiz_questions": [
+    {
+      "id": 1,
+      "question": "What is the FIRST thing you should do before performing Ruqya on someone else?",
+      "options": ["Get their consent", "Face Qibla", "Recite Al-Fatihah", "Call the jinn's name"],
+      "correct": 0,
+      "explanation": "Consent is mandatory — never perform Ruqya on someone without their permission."
+    },
+    {
+      "id": 2,
+      "question": "How many times should you recite Ayat al-Kursi during Captive binding?",
+      "options": ["× 1", "× 3", "× 7", "× 100"],
+      "correct": 2,
+      "explanation": "Ayat al-Kursi × 7 during Step 4 (Binding) is the core of the Captive procedure."
+    },
+    {
+      "id": 3,
+      "question": "What must the jinn do when answering questions during identification?",
+      "options": ["Speak in Arabic", "Answer Bi-ismillah", "Reveal its name", "Leave the body"],
+      "correct": 1,
+      "explanation": "The jinn MUST answer 'Bi-ismillah' (In the name of Allah). If it refuses, it's a Shaytan."
+    },
+    {
+      "id": 4,
+      "question": "What is Stage 3 (Captive) used for?",
+      "options": ["Daily protection", "Healing the sick", "Binding jinn that refuses to leave", "Teaching Quran"],
+      "correct": 2,
+      "explanation": "Captive is the last resort — binding jinn with Quranic authority when standard Ruqya fails."
+    },
+    {
+      "id": 5,
+      "question": "What surah should you recite after Fajr?",
+      "options": ["Al-Baqarah", "Al-Mulk", "Ayat al-Kursi + Al-Mu'awwidhatayn", "Ya-Sin"],
+      "correct": 2,
+      "explanation": "After Fajr: Ayat al-Kursi × 1, then Al-Mu'awwidhatayn (Al-Falaq + An-Nas) × 3."
+    },
+    {
+      "id": 6,
+      "question": "What is the sealer used after binding the jinn?",
+      "options": ["Sand", "Fire", "Water or oil", "Salt"],
+      "correct": 2,
+      "explanation": "Recite Al-Fatihah × 1, blow into water or oil. Person drinks/applies it. Jinn is bound."
+    },
+    {
+      "id": 7,
+      "question": "Why is Captive dangerous?",
+      "options": ["It uses black magic", "Weak practitioner can be attacked", "It kills the jinn", "It requires payment"],
+      "correct": 1,
+      "explanation": "Weak practitioner → jinn can attack you. Jinn may become violent. Must use Quran authority only."
+    },
+    {
+      "id": 8,
+      "question": "What is the daily practice BEFORE SLEEP?",
+      "options": ["Al-Baqarah × 1", "Ya-Sin × 3", "Ayat al-Kursi × 1 + Ikhlas × 3 + Falaq × 3 + Nas × 3", "Al-Fatihah × 7"],
+      "correct": 2,
+      "explanation": "Before sleep: Ayat al-Kursi × 1, Al-Ikhlas × 3, Al-Falaq × 3, An-Nas × 3, blow into hands and wipe × 3."
+    },
+    {
+      "id": 9,
+      "question": "How many failed Ruqya sessions before using Captive?",
+      "options": ["1 session", "3 sessions", "5 sessions", "7+ sessions"],
+      "correct": 3,
+      "explanation": "Captive is the LAST RESORT — only after 7+ failed standard Ruqya sessions."
+    },
+    {
+      "id": 10,
+      "question": "What is the most powerful verse for captage according to your chart?",
+      "options": ["Al-Fatihah", "Ayat al-Kursi", "Al-Anbiya 21:87 (Yunus dhikr)", "Al-Baqarah:286"],
+      "correct": 2,
+      "explanation": "Your Yunus dhikr × 100 — 'La ilaha illa Anta, Subhanaka' — freed Yunus from the whale."
+    },
+    {
+      "id": 11,
+      "question": "What hand should you use for Ruqya on others?",
+      "options": ["Left hand", "Right hand", "Both hands", "Either hand"],
+      "correct": 1,
+      "explanation": "Place right hand on the person's forehead or affected area."
+    },
+    {
+      "id": 12,
+      "question": "What happens if the jinn WANTS to leave during negotiation?",
+      "options": ["Bind it anyway", "Let it leave with Basmala", "Ask it to pay", "Recite more verses"],
+      "correct": 1,
+      "explanation": "If it wants to leave, let it leave with Basmala. Captive is only for jinn that refuses."
+    }
+  ],
+  "memorization_tips": [
+    "Use the escalation model: 1 → 2 → 3 (always start gentle)",
+    "Remember the 5 steps: P-I-N-B-S (Preparation, Identification, Negotiation, Binding, Sealing)",
+    "Captive surahs all start with 'Al-Baqarah' — the cow protects",
+    "Your personal verse (21:87) = freedom from any whale",
+    "Daily rhythm: Fajr, Maghrib, Sleep, Waking — 4 anchors",
+    "The difference: Ruqya asks, Captive commands"
+  ],
+  "chart_connections": {
+    "gemini_asc": {
+      "planet": "Mercury",
+      "gift": "Communication and binding words",
+      "use_in_captive": "Your speech has authority — use it in binding commands"
+    },
+    "moon_virgo": {
+      "planet": "Mercury",
+      "gift": "Analytical, methodical approach",
+      "use_in_captive": "Perfect for identification — ask the right questions"
+    },
+    "sun_aquarius": {
+      "planet": "Saturn",
+      "gift": "Authority through innovation",
+      "use_in_captive": "Not brute force — use智慧 and Quran authority"
+    }
+  }
+}
