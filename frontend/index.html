@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHI Spiritual System - The Mystic's Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/mystic.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d4a574">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-symbol">☽</div>
+                    <h1 class="logo">MAHI</h1>
+                    <p class="subtitle">The Mystic's Path</p>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item active" data-page="dashboard">
+                    <span class="nav-icon">✧</span>
+                    <span class="nav-text">Dashboard</span>
+                </li>
+                <li class="nav-item" data-page="soul">
+                    <span class="nav-icon">☽</span>
+                    <span class="nav-text">Soul Blueprint</span>
+                </li>
+                <li class="nav-item" data-page="chart">
+                    <span class="nav-icon">☉</span>
+                    <span class="nav-text">Natal Chart</span>
+                </li>
+                <li class="nav-item" data-page="verses">
+                    <span class="nav-icon">﷽</span>
+                    <span class="nav-text">Quranic Verses</span>
+                </li>
+                <li class="nav-item" data-page="surahs">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Surah Library</span>
+                </li>
+                <li class="nav-item" data-page="destiny">
+                    <span class="nav-icon">⭐</span>
+                    <span class="nav-text">Destiny Map</span>
+                </li>
+                <li class="nav-item" data-page="practice">
+                    <span class="nav-icon">📿</span>
+                    <span class="nav-text">Practice Tracker</span>
+                </li>
+                <li class="nav-item" data-page="lunar">
+                    <span class="nav-icon">☾</span>
+                    <span class="nav-text">Lunar Calendar</span>
+                </li>
+                <li class="nav-item" data-page="emergency">
+                    <span class="nav-icon">🔮</span>
+                    <span class="nav-text">Emergency Dhikr</span>
+                </li>
+                <li class="nav-item" data-page="ruqya">
+                    <span class="nav-icon">🕋</span>
+                    <span class="nav-text">Ruqya Guide</span>
+                </li>
+                <li class="nav-item" data-page="ruqya-learning">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Ruqya Learning</span>
+                </li>
+                <li class="nav-item" data-page="daily-practice">
+                    <span class="nav-icon">🕐</span>
+                    <span class="nav-text">Daily Practice</span>
+                </li>
+                <li class="nav-item" data-page="learning">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Learning Hub</span>
+                </li>
+                <li class="nav-item" data-page="settings">
+                    <span class="nav-icon">⚙</span>
+                    <span class="nav-text">Settings</span>
+                </li>
+                <li class="nav-item" data-page="prayer">
+                    <span class="nav-icon">🕌</span>
+                    <span class="nav-text">Prayer Times</span>
+                </li>
+                <li class="nav-item" data-page="progress">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Progress</span>
+                </li>
+                <li class="nav-item" data-page="audio">
+                    <span class="nav-icon">🎧</span>
+                    <span class="nav-text">Quran Audio</span>
+                </li>
+                <li class="nav-item" data-page="export">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-text">Reports</span>
+                </li>
+                <li class="nav-item" data-page="family">
+                    <span class="nav-icon">👪</span>
+                    <span class="nav-text">Family Charts</span>
+                </li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon">☾</span>
+                    <span class="theme-text">Dark Mode</span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Offline Banner -->
+        <div id="offlineBanner" class="offline-banner" style="display:none;">
+            <span>📡 You are offline. Changes will sync when reconnected.</span>
+        </div>
+        
+        <!-- Connection Status -->
+        <div id="connectionStatus" class="connection-status online">● Online</div>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Page -->
+            <section class="page active" id="dashboard">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">✧</div>
+                        <div>
+                            <h2>Dashboard</h2>
+                            <p class="date-display" id="currentDate"></p>
+                            <p class="hijri-display" id="hijriDate" style="color:var(--accent-gold);font-size:14px;font-weight:600"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Today's Practice Card -->
+                    <div class="card practice-card">
+                        <div class="card-header">
+                            <h3>Today's Practice</h3>
+                            <span class="completion-badge" id="completionBadge">0%</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="practice-list" id="practiceList">
+                                <!-- Practice items will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Stats Card -->
+                    <div class="card stats-card">
+                        <div class="card-header">
+                            <h3>Quick Stats</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="stat-item">
+                                <span class="stat-icon">🔥</span>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="streakCount">0</span>
+                                    <span class="stat-label">Day Streak</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon">📿</span>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="totalRecitations">0</span>
+                                    <span class="stat-label">Total Recitations</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon">📝</span>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="journalEntries">0</span>
+                                    <span class="stat-label">Journal Entries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Transit Card -->
+                    <div class="card transit-card">
+                        <div class="card-header">
+                            <h3>Current Transit</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="transit-info" id="transitInfo">
+                                <!-- Transit info will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mystic Quote Card -->
+                    <div class="card quote-card">
+                        <div class="card-header">
+                            <h3>Daily Wisdom</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="quote-content" id="dailyQuote">
+                                <!-- Quote will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Moon Phase Card -->
+                    <div class="card moon-card">
+                        <div class="card-header">
+                            <h3>Moon Phase</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="moon-widget" id="moonWidget" style="width:140px;height:140px;margin:0 auto">
+                                <!-- Moon SVG will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transit Aspects Card -->
+                    <div class="card transit-aspects-card">
+                        <div class="card-header">
+                            <h3>Transit Aspects</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="transit-aspects-widget" id="transitAspectsWidget">
+                                <!-- Transit aspects will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Big Three Card -->
+                    <div class="card big-three-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Action Big Three — Your Karmic Engine</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="actionBigThree"></div>
+                        </div>
+                    </div>
+
+                    <!-- Quranic Blueprint Card -->
+                    <div class="card quran-blueprint-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Quranic Blueprint — The Hidden Architecture of Your Soul</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="quranBlueprint"></div>
+                        </div>
+                    </div>
+
+                    <!-- Daily Quranic Wisdom Card -->
+                    <div class="card quran-wisdom-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Today's Quranic Wisdom — Undiscovered Connections</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="dailyQuranWisdom"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Soul Blueprint Page -->
+            <section class="page" id="soul">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">☽</div>
+                        <div>
+                            <h2>Soul Blueprint</h2>
+                            <p>Your cosmic identity and spiritual DNA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="soul-container">
+                    <div class="card soul-card">
+                        <div class="card-header">
+                            <h3>Soul Purpose</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="soul-purpose" id="soulPurpose">
+                                <!-- Soul purpose will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card soul-card">
+                        <div class="card-header">
+                            <h3>Past Life Gifts</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="past-life" id="pastLife">
+                                <!-- Past life gifts will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card soul-card">
+                        <div class="card-header">
+                            <h3>Current Life Challenges</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="challenges" id="challenges">
+                                <!-- Challenges will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card soul-card">
+                        <div class="card-header">
+                            <h3>Spiritual Gifts</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="gifts" id="gifts">
+                                <!-- Gifts will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Chart Page -->
+            <section class="page" id="chart">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">☉</div>
+                        <div>
+                            <h2>Natal Chart</h2>
+                            <p>Sidereal - Lahiri Ayanamsa - Whole Sign Houses</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-controls">
+                        <div class="chart-view-selector" id="chartViewSelector">
+                            <button class="chart-view-btn active" data-view="D1">Natal (D-1)</button>
+                            <button class="chart-view-btn" data-view="D9">Navamsha (D-9)</button>
+                            <button class="chart-view-btn" data-view="D10">Dashamsha (D-10)</button>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-wheel" id="chartWheel">
+                        <!-- Chart visualization will be loaded here -->
+                    </div>
+
+                    <div class="planet-inspector-card" id="planetInspector" style="display:none;">
+                        <!-- Interactive planet detail inspection -->
+                    </div>
+                    
+                    <div class="chart-details">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Planetary Positions</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="planet-table" id="planetTable">
+                                    <!-- Planet table will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Key Yogas</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="yoga-list" id="yogaList">
+                                    <!-- Yoga list will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>House Analysis</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="house-list" id="houseList">
+                                    <!-- House analysis will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Transit-to-Natal Aspects</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="transit-aspect-list" id="transitAspects">
+                                    <!-- Transit aspects will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Verses Page -->
+            <section class="page" id="verses">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">﷽</div>
+                        <div>
+                            <h2>Quranic Verses</h2>
+                            <p>Your core verses for spiritual power</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="verses-container">
+                    <div class="verse-selector" id="verseSelector">
+                        <!-- Verse buttons will be loaded here -->
+                    </div>
+                    
+                    <div class="verse-display" id="verseDisplay">
+                        <!-- Verse content will be loaded here -->
+                    </div>
+                    
+                    <div class="daily-practice-container" id="dailyPractice">
+                        <!-- Daily ruqya practice schedule will be loaded here -->
+                    </div>
+                    
+                    <div class="surah-needs-container" id="surahForNeeds">
+                        <!-- Surah for specific needs will be loaded here -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Surah Library Page -->
+            <section class="page" id="surahs">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">📖</div>
+                        <div>
+                            <h2>Surah Library</h2>
+                            <p>All 114 Surahs with meanings and connections</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="surah-container">
+                    <div class="surah-search">
+                        <input type="text" id="surahSearch" placeholder="Search Surahs...">
+                    </div>
+                    
+                    <div class="surah-grid" id="surahGrid">
+                        <!-- Surah cards will be loaded here -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Destiny Map Page -->
+            <section class="page" id="destiny">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">⭐</div>
+                        <div>
+                            <h2>Destiny Map</h2>
+                            <p>Your life path, timing, and cosmic calendar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destiny-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Vimshottari Dasha Timeline</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="dasha-timeline" id="dashaTimeline">
+                                <!-- Dasha timeline will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Current Dasha Period</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="current-dasha" id="currentDasha">
+                                <!-- Current dasha will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Key Timing Windows</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="timing-windows" id="timingWindows">
+                                <!-- Timing windows will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Practice Page -->
+            <section class="page" id="practice">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">📿</div>
+                        <div>
+                            <h2>Practice Tracker</h2>
+                            <div class="streak-display">
+                                <span class="streak-icon">🔥</span>
+                                <span class="streak-number" id="practiceStreak">0</span>
+                                <span class="streak-text">Day Streak</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="practice-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recitation Counter</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="recitation-counter" id="recitationCounter">
+                                <!-- Recitation counters will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Journal</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="journal-entry">
+                                <label for="journalPrompt">What did Allah teach me today?</label>
+                                <textarea id="journalPrompt" rows="6" placeholder="Write your reflection here..."></textarea>
+                                <button class="btn btn-primary" id="saveJournal">Save Entry</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Monthly View</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="monthly-calendar" id="monthlyCalendar">
+                                <!-- Calendar will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Lunar Page -->
+            <section class="page" id="lunar">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">☾</div>
+                        <div>
+                            <h2>Lunar Calendar</h2>
+                            <p>Track lunar phases and recitation schedule</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lunar-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Current Lunar Phase</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="lunar-phase" id="lunarPhase">
+                                <!-- Lunar phase will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Today's Recitation</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="recitation-schedule" id="recitationSchedule">
+                                <!-- Recitation schedule will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Monthly Lunar View</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="lunar-calendar" id="lunarCalendar">
+                                <!-- Lunar calendar will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Emergency Dhikr Page -->
+            <section class="page" id="emergency">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🔮</div>
+                        <div>
+                            <h2>Emergency Dhikr</h2>
+                            <p>Instant spiritual remedies for any state</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="emergency-container">
+                    <div class="emergency-grid" id="emergencyGrid">
+                        <!-- Emergency practices will be loaded here -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ruqya Guide Page -->
+            <section class="page" id="ruqya">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🕋</div>
+                        <div>
+                            <h2>Ruqya Guide</h2>
+                            <p>Islamic spiritual healing through Quranic recitation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- What is Ruqya Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>What is Ruqya?</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);line-height:1.8;font-size:15px">
+                                <strong>Ruqya</strong> (رقية) is the Islamic practice of spiritual healing through the recitation of Quranic verses and authentic supplications. It is a Sunnah of the Prophet Muhammad (SAW) and a means of seeking Allah's help for physical, emotional, and spiritual ailments.
+                            </p>
+                            <p style="color:var(--accent-gold);margin-top:12px;font-style:italic">
+                                "And We send down of the Quran that which is a healing and a mercy to those who believe." — Surah Al-Isra 17:82
+                            </p>
+                            <div style="margin-top:16px;padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                <strong style="color:var(--accent-blue)">Key Principle:</strong> Healing comes from Allah alone. The Quran is the means, not the source. Never attribute healing to the words themselves — always to Allah.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conditions for Valid Ruqya Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Conditions for Valid Ruqya</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-gold)">
+                                    <div style="font-size:24px;margin-bottom:8px">📖</div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">1. Quranic Verses Only</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">Use only Quranic verses or authentic supplications from the Sunnah. No foreign words or inventions.</div>
+                                </div>
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                    <div style="font-size:24px;margin-bottom:8px">🗣️</div>
+                                    <div style="font-weight:600;color:var(--accent-blue);margin-bottom:4px">2. Arabic Language</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">Recite in Arabic or in a language the affected person understands. The words must be intelligible.</div>
+                                </div>
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                    <div style="font-size:24px;margin-bottom:8px">🤲</div>
+                                    <div style="font-weight:600;color:var(--accent-green);margin-bottom:4px">3. Belief in Allah Alone</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">Believe that healing comes from Allah alone. The ruqya practitioner is only a means, not the source.</div>
+                                </div>
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-red)">
+                                    <div style="font-size:24px;margin-bottom:8px">🚫</div>
+                                    <div style="font-weight:600;color:var(--accent-red);margin-bottom:4px">4. No Shirk or Bid'ah</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">No polytheism (shirk), no innovation (bid'ah), no amulets, no reliance on jinn or created beings.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Self-Ruqya Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Self-Ruqya — Step-by-Step Guide</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px">
+                                Self-ruqya is the preferred method as it strengthens your connection with Allah. Perform on yourself before seeking help from others.
+                            </p>
+                            <div style="display:flex;flex-direction:column;gap:12px">
+                                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="min-width:32px;height:32px;background:var(--accent-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg-primary)">1</div>
+                                    <div>
+                                        <div style="font-weight:600;color:var(--text-primary)">Begin with Basmalah</div>
+                                        <div style="font-size:13px;color:var(--text-secondary)">Say "Bismillah ar-Rahman ar-Raheem" 3 times. Place your right hand on the affected area.</div>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="min-width:32px;height:32px;background:var(--accent-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg-primary)">2</div>
+                                    <div>
+                                        <div style="font-weight:600;color:var(--text-primary)">Recite Ayat al-Kursi (2:255)</div>
+                                        <div style="font-size:13px;color:var(--text-secondary)">The Throne Verse — one of the most powerful verses for protection and healing. Recite 3 times.</div>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="min-width:32px;height:32px;background:var(--accent-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg-primary)">3</div>
+                                    <div>
+                                        <div style="font-weight:600;color:var(--text-primary)">Recite Surah Al-Fatiha (7 times)</div>
+                                        <div style="font-size:13px;color:var(--text-secondary)">The Opening — the greatest Surah. Blow gently on your palms and pass over the affected area.</div>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="min-width:32px;height:32px;background:var(--accent-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg-primary)">4</div>
+                                    <div>
+                                        <div style="font-weight:600;color:var(--text-primary)">Recite Al-Mu'awwidhatayn (3 times each)</div>
+                                        <div style="font-size:13px;color:var(--text-secondary)">Surah Al-Falaq (113) and Surah An-Nas (114) — the two refuges. Blow on palms and pass over body.</div>
+                                    </div>
+                                </div>
+                                <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="min-width:32px;height:32px;background:var(--accent-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg-primary)">5</div>
+                                    <div>
+                                        <div style="font-weight:600;color:var(--text-primary)">Make Dua to Allah</div>
+                                        <div style="font-size:13px;color:var(--text-secondary)">Ask Allah specifically for healing. Say: "Allahumma rabbi an-nas, adhhib al-ba'sa, wa ashfi anta ash-Shafi" (O Lord of people, remove the harm and heal, You are the Healer).</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Distance Ruqya Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Distance Ruqya</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:12px">
+                                Ruqya can be performed remotely for those who cannot perform it themselves.
+                            </p>
+                            <div style="display:flex;flex-direction:column;gap:8px">
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-gold)">
+                                    <div style="font-weight:600;color:var(--accent-gold);font-size:13px">Water Method</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Recite Quranic verses over clean water. The affected person drinks the water or washes with it.</div>
+                                </div>
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-blue)">
+                                    <div style="font-weight:600;color:var(--accent-blue);font-size:13px">Oil Method</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Recite over olive oil. The affected person applies it to their body, especially the forehead.</div>
+                                </div>
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-green)">
+                                    <div style="font-weight:600;color:var(--accent-green);font-size:13px">Dua Method</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Make sincere dua for the person from a distance. Allah's mercy is not limited by space.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Verses Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Emergency Verses</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:12px">
+                                Quick-reference for urgent spiritual situations:
+                            </p>
+                            <div style="display:flex;flex-direction:column;gap:8px">
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-red)">
+                                    <div style="font-weight:600;color:var(--accent-red);font-size:13px">Evil Eye / Hasad</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Ayat al-Kursi (2:255) + Surah Al-Falaq (113) × 3</div>
+                                </div>
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-purple)">
+                                    <div style="font-weight:600;color:var(--accent-purple);font-size:13px">Anxiety / Worry</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Surah Ar-Rad 13:28 × 7 — "In the remembrance of Allah do hearts find rest"</div>
+                                </div>
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-blue)">
+                                    <div style="font-weight:600;color:var(--accent-blue);font-size:13px">Protection at Night</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Ayat al-Kursi + Al-Mu'awwidhatayn before sleep</div>
+                                </div>
+                                <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:3px solid var(--accent-green)">
+                                    <div style="font-weight:600;color:var(--accent-green);font-size:13px">Morning / Evening Adhkar</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Full morning and evening protection supplications daily</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Ruqya Guide Link -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-body" style="text-align: center; padding: 24px;">
+                            <h3 style="color: var(--accent-gold); margin-bottom: 12px;">📚 Advanced Ruqya Guide</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 16px;">Complete methodology based on Ben Halima Abderraouf — 3 stages, captage procedure, surahs for specific needs, emergency protocols</p>
+                            <a href="ruqya.html" class="btn btn-primary" style="display: inline-block; padding: 12px 24px; background: var(--accent-gold); color: var(--bg-primary); text-decoration: none; border-radius: 8px; font-weight: 600;">Open Advanced Guide →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daily Practice Page -->
+            <section class="page" id="daily-practice">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🕐</div>
+                        <div>
+                            <h2>Daily Practice — MAHI Method</h2>
+                            <p>Activate planetary strengths, protect Moon in Pisces, build spiritual foundation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Core Info Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>The MAHI Method — Core Components</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+                                <div style="text-align:center;padding:16px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-size:32px;margin-bottom:8px">📿</div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">Core Verses</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">21:87 · 55:1-4 · 68:1-4</div>
+                                </div>
+                                <div style="text-align:center;padding:16px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-size:32px;margin-bottom:8px">🕌</div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">Divine Names</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">Ya Hafiz · Ya Rahman · Ya Alim</div>
+                                </div>
+                                <div style="text-align:center;padding:16px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-size:32px;margin-bottom:8px">⚡</div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">Power Day</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">Thursday (Jupiter Energy)</div>
+                                </div>
+                                <div style="text-align:center;padding:16px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-size:32px;margin-bottom:8px">🌙</div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">Started</div>
+                                    <div style="font-size:13px;color:var(--text-secondary)">July 28, 2026</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fajr Practice Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>🌅 Fajr — Yunus Dhikr (100×)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Time & Purpose</div>
+                                    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px">
+                                        <strong>Time:</strong> Before sunrise (Fajr prayer)<br>
+                                        <strong>Duration:</strong> ~15 minutes<br>
+                                        <strong>Purpose:</strong> Protection for Moon in Pisces, emotional purification
+                                    </div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Benefits</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">
+                                        • Protection from anxiety and emotional turmoil<br>
+                                        • Purification of Moon (debilitated in Pisces)<br>
+                                        • Connection to Prophet Yunus's patience and gratitude
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Method</div>
+                                    <div style="display:flex;flex-direction:column;gap:6px">
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">1.</span> After Fajr prayer, sit in prayer mat
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">2.</span> Say "Astaghfirullah" 3x
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">3.</span> Begin Yunus dhikr with tasbih (108 beads)
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">4.</span> Complete 100 repetitions
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">5.</span> Make dua for emotional protection
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top:16px;padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                <div style="font-weight:600;color:var(--accent-blue);margin-bottom:8px">The Invocation (21:87)</div>
+                                <div style="font-size:20px;color:var(--accent-gold);margin-bottom:8px;font-family:'Amiri',serif;line-height:1.8">
+                                    لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary);font-style:italic">
+                                    "La ilaha illa Anta, Subhanaka, inni kuntu min al-dhalimeen"
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary)">
+                                    "There is no god but You, Glory be to You, indeed I have been among the wrongdoers."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ASR Practice Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>✍️ ASR — Al-Qalam Writing</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Time & Purpose</div>
+                                    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px">
+                                        <strong>Time:</strong> After ASR prayer (afternoon)<br>
+                                        <strong>Duration:</strong> ~30 minutes<br>
+                                        <strong>Purpose:</strong> Bless writing, activate Mercury in Aquarius (4°39')
+                                    </div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Benefits</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">
+                                        • Blesses all writing sessions<br>
+                                        • Activates Mercury in Dhanishta (writing innovation)<br>
+                                        • Connects writing to divine inspiration
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Method</div>
+                                    <div style="display:flex;flex-direction:column;gap:6px">
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">1.</span> Before opening document or starting to write
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">2.</span> Say "Bismillah" 3x
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">3.</span> Recite Al-Qalam 68:1
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">4.</span> Ask Allah to bless the writing
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">5.</span> Begin writing (one page free writing)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top:16px;padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                <div style="font-weight:600;color:var(--accent-blue);margin-bottom:8px">The Invocation (68:1-4)</div>
+                                <div style="font-size:20px;color:var(--accent-gold);margin-bottom:8px;font-family:'Amiri',serif;line-height:1.8">
+                                    نُونٌ وَالْقَلَمِ وَمَا يَسْطُرُونَ
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary);font-style:italic">
+                                    "Nun. Wal-qalami wa ma yasturun"
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary)">
+                                    "Nun. By the pen and what they inscribe."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maghrib Practice Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>📖 Maghrib — Ar-Rahman Reflection</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Time & Purpose</div>
+                                    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px">
+                                        <strong>Time:</strong> After Maghrib prayer (sunset)<br>
+                                        <strong>Duration:</strong> ~5 minutes<br>
+                                        <strong>Purpose:</strong> Activate Jupiter exalted in Cancer, align with teaching purpose
+                                    </div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Benefits</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">
+                                        • Activates Jupiter exalted in Cancer (12°47')<br>
+                                        • Aligns with teaching purpose (Sun in Purva Bhadra)<br>
+                                        • Connects to Quran as source of wisdom
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Method</div>
+                                    <div style="display:flex;flex-direction:column;gap:6px">
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">1.</span> After Maghrib prayer, sit quietly
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">2.</span> Recite Ar-Rahman 55:1-4
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">3.</span> Journal one insight from the morning
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">4.</span> Identify one teaching moment from today
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">5.</span> Make dua for wisdom and teaching ability
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top:16px;padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                <div style="font-weight:600;color:var(--accent-blue);margin-bottom:8px">The Invocation (55:1-4)</div>
+                                <div style="font-size:20px;color:var(--accent-gold);margin-bottom:8px;font-family:'Amiri',serif;line-height:1.8">
+                                    الرَّحْمَٰنُ. عَلَّمَ الْقُرْآنَ. خَلَقَ الْإِنسَانَ. عَلَّمَهُ الْبَيَانَ
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary);font-style:italic">
+                                    "Ar-Rahman. Allamal-Quran. Khalaqal-Insan. Allamahu'l-Bayan"
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary)">
+                                    "The Most Merciful. Taught the Quran. Created man. Taught him eloquence."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Isha Practice Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>📝 Isha — Journaling & Gratitude</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Time & Purpose</div>
+                                    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px">
+                                        <strong>Time:</strong> After Isha prayer (night)<br>
+                                        <strong>Duration:</strong> ~10 minutes<br>
+                                        <strong>Purpose:</strong> Reflect on the day, record spiritual insights, build wisdom
+                                    </div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Benefits</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">
+                                        • Self-awareness and spiritual growth<br>
+                                        • Pattern recognition in daily life<br>
+                                        • Wisdom accumulation over time<br>
+                                        • Connection to Quranic moral character (68:4)
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Method</div>
+                                    <div style="display:flex;flex-direction:column;gap:6px">
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">1.</span> Sit with journal or notebook
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">2.</span> Ask: "What did Allah teach me today?"
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">3.</span> Write one insight or reflection
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">4.</span> Say "Alhamdulillah" 10x (gratitude)
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)">
+                                            <span style="color:var(--accent-gold)">5.</span> Recite Al-Mu'awwidhatayn before sleep
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top:16px;padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                <div style="font-weight:600;color:var(--accent-blue);margin-bottom:8px">The Verse (68:4)</div>
+                                <div style="font-size:20px;color:var(--accent-gold);margin-bottom:8px;font-family:'Amiri',serif;line-height:1.8">
+                                    إِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary);font-style:italic">
+                                    "Innaka la'ala khuluqin azeem"
+                                </div>
+                                <div style="font-size:13px;color:var(--text-secondary)">
+                                    "And you are of a great moral character."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips for Success Card -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Tips for Success</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+                                <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">🎯 Start Small</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Begin with 33 repetitions of Yunus dhikr, increase to 100 over time.</div>
+                                </div>
+                                <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">⏰ Set Alarms</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Fajr, ASR, Maghrib, and Isha time reminders.</div>
+                                </div>
+                                <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">📓 Journal</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Keep a small notebook for Ar-Rahman reflections.</div>
+                                </div>
+                                <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">💪 Consistency</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">Missing one day is okay, don't miss two.</div>
+                                </div>
+                                <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">🔄 Flexibility</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">If Fajr is missed, do Yunus dhikr after sunrise.</div>
+                                </div>
+                                <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:4px">🤲 Gratitude</div>
+                                    <div style="font-size:12px;color:var(--text-secondary)">End each day with "Alhamdulillah" 10x.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Page (Vedic Astrology Hub) -->
+            <section class="page" id="learning">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">📚</div>
+                        <div>
+                            <h2>Learning Hub — Vedic Astrology</h2>
+                            <p>Master the ancient science of Jyotish and Hellenistic techniques</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Section 1: Vedic Astrology Basics -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Section 1: Vedic Astrology Basics (Jyotish Shastra)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px;line-height:1.8">
+                                <strong>Vedic Astrology (Jyotish)</strong> is the ancient Indian science of light, dating back over 5,000 years to the Vedas. Unlike Western astrology which uses the tropical zodiac (seasonal), Jyotish uses the <strong>sidereal zodiac</strong> — fixed star positions — making it approximately 23°48' behind tropical (Lahiri ayanamsa). The word "Jyotish" means "light" — studying how celestial light shapes karma.
+                            </p>
+
+                            <!-- 9 Planets -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-gold);font-size:14px;margin-bottom:12px">🪐 The 9 Planets (Grahas)</div>
+                                <p style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;line-height:1.6">
+                                    Grahas (meaning "to seize") are karmic forces that grip the soul. Each carries specific energies — they are not just celestial bodies but living agents of destiny. The two luminaries (Sun, Moon) plus 5 visible planets plus 2 mathematical nodes (Rahu, Ketu) form the Navagraha.
+                                </p>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px">
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FFD700">
+                                        <div style="font-weight:600;color:#FFD700;font-size:13px">☉ Sun (Surya)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Soul, ego, authority, father, vitality. Rules Leo. Exalted in Aries (10°). Debilitated in Libra. Day star — represents the Atma (soul).</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #C0C0C0">
+                                        <div style="font-weight:600;color:#C0C0C0;font-size:13px">☽ Moon (Chandra)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Mind, emotions, mother, nurture. Rules Cancer. Exalted in Taurus. Debilitated in Scorpio. The Mind — represents how you think and feel.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FF4444">
+                                        <div style="font-weight:600;color:#FF4444;font-size:13px">♂ Mars (Mangala)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Courage, action, conflict, siblings. Rules Aries & Scorpio. Exalted in Capricorn. Debilitated in Cancer. The Commander — drives ambition and war.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #00CC66">
+                                        <div style="font-weight:600;color:#00CC66;font-size:13px">☿ Mercury (Budha)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Intellect, communication, trade, education. Rules Gemini & Virgo. Exalted in Virgo. Debilitated in Pisces. The Merchant — governs speech and logic.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FFAA00">
+                                        <div style="font-weight:600;color:#FFAA00;font-size:13px">♃ Jupiter (Guru)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Wisdom, dharma, children, wealth. Rules Sagittarius & Pisces. Exalted in Cancer. Debilitated in Capricorn. The Teacher — represents expansion and grace.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FF69B4">
+                                        <div style="font-weight:600;color:#FF69B4;font-size:13px">♀ Venus (Shukra)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Love, luxury, art, marriage, comfort. Rules Taurus & Libra. Exalted in Pisces. Debilitated in Virgo. The Guru of Asuras — beauty and desire.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #6666CC">
+                                        <div style="font-weight:600;color:#6666CC;font-size:13px">♄ Saturn (Shani)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Discipline, karma, delay, longevity. Rules Capricorn & Aquarius. Exalted in Libra. Debilitated in Aries. The Judge — rewards patience, punishes shortcuts.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #8B4513">
+                                        <div style="font-weight:600;color:#CC8844;font-size:13px">☊ Rahu (North Node)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Obsession, illusion, foreign lands, sudden events. Not a physical planet — the lunar node where Moon crosses north. Rules Aquarius. Amplifies whatever it touches.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #333">
+                                        <div style="font-weight:600;color:#888;font-size:13px">☋ Ketu (South Node)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">Spirituality, detachment, past-life karma, liberation. The lunar node where Moon crosses south. Rules Scorpio. The Mokshakaraka — releases material bonds.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 12 Signs -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-blue);font-size:14px;margin-bottom:12px">♈ The 12 Zodiac Signs (Rashis)</div>
+                                <p style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;line-height:1.6">
+                                    Each Rashi (sign) is a 30° segment of the zodiac. They carry elemental energy (Fire, Earth, Air, Water) and modality (Cardinal/Chara, Fixed/Sthira, Mutable/Dvisvabhava). The sign the Moon occupies at birth is your Rashi — your emotional identity.
+                                </p>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px">
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #FF4444">
+                                        <div style="font-weight:600;color:#FF4444;font-size:11px">♈ Aries (Mesha)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">🔥 Fire · Cardinal · Mars</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #00AA00">
+                                        <div style="font-weight:600;color:#00AA00;font-size:11px">♉ Taurus (Vrishabha)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">🌍 Earth · Fixed · Venus</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #FFCC00">
+                                        <div style="font-weight:600;color:#FFCC00;font-size:11px">♊ Gemini (Mithuna)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">💨 Air · Mutable · Mercury</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #4488FF">
+                                        <div style="font-weight:600;color:#4488FF;font-size:11px">♋ Cancer (Karka)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">💧 Water · Cardinal · Moon</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #FF8800">
+                                        <div style="font-weight:600;color:#FF8800;font-size:11px">♌ Leo (Simha)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">🔥 Fire · Fixed · Sun</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #00AA44">
+                                        <div style="font-weight:600;color:#00AA44;font-size:11px">♍ Virgo (Kanya)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">🌍 Earth · Mutable · Mercury</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #CC44CC">
+                                        <div style="font-weight:600;color:#CC44CC;font-size:11px">♎ Libra (Tula)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">💨 Air · Cardinal · Venus</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #CC0000">
+                                        <div style="font-weight:600;color:#CC0000;font-size:11px">♏ Scorpio (Vrischika)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">💧 Water · Fixed · Mars</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #4466FF">
+                                        <div style="font-weight:600;color:#4466FF;font-size:11px">♐ Sagittarius (Dhanu)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">🔥 Fire · Mutable · Jupiter</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #555">
+                                        <div style="font-weight:600;color:#888;font-size:11px">♑ Capricorn (Makara)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">🌍 Earth · Cardinal · Saturn</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #4488CC">
+                                        <div style="font-weight:600;color:#4488CC;font-size:11px">♒ Aquarius (Kumbha)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">💨 Air · Fixed · Saturn</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #3366AA">
+                                        <div style="font-weight:600;color:#3366AA;font-size:11px">♓ Pisces (Meena)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">💧 Water · Mutable · Jupiter</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 12 Houses -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-green);font-size:14px;margin-bottom:12px">🏠 The 12 Houses (Bhavas)</div>
+                                <p style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;line-height:1.6">
+                                    Houses (Bhavas) are the stages where planetary dramas unfold. Each house governs specific life domains. The Ascendant (Lagna) marks the 1st house — your body, personality, and how you enter the world. Houses are counted counter-clockwise from the Ascendant sign.
+                                </p>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:6px">
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">1st — Self (Lagna)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Body, personality, identity, vitality, how others see you</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">2nd — Wealth (Dhana)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Family, speech, food, accumulated wealth, values</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">3rd — Siblings (Sahaja)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Courage, short travels, communication, siblings, writing</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">4th — Home (Sukha)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Mother, property, vehicles, inner peace, education</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">5th — Children (Putra)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Creativity, romance, intelligence, past-life merit, speculation</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">6th — Enemies (Ripu)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Disease, debt, obstacles, daily work, service, competition</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">7th — Marriage (Kalatra)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Partnerships, spouse, business deals, public dealings</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">8th — Death (Ayur)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Longevity, transformation, hidden resources, occult, inheritance</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">9th — Dharma (Bhagya)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Fortune, religion, philosophy, higher learning, father, long travels</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">10th — Career (Karma)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Profession, reputation, authority, public image, achievements</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">11th — Gains (Labha)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Income, friendships, community, aspirations, fulfillment of desires</div>
+                                    </div>
+                                    <div style="padding:8px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:11px">12th — Loss (Vyaya)</div>
+                                        <div style="font-size:10px;color:var(--text-secondary)">Expenses, losses, foreign lands, liberation (moksha), sleep, isolation</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aspects -->
+                            <div>
+                                <div style="font-weight:700;color:var(--accent-purple);font-size:14px;margin-bottom:12px">🔗 Planetary Aspects (Drishti)</div>
+                                <p style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;line-height:1.6">
+                                    Unlike Western astrology's 30° orbs, Vedic aspects are precise: every planet aspects the 7th house from it (full aspect). But the three malefics — Mars, Saturn, and Rahu — have <strong>special aspects</strong> that add intensity:
+                                </p>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px">
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #FF4444">
+                                        <div style="font-weight:600;color:#FF4444;font-size:12px">♂ Mars Aspects: 4th, 7th, 8th</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Aggressive aspects — forced action on 4th (home), 7th (partners), 8th (transformation)</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #6666CC">
+                                        <div style="font-weight:600;color:#6666CC;font-size:12px">♄ Saturn Aspects: 3rd, 7th, 10th</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Restrictive aspects — delays 3rd (courage), 7th (partners), 10th (career)</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #CC8844">
+                                        <div style="font-weight:600;color:#CC8844;font-size:12px">☊ Rahu Aspects: 5th, 7th, 9th</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Obsessive aspects — amplifies 5th (creativity), 7th (partners), 9th (fortune)</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);font-size:12px">♃ Jupiter Aspects: 5th, 7th, 9th</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Benevolent aspects — blesses 5th (creativity), 7th (partners), 9th (fortune)</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-blue)">
+                                        <div style="font-weight:600;color:var(--accent-blue);font-size:12px">All Planets Aspect: 7th</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Universal aspect — every planet aspects the house directly opposite, creating tension or balance</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Nakshatras -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Section 2: Nakshatras — The 27 Lunar Mansions</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px;line-height:1.8">
+                                The <strong>27 Nakshatras</strong> are the hidden layer beneath the zodiac — each spanning 13°20' of the ecliptic. Where Rashis show WHAT you experience, Nakshatras reveal HOW your karmic story unfolds. Each Nakshatra has its own deity (ruling god), symbol, element, and planetary ruler. The Moon's Nakshatra at birth is your most intimate identity — your emotional heartbeat.
+                            </p>
+
+                            <!-- All 27 Nakshatras Table -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-gold);font-size:14px;margin-bottom:12px">Complete Nakshatra Table</div>
+                                <div style="overflow-x:auto">
+                                    <table style="width:100%;border-collapse:collapse;font-size:11px">
+                                        <thead>
+                                            <tr style="border-bottom:2px solid var(--border-color)">
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">#</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Nakshatra</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Lord</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Deity</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Meaning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">1</td><td style="padding:5px;color:var(--text-primary)">Ashwini</td><td style="padding:5px;color:var(--text-secondary)">Ketu</td><td style="padding:5px;color:var(--text-secondary)">Ashwini Kumaras</td><td style="padding:5px;color:var(--text-secondary)">Healing, speed, innovation</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">2</td><td style="padding:5px;color:var(--text-primary)">Bharani</td><td style="padding:5px;color:var(--text-secondary)">Venus</td><td style="padding:5px;color:var(--text-secondary)">Yama</td><td style="padding:5px;color:var(--text-secondary)">Creation, restraint, transformation</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">3</td><td style="padding:5px;color:var(--text-primary)">Krittika</td><td style="padding:5px;color:var(--text-secondary)">Sun</td><td style="padding:5px;color:var(--text-secondary)">Agni (Fire)</td><td style="padding:5px;color:var(--text-secondary)">Sharpness, cutting, purifying fire</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">4</td><td style="padding:5px;color:var(--text-primary)">Rohini</td><td style="padding:5px;color:var(--text-secondary)">Moon</td><td style="padding:5px;color:var(--text-secondary)">Brahma</td><td style="padding:5px;color:var(--text-secondary)">Growth, fertility, fixed determination</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">5</td><td style="padding:5px;color:var(--text-primary)">Mrigashira</td><td style="padding:5px;color:var(--text-secondary)">Mars</td><td style="padding:5px;color:var(--text-secondary)">Soma (Moon)</td><td style="padding:5px;color:var(--text-secondary)">Searching, seeking, deer's head</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">6</td><td style="padding:5px;color:var(--text-primary)">Ardra</td><td style="padding:5px;color:var(--text-secondary)">Rahu</td><td style="padding:5px;color:var(--text-secondary)">Rudra (Shiva)</td><td style="padding:5px;color:var(--text-secondary)">Stern, tears, destructive storms</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(255,215,0,0.08)"><td style="padding:5px;color:var(--text-secondary)">7</td><td style="padding:5px;font-weight:600;color:var(--accent-gold)">Punarvasu ⭐</td><td style="padding:5px;color:var(--text-secondary)">Jupiter</td><td style="padding:5px;color:var(--text-secondary)">Aditi (Mother)</td><td style="padding:5px;color:var(--text-secondary)">Renewal, return of light, expansion</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">8</td><td style="padding:5px;color:var(--text-primary)">Pushya</td><td style="padding:5px;color:var(--text-secondary)">Saturn</td><td style="padding:5px;color:var(--text-secondary)">Brihaspati</td><td style="padding:5px;color:var(--text-secondary)">Nourishment, spiritual duty</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">9</td><td style="padding:5px;color:var(--text-primary)">Ashlesha</td><td style="padding:5px;color:var(--text-secondary)">Mercury</td><td style="padding:5px;color:var(--text-secondary)">Nagas (Serpents)</td><td style="padding:5px;color:var(--text-secondary)">Clinging, kundalini, poison cure</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">10</td><td style="padding:5px;color:var(--text-primary)">Magha</td><td style="padding:5px;color:var(--text-secondary)">Ketu</td><td style="padding:5px;color:var(--text-secondary)">Pitris (Ancestors)</td><td style="padding:5px;color:var(--text-secondary)">Royal power, ancestral authority</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">11</td><td style="padding:5px;color:var(--text-primary)">Purva Phalguni</td><td style="padding:5px;color:var(--text-secondary)">Venus</td><td style="padding:5px;color:var(--text-secondary)">Bhaga (Fortune)</td><td style="padding:5px;color:var(--text-secondary)">Enjoyment, rest, marital bliss</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">12</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Uttara Phalguni ⭐</td><td style="padding:5px;color:var(--text-secondary)">Sun</td><td style="padding:5px;color:var(--text-secondary)">Aryaman (Patron)</td><td style="padding:5px;color:var(--text-secondary)">Patronage, marriage, contracts</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">13</td><td style="padding:5px;color:var(--text-primary)">Hasta</td><td style="padding:5px;color:var(--text-secondary)">Moon</td><td style="padding:5px;color:var(--text-secondary)">Savitr (Sun)</td><td style="padding:5px;color:var(--text-secondary)">Skill, craft, manifestation by hand</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">14</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Chitra ⭐</td><td style="padding:5px;color:var(--text-secondary)">Mars</td><td style="padding:5px;color:var(--text-secondary)">Tvashtar (Architect)</td><td style="padding:5px;color:var(--text-secondary)">Brilliance, creativity, illusion</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">15</td><td style="padding:5px;color:var(--text-primary)">Swati</td><td style="padding:5px;color:var(--text-secondary)">Rahu</td><td style="padding:5px;color:var(--text-secondary)">Vayu (Wind)</td><td style="padding:5px;color:var(--text-secondary)">Independence, flexibility, coral</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">16</td><td style="padding:5px;color:var(--text-primary)">Vishakha</td><td style="padding:5px;color:var(--text-secondary)">Jupiter</td><td style="padding:5px;color:var(--text-secondary)">Indra-Agni</td><td style="padding:5px;color:var(--text-secondary)">Goal-oriented, determination</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">17</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Anuradha ⭐</td><td style="padding:5px;color:var(--text-secondary)">Saturn</td><td style="padding:5px;color:var(--text-secondary)">Mitra (Friend)</td><td style="padding:5px;color:var(--text-secondary)">Devotion, friendship, spiritual discipline</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">18</td><td style="padding:5px;color:var(--text-primary)">Jyeshtha</td><td style="padding:5px;color:var(--text-secondary)">Mercury</td><td style="padding:5px;color:var(--text-secondary)">Indra (King)</td><td style="padding:5px;color:var(--text-secondary)">Seniority, authority, protector</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">19</td><td style="padding:5px;color:var(--text-primary)">Mula</td><td style="padding:5px;color:var(--text-secondary)">Ketu</td><td style="padding:5px;color:var(--text-secondary)">Nirrti (Destruction)</td><td style="padding:5px;color:var(--text-secondary)">Root cause, investigation, foundation</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">20</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Purva Ashadha ⭐</td><td style="padding:5px;color:var(--text-secondary)">Venus</td><td style="padding:5px;color:var(--text-secondary)">Apas (Water)</td><td style="padding:5px;color:var(--text-secondary)">Invincibility, purification, flow</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">21</td><td style="padding:5px;color:var(--text-primary)">Uttara Ashadha</td><td style="padding:5px;color:var(--text-secondary)">Sun</td><td style="padding:5px;color:var(--text-secondary)">Vishve-devas</td><td style="padding:5px;color:var(--text-secondary)">Universal victory, lasting principles</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">22</td><td style="padding:5px;color:var(--text-primary)">Shravana</td><td style="padding:5px;color:var(--text-secondary)">Moon</td><td style="padding:5px;color:var(--text-secondary)">Vishnu</td><td style="padding:5px;color:var(--text-secondary)">Listening, learning, connection</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(68,136,255,0.08)"><td style="padding:5px;color:var(--text-secondary)">23</td><td style="padding:5px;font-weight:600;color:var(--accent-blue)">Dhanishta ⭐</td><td style="padding:5px;color:var(--text-secondary)">Mars</td><td style="padding:5px;color:var(--text-secondary)">Ashta-Vasus</td><td style="padding:5px;color:var(--text-secondary)">Wealth, music, timing, cosmic rhythm</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">24</td><td style="padding:5px;color:var(--text-primary)">Shatabhisha</td><td style="padding:5px;color:var(--text-secondary)">Rahu</td><td style="padding:5px;color:var(--text-secondary)">Varuna (Ocean)</td><td style="padding:5px;color:var(--text-secondary)">Healing, 100 physicians, secrecy</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(68,136,255,0.08)"><td style="padding:5px;color:var(--text-secondary)">25</td><td style="padding:5px;font-weight:600;color:var(--accent-blue)">Purva Bhadra ⭐</td><td style="padding:5px;color:var(--text-secondary)">Jupiter</td><td style="padding:5px;color:var(--text-secondary)">Aja Ekapada</td><td style="padding:5px;color:var(--text-secondary)">Spiritual fire, transformation, duality</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">26</td><td style="padding:5px;color:var(--text-primary)">Uttara Bhadra</td><td style="padding:5px;color:var(--text-secondary)">Saturn</td><td style="padding:5px;color:var(--text-secondary)">Ahir Budhnya</td><td style="padding:5px;color:var(--text-secondary)">Deep wisdom, serpent fire, depth</td></tr>
+                                            <tr><td style="padding:5px;color:var(--text-secondary)">27</td><td style="padding:5px;color:var(--text-primary)">Revati</td><td style="padding:5px;color:var(--text-secondary)">Mercury</td><td style="padding:5px;color:var(--text-secondary)">Pooshan (Nourisher)</td><td style="padding:5px;color:var(--text-secondary)">Journey completion, protection, wealth</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Your Key Nakshatras -->
+                            <div>
+                                <div style="font-weight:700;color:var(--accent-green);font-size:14px;margin-bottom:12px">Key Nakshatras in Your Chart</div>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px">
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);margin-bottom:6px">Punarvasu (ASC 21°31')</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Lord:</strong> Jupiter | <strong>Deity:</strong> Aditi (Mother of Gods)<br>
+                                            "Return of the light" — renewal, optimism, expansion. Your Ascendant nakshatra gives you a naturally philosophical disposition, ability to bounce back from darkness, and gift for teaching. Punarvasu people are the eternal optimists who carry wisdom from hardship.
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);margin-bottom:6px">Uttara Phalguni (Moon 5°50')</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Lord:</strong> Sun | <strong>Deity:</strong> Aryaman (Patron of Contracts)<br>
+                                            "The later fruit" — patronage, marriage, lasting bonds. Your Moon nakshatra makes you a natural patron of others — someone who supports, protects, and creates lasting partnerships. Your emotional core seeks stability through loyal connections.
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                        <div style="font-weight:600;color:var(--accent-blue);margin-bottom:6px">Purva Bhadra (Sun 22°26', Mars 22°01')</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Lord:</strong> Jupiter | <strong>Deity:</strong> Aja Ekapada (One-footed Goat)<br>
+                                            "The earlier lucky feet" — spiritual fire, transformation through crisis. Both your Sun AND Mars sit here, creating a powerful spiritual warrior energy. You're meant to lead through philosophical fire, transforming crisis into wisdom. Duality is your gift and challenge.
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-purple)">
+                                        <div style="font-weight:600;color:var(--accent-purple);margin-bottom:6px">Dhanishta (Mercury 4°39', Saturn 2°16')</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Lord:</strong> Mars | <strong>Deity:</strong> Ashta-Vasus (Eight Wealth Gods)<br>
+                                            "The star of symphony" — wealth, music, timing, cosmic rhythm. Mercury and Saturn together here create disciplined communication with wealth-building potential. You have natural rhythm — knowing when to act and when to wait.
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FF4444">
+                                        <div style="font-weight:600;color:#FF4444;margin-bottom:6px">Ashwini (Venus 6°42')</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Lord:</strong> Ketu | <strong>Deity:</strong> Ashwini Kumaras (Divine Healers)<br>
+                                            "The horse-headed ones" — speed, healing, innovation. Venus in Ashwini gives you rapid artistic expression, healing through beauty, and innovative approach to relationships. You love quickly, create quickly, heal quickly.
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);margin-bottom:6px">Anuradha (Moon 5°50' — corrected Vedic chart)</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Lord:</strong> Saturn | <strong>Deity:</strong> Mitra (Friendship God)<br>
+                                            "Following Radha" — devotion, friendship, spiritual discipline. From the corrected Vedic chart, Moon in Anuradha creates deep capacity for devotion, strong friendships, and balance between material and spiritual. Transformative emotional connections.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Yogas -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Section 3: Yogas — Planetary Combinations</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px;line-height:1.8">
+                                <strong>Yogas</strong> (meaning "union") are powerful planetary combinations that reveal karmic patterns, blessings, and challenges. When two or more planets combine energies through conjunction, aspect, or house placement, they create specific life signatures. Jyotish recognizes thousands of yogas — here are the 5 most significant types and how they appear in your chart.
+                            </p>
+                            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px">
+                                <!-- Raja Yoga -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-gold)">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px;font-size:14px">Raja Yoga (Royal Combination)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.6">
+                                        <strong>Definition:</strong> Connection between a Kendra lord (1st, 4th, 7th, 10th) and Trikona lord (1st, 5th, 9th). The most powerful yoga for success, authority, and high status. Named "Raja" (king) because it produces rulers and leaders.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Mercury (1st lord) in 9th house, Jupiter (7th lord) in 7th house, Saturn (10th lord) in 9th house. Triple Raja Yoga formation — career through wisdom and technology, recognition in philosophical/technological fields. Timing: 2026-2028 (Jupiter-Mercury Dasha) = major breakthrough.
+                                    </div>
+                                </div>
+                                <!-- Dhana Yoga -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                    <div style="font-weight:600;color:var(--accent-blue);margin-bottom:8px;font-size:14px">Dhana Yoga (Wealth Combination)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.6">
+                                        <strong>Definition:</strong> Lords of wealth houses (2nd, 5th, 9th, 11th) in conjunction or mutual aspect. Indicates potential for accumulated wealth, multiple income streams, and financial security.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Venus (5th lord) in 11th house, Jupiter (7th lord) in 7th house, Mercury (1st lord) in 9th house. Wealth through creativity, partnerships, and teaching. Multiple income streams. Timing: 2026-2028 wealth building, 2028-2030 financial freedom.
+                                    </div>
+                                </div>
+                                <!-- Parivartana Yoga -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                    <div style="font-weight:600;color:var(--accent-green);margin-bottom:8px;font-size:14px">Parivartana Yoga (Exchange Yoga)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.6">
+                                        <strong>Definition:</strong> Two planets sitting in each other's signs, creating mutual support. The exchange can be powerful (Maha Parivartana) or casual (Laghu Parivartana) depending on house involvement.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Moon-Mercury exchange (Moon in Scorpio/Mercury's sign, Mercury in Cancer/Moon's sign in some systems). Emotional intelligence meets communication — your feelings inform your words, and your words process your emotions. A natural counselor's signature.
+                                    </div>
+                                </div>
+                                <!-- Neecha Bhanga Raja Yoga -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-purple)">
+                                    <div style="font-weight:600;color:var(--accent-purple);margin-bottom:8px;font-size:14px">Neecha Bhanga Raja Yoga (Cancellation of Debilitation)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.6">
+                                        <strong>Definition:</strong> When a debilitated planet's weakness is cancelled by specific conditions (lord of debilitation sign aspects, exalted planet aspects, or the debilitated planet is in the house of its exaltation). Weakness transforms into unexpected strength.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Moon debilitated in Scorpio but cancelled by Mercury exchange — emotional depth becomes wisdom rather than destruction. Venus debilitated in some systems but rescued by Ashwini's healing energy. Your challenges become your greatest gifts.
+                                    </div>
+                                </div>
+                                <!-- Gaja Kesari Yoga -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FFAA00">
+                                    <div style="font-weight:600;color:#FFAA00;margin-bottom:8px;font-size:14px">Gaja Kesari Yoga (Elephant-Lion Combination)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.6">
+                                        <strong>Definition:</strong> Jupiter in Kendra (1st, 4th, 7th, 10th) from Moon or Ascendant. One of the most auspicious yogas — named after the elephant (Gaja) and lion (Kesari) representing wisdom and power combined. Indicates fame, wisdom, wealth, and long-lasting reputation.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Jupiter in Sagittarius (domicile, own sign) in 7th house from Gemini ASC. Jupiter aspects 1st, 3rd, and 11th houses. This is an exceptionally powerful Gaja Kesari — Jupiter's maximum strength in its own sign creates lasting reputation through teaching, wisdom, and philosophical leadership.
+                                    </div>
+                                </div>
+                                <!-- Kemadruma Yoga -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #CC0000">
+                                    <div style="font-weight:600;color:#CC0000;margin-bottom:8px;font-size:14px">Kemadruma Yoga (Moon without benefic support)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.6">
+                                        <strong>Definition:</strong> Moon without conjunction or aspect from benefic planets (Jupiter, Venus, Mercury). Creates emotional intensity, need for spiritual practices, and transformative emotional nature. Not always negative — can indicate deep emotional wisdom through solitude.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Moon in Scorpio (debilitated) with Pluto conjunction, no direct benefic aspects. Advice: daily meditation, healing arts, transform emotions into wisdom. Your emotional depth is your superpower when channeled through spiritual practice.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Vimshottari Dasha -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Section 4: Vimshottari Dasha — The 120-Year Timing Cycle</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px;line-height:1.8">
+                                The <strong>Vimshottari Dasha</strong> system is Vedic astrology's most accurate timing mechanism. It divides a 120-year cycle into 9 planetary periods (Mahadashas), each ruled by a different graha. Your starting point is determined by the Nakshatra of your Moon at birth — your karmic starting line. Each Mahadasha is further divided into Bhukti (sub-periods) ruled by the same 9 planets in sequence.
+                            </p>
+
+                            <!-- Your Dasha Timeline -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-green);font-size:14px;margin-bottom:12px">Your Complete Dasha Timeline (Moon in Anuradha — Saturn ruled)</div>
+                                <div style="overflow-x:auto">
+                                    <table style="width:100%;border-collapse:collapse;font-size:12px">
+                                        <thead>
+                                            <tr style="border-bottom:2px solid var(--border-color)">
+                                                <th style="text-align:left;padding:8px;color:var(--accent-gold)">Dasha</th>
+                                                <th style="text-align:left;padding:8px;color:var(--accent-gold)">Planet</th>
+                                                <th style="text-align:left;padding:8px;color:var(--accent-gold)">Years</th>
+                                                <th style="text-align:left;padding:8px;color:var(--accent-gold)">Duration</th>
+                                                <th style="text-align:left;padding:8px;color:var(--accent-gold)">Life Theme</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">1996-2011</td><td style="padding:7px;color:#6666CC;font-weight:600">♄ Saturn</td><td style="padding:7px;color:var(--text-secondary)">Age 0-15</td><td style="padding:7px;color:var(--text-secondary)">15.4 yrs</td><td style="padding:7px;color:var(--text-secondary)">Foundation, discipline, delays, family hardship</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.1)"><td style="padding:7px;color:var(--accent-green);font-weight:600">2011-2028</td><td style="padding:7px;color:#00CC66;font-weight:600">☿ Mercury</td><td style="padding:7px;color:var(--accent-green)">Age 15-32</td><td style="padding:7px;color:var(--text-secondary)">17 yrs</td><td style="padding:7px;color:var(--accent-green);font-weight:600">Communication, intellect, business, technology ← CURRENT</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">2028-2035</td><td style="padding:7px;color:#888;font-weight:600">☋ Ketu</td><td style="padding:7px;color:var(--text-secondary)">Age 32-39</td><td style="padding:7px;color:var(--text-secondary)">7 yrs</td><td style="padding:7px;color:var(--text-secondary)">Spiritual awakening, detachment, dissolution of ego</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">2035-2055</td><td style="padding:7px;color:#FF69B4;font-weight:600">♀ Venus</td><td style="padding:7px;color:var(--text-secondary)">Age 39-59</td><td style="padding:7px;color:var(--text-secondary)">20 yrs</td><td style="padding:7px;color:var(--text-secondary)">Love, luxury, creativity, wealth, comfort</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">2055-2061</td><td style="padding:7px;color:#FFD700;font-weight:600">☉ Sun</td><td style="padding:7px;color:var(--text-secondary)">Age 59-65</td><td style="padding:7px;color:var(--text-secondary)">6 yrs</td><td style="padding:7px;color:var(--text-secondary)">Authority, recognition, leadership, government</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">2061-2071</td><td style="padding:7px;color:#C0C0C0;font-weight:600">☽ Moon</td><td style="padding:7px;color:var(--text-secondary)">Age 65-75</td><td style="padding:7px;color:var(--text-secondary)">10 yrs</td><td style="padding:7px;color:var(--text-secondary)">Emotions, public recognition, mother, nurture</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">2071-2078</td><td style="padding:7px;color:#FF4444;font-weight:600">♂ Mars</td><td style="padding:7px;color:var(--text-secondary)">Age 75-82</td><td style="padding:7px;color:var(--text-secondary)">7 yrs</td><td style="padding:7px;color:var(--text-secondary)">Energy, courage, property, final action</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:7px;color:var(--text-secondary)">2078-2096</td><td style="padding:7px;color:#CC8844;font-weight:600">☊ Rahu</td><td style="padding:7px;color:var(--text-secondary)">Age 82-100</td><td style="padding:7px;color:var(--text-secondary)">18 yrs</td><td style="padding:7px;color:var(--text-secondary)">Ambition, foreign lands, sudden changes, completion</td></tr>
+                                            <tr><td style="padding:7px;color:var(--text-secondary)">2096-2112</td><td style="padding:7px;color:#FFAA00;font-weight:600">♃ Jupiter</td><td style="padding:7px;color:var(--text-secondary)">Age 100-116</td><td style="padding:7px;color:var(--text-secondary)">16 yrs</td><td style="padding:7px;color:var(--text-secondary)">Wisdom, spirituality, teaching, moksha</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Current Dasha Detail -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-gold);font-size:14px;margin-bottom:12px">Your Current Period: Mercury Mahadasha (Final Phase)</div>
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                                        <div>
+                                            <div style="font-weight:600;color:var(--accent-green);margin-bottom:8px">Mercury's Significations for You</div>
+                                            <div style="font-size:12px;color:var(--text-secondary);line-height:1.8">
+                                                • Mercury in Aquarius 4°39' (9th house) — Innovation in philosophy<br>
+                                                • Mercury in Dhanishta Nakshatra — Wealth through timing<br>
+                                                • Mercury rules 1st and 4th houses — Self and home<br>
+                                                • <strong>Theme:</strong> Communication breakthroughs, technology ventures, business development
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px">Critical Transition: Mercury → Ketu (2028)</div>
+                                            <div style="font-size:12px;color:var(--text-secondary);line-height:1.8">
+                                                <strong>Date:</strong> Approximately mid-2028 (age 32)<br>
+                                                <strong>Theme:</strong> From material to spiritual<br>
+                                                • Mercury (material intellect) dissolves into Ketu (spiritual detachment)<br>
+                                                • Your entire value system transforms<br>
+                                                • Spiritual awakening accelerates<br>
+                                                • <strong>Preparation:</strong> Complete material foundations, develop spiritual practices, release attachments
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- How to Read Your Own Dasha -->
+                            <div>
+                                <div style="font-weight:700;color:var(--accent-blue);font-size:14px;margin-bottom:12px">How to Read Your Own Dasha</div>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px">
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:12px;margin-bottom:6px">Step 1: Find Your Moon Nakshatra</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.6">Your Moon's Nakshatra determines your starting dasha. Each Nakshatra is ruled by one of the 9 planets — that planet's dasha runs first at birth.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:2px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);font-size:12px;margin-bottom:6px">Step 2: Calculate Balance</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.6">The fraction of the Nakshatra the Moon has passed determines how much of the first dasha remains at birth. Example: Moon at 5°50' in Anuradha = ~5.5 years of Saturn dasha remaining.</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:2px solid var(--accent-blue)">
+                                        <div style="font-weight:600;color:var(--accent-blue);font-size:12px;margin-bottom:6px">Step 3: Follow the Sequence</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.6">Sequence: Saturn → Mercury → Ketu → Venus → Sun → Moon → Mars → Rahu → Jupiter. Each runs for its fixed duration (total = 120 years).</div>
+                                    </div>
+                                    <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:2px solid var(--accent-purple)">
+                                        <div style="font-weight:600;color:var(--accent-purple);font-size:12px;margin-bottom:6px">Step 4: Read Bhukti (Sub-Periods)</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.6">Within each Mahadasha, 9 Bhukti run in sequence. Mercury Mahadasha → Mercury/Venus Bhukti → Mercury/Sun Bhukti → etc. Bhukti refine the Mahadasha theme.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Hellenistic Techniques -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Section 5: Hellenistic Techniques (Ancient Western)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px;line-height:1.8">
+                                <strong>Hellenistic Astrology</strong> (150 BCE - 700 CE) is the Western tradition that shares roots with Vedic through Babylonian origins. While Vedic uses Nakshatras and Dasha systems, Hellenistic developed Whole Sign Houses, Planetary Sect, Lots (Arabic Parts), and Annual Profections — all used in MAHI's chart analysis alongside Jyotish.
+                            </p>
+                            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+                                <!-- Whole Sign Houses -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-gold)">
+                                    <div style="font-weight:600;color:var(--accent-gold);margin-bottom:8px;font-size:14px">Whole Sign Houses</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.7">
+                                        The oldest house system: each sign = one house. The Ascendant sign becomes the 1st house, the next sign the 2nd, and so on. No intercepted signs, no unequal houses. Simple, powerful, ancient — and shared with Vedic astrology's Rashi chart.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Gemini ASC → 1st house = all of Gemini, 2nd = all of Cancer, 3rd = all of Leo, etc. Sun/Mercury/Mars in Aquarius = 9th house. Saturn in Pisces = 10th house. Jupiter in Sagittarius = 7th house.
+                                    </div>
+                                </div>
+                                <!-- Planetary Sect -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-blue)">
+                                    <div style="font-weight:600;color:var(--accent-blue);margin-bottom:8px;font-size:14px">Planetary Sect (Day/Night Chart)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.7">
+                                        Each planet belongs to either the Day sect (Sun, Jupiter, Saturn) or Night sect (Moon, Venus, Mars). Planets work best when in their proper sect — diurnal planets during daytime, nocturnal at night. Sect determines ease or difficulty of expression.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Born at 14:00 (daytime) = Day chart. Sun, Jupiter, Saturn are in sect (stronger). Moon, Venus, Mars are out of sect (more challenged). But Jupiter in domicile overrides sect — still powerful. Moon debilitated + out of sect = emotional challenges.
+                                    </div>
+                                </div>
+                                <!-- Lots -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                    <div style="font-weight:600;color:var(--accent-green);margin-bottom:8px;font-size:14px">Lots (Arabic Parts / Planetary Lots)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.7">
+                                        Calculated points derived from three planetary positions (usually ASC + two planets). The Lot of Fortune = ASC + Moon - Sun (by day) or ASC + Sun - Moon (by night). The Lot of Spirit = inverse of Fortune. These lots reveal specific life domains — Fortune = body/circumstances, Spirit = soul/purpose.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Fortune at Virgo 4°55' (4th house) — fortune through home, mother, property, inner peace. Spirit at Pisces 4°55' (10th house) — soul purpose through career, public image, karma. The fortune-body lives at home; the spirit-soul lives in the world.
+                                    </div>
+                                </div>
+                                <!-- Annual Profections -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-purple)">
+                                    <div style="font-weight:600;color:var(--accent-purple);margin-bottom:8px;font-size:14px">Annual Profections (Age-Based Timing)</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.7">
+                                        A simple but powerful technique: advance one house per year from the Ascendant. The profected house's sign ruler becomes your Time Lord for the year. Every 12 years the cycle repeats. Profections highlight which life area gets activated each birthday.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Age 30 (2026) → 7th House (Sagittarius) → Time Lord = JUPITER. This year is about PARTNERSHIPS. Jupiter is exalted in your 7th — BEST possible placement. Seek collaborations, expand through others, teach or guide, travel with purpose. Age 31 → 8th House → Saturn Time Lord → transformation.
+                                    </div>
+                                </div>
+                                <!-- Domicile & Exaltation -->
+                                <div style="padding:16px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid #FFAA00">
+                                    <div style="font-weight:600;color:#FFAA00;margin-bottom:8px;font-size:14px">Domicile, Exaltation, Detriment, Fall</div>
+                                    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.7">
+                                        Each planet has: a <strong>Domicile</strong> (sign it rules — maximum strength), an <strong>Exaltation</strong> (sign where it's honored — peak expression), a <strong>Detriment</strong> (opposite domicile — weakened), and a <strong>Fall</strong> (opposite exaltation — lowest expression). These four states determine a planet's essential dignity.
+                                    </div>
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
+                                        <strong>In Your Chart:</strong> Jupiter in Sagittarius = DOMICILE (maximum strength). Saturn in Aquarius = own sign (strong). Moon in Scorpio = DEBILITATION (weakened) but Neecha Bhanga (cancellation). Venus debilitated = challenged in relationships but Ashwini heals. Sun in Aquarius = neutral.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 6: Your Chart Quick Reference -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Section 6: Your Chart Quick Reference (Kamel M. Abdelghani)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p style="color:var(--text-primary);margin-bottom:16px;line-height:1.8">
+                                <strong>Birth Data:</strong> March 6, 1996, 14:00 CET, El Bayadh, Algeria (33°41'N, 1°1'E). Sidereal zodiac (Lahiri ayanamsa 23°48'), Whole Sign Houses. This is your complete natal reference — the cosmic blueprint at the moment you entered the world.
+                            </p>
+
+                            <!-- Planetary Positions Table -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-gold);font-size:14px;margin-bottom:12px">Planetary Positions (Sidereal - Lahiri)</div>
+                                <div style="overflow-x:auto">
+                                    <table style="width:100%;border-collapse:collapse;font-size:11px">
+                                        <thead>
+                                            <tr style="border-bottom:2px solid var(--border-color)">
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Planet</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Sign</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Degree</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">House</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Nakshatra</th>
+                                                <th style="text-align:left;padding:6px;color:var(--accent-gold)">Dignity</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(255,215,0,0.05)"><td style="padding:6px;font-weight:600;color:var(--accent-gold)">ASC</td><td style="padding:6px;color:var(--text-primary)">Gemini</td><td style="padding:6px;color:var(--text-secondary)">21°31'</td><td style="padding:6px;color:var(--text-secondary)">1st</td><td style="padding:6px;color:var(--text-secondary)">Punarvasu</td><td style="padding:6px;color:var(--accent-green)">—</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#FFD700">☉ Sun</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">22°26'</td><td style="padding:6px;color:var(--text-secondary)">9th</td><td style="padding:6px;color:var(--text-secondary)">Purva Bhadra</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#C0C0C0">☽ Moon</td><td style="padding:6px;color:var(--text-primary)">Scorpio</td><td style="padding:6px;color:var(--text-secondary)">5°50'</td><td style="padding:6px;color:var(--text-secondary)">4th*</td><td style="padding:6px;color:var(--text-secondary)">Anuradha</td><td style="padding:6px;color:#CC0000">Debilitated</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#00CC66">☿ Mercury</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">4°39'</td><td style="padding:6px;color:var(--text-secondary)">9th</td><td style="padding:6px;color:var(--text-secondary)">Dhanishta</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#FF69B4">♀ Venus</td><td style="padding:6px;color:var(--text-primary)">Aries</td><td style="padding:6px;color:var(--text-secondary)">6°42'</td><td style="padding:6px;color:var(--text-secondary)">11th</td><td style="padding:6px;color:var(--text-secondary)">Ashwini</td><td style="padding:6px;color:#CC0000">Debilitated</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#FF4444">♂ Mars</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">22°01'</td><td style="padding:6px;color:var(--text-secondary)">9th</td><td style="padding:6px;color:var(--text-secondary)">Purva Bhadra</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(255,170,0,0.08)"><td style="padding:6px;font-weight:600;color:#FFAA00">♃ Jupiter</td><td style="padding:6px;color:var(--text-primary)">Sagittarius</td><td style="padding:6px;color:var(--text-secondary)">18°50'</td><td style="padding:6px;color:var(--text-secondary)">7th</td><td style="padding:6px;color:var(--text-secondary)">Purva Ashadha</td><td style="padding:6px;color:var(--accent-green);font-weight:600">Domicile ★</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#6666CC">♄ Saturn</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">2°16'</td><td style="padding:6px;color:var(--text-secondary)">9th†</td><td style="padding:6px;color:var(--text-secondary)">Purva Bhadra</td><td style="padding:6px;color:var(--accent-green)">Own Sign</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#CC8844">☊ Rahu</td><td style="padding:6px;color:var(--text-primary)">Virgo</td><td style="padding:6px;color:var(--text-secondary)">25°09'</td><td style="padding:6px;color:var(--text-secondary)">4th</td><td style="padding:6px;color:var(--text-secondary)">Chitra</td><td style="padding:6px;color:var(--text-secondary)">—</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#888">☋ Ketu</td><td style="padding:6px;color:var(--text-primary)">Pisces</td><td style="padding:6px;color:var(--text-secondary)">25°09'</td><td style="padding:6px;color:var(--text-secondary)">10th</td><td style="padding:6px;color:var(--text-secondary)">Revati</td><td style="padding:6px;color:var(--text-secondary)">—</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div style="margin-top:8px;font-size:11px;color:var(--text-secondary)">
+                                    * Moon in Scorpio = 4th house from Gemini ASC (corrected Vedic chart) | † Saturn in Aquarius = 9th house (corrected Vedic chart)
+                                </div>
+                            </div>
+
+                            <!-- Key Yogas Summary -->
+                            <div style="margin-bottom:20px">
+                                <div style="font-weight:700;color:var(--accent-green);font-size:14px;margin-bottom:12px">Your Key Yogas at a Glance</div>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);font-size:12px">Raja Yoga</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Mercury in 9th, Jupiter in 7th, Saturn in 9th — authority through wisdom</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-blue)">
+                                        <div style="font-weight:600;color:var(--accent-blue);font-size:12px">Dhana Yoga</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Venus in 11th, Jupiter in 7th — wealth through creativity and partnerships</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);font-size:12px">Gaja Kesari</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Jupiter in domicile in 7th — lasting reputation through teaching</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-purple)">
+                                        <div style="font-weight:600;color:var(--accent-purple);font-size:12px">Neecha Bhanga</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Moon debilitation cancelled by Mercury exchange — depth becomes wisdom</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);font-size:12px">Parivartana</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Moon-Mercury exchange — emotional intelligence meets communication</div>
+                                    </div>
+                                    <div style="padding:10px;background:var(--bg-tertiary);border-radius:6px;border-left:2px solid #CC0000">
+                                        <div style="font-weight:600;color:#CC0000;font-size:12px">Kemadruma</div>
+                                        <div style="font-size:11px;color:var(--text-secondary)">Moon without benefic aspects — spiritual practice required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Current Timing -->
+                            <div>
+                                <div style="font-weight:700;color:var(--accent-blue);font-size:14px;margin-bottom:12px">Current Timing Summary</div>
+                                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px">
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
+                                        <div style="font-weight:600;color:var(--accent-green);margin-bottom:6px">Mahadasha: Mercury (2011-2028)</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Theme:</strong> Communication, intellect, business, technology<br>
+                                            <strong>Your Phase:</strong> Final 2 years (2026-2028)<br>
+                                            <strong>Key:</strong> Mercury in Dhanishta = wealth through timing. Communication breakthroughs. Technology ventures. Building foundations for Ketu period.
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-gold)">
+                                        <div style="font-weight:600;color:var(--accent-gold);margin-bottom:6px">Annual Profection: Age 30 (Jupiter)</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Profected House:</strong> 7th (Sagittarius)<br>
+                                            <strong>Time Lord:</strong> Jupiter — exalted in your 7th house<br>
+                                            <strong>Theme:</strong> PARTNERSHIPS — romantic, business, collaborative<br>
+                                            <strong>Action:</strong> Seek collaborations, expand through others, teach, travel
+                                        </div>
+                                    </div>
+                                    <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-purple)">
+                                        <div style="font-weight:600;color:var(--accent-purple);margin-bottom:6px">Key Transit: Jupiter in Gemini (2026)</div>
+                                        <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
+                                            <strong>Transit House:</strong> 1st (your Ascendant)<br>
+                                            <strong>Natal Lilith:</strong> 24°01' Gemini (conjunct transit)<br>
+                                            <strong>Impact:</strong> Personal transformation, new identity emerges, communication breakthroughs, learning and teaching opportunities
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ruqya Learning Page -->
+            <section class="page" id="ruqya-learning">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">📖</div>
+                        <div>
+                            <h2>Ruqya Learning System</h2>
+                            <p>Master the 3-Stage Ruqya Methodology by Ben Halima</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="ruqya-learning-content">
+                    <!-- Content loaded by ruqya-learning.js -->
+                </div>
+            </section>
+            
+            <!-- Settings Page -->
+            <section class="page" id="settings">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">⚙</div>
+                        <div>
+                            <h2>Settings</h2>
+                            <p>Customize your experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Profile</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="profileName">Name</label>
+                                <input type="text" id="profileName" value="Kamel M. Abdelghani">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthDate">Birth Date</label>
+                                <input type="date" id="birthDate" value="1996-03-06">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthTime">Birth Time</label>
+                                <input type="time" id="birthTime" value="14:00">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthLocation">Birth Location</label>
+                                <input type="text" id="birthLocation" value="El Bayadh, Algeria">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Practice Settings</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="fajrReminder" checked>
+                                    Enable Fajr reminder (4:30 AM)
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="asrReminder" checked>
+                                    Enable ASR reminder (3:30 PM)
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="maghribReminder" checked>
+                                    Enable Maghrib reminder (7:00 PM)
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="ishaReminder" checked>
+                                    Enable Isha reminder (9:00 PM)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Theme</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="theme-options">
+                                <button class="theme-btn active" data-theme="dark">☾ Dark</button>
+                                <button class="theme-btn" data-theme="light">☀ Light</button>
+                                <button class="theme-btn" data-theme="auto">🔄 Auto</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Data Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="data-buttons">
+                                <button class="btn btn-primary" id="exportData">Export Data</button>
+                                <button class="btn btn-secondary" id="importData">Import Data</button>
+                                <button class="btn btn-danger" id="clearData">Clear Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Prayer Times Page -->
+            <section class="page" id="prayer">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🕌</div>
+                        <div>
+                            <h2>Prayer Times</h2>
+                            <p>El Bayadh, Algeria</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prayer-container">
+                    <div class="card">
+                        <div class="card-header"><h3>Today's Prayer Times</h3></div>
+                        <div class="card-body">
+                            <div class="prayer-times-grid">
+                                <div class="prayer-time-item"><span class="prayer-name">Fajr</span><span class="prayer-value" id="fajrTime">--:--</span></div>
+                                <div class="prayer-time-item"><span class="prayer-name">Sunrise</span><span class="prayer-value" id="sunriseTime">--:--</span></div>
+                                <div class="prayer-time-item"><span class="prayer-name">Dhuhr</span><span class="prayer-value" id="dhuhrTime">--:--</span></div>
+                                <div class="prayer-time-item"><span class="prayer-name">Asr</span><span class="prayer-value" id="asrTime">--:--</span></div>
+                                <div class="prayer-time-item"><span class="prayer-name">Maghrib</span><span class="prayer-value" id="maghribTime">--:--</span></div>
+                                <div class="prayer-time-item"><span class="prayer-name">Isha</span><span class="prayer-value" id="ishaTime">--:--</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Next Prayer</h3></div>
+                        <div class="card-body">
+                            <div class="next-prayer-countdown" id="nextPrayerCountdown">Calculating...</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Notification Settings</h3></div>
+                        <div class="card-body">
+                            <label><input type="checkbox" id="prayerNotify" checked> Enable notifications (5 min before)</label><br>
+                            <label><input type="checkbox" id="prayerSound" checked> Enable sound alert</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Progress Page -->
+            <section class="page" id="progress">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">📊</div>
+                        <div>
+                            <h2>Progress Analytics</h2>
+                            <p>Track your spiritual journey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="card">
+                        <div class="card-header"><h3>Weekly Activity</h3></div>
+                        <div class="card-body"><div id="weeklyChart" class="chart-container"></div></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Monthly Heatmap</h3></div>
+                        <div class="card-body"><div id="monthlyHeatmap" class="chart-container"></div></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Verse Breakdown</h3></div>
+                        <div class="card-body"><div id="versesDonut" class="chart-container"></div></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Streak Trend</h3></div>
+                        <div class="card-body"><div id="streakLine" class="chart-container"></div></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Audio Player Page -->
+            <section class="page" id="audio">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🎧</div>
+                        <div>
+                            <h2>Quran Audio</h2>
+                            <p>Ayah-by-ayah recitation with Mishary Alafasy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="audio-container">
+                    <!-- MAHI Practice Card -->
+                    <div class="card" style="grid-column:span 2;border-left:3px solid var(--accent-gold)">
+                        <div class="card-header"><h3>📿 MAHI Practice — Current Session</h3></div>
+                        <div class="card-body" id="mahi-practice-card">
+                            <!-- Loaded by QuranAudio.renderMAHISection() -->
+                        </div>
+                    </div>
+
+                    <!-- Surah Selector -->
+                    <div class="card">
+                        <div class="card-header"><h3>Select Surah</h3></div>
+                        <div class="card-body">
+                            <div class="audio-controls">
+                                <select id="qa-surah" class="audio-select"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ayah Display -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 id="qa-ref">Surah 1:1</h3>
+                            <span id="qa-ayah-count" style="font-size:12px;color:var(--text-secondary)">Ayah 1 of 7</span>
+                        </div>
+                        <div class="card-body">
+                            <div id="qa-arabic" style="font-size:28px;color:var(--accent-gold);font-family:'Amiri',serif;line-height:2;text-align:center;direction:rtl;padding:16px 0;border-bottom:1px solid var(--border-color);margin-bottom:16px">
+                                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                            </div>
+                            <div id="qa-translit" style="font-size:16px;color:var(--text-secondary);font-style:italic;text-align:center;padding:8px 0;border-bottom:1px solid var(--border-color);margin-bottom:16px">
+                                Bismillah ir-Rahman ir-Rahim
+                            </div>
+                            <div id="qa-translation" style="font-size:14px;color:var(--text-primary);text-align:center;line-height:1.6;padding:8px 0">
+                                In the name of Allah, the Entirely Merciful, the Especially Merciful.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player Controls -->
+                    <div class="card">
+                        <div class="card-header"><h3>Player</h3></div>
+                        <div class="card-body">
+                            <div class="audio-progress" id="qa-progress-bar">
+                                <div class="audio-progress-fill" id="qa-progress-fill"></div>
+                            </div>
+                            <div class="audio-time">
+                                <span id="qa-current-time">0:00</span>
+                                <span id="qa-duration">0:00</span>
+                            </div>
+                            <div class="audio-buttons">
+                                <button class="btn" id="qa-prev" title="Previous Ayah">⏮</button>
+                                <button class="btn btn-primary btn-lg" id="qa-play" title="Play/Pause">▶</button>
+                                <button class="btn" id="qa-pause" title="Pause">⏸</button>
+                                <button class="btn" id="qa-stop" title="Stop">⏹</button>
+                                <button class="btn" id="qa-next" title="Next Ayah">⏭</button>
+                                <button class="btn" id="qa-repeat" title="Repeat Mode">🔁</button>
+                            </div>
+                            <div class="audio-volume">
+                                <span>🔊</span>
+                                <input type="range" id="qa-volume" min="0" max="100" value="80">
+                            </div>
+                            <div id="qa-playing-info" style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:8px">
+                                Mishary Rashid Alafasy — Al-Fatihah
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Surahs -->
+                    <div class="card">
+                        <div class="card-header"><h3>Quick Surahs</h3></div>
+                        <div class="card-body">
+                            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                                <button class="btn btn-primary" onclick="QuranAudio.loadSurah(21,87)">21:87 — Al-Anbiya (Yunus)</button>
+                                <button class="btn btn-primary" onclick="QuranAudio.loadSurah(68,1)">68:1 — Al-Qalam</button>
+                                <button class="btn btn-primary" onclick="QuranAudio.loadSurah(55,1)">55:1-4 — Ar-Rahman</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(1,1)">1. Al-Fatihah</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(36,1)">36. Ya-Sin</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(67,1)">67. Al-Mulk</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(93,1)">93. Ad-Duhaa</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(97,1)">97. Al-Qadr</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(112,1)">112. Al-Ikhlas</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(113,1)">113. Al-Falaq</button>
+                                <button class="btn" onclick="QuranAudio.loadSurah(114,1)">114. An-Nas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Export/Reports Page -->
+            <section class="page" id="export">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">📋</div>
+                        <div>
+                            <h2>Spiritual Reports</h2>
+                            <p>Export and print your journey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="export-container">
+                    <div class="card">
+                        <div class="card-header"><h3>Weekly Summary</h3></div>
+                        <div class="card-body">
+                            <p>Recitation counts, practice days, journal entries for this week.</p>
+                            <button class="btn btn-primary" id="export-weekly">Print Weekly Report</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Monthly Report</h3></div>
+                        <div class="card-body">
+                            <p>Full monthly overview with heatmap and verse breakdown.</p>
+                            <button class="btn btn-primary" id="export-monthly">Print Monthly Report</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Full Spiritual Profile</h3></div>
+                        <div class="card-body">
+                            <p>Complete profile: natal chart, verses, practices, dashas.</p>
+                            <button class="btn btn-primary" id="export-full-profile">Print Full Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Family Charts Page -->
+            <section class="page" id="family">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">👪</div>
+                        <div>
+                            <h2>Family Charts</h2>
+                            <p>Deep synastry analysis and Quranic personality mapping</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Family Overview Card -->
+                    <div class="card family-overview-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>The Mahi Family — Quranic Blueprint</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="family-archetypes" id="familyArchetypes">
+                                <!-- Family archetypes loaded from data -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mother Chart Card -->
+                    <div class="card family-chart-card">
+                        <div class="card-header">
+                            <h3>Zohra (Mother)</h3>
+                            <span class="badge">Dec 1, 1972</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-summary" id="motherChart">
+                                <!-- Mother chart summary -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Father Chart Card -->
+                    <div class="card family-chart-card">
+                        <div class="card-header">
+                            <h3>Father</h3>
+                            <span class="badge">1961</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-summary" id="fatherChart">
+                                <!-- Father chart summary -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kheireddine Chart Card -->
+                    <div class="card family-chart-card">
+                        <div class="card-header">
+                            <h3>Kheireddine</h3>
+                            <span class="badge">Aug 24, 1994</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-summary" id="kheireddineChart">
+                                <!-- Kheireddine chart summary -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kamel Chart Card -->
+                    <div class="card family-chart-card">
+                        <div class="card-header">
+                            <h3>Kamel</h3>
+                            <span class="badge">Mar 6, 1996</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-summary" id="kamelChart">
+                                <!-- Kamel chart summary -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Synastry Connections Card -->
+                    <div class="card synastry-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Synastry Connections</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="synastry-grid" id="synastryGrid">
+                                <!-- Synastry connections -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Shared Nakshatras Card -->
+                    <div class="card nakshatra-patterns-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Family Nakshatra Patterns</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="nakshatra-patterns" id="nakshatraPatterns">
+                                <!-- Shared nakshatra patterns -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Missing Data Card -->
+                    <div class="card missing-data-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Missing Birth Data</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="missing-data-list" id="missingDataList">
+                                <!-- Missing data items -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/chart-engine.js"></script>
+    <script src="js/transit-engine.js"></script>
+    <script src="js/moon-visual.js"></script>
+    <script src="js/moon-engine.js"></script>
+    <script src="js/practice-engine.js"></script>
+    <script src="js/recitation-engine.js"></script>
+    <script src="js/audio-player.js"></script>
+    <script src="js/quran-audio.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/progress-charts.js"></script>
+    <script src="js/export-reports.js"></script>
+    <script src="js/offline.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/practice.js"></script>
+    <script src="js/verses.js"></script>
+    <script src="js/lunar.js"></script>
+    <script src="js/mystic.js"></script>
+    <script src="js/family.js"></script>
+    <script src="js/ruqya-learning.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
+        // Init new modules after DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.AudioPlayer) AudioPlayer.init();
+            if (window.QuranAudio) QuranAudio.init();
+            if (window.Notifications) Notifications.init();
+            if (window.ProgressCharts) ProgressCharts.init();
+            if (window.ExportReports) ExportReports.init();
+            if (window.OfflineManager) OfflineManager.init();
+        });
+    </script>
+</body>
+</html>

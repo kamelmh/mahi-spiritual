@@ -1,0 +1,75 @@
+{
+  "birth": {
+    "name": "Sara",
+    "role": "Oumkeltoum's sister (considered sibling to Kamel)",
+    "date": "May 24, 2004",
+    "time": "06:30 AM",
+    "location": "El Bayadh, Algeria",
+    "note": "Confirmed Version A chart. Oumkeltoum's SISTER. NOT Father's daughter. Considered sibling to Kamel — raised together."
+  },
+  "family_context": {
+    "biological_mother": "Oumkeltoum's mother (unknown)",
+    "biological_father": "Unknown",
+    "step_father": "None (not Father's daughter)",
+    "sister": "Oumkeltoum (step-mother to Kamel)",
+    "relationship_to_kamel": "Considered sibling — raised together, but NOT biologically related"
+  },
+  "tropical": {
+    "Sun": {"sign": "Gemini", "degree": 3.4, "minute": 24},
+    "Moon": {"sign": "Gemini", "degree": 7.0, "minute": 0, "note": "Estimated for 06:30 AM"},
+    "Mercury": {"sign": "Gemini", "degree": 17.0, "minute": 0},
+    "Venus": {"sign": "Aries", "degree": 24.0, "minute": 0},
+    "Mars": {"sign": "Pisces", "degree": 18.0, "minute": 0},
+    "Jupiter": {"sign": "Virgo", "degree": 11.0, "minute": 0},
+    "Saturn": {"sign": "Cancer", "degree": 18.0, "minute": 0},
+    "Uranus": {"sign": "Pisces", "degree": 5.0, "minute": 0},
+    "Neptune": {"sign": "Aquarius", "degree": 16.0, "minute": 0},
+    "Pluto": {"sign": "Sagittarius", "degree": 22.0, "minute": 0},
+    "Rahu": {"sign": "Pisces", "degree": 18.0, "minute": 0},
+    "Ketu": {"sign": "Virgo", "degree": 18.0, "minute": 0}
+  },
+  "sidereal": {
+    "Sun": {"sign": "Taurus", "degree": 9.35, "minute": 21},
+    "Moon": {"sign": "Taurus", "degree": 12.95, "minute": 0, "note": "Estimated"},
+    "Mercury": {"sign": "Taurus", "degree": 22.95, "minute": 0},
+    "Venus": {"sign": "Pisces", "degree": 0.05, "minute": 3},
+    "Mars": {"sign": "Aquarius", "degree": 23.95, "minute": 0},
+    "Jupiter": {"sign": "Leo", "degree": 16.95, "minute": 0},
+    "Saturn": {"sign": "Gemini", "degree": 23.95, "minute": 0},
+    "Uranus": {"sign": "Aquarius", "degree": 10.95, "minute": 0},
+    "Neptune": {"sign": "Capricorn", "degree": 21.95, "minute": 0},
+    "Pluto": {"sign": "Scorpio", "degree": 27.95, "minute": 0},
+    "Rahu": {"sign": "Aquarius", "degree": 23.95, "minute": 0},
+    "Ketu": {"sign": "Leo", "degree": 23.95, "minute": 0}
+  },
+  "nakshatras": {
+    "Sun": {"name": "Krittika", "lord": "Sun", "pada": 3},
+    "Moon": {"name": "Mrigashira", "lord": "Mars", "pada": 2},
+    "Mercury": {"name": "Ardra", "lord": "Rahu", "pada": 3},
+    "Venus": {"name": "Revati", "lord": "Mercury", "pada": 3},
+    "Mars": {"name": "Shatabhisha", "lord": "Rahu", "pada": 1},
+    "Jupiter": {"name": "P.Phalguni", "lord": "Venus", "pada": 4},
+    "Saturn": {"name": "Ardra", "lord": "Rahu", "pada": 4},
+    "Rahu": {"name": "Shatabhisha", "lord": "Rahu", "pada": 3},
+    "Ketu": {"name": "Magha", "lord": "Ketu", "pada": 3}
+  },
+  "yogas": [
+    {"name": "Saturn-Rahu conjunction", "planets": "Saturn + Rahu in Aquarius", "description": "Intense karmic lessons, innovation through structure"},
+    {"name": "Jupiter in Leo", "planets": "Jupiter in Leo", "description": "Natural teaching ability, creative wisdom"}
+  ],
+  "core_strengths": [
+    "Sun in Krittika — sharp intellect, discriminating mind",
+    "Moon in Mrigashira — seeking, curious, adaptable",
+    "Jupiter in Leo — creative teaching, natural authority",
+    "Mercury in Ardra — deep communicator, transformative speech"
+  ],
+  "core_challenges": [
+    "Saturn-Rahu conjunction — intense karmic burden",
+    "Mars debilitated in Aquarius — struggles with assertiveness",
+    "Ketu in Magha — past-life authority issues",
+    "NOT biologically related to Father — may feel like outsider"
+  ],
+  "soul_purpose": "Seeker (Mrigashira Moon) with sharp intellect (Krittika Sun) and creative teaching ability (Jupiter Leo). Must balance karmic burden (Saturn-Rahu) with natural gifts. As Oumkeltoum's sister, she brings independent energy to the family.",
+  "quranic_connection": "Krittika — Fire of purification. Connected to Surah Al-A'la (87) — Glorify the name of your Lord.",
+  "family_pattern": "NOT part of the 'siblings' Virgo rising pattern. Independent chart. Shares some patterns with Oumkeltoum (debilitated Mars, exalted Jupiter) as sister."
+}

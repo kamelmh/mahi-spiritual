@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quran and The Moon — Recitation Plan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0d1117;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .poster {
+            width: 900px;
+            background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: #c9a227;
+        }
+        
+        .bismillah {
+            font-family: 'Amiri', serif;
+            font-size: 36px;
+            color: #c9a227;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #c9a227;
+            margin-bottom: 20px;
+        }
+        
+        .verse {
+            font-family: 'Amiri', serif;
+            font-size: 16px;
+            color: #8b949e;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .verse-ref {
+            font-size: 11px;
+            color: #484f58;
+            margin-top: 10px;
+        }
+        
+        /* Method Badge */
+        .badge {
+            display: inline-block;
+            background: rgba(201, 162, 39, 0.1);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            color: #c9a227;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        
+        /* Grid */
+        .grid {
+            padding: 40px;
+        }
+        
+        .week-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #c9a227;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+        }
+        
+        .days-row {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .day {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 15px 12px;
+            text-align: center;
+            position: relative;
+            transition: all 0.2s;
+        }
+        
+        .day:hover {
+            border-color: rgba(201, 162, 39, 0.3);
+            background: rgba(201, 162, 39, 0.05);
+        }
+        
+        .day-num {
+            font-size: 24px;
+            font-weight: 700;
+            color: #c9a227;
+            margin-bottom: 8px;
+        }
+        
+        .day-label {
+            font-size: 9px;
+            color: #484f58;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .surah {
+            font-size: 11px;
+            font-weight: 600;
+            color: #e6edf3;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .verses {
+            font-size: 10px;
+            color: #8b949e;
+        }
+        
+        /* Special Days */
+        .day.friday {
+            border-color: rgba(34, 139, 34, 0.3);
+        }
+        
+        .day.friday .day-num {
+            color: #3fb950;
+        }
+        
+        .day.full-moon {
+            border-color: rgba(255, 215, 0, 0.4);
+            background: rgba(255, 215, 0, 0.05);
+        }
+        
+        .day.full-moon .day-num {
+            color: #ffd700;
+        }
+        
+        .day.laylatul-qadr {
+            border-color: rgba(156, 39, 176, 0.4);
+            background: rgba(156, 39, 176, 0.08);
+        }
+        
+        .day.laylatul-qadr .day-num {
+            color: #bc8cff;
+        }
+        
+        .day.khatam {
+            border-color: rgba(201, 162, 39, 0.5);
+            background: rgba(201, 162, 39, 0.08);
+        }
+        
+        .day.khatam .day-num {
+            color: #c9a227;
+        }
+        
+        /* Day 25-28 smaller grid */
+        .days-row-small {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        /* Legend */
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 25px 40px;
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: #8b949e;
+        }
+        
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid;
+        }
+        
+        .legend-dot.green { border-color: #3fb950; }
+        .legend-dot.gold { border-color: #ffd700; }
+        .legend-dot.purple { border-color: #bc8cff; }
+        .legend-dot.amber { border-color: #c9a227; }
+        
+        /* Footer */
+        .footer {
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-text {
+            font-size: 11px;
+            color: #484f58;
+            line-height: 1.8;
+        }
+        
+        .footer-brand {
+            font-size: 13px;
+            color: #c9a227;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <!-- Header -->
+        <header class="header">
+            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+            <h1 class="title">THE QURAN AND THE MOON</h1>
+            <p class="subtitle">30-Day Recitation Plan • No Chopping</p>
+            <p class="verse">
+                "Behold, it is for Us to gather all the revelations together to make them a whole, 
+                and it is for Us to cause it to be recited as it ought to be recited."
+            </p>
+            <p class="verse-ref">Quran 75:17-19</p>
+            <div class="badge">🌙 Imran N. Hosein Method</div>
+        </header>
+        
+        <!-- Grid -->
+        <div class="grid">
+            <!-- Week 1 -->
+            <div class="week-label">Week 1 — Days of Creation</div>
+            <div class="days-row">
+                <div class="day">
+                    <div class="day-num">01</div>
+                    <div class="day-label">Day 1</div>
+                    <div class="surah">al-Baqarah</div>
+                    <div class="verses">286 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">02</div>
+                    <div class="day-label">Day 2</div>
+                    <div class="surah">Al-Imran</div>
+                    <div class="verses">200 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">03</div>
+                    <div class="day-label">Day 3</div>
+                    <div class="surah">al-Nisa'</div>
+                    <div class="verses">177 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">04</div>
+                    <div class="day-label">Day 4</div>
+                    <div class="surah">al-Maidah</div>
+                    <div class="verses">120 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">05</div>
+                    <div class="day-label">Day 5</div>
+                    <div class="surah">al-An'am</div>
+                    <div class="verses">166 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">06</div>
+                    <div class="day-label">Day 6</div>
+                    <div class="surah">al-A'raf</div>
+                    <div class="verses">206 verses</div>
+                </div>
+                <div class="day friday">
+                    <div class="day-num">07</div>
+                    <div class="day-label">Jumu'ah</div>
+                    <div class="surah">al-Anfal + al-Taubah</div>
+                    <div class="verses">204 verses</div>
+                </div>
+            </div>
+            
+            <!-- Week 2 -->
+            <div class="week-label">Week 2 — Prophets of Israel</div>
+            <div class="days-row">
+                <div class="day">
+                    <div class="day-num">08</div>
+                    <div class="day-label">Day 8</div>
+                    <div class="surah">Yunus + Hud</div>
+                    <div class="verses">232 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">09</div>
+                    <div class="day-label">Day 9</div>
+                    <div class="surah">Yusuf + al-Ra'd</div>
+                    <div class="verses">154 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">10</div>
+                    <div class="day-label">Day 10</div>
+                    <div class="surah">Ibrahim + al-Hijr</div>
+                    <div class="verses">151 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">11</div>
+                    <div class="day-label">1/3 Done</div>
+                    <div class="surah">al-Nahl</div>
+                    <div class="verses">128 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">12</div>
+                    <div class="day-label">Day 12</div>
+                    <div class="surah">al-Isra + al-Kahf</div>
+                    <div class="verses">221 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">13</div>
+                    <div class="day-label">Day 13</div>
+                    <div class="surah">Maryam + Taha</div>
+                    <div class="verses">233 verses</div>
+                </div>
+                <div class="day friday">
+                    <div class="day-num">14</div>
+                    <div class="day-label">Jumu'ah</div>
+                    <div class="surah">al-Anbiya + al-Hajj</div>
+                    <div class="verses">190 verses</div>
+                </div>
+            </div>
+            
+            <!-- Week 3 -->
+            <div class="week-label">Week 3 — Full Moon to Last Third</div>
+            <div class="days-row">
+                <div class="day full-moon">
+                    <div class="day-num">15</div>
+                    <div class="day-label">Full Moon</div>
+                    <div class="surah">al-Mu'minun + al-Nur</div>
+                    <div class="verses">182 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">16</div>
+                    <div class="day-label">Day 16</div>
+                    <div class="surah">al-Furqan + al-Shu'ara</div>
+                    <div class="verses">304 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">17</div>
+                    <div class="day-label">Day 17</div>
+                    <div class="surah">al-Naml + al-Qasas + al-Ankabut</div>
+                    <div class="verses">250 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">18</div>
+                    <div class="day-label">Day 18</div>
+                    <div class="surah">al-Rum + Luqman + al-Sajdah + al-Ahzab</div>
+                    <div class="verses">197 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">19</div>
+                    <div class="day-label">Day 19</div>
+                    <div class="surah">Saba' + Fatir + Yasin + al-Saffat</div>
+                    <div class="verses">364 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">20</div>
+                    <div class="day-label">Day 20</div>
+                    <div class="surah">Sad + al-Zumar + Ghafir</div>
+                    <div class="verses">248 verses</div>
+                </div>
+                <div class="day" style="border-color: rgba(156, 39, 176, 0.3);">
+                    <div class="day-num" style="color: #bc8cff;">21</div>
+                    <div class="day-label">Last 1/3</div>
+                    <div class="surah">Fussilat + al-Shura + al-Zukhruf + al-Dukhan</div>
+                    <div class="verses">255 verses</div>
+                </div>
+            </div>
+            
+            <!-- Week 4 -->
+            <div class="week-label">Week 4 — Lailatul Qadr Nights</div>
+            <div class="days-row-small">
+                <div class="day">
+                    <div class="day-num">22</div>
+                    <div class="day-label">Day 22</div>
+                    <div class="surah">al-Jathiyah + al-Ahqaf + Muhammad + al-Fath + al-Hujurat</div>
+                    <div class="verses">157 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">23</div>
+                    <div class="day-label">Day 23</div>
+                    <div class="surah">Qaf + al-Dhariyat + al-Tur + al-Najm + al-Qamar</div>
+                    <div class="verses">271 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">24</div>
+                    <div class="day-label">Day 24</div>
+                    <div class="surah">al-Rahman + al-Waqi'ah + al-Hadid + al-Mujadilah</div>
+                    <div class="verses">225 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">25</div>
+                    <div class="day-label">Day 25</div>
+                    <div class="surah">al-Hashr through al-Qalam (10 surahs)</div>
+                    <div class="verses">187 verses</div>
+                </div>
+            </div>
+            <div class="days-row-small">
+                <div class="day">
+                    <div class="day-num">26</div>
+                    <div class="day-label">Day 26</div>
+                    <div class="surah">al-Haqqah through al-Muddaththir (6 surahs)</div>
+                    <div class="verses">228 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">27</div>
+                    <div class="day-label">Day 27</div>
+                    <div class="surah">al-Qiyamah through al-Naziat (5 surahs)</div>
+                    <div class="verses">207 verses</div>
+                </div>
+                <div class="day">
+                    <div class="day-num">28</div>
+                    <div class="day-label">Day 28</div>
+                    <div class="surah">Abasa through al-Ghashiyah (9 surahs)</div>
+                    <div class="verses">235 verses</div>
+                </div>
+                <div class="day laylatul-qadr">
+                    <div class="day-num">29</div>
+                    <div class="day-label">Lailatul Qadr</div>
+                    <div class="surah">al-Fajr through al-Qadr (9 surahs)</div>
+                    <div class="verses">137 verses</div>
+                </div>
+            </div>
+            
+            <!-- Day 30 -->
+            <div class="week-label">Day 30 — Khatam</div>
+            <div style="display: flex; justify-content: center;">
+                <div class="day khatam" style="width: 200px;">
+                    <div class="day-num">30</div>
+                    <div class="day-label">KHATAM</div>
+                    <div class="surah">al-Bayyinah through al-Nas (17 surahs)</div>
+                    <div class="verses">106 verses</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-dot green"></div>
+                <span>Jumu'ah (Friday)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot gold"></div>
+                <span>Full Moon (Day 15)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot purple"></div>
+                <span>Last 1/3 Begins</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot amber"></div>
+                <span>Lailatul Qadr / Khatam</span>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                Never chop a Surah into pieces • The Suwar are Allah's Divinely-ordained divisions<br>
+                If 29 days: Recite Day 30 on Day 29 or before restarting
+            </div>
+            <div class="footer-brand">MAHI SPIRITUAL SYSTEM</div>
+        </footer>
+    </div>
+</body>
+</html>

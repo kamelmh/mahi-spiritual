@@ -1,0 +1,32 @@
+{
+  "name": "mahi-spiritual",
+  "version": "2.0.0",
+  "description": "MAHI Spiritual System — Astrology, Quran, and Daily Practice Dashboard",
+  "scripts": {
+    "generate": "python -m backend.generate",
+    "build": "python build.py",
+    "dev": "cd frontend && python -m http.server 8000",
+    "dev:open": "cd frontend && python -m http.server 8000 --open",
+    "test": "python tests/test_backend.py",
+    "test:e2e": "node node_modules/@playwright/test/cli.js test --reporter=list",
+    "lint": "echo 'No linter configured yet'",
+    "clean": "rm -rf frontend/data/chart.json frontend/data/family.json frontend/data/dasha.json frontend/data/transits.json test-results/",
+    "deploy": "npm run build && git push origin main",
+    "predeploy": "npm run build"
+  },
+  "keywords": [
+    "astrology",
+    "vedic",
+    "spiritual",
+    "quran",
+    "dashboard"
+  ],
+  "author": "Kamel Mahi",
+  "license": "MIT",
+  "engines": {
+    "python": ">=3.10"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}

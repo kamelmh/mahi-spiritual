@@ -1,0 +1,145 @@
+{
+  "surah_nakshatra_map": [
+    {"surah": 1, "name": "Al-Fatihah", "arabic": "الفاتحة", "meaning": "The Opening", "nakshatra": "Al-Sharatain", "nakshatra_arabic": "الشراطين", "ruling_planet": "Mars", "sign": "Aries", "verses_key": "1-7", "theme": "Opening, healing, foundation", "ruqya_use": "Master ruqya verse — recite for all spiritual ailments", "count_daily": 7},
+    {"surah": 57, "name": "Al-Hadid", "arabic": "الحديد", "meaning": "The Iron", "nakshatra": "Al-Butain", "nakshatra_arabic": "البطين", "ruling_planet": "Venus", "sign": "Aries", "verses_key": "1-6", "theme": "Iron, strength, divine light", "ruqya_use": "Protection and spiritual armor", "count_daily": 1},
+    {"surah": 55, "name": "Ar-Rahman", "arabic": "الرحمن", "meaning": "The Compassionate", "nakshatra": "Al-Thurayya", "nakshatra_arabic": "الثريا", "ruling_planet": "Moon", "sign": "Taurus", "verses_key": "1-4", "theme": "Mercy, creation, teaching", "ruqya_use": "Teaching gift activation — connect to Moon in Virgo", "count_daily": 1},
+    {"surah": 59, "name": "Al-Hashr", "arabic": "الحشر", "meaning": "The Gathering", "nakshatra": "Al-Dabaran", "nakshatra_arabic": "الدبران", "ruling_planet": "Sun", "sign": "Taurus", "verses_key": "1-4", "theme": "Gathering, exile, divine names", "ruqya_use": "Expulsion of jinn from dwelling", "count_daily": 1},
+    {"surah": 55, "name": "Ar-Rahman", "arabic": "الرحمن", "meaning": "The Compassionate", "nakshatra": "Al-Haqqah", "nakshatra_arabic": "الهقعة", "ruling_planet": "Mercury", "sign": "Gemini", "verses_key": "1-78", "theme": "Divine abundance, mercy", "ruqya_use": "Overflow of blessings — Jupiter in Sagittarius connection", "count_daily": 1},
+    {"surah": 78, "name": "An-Naba", "arabic": "النبأ", "meaning": "The News", "nakshatra": "Al-Hanan", "nakshatra_arabic": "الحنان", "ruling_planet": "Venus", "sign": "Gemini", "verses_key": "1-40", "theme": "Resurrection, divine news", "ruqya_use": "Spiritual awakening and awareness", "count_daily": 1},
+    {"surah": 87, "name": "Al-A'la", "arabic": "الأعلى", "meaning": "The Most High", "nakshatra": "Al-Dhira", "nakshatra_arabic": "الذراع", "ruling_planet": "Jupiter", "sign": "Cancer", "verses_key": "1-19", "theme": "Divine glory, remembrance", "ruqya_use": "Elevation and divine connection", "count_daily": 1},
+    {"surah": 31, "name": "Luqman", "arabic": "لقمان", "meaning": "Luqman", "nakshatra": "Al-Nathrah", "nakshatra_arabic": "النثرة", "ruling_planet": "Jupiter", "sign": "Cancer", "verses_key": "1-34", "theme": "Wisdom, guidance, parenting", "ruqya_use": "Wisdom and protection from misguidance", "count_daily": 1},
+    {"surah": 113, "name": "Al-Falaq", "arabic": "الفلق", "meaning": "The Daybreak", "nakshatra": "Al-Tarf", "nakshatra_arabic": "الطرف", "ruling_planet": "Sun", "sign": "Leo", "verses_key": "1-5", "theme": "Protection from evil", "ruqya_use": "Protection from envy and dark magic — daily essential", "count_daily": 3},
+    {"surah": 85, "name": "Al-Buruj", "arabic": "البروج", "meaning": "The Mansions", "nakshatra": "Al-Ghafr", "nakshatra_arabic": "الغفر", "ruling_planet": "Saturn", "sign": "Leo", "verses_key": "1-22", "theme": "Celestial protection, truth", "ruqya_use": "Protection from persecution and dark forces", "count_daily": 1},
+    {"surah": 40, "name": "Ghafir", "arabic": "غافر", "meaning": "The Forgiver", "nakshatra": "Al-Zubrah", "nakshatra_arabic": "الميزان", "ruling_planet": "Venus", "sign": "Libra", "verses_key": "1-85", "theme": "Forgiveness, divine mercy", "ruqya_use": "Forgiveness of sins and spiritual purification", "count_daily": 1},
+    {"surah": 12, "name": "Yusuf", "arabic": "يوسف", "meaning": "Joseph", "nakshatra": "Al-Sarfah", "nakshatra_arabic": "السُّرف", "ruling_planet": "Mars", "sign": "Virgo", "verses_key": "1-111", "theme": "Beauty, patience, trials", "ruqya_use": "Patience through trials and protection", "count_daily": 1},
+    {"surah": 36, "name": "Ya-Sin", "arabic": "يس", "meaning": "Ya-Sin", "nakshatra": "Al-Awwa", "nakshatra_arabic": "العوى", "ruling_planet": "Venus", "sign": "Virgo", "verses_key": "1-83", "theme": "Heart of Quran, resurrection", "ruqya_use": "Heart of the Quran — recite for spiritual connection and death preparation", "count_daily": 1},
+    {"surah": 13, "name": "Ar-Ra'd", "arabic": "الرعد", "meaning": "The Thunder", "nakshatra": "Al-Simak", "nakshatra_arabic": "السماك", "ruling_planet": "Saturn", "sign": "Libra", "verses_key": "1-43", "theme": "Thunder, divine signs, authority", "ruqya_use": "Establishing authority and divine proof", "count_daily": 1},
+    {"surah": 110, "name": "An-Nasr", "arabic": "النصر", "meaning": "The Victory", "nakshatra": "Al-Ghafr", "nakshatra_arabic": "الغفر", "ruling_planet": "Jupiter", "sign": "Libra", "verses_key": "1-3", "theme": "Divine victory, help", "ruqya_use": "Victory and divine assistance", "count_daily": 1},
+    {"surah": 31, "name": "Luqman", "arabic": "لقمان", "meaning": "Luqman", "nakshatra": "Al-Zubana", "nakshatra_arabic": "الزبانى", "ruling_planet": "Mars", "sign": "Scorpio", "verses_key": "1-34", "theme": "Wisdom, guidance", "ruqya_use": "Wisdom and protection from dark forces", "count_daily": 1},
+    {"surah": 55, "name": "Ar-Rahman", "arabic": "الرحمن", "meaning": "The Compassionate", "nakshatra": "Al-Iklil", "nakshatra_arabic": "الإكليل", "ruling_planet": "Mercury", "sign": "Scorpio", "verses_key": "1-78", "theme": "Divine mercy, balance", "ruqya_use": "Crown of mercy — spiritual elevation", "count_daily": 1},
+    {"surah": 13, "name": "Ar-Ra'd", "arabic": "الرعد", "meaning": "The Thunder", "nakshatra": "Al-Qalb", "nakshatra_arabic": "القلب", "ruling_planet": "Mars", "sign": "Scorpio", "verses_key": "1-43", "theme": "Heart, divine authority", "ruqya_use": "Heart protection — connect to Moon Virgo (Uttara Phalguni)", "count_daily": 1},
+    {"surah": 23, "name": "Al-Mu'minun", "arabic": "المؤمنون", "meaning": "The Believers", "nakshatra": "Al-Shaulah", "nakshatra_arabic": "الshawلا", "ruling_planet": "Mars", "sign": "Sagittarius", "verses_key": "1-118", "theme": "Believers, creation, success", "ruqya_use": "Spiritual success and protection of faith", "count_daily": 1},
+    {"surah": 108, "name": "Al-Kawthar", "arabic": "الكوثر", "meaning": "The Abundance", "nakshatra": "Al-Na'aem", "nakshatra_arabic": "النعيم", "ruling_planet": "Jupiter", "sign": "Sagittarius", "verses_key": "1-3", "theme": "Divine abundance, prayer", "ruqya_use": "Overflow of divine blessings — Jupiter in Sagittarius connection", "count_daily": 100},
+    {"surah": 55, "name": "Ar-Rahman", "arabic": "الرحمن", "meaning": "The Compassionate", "nakshatra": "Al-Baldah", "nakshatra_arabic": "البلدة", "ruling_planet": "Mercury", "sign": "Capricorn", "verses_key": "1-78", "theme": "City, civilization, mercy", "ruqya_use": "Foundation of mercy in daily life", "count_daily": 1},
+    {"surah": 73, "name": "Al-Muzzammil", "arabic": "المزمل", "meaning": "The Wrapped One", "nakshatra": "Sa'd al-Dhabih", "nakshatra_arabic": "سعد الذابح", "ruling_planet": "Saturn", "sign": "Capricorn", "verses_key": "1-20", "theme": "Night prayer, wrapping, devotion", "ruqya_use": "Night protection and deep spiritual connection", "count_daily": 1},
+    {"surah": 93, "name": "Ad-Duha", "arabic": "الضحى", "meaning": "The Morning Hours", "nakshatra": "Sa'd Bula", "nakshatra_arabic": "سعد بلع", "ruling_planet": "Jupiter", "sign": "Aquarius", "verses_key": "1-11", "theme": "Morning, hope, relief", "ruqya_use": "Night protection — recite before sleep for divine mercy", "count_daily": 3},
+    {"surah": 103, "name": "Al-Asr", "arabic": "العصر", "meaning": "The Declining Day", "nakshatra": "Sa'd al-Su'ud", "nakshatra_arabic": "سعد السعود", "ruling_planet": "Jupiter", "sign": "Aquarius", "verses_key": "1-3", "theme": "Time, loss, patience", "ruqya_use": "Time management and spiritual urgency", "count_daily": 1},
+    {"surah": 30, "name": "Ar-Rum", "arabic": "الروم", "meaning": "The Romans", "nakshatra": "Sa'd al-Akhbiyah", "nakshatra_arabic": "سعد الأخبية", "ruling_planet": "Saturn", "sign": "Pisces", "verses_key": "1-60", "theme": "Victory, divine promise", "ruqya_use": "Promise of divine victory after hardship", "count_daily": 1},
+    {"surah": 75, "name": "Al-Qiyamah", "arabic": "القيامة", "meaning": "The Resurrection", "nakshatra": "Al-Fargh al-Mukdim", "nakshatra_arabic": "الفرج المقدم", "ruling_planet": "Mercury", "sign": "Pisces", "verses_key": "1-40", "theme": "Resurrection, accountability", "ruqya_use": "Spiritual rebirth and awakening", "count_daily": 1},
+    {"surah": 94, "name": "Ash-Sharh", "arabic": "الشرح", "meaning": "The Relief", "nakshatra": "Al-Fargh al-Thani", "nakshatra_arabic": "الفرج الثاني", "ruling_planet": "Moon", "sign": "Pisces", "verses_key": "1-8", "theme": "Relief, expansion, ease", "ruqya_use": "Divine relief from hardship and anxiety", "count_daily": 1},
+    {"surah": 21, "name": "Al-Anbiya", "arabic": "الأنبياء", "meaning": "The Prophets", "nakshatra": "Batn al-Hut", "nakshatra_arabic": "بطن الحوت", "ruling_planet": "Mercury", "sign": "Pisces", "verses_key": "87", "theme": "Prophets, Yunus dhikr", "ruqya_use": "MAHI'S PERSONAL VERSE — La ilaha illa Anta × 100 daily protection", "count_daily": 100}
+  ],
+  "chart_connections": {
+    "ascendant_gemini": {
+      "ruling_planet": "Mercury",
+      "key_surahs": [68, 21, 36],
+      "connection": "Mercury rules your Gemini ASC — Al-Qalam (68) for writing, Al-Anbiya (21) for prophetic protection, Ya-Sin (36) for spiritual heart"
+    },
+    "moon_virgo": {
+      "ruling_planet": "Mercury",
+      "key_surahs": [12, 36, 31],
+      "connection": "Moon in Uttara Phalguni (Virgo) — Yusuf (12) for patience, Ya-Sin (36) for heart connection, Luqman (31) for wisdom"
+    },
+    "sun_aquarius": {
+      "ruling_planet": "Saturn",
+      "key_surahs": [50, 93, 103],
+      "connection": "Sun in Purva Bhadra (Aquarius) — Qaf (50) for accountability, Ad-Duha (93) for morning hope, Al-Asr (103) for time"
+    },
+    "jupiter_sagittarius": {
+      "ruling_planet": "Jupiter",
+      "key_surahs": [108, 35, 55],
+      "connection": "Jupiter in own sign — Al-Kawthar (108) for abundance, Fatir (35) for guidance, Ar-Rahman (55) for mercy"
+    }
+  },
+  "daily_ruqya_practice": {
+    "after_fajr": [
+      {"surah": "Al-Fatihah", "count": 1, "purpose": "Opening recitation"},
+      {"surah": "Ayat al-Kursi", "count": 1, "purpose": "Divine protection"},
+      {"surah": "Al-Baqarah 285-286", "count": 1, "purpose": "Final verses of protection"}
+    ],
+    "after_duha": [
+      {"surah": "Ayat al-Kursi", "count": 1, "purpose": "Divine throne verse"},
+      {"surah": "Al-Baqarah 1-5", "count": 1, "purpose": "Opening verses"}
+    ],
+    "before_sleep": [
+      {"surah": "Ayat al-Kursi", "count": 1, "purpose": "Night protection"},
+      {"surah": "Al-Mulk", "count": 1, "purpose": "Grave protection"},
+      {"surah": "Ad-Duha", "count": 1, "purpose": "Morning hope"},
+      {"surah": "Ash-Shams", "count": 1, "purpose": "Divine light"},
+      {"surah": "Al-Ikhlas", "count": 3, "purpose": "Purification"},
+      {"surah": "Al-Falaq", "count": 3, "purpose": "Protection from evil"},
+      {"surah": "An-Nas", "count": 3, "purpose": "Protection from whispers"}
+    ],
+    "upon_waking": [
+      {"surah": "Bismillahi Rahmani Raheem", "count": 1, "purpose": "In the name of Allah"},
+      {"surah": "Al-Fatihah", "count": 1, "purpose": "Opening"},
+      {"surah": "An-Nas 1-6", "count": 1, "purpose": "Protection from Shaytan"}
+    ]
+  },
+  "surah_for_needs": {
+    "spiritual_protection": [
+      {"surah": "Al-Fatihah", "use": "Foundation of all healing"},
+      {"surah": "Ayat al-Kursi", "use": "Throne verse — repels jinn"},
+      {"surah": "Al-Baqarah", "use": "Longest protection — house blessed"},
+      {"surah": "Al-Falaq", "use": "Protection from dark magic"},
+      {"surah": "An-Nas", "use": "Protection from whispers"},
+      {"surah": "Al-Mulk", "use": "Grave protection"}
+    ],
+    "health_healing": [
+      {"surah": "Al-Fatihah", "use": "Master healer — recite 7× over water"},
+      {"surah": "Ash-Sharh 94:5-6", "use": "With hardship comes ease"},
+      {"surah": "Al-Isra 17:82", "use": "Quran as healing and mercy"}
+    ],
+    "rizq_sustenance": [
+      {"surah": "Al-Waqi'ah", "use": "Wealth protection — recite nightly"},
+      {"surah": "Ar-Rahman", "use": "Divine abundance"},
+      {"surah": "Al-Kawthar", "use": "Overflow of blessings"},
+      {"surah": "Ad-Duha", "use": "Morning relief and provision"}
+    ],
+    "protection_from_dajjal": [
+      {"surah": "Al-Kahf", "use": "Read on Friday — protection from Dajjal"},
+      {"surah": "Al-A'raf 7:130", "use": "Divine punishment of oppressors"},
+      {"surah": "Ta-Ha 20:135", "use": "Reminder that every matter has an appointed time"}
+    ],
+    "marriage Relationships": [
+      {"surah": "Ar-Rum", "use": "Love and unity"},
+      {"surah": "Yusuf", "use": "Patience in relationships"},
+      {"surah": "Luqman", "use": "Wisdom in family matters"}
+    ],
+    "spiritual_authority": [
+      {"surah": "Al-Baqarah 2:255", "use": "Ayat al-Kursi — divine authority"},
+      {"surah": "Sad 38:26", "use": "David's throne verse — establishes authority"},
+      {"surah": "Al-A'raf 7:130", "use": "Authority over oppressors"}
+    ]
+  },
+  "personal_chart_verses": {
+    "ascendant_ruler": {
+      "planet": "Mercury",
+      "surah": "Al-Qalam 68:1-4",
+      "arabic": "نُونٌ وَالْقَلَمِ وَمَا يَسْطُرُونَ",
+      "meaning": "Nun. By the pen and what they write",
+      "practice": "Recite to activate your writing legacy — Gemini ASC connects to communication"
+    },
+    "moon_nakshatra": {
+      "nakshatra": "Uttara Phalguni",
+      "surah": "Ya-Sin 36:1-83",
+      "arabic": "يس",
+      "meaning": "Heart of the Quran",
+      "practice": "Recite every morning for spiritual heart activation — Moon in Virgo connection"
+    },
+    "sun_nakshatra": {
+      "nakshatra": "Purva Bhadra",
+      "surah": "Qaf 50:1-45",
+      "arabic": "ق",
+      "meaning": "Qaf — by the glorious Quran",
+      "practice": "Recite for accountability and depth — Sun in Aquarius connection"
+    },
+    "jupiter_position": {
+      "position": "Sagittarius (own sign)",
+      "surah": "Al-Kawthar 108:1-3",
+      "arabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+      "meaning": "Indeed, We have granted you abundance",
+      "practice": "Recite × 100 before asking Allah for abundance — smallest surah, biggest reward"
+    }
+  }
+}

@@ -1,0 +1,439 @@
+/* MAHI Spiritual System - Theme Styles */
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f0f0;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --accent-blue: #2196f3;
+    --accent-gold: #b8860b;
+    --accent-green: #4caf50;
+    --accent-red: #f44336;
+    --accent-purple: #9c27b0;
+    --border-color: #e0e0e0;
+}
+
+/* Dark Theme (Default) */
+[data-theme="dark"] {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-tertiary: #1a1a25;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-blue: #4a90d9;
+    --accent-gold: #d4a574;
+    --accent-green: #4caf50;
+    --accent-red: #f44336;
+    --accent-purple: #9c27b0;
+    --border-color: #2a2a35;
+}
+
+/* Auto Theme - System Preference */
+@media (prefers-color-scheme: light) {
+    [data-theme="auto"] {
+        --bg-primary: #f5f5f5;
+        --bg-secondary: #ffffff;
+        --bg-tertiary: #f0f0f0;
+        --text-primary: #1a1a1a;
+        --text-secondary: #666666;
+        --accent-blue: #2196f3;
+        --accent-gold: #b8860b;
+        --accent-green: #4caf50;
+        --accent-red: #f44336;
+        --accent-purple: #9c27b0;
+        --border-color: #e0e0e0;
+    }
+}
+
+/* Theme Transition */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific Component Styles */
+[data-theme="light"] .sidebar {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .practice-item {
+    background-color: #f8f8f8;
+}
+
+[data-theme="light"] .stat-item {
+    border-bottom-color: #e0e0e0;
+}
+
+[data-theme="light"] .emergency-btn {
+    background-color: #f8f8f8;
+}
+
+[data-theme="light"] .emergency-btn:hover {
+    background-color: #ffebee;
+}
+
+[data-theme="light"] .verse-display {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .recitation-item {
+    background-color: #f8f8f8;
+}
+
+[data-theme="light"] .file-list {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .modal-content {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    [data-theme="dark"] {
+        --bg-primary: #000000;
+        --bg-secondary: #0a0a0a;
+        --bg-tertiary: #1a1a1a;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --border-color: #ffffff;
+    }
+    
+    [data-theme="light"] {
+        --bg-primary: #ffffff;
+        --bg-secondary: #ffffff;
+        --bg-tertiary: #f0f0f0;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+        --border-color: #000000;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .theme-toggle,
+    .emergency-buttons,
+    .recitation-controls,
+    .data-buttons {
+        display: none !important;
+    }
+    
+    .main-content {
+        padding: 0;
+        width: 100%;
+    }
+    
+    .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .verse-arabic {
+        font-size: 24px;
+        color: black;
+    }
+}
+
+/* Arabic Text Styles */
+.arabic-text {
+    font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.8;
+}
+
+/* Verse Card Styles */
+.verse-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.verse-card .verse-arabic {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: var(--accent-gold);
+}
+
+.verse-card .verse-transliteration {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.verse-card .verse-translation {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.verse-card .verse-words {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.verse-word {
+    text-align: center;
+    padding: 8px;
+    background-color: var(--bg-tertiary);
+    border-radius: 6px;
+}
+
+.verse-word .arabic {
+    font-size: 18px;
+    color: var(--accent-gold);
+    margin-bottom: 4px;
+}
+
+.verse-word .transliteration {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.verse-word .meaning {
+    font-size: 12px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Chart Visualization Styles */
+.chart-wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+}
+
+.chart-wheel::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.chart-wheel::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.planet-marker {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.planet-marker:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.house-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 1px;
+    background-color: var(--border-color);
+    transform-origin: left center;
+}
+
+/* Lunar Phase Icons */
+.lunar-phase-icon {
+    font-size: 64px;
+    line-height: 1;
+}
+
+/* Streak Animation */
+@keyframes streakGlow {
+    0% { text-shadow: 0 0 5px var(--accent-gold); }
+    50% { text-shadow: 0 0 20px var(--accent-gold); }
+    100% { text-shadow: 0 0 5px var(--accent-gold); }
+}
+
+.streak-active {
+    animation: streakGlow 2s ease-in-out infinite;
+}
+
+/* Progress Bar Animation */
+@keyframes progressFill {
+    from { width: 0; }
+}
+
+.progress-fill {
+    animation: progressFill 1s ease-out;
+}
+
+/* Button Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.btn:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation Active State */
+.nav-item.active {
+    background-color: var(--bg-tertiary);
+    border-left-color: var(--accent-gold);
+}
+
+.nav-item.active .nav-icon {
+    color: var(--accent-gold);
+}
+
+.nav-item.active .nav-text {
+    color: var(--accent-gold);
+}
+
+/* Form Input Focus States */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.2);
+}
+
+/* Scrollbar for Light Theme */
+[data-theme="light"]::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+[data-theme="light"]::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+}
+
+[data-theme="light"]::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Emergency Button Styles */
+.emergency-btn[data-emotion="anxious"]:hover {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.emergency-btn[data-emotion="overwhelmed"]:hover {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+}
+
+.emergency-btn[data-emotion="lost"]:hover {
+    background-color: #fce4ec;
+    border-color: #e91e63;
+}
+
+.emergency-btn[data-emotion="misunderstood"]:hover {
+    background-color: #f3e5f5;
+    border-color: #9c27b0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .verse-selector {
+        flex-direction: column;
+    }
+    
+    .verse-btn {
+        width: 100%;
+    }
+    
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .theme-options {
+        flex-direction: column;
+    }
+    
+    .theme-btn {
+        width: 100%;
+    }
+    
+    .data-buttons {
+        flex-direction: column;
+    }
+    
+    .data-buttons .btn {
+        width: 100%;
+    }
+}

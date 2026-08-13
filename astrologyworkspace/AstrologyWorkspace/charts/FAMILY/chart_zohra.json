@@ -1,0 +1,74 @@
+{
+  "birth": {
+    "name": "Zohra (Mother)",
+    "date": "December 1, 1972",
+    "time": "12:00 noon (estimated — birth time unknown)",
+    "location": "El Bayadh, Algeria",
+    "note": "No birth time provided. Noon chart used. Moon and Ascendant are approximate."
+  },
+  "tropical": {
+    "Sun": {"sign": "Sagittarius", "degree": 8.88, "minute": 53},
+    "Moon": {"sign": "Sagittarius", "degree": 16.13, "minute": 8},
+    "Mercury": {"sign": "Scorpio", "degree": 28.27, "minute": 16},
+    "Venus": {"sign": "Capricorn", "degree": 7.93, "minute": 56},
+    "Mars": {"sign": "Capricorn", "degree": 10.0, "minute": 0},
+    "Jupiter": {"sign": "Capricorn", "degree": 10.83, "minute": 50},
+    "Saturn": {"sign": "Gemini", "degree": 17.75, "minute": 45},
+    "Uranus": {"sign": "Libra", "degree": 21.6, "minute": 36},
+    "Neptune": {"sign": "Scorpio", "degree": 5.12, "minute": 7},
+    "Pluto": {"sign": "Libra", "degree": 4.05, "minute": 3},
+    "Rahu": {"sign": "Virgo", "degree": 0.0, "minute": 0},
+    "Ketu": {"sign": "Pisces", "degree": 0.0, "minute": 0}
+  },
+  "sidereal": {
+    "Sun": {"sign": "Scorpio", "degree": 14.82, "minute": 49},
+    "Moon": {"sign": "Scorpio", "degree": 22.07, "minute": 4},
+    "Mercury": {"sign": "Libra", "degree": 4.21, "minute": 13},
+    "Venus": {"sign": "Sagittarius", "degree": 13.87, "minute": 52},
+    "Mars": {"sign": "Sagittarius", "degree": 15.94, "minute": 0},
+    "Jupiter": {"sign": "Sagittarius", "degree": 16.77, "minute": 46},
+    "Saturn": {"sign": "Taurus", "degree": 23.69, "minute": 41},
+    "Uranus": {"sign": "Virgo", "degree": 27.54, "minute": 32},
+    "Neptune": {"sign": "Libra", "degree": 11.06, "minute": 3},
+    "Pluto": {"sign": "Virgo", "degree": 9.99, "minute": 0},
+    "Rahu": {"sign": "Leo", "degree": 5.94, "minute": 56},
+    "Ketu": {"sign": "Aquarius", "degree": 5.94, "minute": 56}
+  },
+  "houses": {
+    "note": "Estimated — noon chart with unknown birth time. Ascendant approximate.",
+    "asc": {"sign": "Pisces", "degree": 25.0, "minute": 0},
+    "mc": {"sign": "Sagittarius", "degree": 15.0, "minute": 0}
+  },
+  "nakshatras": {
+    "Sun": {"name": "Anuradha", "lord": "Saturn", "pada": 3},
+    "Moon": {"name": "Jyeshta", "lord": "Mercury", "pada": 2},
+    "Mercury": {"name": "Swati", "lord": "Rahu", "pada": 1},
+    "Venus": {"name": "Uttara Ashadha", "lord": "Sun", "pada": 2},
+    "Mars": {"name": "Uttara Ashadha", "lord": "Sun", "pada": 3},
+    "Jupiter": {"name": "Uttara Ashadha", "lord": "Sun", "pada": 3},
+    "Saturn": {"name": "Rohini", "lord": "Moon", "pada": 3},
+    "Rahu": {"name": "Magha", "lord": "Ketu", "pada": 1},
+    "Ketu": {"name": "Purva Bhadra", "lord": "Jupiter", "pada": 3}
+  },
+  "yogas": [
+    {"name": "Raj Yoga", "planets": "Jupiter + Mars in Sagittarius", "description": "Jupiter-Mars conjunction in Sagittarius — great ambition, leadership potential, authority through effort"},
+    {"name": "Gajakesari Yoga", "planets": "Jupiter + Moon", "description": "Jupiter and Moon both in Sagittarius — wisdom, prosperity, respect, longevity"},
+    {"name": "Viparita Raja Yoga", "planets": "Rahu in Leo 1st + Ketu in Aquarius 7th", "description": "Rahu rising gives unorthodox personality, Ketu in 7th gives detachment from partnerships"}
+  ],
+  "core_strengths": [
+    "Jupiter-Mars Raj Yoga — powerful drive, ambition, authority",
+    "Moon in Jyeshta — deep emotional intelligence, protective instincts, matriarchal energy",
+    "Saturn in Rohini — practical wisdom, steady accumulation of resources, grounded stability",
+    "Sun in Anuradha — devotion, transformation through service, deep loyalty",
+    "Rahu in Leo — charismatic, creative, dramatic presence"
+  ],
+  "core_challenges": [
+    "Jupiter-Mars conjunction can be overconfident or overly authoritative",
+    "Moon in Jyeshta — tendency to hold grudges, emotional intensity",
+    "Saturn in Taurus — fear of financial loss, stubbornness",
+    "No birth time — Ascendant and house positions are approximate"
+  ],
+  "soul_purpose": "Deep emotional protector (Moon Jyeshta) with strong authoritative drive (Jupiter-Mars Raj Yoga). Transformation through devotion and service (Sun Anuradha). Grounded wisdom (Saturn Rohini).",
+  "quranic_connection": "Anuradha — Devotion and service through transformation. Connected to Surah Ar-Rahman (55) — mercy and creation.",
+  "spiritual_path": "The Matriarch — protective, nurturing, but powerful. Jupiter-Mars gives her authority. Moon in Jyeshta gives emotional depth and the ability to protect the family fiercely."
+}

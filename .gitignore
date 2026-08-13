@@ -1,0 +1,26 @@
+# Python backend
+__pycache__/
+*.pyc
+.venv/
+
+# Generated data
+frontend/data/chart.json
+frontend/data/family.json
+frontend/data/dasha.json
+frontend/data/transits.json
+
+# Large files
+*.bsp
+*.pdf
+*.mp3
+*.rar
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Netlify folder
+.netlify

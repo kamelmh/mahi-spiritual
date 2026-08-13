@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#d4a574">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Dhikr Counter</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>📿</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="stats">
+        <div class="stat"><span class="stat-value" id="dailyTotal">0</span><span class="stat-label">Today</span></div>
+        <div class="stat"><span class="stat-value" id="streak">0</span><span class="stat-label">Streak</span></div>
+        <div class="stat"><span class="stat-value" id="sessionTotal">0</span><span class="stat-label">Session</span></div>
+      </div>
+    </header>
+
+    <div class="dhikr-name" id="dhikrName">SubhanAllah</div>
+
+    <div class="counter-area">
+      <div class="ring-container">
+        <svg class="progress-ring" viewBox="0 0 260 260">
+          <circle class="ring-bg" cx="130" cy="130" r="120" />
+          <circle class="ring-progress" id="ringProgress" cx="130" cy="130" r="120" />
+        </svg>
+        <button class="counter-btn" id="counterBtn" aria-label="Count">
+          <span class="count" id="count">0</span>
+          <span class="target" id="targetLabel">/ 33</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="selector-row">
+        <select id="dhikrSelect" class="select">
+          <option value="SubhanAllah">SubhanAllah</option>
+          <option value="Alhamdulillah">Alhamdulillah</option>
+          <option value="Allahu Akbar">Allahu Akbar</option>
+          <option value="La Ilaha Illallah">La Ilaha Illallah</option>
+          <option value="Astaghfirullah">Astaghfirullah</option>
+          <option value="Salawat">Salawat</option>
+        </select>
+        <select id="targetSelect" class="select select-small">
+          <option value="33">33</option>
+          <option value="99">99</option>
+          <option value="100">100</option>
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+        </select>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-icon" id="resetBtn" aria-label="Reset">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        </button>
+        <button class="btn-icon" id="soundBtn" aria-label="Toggle sound">
+          <svg id="soundOn" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <svg id="soundOff" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        </button>
+        <button class="btn-icon" id="installBtn" aria-label="Install app" style="display:none">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="completed-msg" id="completedMsg">MashaAllah! ✓</div>
+  </div>
+
+  <audio id="clickSound" preload="auto"></audio>
+  <script src="app.js"></script>
+</body>
+</html>

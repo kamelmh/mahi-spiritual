@@ -1,0 +1,137 @@
+{
+  "family": {
+    "name": "The Mahi Family",
+    "quranic_mission": "Seek truth → Protect the family → Teach wisdom → Write it down",
+    "core_verse": "Surah Al-Anbiya 21:87 — There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers."
+  },
+  "members": [
+    {
+      "name": "Zohra",
+      "role": "Mother",
+      "date": "December 1, 1972",
+      "sidereal": {
+        "Sun": {"sign": "Scorpio", "degree": 14.82, "nakshatra": "Anuradha"},
+        "Moon": {"sign": "Scorpio", "degree": 22.07, "nakshatra": "Jyeshta"},
+        "Mercury": {"sign": "Libra", "degree": 4.21, "nakshatra": "Swati"},
+        "Venus": {"sign": "Sagittarius", "degree": 13.87, "nakshatra": "Uttara Ashadha"},
+        "Mars": {"sign": "Sagittarius", "degree": 15.94, "nakshatra": "Uttara Ashadha"},
+        "Jupiter": {"sign": "Sagittarius", "degree": 16.77, "nakshatra": "Uttara Ashadha"},
+        "Saturn": {"sign": "Taurus", "degree": 23.69, "nakshatra": "Rohini"},
+        "Rahu": {"sign": "Leo", "degree": 5.94, "nakshatra": "Magha"}
+      },
+      "archetype": "The Protector",
+      "quranic_verse": "Surah Ar-Rahman 55 — He created man from clay like pottery",
+      "strengths": ["Jupiter-Mars Raj Yoga", "Moon in Jyeshta", "Saturn in Rohini", "Sun in Anuradha"],
+      "challenges": ["Emotional intensity", "Overconfidence", "Stubbornness"],
+      "note": "No birth time — Ascendant approximate"
+    },
+    {
+      "name": "Father",
+      "role": "Father",
+      "date": "1961 (year only)",
+      "sidereal": {
+        "Sun": {"sign": "Pisces", "degree": 17.38, "nakshatra": "Purva Bhadra"},
+        "Moon": {"sign": "Taurus", "degree": 21.37, "nakshatra": "Rohini"},
+        "Mercury": {"sign": "Pisces", "degree": 28.37, "nakshatra": "Revati"},
+        "Venus": {"sign": "Aries", "degree": 21.37, "nakshatra": "Bharani"},
+        "Mars": {"sign": "Taurus", "degree": 28.37, "nakshatra": "Krittika"},
+        "Jupiter": {"sign": "Pisces", "degree": 14.37, "nakshatra": "Purva Bhadra"},
+        "Saturn": {"sign": "Gemini", "degree": 1.37, "nakshatra": "Mrigashira"},
+        "Rahu": {"sign": "Leo", "degree": 24.37, "nakshatra": "Purva Phalguni"}
+      },
+      "archetype": "The Seeker",
+      "quranic_verse": "Surah Al-Kahf 18:10 — Our Lord, grant us from Yourself mercy",
+      "strengths": ["Sun-Jupiter Pisces", "Moon Rohini", "Venus Bharani"],
+      "challenges": ["Lack of practical grounding", "Communication difficulties"],
+      "note": "Only year known — positions estimated"
+    },
+    {
+      "name": "Kheireddine",
+      "role": "Son (Eldest)",
+      "date": "August 24, 1994",
+      "sidereal": {
+        "Sun": {"sign": "Virgo", "degree": 7.46, "nakshatra": "Hasta"},
+        "Moon": {"sign": "Aquarius", "degree": 0.53, "nakshatra": "Dhanishta"},
+        "Mercury": {"sign": "Leo", "degree": 27.45, "nakshatra": "P.Phalguni"},
+        "Venus": {"sign": "Leo", "degree": 12.22, "nakshatra": "P.Phalguni"},
+        "Mars": {"sign": "Aries", "degree": 25.22, "nakshatra": "Krittika"},
+        "Jupiter": {"sign": "Scorpio", "degree": 25.50, "nakshatra": "Jyeshta"},
+        "Saturn": {"sign": "Aries", "degree": 17.28, "nakshatra": "Bharani"},
+        "Rahu": {"sign": "Libra", "degree": 15.55, "nakshatra": "Swati"}
+      },
+      "archetype": "The Teacher",
+      "quranic_verse": "Surah Ar-Rahman 55:1-4 — He taught the Quran",
+      "strengths": ["Hasta Sun", "Dhanishta Moon", "Jupiter-Mars exchange"],
+      "challenges": ["Need for balance", "Tendency to overwork"]
+    },
+    {
+      "name": "Kamel",
+      "role": "Son (Younger)",
+      "date": "March 6, 1996",
+      "sidereal": {
+        "Sun": {"sign": "Aquarius", "degree": 22.26, "nakshatra": "Purva Bhadra"},
+        "Moon": {"sign": "Scorpio", "degree": 5.50, "nakshatra": "Anuradha"},
+        "Mercury": {"sign": "Aquarius", "degree": 4.39, "nakshatra": "Dhanishta"},
+        "Venus": {"sign": "Capricorn", "degree": 6.41, "nakshatra": "Uttara Ashadha"},
+        "Mars": {"sign": "Aries", "degree": 18.33, "nakshatra": "Bharani"},
+        "Jupiter": {"sign": "Scorpio", "degree": 27.20, "nakshatra": "Jyeshta"},
+        "Saturn": {"sign": "Aries", "degree": 17.35, "nakshatra": "Bharani"},
+        "Rahu": {"sign": "Virgo", "degree": 25.15, "nakshatra": "Chitra"}
+      },
+      "archetype": "The Writer",
+      "quranic_verse": "Surah Al-Qalam 68:1-4 — Nun. By the pen",
+      "strengths": ["Gemini rising", "Dhanishta Mercury", "Anuradha Moon"],
+      "challenges": ["Karmic burden", "Need for transformation"]
+    },
+    {
+      "name": "Ikram",
+      "role": "Sister",
+      "date": "Data needed",
+      "archetype": "The Healer (estimated)",
+      "quranic_verse": "Surah Ash-Sharh 94 — Indeed, with hardship comes ease",
+      "note": "Virgo rising estimated — need exact birth data"
+    },
+    {
+      "name": "Ghofran",
+      "role": "Sister",
+      "date": "Data needed",
+      "archetype": "The Forgiver (estimated)",
+      "quranic_verse": "Surah Ghafir 40 — He who forgives sins",
+      "note": "Virgo rising estimated — need exact birth data"
+    },
+    {
+      "name": "Sara",
+      "role": "Sister (Youngest)",
+      "date": "Data needed",
+      "archetype": "The Future (estimated)",
+      "quranic_verse": "Surah Maryam 19 — She said, How shall I have a son",
+      "note": "Need exact birth data"
+    }
+  ],
+  "shared_nakshatras": [
+    {"nakshatra": "Purva Bhadra", "members": ["Father (Sun)", "Kamel (Sun)", "Father (Jupiter)"], "significance": "Father-son spiritual seeker bond"},
+    {"nakshatra": "Jyeshta", "members": ["Kheireddine (Jupiter)", "Kamel (Jupiter)", "Mother (Moon)"], "significance": "Both brothers share Jupiter wisdom channel"},
+    {"nakshatra": "Dhanishta", "members": ["Kheireddine (Moon)", "Kamel (Mercury)"], "significance": "Emotional-communication bridge"},
+    {"nakshatra": "Rohini", "members": ["Mother (Saturn)", "Father (Moon)"], "significance": "Father's emotions shaped by mother's discipline"},
+    {"nakshatra": "Anuradha", "members": ["Mother (Sun)", "Kamel (Moon)"], "significance": "Kamel carries mother's devotion"},
+    {"nakshatra": "Bharani", "members": ["Father (Venus)", "Kamel (Mars, Saturn)"], "significance": "Father's love meets karmic burden"},
+    {"nakshatra": "Krittika", "members": ["Kheireddine (Mars)", "Father (Mars)"], "significance": "Father's drive lives in both"}
+  ],
+  "synastry_bonds": [
+    {"type": "parent-child", "from": "Mother", "to": "Kheireddine", "nakshatra": "Jyeshta", "description": "Mother's Moon feeds Kheireddine's Jupiter wisdom"},
+    {"type": "parent-child", "from": "Mother", "to": "Kamel", "nakshatra": "Anuradha", "description": "Mother's Sun feeds Kamel's emotional devotion"},
+    {"type": "parent-child", "from": "Father", "to": "Kamel", "nakshatra": "Purva Bhadra", "description": "Father's spiritual seeker energy passes directly to Kamel"},
+    {"type": "parent-child", "from": "Father", "to": "Kamel", "nakshatra": "Bharani", "description": "Father's love transforms Kamel's karma"},
+    {"type": "sibling", "from": "Kheireddine", "to": "Kamel", "nakshatra": "Dhanishta", "description": "Emotional-communication bridge"},
+    {"type": "sibling", "from": "Kheireddine", "to": "Kamel", "nakshatra": "Jyeshta", "description": "Shared wisdom channel"},
+    {"type": "parent-parent", "from": "Mother", "to": "Father", "nakshatra": "Rohini", "description": "Father's emotions shaped by mother's discipline"}
+  ],
+  "quranic_archetypes": [
+    {"archetype": "The Seeker", "verse": "Surah Al-Anbiya 21:87", "members": ["Father", "Kamel"], "description": "Yunus's prayer — There is no deity except You"},
+    {"archetype": "The Teacher", "verse": "Surah Ar-Rahman 55:1-4", "members": ["Kheireddine", "Kamel"], "description": "He taught the Quran, created man, taught him eloquence"},
+    {"archetype": "The Writer", "verse": "Surah Al-Qalam 68:1-4", "members": ["Kamel"], "description": "Nun. By the pen and what they inscribe"},
+    {"archetype": "The Protector", "verse": "Surah Ar-Rahman 55", "members": ["Zohra"], "description": "Protective authority through mercy"},
+    {"archetype": "The Healer", "verse": "Surah Ash-Sharh 94", "members": ["Ikram (estimated)"], "description": "Indeed, with hardship comes ease"},
+    {"archetype": "The Forgiver", "verse": "Surah Ghafir 40", "members": ["Ghofran (estimated)"], "description": "He who forgives sins"}
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "birth": {
+    "name": "Kamel M. Abdelghani",
+    "date": "1996-03-06",
+    "time": "14:00",
+    "location": "El Bayadh, Algeria",
+    "coordinates": {
+      "latitude": 33.6833,
+      "longitude": 1.0167
+    },
+    "ayanamsa": "Lahiri",
+    "houseSystem": "Whole Sign"
+  },
+  "ascendant": {
+    "sign": "Gemini",
+    "degree": 21.5167,
+    "nakshatra": "Punarvasu",
+    "ruler": "Mercury",
+    "deity": "Aditi",
+    "symbol": "Quiver of arrows",
+    "meaning": "Return of light, renewal, abundance"
+  },
+  "mc": {
+    "sign": "Pisces",
+    "degree": 6.8,
+    "nakshatra": "Revati",
+    "deity": "Pushan",
+    "symbol": "Fish",
+    "meaning": "Spiritual guidance, protection of travelers"
+  },
+  "planets": [
+    {
+      "name": "Sun",
+      "symbol": "☉",
+      "sign": "Aquarius",
+      "degree": 22.4333,
+      "house": 9,
+      "nakshatra": "Purva Bhadra",
+      "pada": 1,
+      "purpose": "Dharma",
+      "deity": "Aja Ekapada",
+      "symbol": "Front legs of funeral cot",
+      "meaning": "Spiritual fire, transformation through crisis",
+      "quranicConnection": "Surah Al-Qalam 68:1-4 - The Pen writes your destiny",
+      "strength": "Own Sign",
+      "exaltation": null
+    },
+    {
+      "name": "Moon",
+      "symbol": "☽",
+      "sign": "Scorpio",
+      "degree": 5.8333,
+      "house": 6,
+      "nakshatra": "Anuradha",
+      "pada": 2,
+      "purpose": "Dharma",
+      "deity": "Mitra",
+      "symbol": "Lotus",
+      "meaning": "Devotion, friendship, spiritual discipline",
+      "quranicConnection": "Surah Al-Anbiya 21:87 (Yunus) - Protection through surrender",
+      "strength": "Debilitated (with cancellation)",
+      "exaltation": null
+    },
+    {
+      "name": "Mercury",
+      "symbol": "☿",
+      "sign": "Aquarius",
+      "degree": 4.6556,
+      "house": 9,
+      "nakshatra": "Dhanishta",
+      "pada": 4,
+      "purpose": "Artha",
+      "deity": "Vasus",
+      "symbol": "Drum",
+      "meaning": "Wealth, timing, rhythm, cosmic order",
+      "quranicConnection": "Surah Ar-Rahman 55:1-4 - Taught eloquence",
+      "strength": "Neutral",
+      "exaltation": null
+    },
+    {
+      "name": "Venus",
+      "symbol": "♀",
+      "sign": "Aries",
+      "degree": 6.7056,
+      "house": 11,
+      "nakshatra": "Ashwini",
+      "pada": 3,
+      "purpose": "Dharma",
+      "deity": "Ashwini Kumaras",
+      "symbol": "Horse's head",
+      "meaning": "Healing, speed, new beginnings",
+      "quranicConnection": "Surah Ya-Sin 36:82 - Creative manifestation",
+      "strength": "Debilitated",
+      "exaltation": null
+    },
+    {
+      "name": "Mars",
+      "symbol": "♂",
+      "sign": "Aquarius",
+      "degree": 22.02,
+      "house": 9,
+      "nakshatra": "Purva Bhadra",
+      "pada": 1,
+      "purpose": "Dharma",
+      "deity": "Aja Ekapada",
+      "symbol": "Front legs of funeral cot",
+      "meaning": "Spiritual fire, transformation through crisis",
+      "quranicConnection": "Surah Al-Qalam 68:1-4 - The Pen writes with fire",
+      "strength": "Friendly",
+      "exaltation": null
+    },
+    {
+      "name": "Jupiter",
+      "symbol": "♃",
+      "sign": "Sagittarius",
+      "degree": 18.8333,
+      "house": 7,
+      "nakshatra": "Purva Ashadha",
+      "pada": 2,
+      "purpose": "Moksha",
+      "deity": "Apas",
+      "symbol": "Tusk of elephant",
+      "meaning": "Invincibility, cosmic waters, purification",
+      "quranicConnection": "Surah Ar-Rahman 55:1-4 - The Compassionate Teacher",
+      "strength": "Own Sign (EXALTED)",
+      "exaltation": "Cancer"
+    },
+    {
+      "name": "Saturn",
+      "symbol": "♄",
+      "sign": "Aquarius",
+      "degree": 2.2753,
+      "house": 10,
+      "nakshatra": "Dhanishta",
+      "pada": 4,
+      "purpose": "Artha",
+      "deity": "Vasus",
+      "symbol": "Drum",
+      "meaning": "Wealth, timing, rhythm, cosmic order",
+      "quranicConnection": "Surah Al-Mulk 67:1 - The Sovereignty",
+      "strength": "Own Sign",
+      "exaltation": null
+    },
+    {
+      "name": "Rahu",
+      "symbol": "☊",
+      "sign": "Virgo",
+      "degree": 25.15,
+      "house": 4,
+      "nakshatra": "Chitra",
+      "pada": 1,
+      "purpose": "Artha",
+      "deity": "Vishvakarma",
+      "symbol": "Pearl, bright jewel",
+      "meaning": "Creative genius, architectural beauty",
+      "quranicConnection": "Surah Ya-Sin 36:82 - Creative manifestation",
+      "strength": "Rahu",
+      "exaltation": null
+    },
+    {
+      "name": "Ketu",
+      "symbol": "☋",
+      "sign": "Pisces",
+      "degree": 25.15,
+      "house": 10,
+      "nakshatra": "Revati",
+      "pada": 3,
+      "purpose": "Moksha",
+      "deity": "Pushan",
+      "symbol": "Fish",
+      "meaning": "Spiritual guidance, protection of travelers",
+      "quranicConnection": "Surah Al-Anbiya 21:87 (Yunus) - The whale, dissolution into infinite",
+      "strength": "Exalted",
+      "exaltation": "Pisces"
+    }
+  ],
+  "nakshatras": [
+    {
+      "name": "Ashwini",
+      "sign": "Aries",
+      "deity": "Ashwini Kumaras",
+      "symbol": "Horse's head",
+      "meaning": "Healing, speed, new beginnings",
+      "ruler": "Ketu",
+      "count": 7
+    },
+    {
+      "name": "Bharani",
+      "sign": "Aries",
+      "deity": "Yama",
+      "symbol": "Yoni",
+      "meaning": "Transformation, death-rebirth cycle",
+      "ruler": "Venus",
+      "count": 3
+    },
+    {
+      "name": "Krittika",
+      "sign": "Taurus/Aries",
+      "deity": "Agni",
+      "symbol": "Razor",
+      "meaning": "Purification through fire",
+      "ruler": "Sun",
+      "count": 6
+    },
+    {
+      "name": "Rohini",
+      "sign": "Taurus",
+      "deity": "Brahma",
+      "symbol": "Chariot",
+      "meaning": "Creation, fertility, material abundance",
+      "ruler": "Moon",
+      "count": 15
+    },
+    {
+      "name": "Mrigashira",
+      "sign": "Taurus/Gemini",
+      "deity": "Soma",
+      "symbol": "Deer's head",
+      "meaning": "Seeking, searching, spiritual thirst",
+      "ruler": "Mars",
+      "count": 7
+    },
+    {
+      "name": "Ardra",
+      "sign": "Gemini",
+      "deity": "Rudra",
+      "symbol": "Teardrop",
+      "meaning": "Storm, destruction for renewal",
+      "ruler": "Rahu",
+      "count": 18
+    },
+    {
+      "name": "Punarvasu",
+      "sign": "Gemini/Cancer",
+      "deity": "Aditi",
+      "symbol": "Quiver of arrows",
+      "meaning": "Return of light, renewal, abundance",
+      "ruler": "Jupiter",
+      "count": 16
+    },
+    {
+      "name": "Pushya",
+      "sign": "Cancer",
+      "deity": "Brihaspati",
+      "symbol": "Lotus",
+      "meaning": "Nourishment, spiritual growth",
+      "ruler": "Saturn",
+      "count": 19
+    },
+    {
+      "name": "Ashlesha",
+      "sign": "Cancer",
+      "deity": "Naga",
+      "symbol": "Serpent",
+      "meaning": "Kundalini energy, hidden wisdom",
+      "ruler": "Mercury",
+      "count": 17
+    },
+    {
+      "name": "Magha",
+      "sign": "Leo",
+      "deity": "Pitrs",
+      "symbol": "Throne",
+      "meaning": "Ancestral power, royal authority",
+      "ruler": "Ketu",
+      "count": 12
+    },
+    {
+      "name": "Purva Phalguni",
+      "sign": "Leo",
+      "deity": "Bhaga",
+      "symbol": "Front legs of bed",
+      "meaning": "Pleasure, creativity, union",
+      "ruler": "Venus",
+      "count": 11
+    },
+    {
+      "name": "Uttara Phalguni",
+      "sign": "Leo/Virgo",
+      "deity": "Aryaman",
+      "symbol": "Bed",
+      "meaning": "Contractual bonds, friendship",
+      "ruler": "Sun",
+      "count": 3
+    },
+    {
+      "name": "Hasta",
+      "sign": "Virgo",
+      "deity": "Savitar",
+      "symbol": "Hand",
+      "meaning": "Healing, craftsmanship, skill",
+      "ruler": "Moon",
+      "count": 10
+    },
+    {
+      "name": "Chitra",
+      "sign": "Virgo/Libra",
+      "deity": "Vishvakarma",
+      "symbol": "Pearl",
+      "meaning": "Creative genius, architectural beauty",
+      "ruler": "Mars",
+      "count": 12
+    },
+    {
+      "name": "Swati",
+      "sign": "Libra",
+      "deity": "Vayu",
+      "symbol": "Coral",
+      "meaning": "Independence, movement, freedom",
+      "ruler": "Rahu",
+      "count": 7
+    },
+    {
+      "name": "Vishakha",
+      "sign": "Libra/Scorpio",
+      "deity": "Indra-Agni",
+      "symbol": "Archway",
+      "meaning": "Goal-oriented, determination",
+      "ruler": "Jupiter",
+      "count": 14
+    },
+    {
+      "name": "Anuradha",
+      "sign": "Scorpio",
+      "deity": "Mitra",
+      "symbol": "Lotus",
+      "meaning": "Devotion, friendship, spiritual discipline",
+      "ruler": "Saturn",
+      "count": 24
+    },
+    {
+      "name": "Jyeshtha",
+      "sign": "Scorpio",
+      "deity": "Indra",
+      "symbol": "Umbrella",
+      "meaning": "Seniority, authority, occult power",
+      "ruler": "Mercury",
+      "count": 17
+    },
+    {
+      "name": "Mula",
+      "sign": "Sagittarius",
+      "deity": "Nirrti",
+      "symbol": "Bundle of roots",
+      "meaning": "Root cause, investigation, destruction",
+      "ruler": "Ketu",
+      "count": 12
+    },
+    {
+      "name": "Purva Ashadha",
+      "sign": "Sagittarius",
+      "deity": "Apas",
+      "symbol": "Tusk of elephant",
+      "meaning": "Invincibility, cosmic waters, purification",
+      "ruler": "Venus",
+      "count": 15
+    },
+    {
+      "name": "Uttara Ashadha",
+      "sign": "Sagittarius/Capricorn",
+      "deity": "Vishvadevas",
+      "symbol": "Elephant tusk",
+      "meaning": "Universal victory, cosmic law",
+      "ruler": "Sun",
+      "count": 10
+    },
+    {
+      "name": "Shravana",
+      "sign": "Capricorn",
+      "deity": "Vishnu",
+      "symbol": "Ear",
+      "meaning": "Listening, learning, divine order",
+      "ruler": "Moon",
+      "count": 19
+    },
+    {
+      "name": "Dhanishta",
+      "sign": "Capricorn/Aquarius",
+      "deity": "Vasus",
+      "symbol": "Drum",
+      "meaning": "Wealth, timing, rhythm, cosmic order",
+      "ruler": "Mars",
+      "count": 17
+    },
+    {
+      "name": "Shatabhisha",
+      "sign": "Aquarius",
+      "deity": "Varuna",
+      "symbol": "Circle",
+      "meaning": "Healing, medicine, cosmic truth",
+      "ruler": "Rahu",
+      "count": 100
+    },
+    {
+      "name": "Purva Bhadra",
+      "sign": "Aquarius/Pisces",
+      "deity": "Aja Ekapada",
+      "symbol": "Front legs of funeral cot",
+      "meaning": "Spiritual fire, transformation through crisis",
+      "ruler": "Jupiter",
+      "count": 20
+    },
+    {
+      "name": "Uttara Bhadra",
+      "sign": "Pisces",
+      "deity": "Ahir Budhnya",
+      "symbol": "Sword",
+      "meaning": "Deep wisdom, serpent power",
+      "ruler": "Saturn",
+      "count": 25
+    },
+    {
+      "name": "Revati",
+      "sign": "Pisces",
+      "deity": "Pushan",
+      "symbol": "Fish",
+      "meaning": "Spiritual guidance, protection of travelers",
+      "ruler": "Mercury",
+      "count": 32
+    }
+  ],
+  "yogas": [
+    {
+      "name": "Soul-Career Identity Fusion",
+      "planets": ["Sun", "Mars"],
+      "description": "AK (Sun) and AmK (Mars) at same degree (22°) in Aquarius - Your soul purpose IS your career",
+      "quranicInsight": "Surah Al-Qalam 68:1-4 - The Pen writes your destiny through moral character",
+      "action": "Align career with soul mission immediately"
+    },
+    {
+      "name": "Master Builder Energy",
+      "degree": 22,
+      "description": "Both AK and AmK at 22° (Master Number) - You are here to BUILD something lasting",
+      "quranicInsight": "Surah Al-Mulk 67:1 - Blessed is He in whose hand is dominion",
+      "action": "Think in decades, not months"
+    },
+    {
+      "name": "Innovation Core",
+      "planets": ["Sun", "Mercury", "Mars", "Saturn"],
+      "description": "4 planets in Aquarius - Innovation is your natural state",
+      "quranicInsight": "Surah Ar-Rahman 55:1-4 - Taught humanity eloquence through innovation",
+      "action": "Embrace technology leadership role"
+    },
+    {
+      "name": "Spiritual Warrior Destiny",
+      "planets": ["Sun", "Mars"],
+      "nakshatra": "Purva Bhadra",
+      "description": "Sun + Mars in Purva Bhadra (spiritual fire) - You are a spiritual warrior",
+      "quranicInsight": "Surah Al-Anbiya 21:87 - The whale's prayer transforms through surrender",
+      "action": "Embrace spiritual warfare, don't avoid it"
+    },
+    {
+      "name": "Wealth Through Timing",
+      "planets": ["Mercury", "Saturn"],
+      "nakshatra": "Dhanishta",
+      "description": "Mercury + Saturn in Dhanishta (wealth + timing) - Wealth comes through precise timing",
+      "quranicInsight": "Surah Ya-Sin 36:82 - Kun Faya Kun - Be, and it is",
+      "action": "Master timing, be patient"
+    },
+    {
+      "name": "Healing Gift Activation",
+      "planet": "Venus",
+      "nakshatra": "Ashwini",
+      "description": "Venus in Ashwini (healing + speed) - Natural healing abilities",
+      "quranicInsight": "Surah Ash-Shuara 26:80 - When I am ill, He heals me",
+      "action": "Develop healing abilities through service"
+    },
+    {
+      "name": "Emotional Depth Transformation",
+      "planet": "Moon",
+      "nakshatra": "Anuradha",
+      "description": "Moon in Anuradha (devotion) - Emotional depth through spiritual discipline",
+      "quranicInsight": "Surah Ar-Rad 13:28 - Verily, in the remembrance of Allah do hearts find tranquility",
+      "practice": "Daily dhikr for emotional stability"
+    },
+    {
+      "name": "Creative Manifestation Power",
+      "planet": "Venus",
+      "sign": "Aries",
+      "house": 11,
+      "description": "Venus in Aries 11th house - Creative dreams manifest through action",
+      "quranicInsight": "Surah Ya-Sin 36:82 - Kun Faya Kun - Creative power",
+      "action": "Take action on creative dreams immediately"
+    }
+  ],
+  "dashas": {
+    "current": {
+      "dasha": "Mercury",
+      "start": "2011-03-06",
+      "end": "2028-03-06",
+      "lord": "Mercury",
+      "subLord": "Saturn",
+      "theme": "Communication, writing, technology, business",
+      "quranicConnection": "Surah Ar-Rahman 55:1-4 - Taught humanity eloquence",
+      "advice": "Focus on writing, teaching, communication. Build your legacy through words."
+    },
+    "next": {
+      "dasha": "Ketu",
+      "start": "2028-03-06",
+      "end": "2035-03-06",
+      "lord": "Ketu",
+      "subLord": "Jupiter",
+      "theme": "Spiritual liberation, dissolution, transcendence",
+      "quranicConnection": "Surah Al-Anbiya 21:87 - The whale's prayer",
+      "advice": "Prepare for spiritual transformation. This is your moksha period."
+    },
+    "timeline": [
+      {"period": "2011-2018", "dasha": "Saturn", "theme": "Foundation building, discipline, structure"},
+      {"period": "2018-2028", "dasha": "Mercury", "theme": "Communication, writing, technology, teaching"},
+      {"period": "2028-2035", "dasha": "Ketu", "theme": "Spiritual liberation, dissolution, transcendence"},
+      {"period": "2035-2042", "dasha": "Venus", "theme": "Creativity, relationships, beauty, healing"},
+      {"period": "2042-2049", "dasha": "Sun", "theme": "Leadership, authority, recognition"}
+    ]
+  },
+  "houses": [
+    {
+      "number": 1,
+      "sign": "Gemini",
+      "ruler": "Mercury",
+      "theme": "Communication, teaching, adaptability, intellectual curiosity",
+      "quranicConnection": "Surah Ar-Rahman 55:1-4 - Taught eloquence"
+    },
+    {
+      "number": 2,
+      "sign": "Cancer",
+      "ruler": "Moon",
+      "theme": "Family wealth, speech, values, food industry, real estate",
+      "quranicConnection": "Surah An-Nahl 16:78 - Allah brought you forth from your mothers"
+    },
+    {
+      "number": 3,
+      "sign": "Leo",
+      "ruler": "Sun",
+      "theme": "Siblings, courage, short travels, creative expression, media",
+      "quranicConnection": "Surah Ya-Sin 36:82 - Creative manifestation"
+    },
+    {
+      "number": 4,
+      "sign": "Virgo",
+      "ruler": "Mercury",
+      "theme": "Home, mother, property, inner peace, healthcare, analysis",
+      "quranicConnection": "Surah Ar-Rad 13:28 - Hearts find tranquility"
+    },
+    {
+      "number": 5,
+      "sign": "Libra",
+      "ruler": "Venus",
+      "theme": "Children, creativity, speculation, art, romance, education",
+      "quranicConnection": "Surah Ar-Rahman 55:78 - Blessed is the name of your Lord"
+    },
+    {
+      "number": 6,
+      "sign": "Scorpio",
+      "ruler": "Mars",
+      "theme": "Health, enemies, daily work, service, research, investigation",
+      "quranicConnection": "Surah Ar-Rad 13:28 - Remembrance brings peace"
+    },
+    {
+      "number": 7,
+      "sign": "Sagittarius",
+      "ruler": "Jupiter",
+      "theme": "Partnerships, marriage, business relationships, teaching, philosophy",
+      "quranicConnection": "Surah Ar-Rahman 55:1-4 - The Compassionate Teacher"
+    },
+    {
+      "number": 8,
+      "sign": "Capricorn",
+      "ruler": "Saturn",
+      "theme": "Transformation, shared resources, inheritance, sexuality, mysticism",
+      "quranicConnection": "Surah Al-Qadr 97:1-5 - The Night of Power"
+    },
+    {
+      "number": 9,
+      "sign": "Aquarius",
+      "ruler": "Saturn",
+      "theme": "Philosophy, higher education, long-distance travel, innovation, technology",
+      "quranicConnection": "Surah Al-Qalam 68:1-4 - The Pen writes destiny"
+    },
+    {
+      "number": 10,
+      "sign": "Pisces",
+      "ruler": "Jupiter",
+      "theme": "Career, public image, authority, spirituality, healing, creativity",
+      "quranicConnection": "Surah Al-Anbiya 21:87 - The whale's prayer"
+    },
+    {
+      "number": 11,
+      "sign": "Aries",
+      "ruler": "Mars",
+      "theme": "Friends, groups, hopes, dreams, humanitarian service, innovation",
+      "quranicConnection": "Surah Ya-Sin 36:82 - Kun Faya Kun"
+    },
+    {
+      "number": 12,
+      "sign": "Taurus",
+      "ruler": "Venus",
+      "theme": "Subconscious, hidden enemies, isolation, spirituality, retreat, healing",
+      "quranicConnection": "Surah Ad-Duhaa 93:1-5 - The Morning Hours"
+    }
+  ],
+  "soulBlueprint": {
+    "sunSign": "Aquarius",
+    "moonSign": "Scorpio",
+    "risingSign": "Gemini",
+    "northNode": "Virgo",
+    "southNode": "Pisces",
+    "soulPurpose": "To bridge innovation with spirituality, teaching complex truths through writing and communication",
+    "pastLifeGifts": "Spiritual wisdom, dissolution of ego, connection to infinite (Ketu in Pisces)",
+    "currentLifeChallenges": "Grounding spiritual insights into practical service (Rahu in Virgo)",
+    "karmicDebts": "Over-idealism, escapism, emotional intensity (Moon debilitated in Scorpio)",
+    "spiritualGifts": "Healing (Ashwini Venus), Teaching (Ar-Rahman), Writing (Al-Qalam), Protection (Yunus dhikr)",
+    "mysticArchetype": "The Mystic Teacher - One who has journeyed through darkness and emerged with wisdom to share"
+  },
+  "powerPractice": {
+    "coreVerses": [
+      {"id": "21-87", "purpose": "Protection through surrender"},
+      {"id": "55-1-4", "purpose": "Teaching gift activation"},
+      {"id": "68-1-4", "purpose": "Writing legacy creation"}
+    ],
+    "divineNames": [
+      {"name": "Ya Hafiz", "purpose": "Daily protection"},
+      {"name": "Ya Rahman", "purpose": "Daily expansion"},
+      {"name": "Ya Alim", "purpose": "Daily wisdom"}
+    ],
+    "dailyPractice": {
+      "fajr": "Yunus dhikr × 100",
+      "dhuhr": "Surah Ash-Shams 91 × 1",
+      "asr": "Write one page (Al-Qalam)",
+      "maghrib": "Surah Ar-Rahman 55 × 1",
+      "isha": "Journal one insight"
+    }
+  }
+}

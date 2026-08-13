@@ -1,0 +1,73 @@
+{
+  "birth": {
+    "name": "Father (Aries Type)",
+    "date": "March 31, 1961 (confirmed)",
+    "time": "Unknown — noon chart used",
+    "location": "El Bayadh, Algeria",
+    "note": "Birth date confirmed as March 31, 1961. Sun at Pisces 17°38' (sidereal) = tropical 10°57' Aries. Birth time unknown — house placements approximate."
+  },
+  "tropical": {
+    "Sun": {"sign": "Aries", "degree": 11.01, "minute": 1, "note": "Estimated from April 1961 ephemeris"},
+    "Moon": {"sign": "Gemini", "degree": 15.0, "minute": 0, "note": "Estimated — Moon changes signs every 2.5 days"},
+    "Mercury": {"sign": "Pisces", "degree": 22.0, "minute": 0, "note": "Estimated — Mercury retrograde in Pisces in April 1961"},
+    "Venus": {"sign": "Taurus", "degree": 15.0, "minute": 0, "note": "Estimated — Venus in Taurus early April 1961"},
+    "Mars": {"sign": "Taurus", "degree": 22.0, "minute": 0, "note": "Estimated — Mars in Taurus April 1961"},
+    "Jupiter": {"sign": "Pisces", "degree": 8.0, "minute": 0, "note": "Estimated — Jupiter entered Pisces March 1961"},
+    "Saturn": {"sign": "Gemini", "degree": 25.0, "minute": 0, "note": "Saturn in Gemini all of 1961"},
+    "Uranus": {"sign": "Virgo", "degree": 28.0, "minute": 0, "note": "Estimated — Uranus in Virgo 1956-1962"},
+    "Neptune": {"sign": "Scorpio", "degree": 12.0, "minute": 0, "note": "Estimated — Neptune in Scorpio 1957-1963"},
+    "Pluto": {"sign": "Virgo", "degree": 15.0, "minute": 0, "note": "Estimated — Pluto in Virgo 1957-1972"},
+    "Rahu": {"sign": "Virgo", "degree": 18.0, "minute": 0, "note": "Estimated — Rahu transit 1960-1962"},
+    "Ketu": {"sign": "Pisces", "degree": 18.0, "minute": 0, "note": "Opposite Rahu"}
+  },
+  "sidereal": {
+    "Sun": {"sign": "Pisces", "degree": 17.38, "minute": 38, "note": "Confirmed — Sun at 17°38' Pisces (sidereal) = tropical 10°57' Aries"},
+    "Moon": {"sign": "Taurus", "degree": 21.37, "minute": 0},
+    "Mercury": {"sign": "Pisces", "degree": 28.37, "minute": 0},
+    "Venus": {"sign": "Aries", "degree": 21.37, "minute": 0},
+    "Mars": {"sign": "Taurus", "degree": 28.37, "minute": 0},
+    "Jupiter": {"sign": "Pisces", "degree": 14.37, "minute": 0},
+    "Saturn": {"sign": "Gemini", "degree": 1.37, "minute": 0},
+    "Uranus": {"sign": "Leo", "degree": 4.37, "minute": 0},
+    "Neptune": {"sign": "Libra", "degree": 18.37, "minute": 0},
+    "Pluto": {"sign": "Leo", "degree": 21.37, "minute": 0},
+    "Rahu": {"sign": "Leo", "degree": 24.37, "minute": 0},
+    "Ketu": {"sign": "Aquarius", "degree": 24.37, "minute": 0}
+  },
+  "houses": {
+    "note": "Unknown birth time. Noon chart used. House positions not calculated.",
+    "asc": "Unknown",
+    "mc": "Unknown"
+  },
+  "nakshatras": {
+    "Sun": {"name": "Purva Bhadra", "lord": "Jupiter", "pada": 4},
+    "Moon": {"name": "Rohini", "lord": "Moon", "pada": 1},
+    "Mercury": {"name": "Revati", "lord": "Mercury", "pada": 3},
+    "Venus": {"name": "Bharani", "lord": "Venus", "pada": 3},
+    "Mars": {"name": "Krittika", "lord": "Sun", "pada": 3},
+    "Jupiter": {"name": "Purva Bhadra", "lord": "Jupiter", "pada": 1},
+    "Saturn": {"name": "Mrigashira", "lord": "Mars", "pada": 1},
+    "Rahu": {"name": "Purva Phalguni", "lord": "Venus", "pada": 2},
+    "Ketu": {"name": "Purva Bhadra", "lord": "Jupiter", "pada": 2}
+  },
+  "yogas": [
+    {"name": "Sun-Jupiter Exchange", "planets": "Sun in Pisces + Jupiter in Pisces", "description": "Mutual aspect/exchange — wisdom, teaching ability, spiritual leadership"},
+    {"name": "Saturn in Gemini", "planets": "Saturn in 3rd house (Gemini)", "description": "Disciplined communicator, structured thinker, methodical approach to learning"}
+  ],
+  "core_strengths": [
+    "Sun in Pisces — intuitive, compassionate, spiritual depth",
+    "Jupiter in Pisces — natural teacher, wisdom, generosity",
+    "Moon in Rohini — nurturing, artistic sensibility, grounded emotions",
+    "Venus in Aries — passionate, direct in love, adventurous in relationships",
+    "Mars in Taurus — steady energy, determined, practical action"
+  ],
+  "core_challenges": [
+    "Sun in Pisces — tendency to be vague or overly idealistic",
+    "Saturn in Gemini — communication difficulties, overly analytical",
+    "No birth time — chart is highly approximate",
+    "Only year known — month and day unknown"
+  ],
+  "soul_purpose": "Spiritual teacher (Sun-Jupiter Pisces) with practical grounding (Moon Rohini, Mars Taurus). Communication challenges overcome through disciplined effort (Saturn Gemini).",
+  "quranic_connection": "Purva Bhadra — Spiritual seeking, transformation, and teaching. Connected to Surah Al-Anbiya (21) — stories of the prophets, including Yunus.",
+  "spiritual_path": "The Seeker — naturally drawn to spiritual truth, teaching, and wisdom. Jupiter in Pisces amplifies spiritual gifts. Saturn in Gemini gives structure to spiritual knowledge."
+}
