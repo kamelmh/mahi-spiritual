@@ -76,19 +76,19 @@ A 60° gap separates the two positions. Decision required from the owner before 
 - **Alerts for other projects:** None
 
 ### 2026-08-15 — Family + Drive-Calendar Version-B Completion (engine-verified, both brothers)
-- **Engine ground truth:** Kamel b. 1996-03-06 14:00 Algiers: Lagna Cancer 3°05', Moon Virgo 6°23' Uttara Phalguni, **Ketu Pisces 25°17' Revati**; Dasha = Rahu Maha 2014-2032 (Venus bhukti current), Jupiter Maha 2032-10-22, **Ketu Maha 2084-2091**. Kheireddine b. 1992-10-04 18:00: Moon Capricorn Uttara Ashadha → **Rahu Maha 2013-11→2031-11** (Ketu Maha ~2083-11). → His "Ketu 2028" claim is also false (he is in Rahu). This *confirms* the repo's "Ketu in Pisces" natal readings are valid (kept + annotated) and *invalidates* every "both enter Ketu 2028" family-doc claim.
-- **Files:** reframed all "Ketu Mahadasha 2028/2028-2035/Oct 2028/Mercury-Ketu 2028" claims in `docs/family/KHEIREDDINE_CHART.md` + 5 `FAMILY/*.md` → Jupiter transition (2031-2032) / Ketu 2084 / ~2083. Corrected Drive `13_Spiritual/06_TRANSIT_TIMING_CALENDAR.md` natal block (ASC Gemini→Cancer 3°05', Moon Hasta→UP, Ketu Aquarius-Dhanishta-8th → Pisces-Revati) + reconciliation banner.
-- **Deliberately left (chart-level, pending owner):** the Drive `06_...` *transit-event house numbers* still use the prior Gemini-ASC frame; re-deriving them from Cancer Lagna requires `backend/transits.py` re-generation — NOT hand-edited (would risk fabrication).
-- **Verification:** `python tests/test_backend.py` -> All tests passed; `npm run build` -> BUILD SUCCEEDED; final grep CLEAN (no Version-A Ketu-2028 dasha facts in `astrologyworkspace/`, `docs/family/`, or Drive `06_...`).
+- **Engine ground truth:** Kamel b. 1996-03-06 14:00 Algiers: **Lagna Gemini 21°31' (Whole Sign, canonical per KAMEL_WHOLE_SIGN_CORRECTED.md)**; Moon Virgo 6°23' Uttara Phalguni, **Ketu Pisces 25°17' Revati -> 10th house (Gemini Lagna)**; Dasha = Rahu Maha 2014-2032 (Venus bhukti current), Jupiter Maha 2032-10-22, **Ketu Maha 2084-2091**. NOTE: engine `calculate_houses` only emits a degenerate equal-house fallback (all 12 cusps at 3°05') because `pyswisseph` is not installed - its "Cancer Lagna" is a non-authoritative fallback, NOT the Lagna. Kheireddine b. 1992-10-04 18:00: Moon Capricorn Uttara Ashadha -> **Rahu Maha 2013-11->2031-11** (Ketu Maha ~2083-11). -> His "Ketu 2028" claim is false (he is in Rahu). This *confirms* the repo's "Ketu in Pisces" natal readings are valid (kept + annotated) and *invalidates* every "both enter Ketu 2028" family-doc claim.
+- **Files:** reframed all "Ketu Mahadasha 2028/2028-2035/Oct 2028/Mercury-Ketu 2028" claims in `docs/family/KHEIREDDINE_CHART.md` + 5 `FAMILY/*.md` -> Jupiter transition (2031-2032) / Ketu 2084 / ~2083. Corrected Drive `13_Spiritual/06_..._TIMING_CALENDAR.md` natal block (Moon Hasta->UP, Ketu Aquarius-Dhanishta-8th -> Pisces 25d17m Revati, ASC Gemini 21d31m Whole Sign) + banner. Transit-house numbers were already Gemini-Lagna-based (correct), left intact.
+- **House-number resolution:** Lagna = Gemini 21d31m (Whole Sign); Ketu (Pisces) = 10th house - repo's original value confirmed. Engine `calculate_houses` degenerate-cusp bug (pyswisseph missing) filed as a separate engine issue.
+- **Verification:** `python tests/test_backend.py` -> All tests passed; `npm run build` -> BUILD SUCCEEDED; final grep CLEAN.
 - **Impact / breaking:** Narrative + Drive-calendar only; no engine/dashboard code change.
-- **Alerts for other projects:** Spiritual-teaching platform — re-derive Drive `06_...` transit house-numbers from Cancer Lagna before publishing.
+- **Alerts for other projects:** Spiritual-teaching platform - Drive `06_...` transit houses are correct under Whole-Sign Gemini Lagna (no action); surface the engine `calculate_houses` degenerate-cusp bug separately.
 
 ## Pending Work
 - [x] Reconcile family synastry Ketu-2028 language — DONE (both brothers; version-B reframed)
-- [x] Resolve Drive `13_Spiritual/06_...` transit-calendar natal block — DONE (corrected to engine Cancer/Moon-UP/Ketu-Revati + banner)
+- [x] Resolve Drive `13_Spiritual/06_...` transit-calendar natal block — DONE (ASC Gemini restored, Moon->UP, Ketu->Pisces Revati 10th + banner)
 - [x] Kamel natal positions + dasha timing reconciled to Version B — DONE
-- [X] Re-derive Drive `06_...` transit *house numbers* — BLOCKED (engine `calculate_houses` emits degenerate equal-house cusps; `transits.py` has no transit→house fn) — not fabricated
-- [ ] Reconcile Kame Ketu house number (9th w/ Cancer Lagna vs 10th w/ Gemini Lagna vs repo "10th") — blocked on house-system fix; engine-honesty note added at `DEEP_ANALYSIS_ALL_TECHNIQUES.md:163`
+- [X] Ketu house number resolved — Ketu = 10th house (Whole-Sign Gemini Lagna, per KAMEL_WHOLE_SIGN_CORRECTED.md); engine calculate_houses degenerate-cusp bug filed
+- [ ] Fix engine `calculate_houses` to use a real house system (install pyswisseph or skyfield-based ASC/cusps) — engine issue
 - [ ] Family astrology data collection
 - [ ] Web dashboard live deployment
 
