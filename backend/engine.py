@@ -574,7 +574,7 @@ def calculate_full_chart(name: str, year: int, month: int, day: int, hour: int =
 
 FAMILY_MEMBERS = {
     "Kamel": {
-        "birth": {"year": 1996, "month": 3, "day": 6, "hour": 12, "minute": 47},
+        "birth": {"year": 1996, "month": 3, "day": 6, "hour": 14, "minute": 0},
         "location": {"latitude": 33.06, "longitude": 1.00},
         "role": "Son (Subject)",
     },

@@ -239,7 +239,7 @@ All planets remain in same signs — natal chart IS ancestral pattern.
 ### 17. VIMSHOTTARI DASHA
 
 **Current:** Mercury Mahadasha (2011-2028)
-**Upcoming:** Ketu Mahadasha (2028-2035)
+**Upcoming (Version B):** Jupiter Mahadasha for both — Kamel 2032-10-22->2048, Kheireddine 2031-11->2047-11; Ketu Mahadasha 2084-10-22 (Kamel) / ~2083-11 (Kheireddine).
 
 ---
 
@@ -947,7 +947,7 @@ All planets remain in same signs — natal chart IS ancestral pattern.
 
 - Kamel: 8th house (Saturn) — transformation
 - Kheireddine: 9th house (Saturn) — philosophy
-- Kamel enters Ketu Dasha (2028) — spiritual awakening
+- Kamel: Jupiter Mahadasha begins 2032-10-22 — expansion/teaching (Version B; Ketu Mahadasha 2084-2091, spiritual completion).
 
 ### 2028-2030 — The Expansion
 

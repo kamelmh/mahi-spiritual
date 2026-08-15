@@ -37,6 +37,8 @@
 
 ## KETU vs RAHU: THE DYNAMIC
 
+> **Note (Version B, reconciled 2026-08-14):** The Ketu-in-Pisces readings below describe the natal/transiting **Ketu planet** (Ketu in Pisces 10th/12th) — a valid natal/transit fact under both Versions. They are NOT Ketu **Mahadasha** (which is 2084-2091, not 2028). The dasha timing was reconciled to Version B separately.
+
 ### What Ketu in Pisces Means
 
 **Ketu** = South Node = Past-life mastery
@@ -301,11 +303,14 @@
 
 ### Current Dasha Period
 
-**Mercury Mahadasha (2011-2028)**:
-- Mercury rules your ASC (Gemini) and 4th house (Virgo)
+**Current Mahadasha: Rahu** (2014-10-23 -> 2032-10-22)
+**Current Antardasha (bhukti): Venus** (2026-05-12 -> 2029-05-12)
+
+- Mercury rules your ASC (Gemini) and 4th house (Virgo) (natal fact, still active)
 - This period is about **COMMUNICATION and ANALYSIS**
 - But Mercury is in **9th House** (Philosophy, teaching)
 - So communication serves **PHILOSOPHY**, not the other way around
+- *(now via Venus bhukti of Rahu: values-driven, tech-forward communication)*
 
 **Advice**: Use Mercury's communication to SHARE your depth, not chase new things
 
@@ -322,14 +327,14 @@
 
 ---
 
-### Ketu Mahadasha (2028-2035)
+### Jupiter Mahadasha (2032-10-22 -> 2048-10-22)
 
-**Ketu period begins mid-2028**:
-- Ketu rules your **12th house** (D9) and **10th house** (D1)
-- This period is about **SPIRITUAL TRANSCENDENCE**
-- You'll be FORCED to embrace your Ketu gifts
+**Jupiter period begins 2032-10-22** (Version B):
+- Jupiter rules your **9th house** (D1) and 9th/12th (D9) — expansion, teaching, higher learning
+- This period is about **WISDOM EXPANSION** and **GLOBAL TEACHING**
+- *(Ketu Mahadasha is 2084-2091 — Version A misplaced it to 2028)*
 
-**Advice**: Start embracing Ketu NOW (2026-2028) before the Ketu period begins
+**Advice**: Embrace Jupiter's teaching/wisdom expansion beginning 2032; Ketu's 12th/10th spiritual-transcendence work is a future (2084+) consideration, not 2028.
 
 ---
 

@@ -295,7 +295,7 @@
 1. **Complete teaching cycle** - 12th house completion
 2. **Reflect on progress** - Taurus stability
 3. **Integrate lessons** - spirituality
-4. **Prepare for next chapter** - Ketu dasha begins
+4. **Prepare for next chapter** - Jupiter Mahadasha begins (2032-10-22) *(Version B: Ketu Mahadasha is 2084-2091, not 2028 — reconciled 2026-08-14)*
 
 ---
 

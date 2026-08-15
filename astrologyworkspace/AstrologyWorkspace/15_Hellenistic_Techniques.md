@@ -310,21 +310,21 @@
 
 ## 6. TIME LORD PERIODS (Vimshottari Dasha)
 
-### Your Current Period
+### Your Current Period (Version B - reconciled 2026-08-14)
 
-**Mercury Mahadasha**: 2011-2028 (17 years)
-**Mercury Antardasha**: Current sub-period
+**Current Mahadasha: Rahu** (2014-10-23 -> 2032-10-22)
+**Current Antardasha (bhukti): Venus** (2026-05-12 -> 2029-05-12) *[benefic sub-period of Rahu]*
 
 **What This Means**:
-- Mercury rules your ASCENDANT (Gemini) and 4th house (Virgo)
-- This is a period of COMMUNICATION, WRITING, and HOME focus
+- Mercury rules your ASCENDANT (Gemini) and 4th house (Virgo) — natal fact, still active regardless of dasha
+- This is a period of COMMUNICATION, WRITING, and HOME focus *(now channeled through Venus bhukti of Rahu: values-driven, tech-forward)*
 - Mercury in Aquarius 9th house = writing/communication about PHILOSOPHY
 
 **Upcoming Period**:
-**Ketu Mahadasha**: Begins mid-2028 (7 years)
-- Ketu in Pisces 10th house = SPIRITUAL career focus
-- This is a period of DETACHMENT and TRANSCENDENCE
-- Career shifts toward HEALING, CREATIVITY, or SPIRITUALITY
+**Next Mahadasha: Jupiter** (2032-10-22 -> 2048-10-22) *[Version B; NOT Ketu 2028]*
+- Ketu Mahadasha is 2084-2091 (Version A misplaced it to 2028)
+- Jupiter in 10th house = EXPANSION of career through teaching, publishing, foreign ventures
+- Career shifts toward WISDOM AUTHORITY and GLOBAL TEACHING (Jupiter theme); Ketu's SPIRITUAL detachment / HEALING / CREATIVITY emphasis is a 2084+ consideration, not 2028.
 
 ---
 

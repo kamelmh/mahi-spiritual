@@ -13,7 +13,13 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-from .engine import calculate_full_chart, calculate_family_charts, FAMILY_MEMBERS
+from .engine import (
+    calculate_full_chart,
+    calculate_planetary_positions,
+    calculate_family_charts,
+    get_nakshatra,
+    FAMILY_MEMBERS,
+)
 from .dasha import calculate_dasha_sequence, get_current_dasha
 from .transits import analyze_family_transits
 
@@ -40,7 +46,13 @@ def make_json_serializable(obj):
 def generate_chart_json():
     """Generate Kamel's natal chart JSON."""
     print("Generating chart.json...")
-    kamel = calculate_full_chart("Kamel", 1996, 3, 6, 12, 47, 33.06, 1.00)
+    kb = FAMILY_MEMBERS["Kamel"]["birth"]
+    loc = FAMILY_MEMBERS["Kamel"]["location"]
+    kamel = calculate_full_chart(
+        "Kamel",
+        kb["year"], kb["month"], kb["day"], kb["hour"], kb["minute"],
+        loc["latitude"], loc["longitude"],
+    )
     kamel["role"] = FAMILY_MEMBERS["Kamel"]["role"]
     return make_json_serializable(kamel)
 
@@ -53,14 +65,28 @@ def generate_family_json():
 
 
 def generate_dasha_json():
-    """Generate Kamel's dasha timeline JSON."""
-    print("Generating dasha.json...")
-    moon_nakshatra = "Hasta"
-    moon_degree = 15.67
-    birth_date = datetime(1996, 3, 6, 14, 0)
+    """Generate Kamel's dasha timeline JSON.
 
-    dashas = calculate_dasha_sequence(moon_nakshatra, moon_degree, birth_date)
-    current = get_current_dasha(birth_date, moon_nakshatra, moon_degree)
+    The Moon nakshatra + degree-in-nakshatra are derived LIVE from the
+    sidereal engine (skyfield + de421.bsp, Lahiri ayanamsa) rather than
+    hardcoded, so the dasha sequence stays consistent with chart.json.
+    """
+    print("Generating dasha.json...")
+    kb = FAMILY_MEMBERS["Kamel"]["birth"]
+    positions = calculate_planetary_positions(
+        kb["year"], kb["month"], kb["day"], kb["hour"], kb["minute"]
+    )
+    moon = positions["Moon"]
+    moon_nakshatra = moon["nakshatra"]
+    moon_degree_in_nakshatra = round(
+        get_nakshatra(moon["sidereal"])["degree_in_nakshatra"], 2
+    )
+    birth_date = datetime(
+        kb["year"], kb["month"], kb["day"], kb["hour"], kb["minute"]
+    )
+
+    dashas = calculate_dasha_sequence(moon_nakshatra, moon_degree_in_nakshatra, birth_date)
+    current = get_current_dasha(birth_date, moon_nakshatra, moon_degree_in_nakshatra)
 
     # Serialize dasha objects
     serialized_dashas = []
@@ -75,7 +101,7 @@ def generate_dasha_json():
     return {
         "name": "Kamel",
         "moon_nakshatra": moon_nakshatra,
-        "moon_degree_in_nakshatra": moon_degree,
+        "moon_degree_in_nakshatra": moon_degree_in_nakshatra,
         "balance_of_first_dasha_years": round(
             dashas[0]["years"] if dashas else 0, 2
         ),

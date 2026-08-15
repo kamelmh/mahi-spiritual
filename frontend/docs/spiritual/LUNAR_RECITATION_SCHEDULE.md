@@ -11,7 +11,7 @@
 
 - **Activate Mercury in Aquarius** (4°39' Dhanishta) — innovative communication
 - **Align with Prophetic tradition** — Surah Al-Qalam (68:1) connects writing to divine inspiration
-- **Build spiritual foundation** — prepare for Ketu Mahadasha (2028)
+- **Build spiritual foundation** — deepen within the Venus bhukti (current, through May 2029) of the Rahu Mahadasha (2014–2032); Jupiter Mahadasha begins 2032-10-22
 - **Connect to Quranic wisdom** — each Surah reveals specific guidance
 
 ---

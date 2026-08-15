@@ -322,14 +322,14 @@ Kamel has Mercury in Aquarius (NOT Leo) — innovative communication:
 |------|--------|------------|--------------|
 | Sep 2026 | Ikram | Venus-Sun → Venus-Moon | Shift from identity to emotions |
 | Oct 2028 | Kheireddine | Mercury Mahadasha ends | End of 17-year communication cycle |
-| Oct 2028 | Kheireddine | Ketu Mahadasha begins | 7-year spiritual dissolution |
+| Oct 2028 | Kheireddine | Ketu Mahadasha begins ~2083-11 (Version B: Rahu Mahadasha until 2031-11; Ketu Maha 2083-11->2090-11) | Spiritual dissolution (Ketu theme) |
 | 2028 | Kamel | Mercury Mahadasha ends | End of 17-year communication cycle |
-| 2028 | Kamel | Ketu Mahadasha begins | 7-year spiritual dissolution |
+| 2028 | Kamel | Jupiter Mahadasha begins 2032-10-22 (Version B) | Expansion/teaching (Jupiter); Ketu Mahadasha 2084 |
 | 2042 | Ghofran | Rahu Mahadasha ends | End of 18-year unconventional cycle |
 
 ### The 2028 Transformation
 
-Both Kamel AND Kheireddine enter Ketu Mahadasha in 2028:
+**Version B (engine, 2026-08-15):** Neither Kamel nor Kheireddine enters Ketu Mahadasha in 2028. Kamel: Jupiter Mahadasha 2032-10-22->2048 (Venus bhukti current until 2029-05). Kheireddine: Rahu Mahadasha until 2031-11 (Venus bhukti 2025-06->2028-06, then Sun bhukti). Both hit Jupiter Mahadasha ~2031-2032; Ketu Mahadasha (dissolution) is 2084 (Kamel) / ~2083 (Kheireddine).
 - **Ketu = dissolution, spirituality, past-life**
 - Both brothers will undergo spiritual transformation simultaneously
 - This is a MAJOR family event

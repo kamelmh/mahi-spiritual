@@ -60,8 +60,8 @@ This workspace contains comprehensive sidereal astrology analysis based on your 
 
 ### 8. Personal Timing System (`10_Personal_Timing_System.md`)
 - Complete Vimshottari Dasha timeline (120 years)
-- Current Mercury Dasha analysis (2011-2028)
-- Critical Ketu transition (2028)
+- Current Rahu Mahadasha + Venus bhukti analysis (2014-2032 / Venus bhukti 2026-05→2029-05)
+- Critical Jupiter Mahadasha threshold (2032-10-22)
 - Current transits to your chart (2026)
 - Key timing windows (2026-2030)
 - Daily, weekly, monthly, annual timing
@@ -69,7 +69,7 @@ This workspace contains comprehensive sidereal astrology analysis based on your 
 - Action plan
 
 ### 9. Career Timing Deep Dive (`11_Career_Timing_Deep_Dive.md`)
-- Mercury Dasha final 2 years (2026-2028)
+- Mercury Dasha final 2 years (2026-2028) -> Rahu Mahadasha: Venus bhukti (2026-05 -> 2029-05) [Version B]
 - Phase-by-phase career actions
 - Technology, communication, business development
 - How to set intentions for personal revolution
@@ -119,9 +119,9 @@ This workspace contains comprehensive sidereal astrology analysis based on your 
 
 ### Timing
 - **2024-2026**: Foundation building
-- **2026-2028**: Major breakthroughs
-- **2028-2030**: Spiritual authority
-- **2030-2035**: Global recognition
+- **2026-2029**: Major breakthroughs (Venus bhukti of Rahu)
+- **2032 onward**: Spiritual authority (Jupiter Mahadasha begins 2032-10-22)
+- **2032-2048**: Global recognition (Jupiter Mahadasha)
 
 ---
 

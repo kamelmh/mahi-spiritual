@@ -61,6 +61,12 @@ async function initDashboard(){
     updateDate();
     updatePracticeList();
     updateStats();
+    if(typeof RecitationEngine!=='undefined'){
+        RecitationEngine.init();
+        const recTotal=Object.values(RecitationEngine.counters||{}).reduce((s,c)=>s+(c.count||0),0);
+        AppState.practice.totalRecitations=recTotal;
+        localStorage.setItem('practice',JSON.stringify(AppState.practice));
+    }
     await updateTransitInfo();
     updateDailyQuote();
     updateMoonWidget();
@@ -493,9 +499,11 @@ function initRuqya(){
 }
 
 function initDailyPractice(){
-    // Daily Practice page is static HTML - no dynamic loading needed
-    // This function ensures the page is properly displayed
     console.log('Daily Practice page loaded');
+    if(typeof RecitationEngine!=='undefined'){
+        RecitationEngine.init();
+        RecitationEngine.renderAllVerses('mahiVersesGrid');
+    }
 }
 
 function initLearning(){

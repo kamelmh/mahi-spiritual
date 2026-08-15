@@ -295,7 +295,7 @@
 - INNOVATION in daily work
 - TRANSFORMATION through routine
 
-**Ketu transiting D9 12th House (Pisces)**:
+**Ketu transiting D9 12th House (Pisces)** *(Ketu the transiting planet ~2024-2031; this is separate from Ketu Mahadasha, which is 2084-2091):
 - Ketu transiting over your natal Ketu
 - SPIRITUAL detachment activated
 - PAST-LIFE mastery accessible
@@ -305,25 +305,25 @@
 
 ### 9. D9 DASHA (Timing of Soul Lessons)
 
-**Current Dasha Period**:
+**Current Dasha Period (Version B - reconciled 2026-08-14)**:
 
-**Mercury Mahadasha (2011-2028)**:
-- Mercury rules D9 3rd and 6th houses
+**Current Mahadasha: Rahu** (2014-10-23 -> 2032-10-22)
+**Current Antardasha (bhukti): Venus** (2026-05-12 -> 2029-05-12)
+- Mercury rules D9 3rd and 6th houses (natal fact, still active)
 - Communication and SERVICE are key
 - Writing and teaching are FAVORED
-- Daily work brings WISDOM
+- Daily work brings WISDOM (channeled through Venus bhukti of Rahu)
 
-**Mercury Antardasha**:
-- Current sub-period
-- MIND and COMMUNICATION activated
+**Venus Antardasha** (current, 2026-05 -> 2029-05):
+- Benefic sub-period active
+- MIND+COMMUNICATION softened by Venus; VALUES and CREATIVITY activated
 - Writing projects are TIMELY
 - Teaching opportunities emerge
 
-**Upcoming Ketu Mahadasha (2028-2035)**:
-- Ketu rules D9 12th house
-- Spiritual detachment ACTIVATED
-- Transcendence through RELATIONSHIPS
-- Past-life karma SURFACES
+**Upcoming Mahadasha: Jupiter** (2032-10-22 -> 2048-10-22) *[Version B; NOT Ketu 2028]*
+- Jupiter rules D9 9th/12th perspective — spiritual EXPANSION and WISDOM teaching
+- Global teaching and higher-learning focus
+- Ketu Mahadasha (D9 12th) is 2084-2091 — Version A misplaced it to 2028; Ketu's 12th-house transcendence is a future (2084+) consideration.
 
 ---
 

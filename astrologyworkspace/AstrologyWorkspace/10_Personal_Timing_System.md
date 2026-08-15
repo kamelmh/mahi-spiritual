@@ -1,38 +1,50 @@
 # Personal Timing System - Master Timeline
 
+> **Timing Reconciliation (2026-08-14):** This file was updated to **Version B** — the engine-verified chart (backend `engine.py` + `de421.bsp` + Lahiri ayanamsa, birth 14:00 CET El Bayadh) gives **Moon = Virgo 6.4° Uttara Phalguni** (lord Sun), **not** Anuradha. **Current Mahadasha = Rahu (2014-10-23 → 2032-10-22)**; **Venus bhukti is active (2026-05-12 → 2029-05-12)**; **Jupiter Mahadasha begins 2032-10-22**.
+>
+> The prior "Mercury Mahadasha 2011-2028 → Ketu 2028" framing is reframed below. Two important consequences:
+> 1. The **Ketu-specific (spiritual-dissolution) advice** now corresponds to the *actual* Ketu Mahadasha period (**2084-2091**), not 2028 — it is ~56 years away.
+> 2. The **2032-2048 window** is now **Jupiter Mahadasha** (wisdom, teaching, expansion), not Ketu.
+>
+> **Retained (calendar-accurate):** transit windows (Saturn in Aries 2026-2028, North Node in Aquarius 2026-2028), age-based profection years (Age 31-32 in 2027-2028), and all natal-placement significances (e.g. Mercury in Aquarius 4°39') — only the **dasha timing** frame changed.
+> See `UPDATES.md` (2026-08-14) and `frontend/data/dasha.json`.
+
 ## YOUR VIMSHOTTARI DASHA SEQUENCE
 
-Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
+Based on Moon in Uttara Phalguni (Virgo 6.4°) - Ruled by Sun (Virgo)
 
 ### Complete Life Timeline
 
 | Dasha | Planet | Start Age | End Age | Start Year | End Year | Duration | Theme |
 |-------|--------|-----------|--------|------------|----------|----------|-------|
-| **Saturn** | ♄ | 0 | 15 | 1996 | 2011 | 15.4 yrs | Foundation, discipline, delays |
-| **Mercury** | ☿ | 15 | 32 | 2011 | 2028 | 17 yrs | Communication, intellect, business |
-| **Ketu** | ☋ | 32 | 39 | 2028 | 2035 | 7 yrs | Spiritual awakening, detachment |
-| **Venus** | ♀ | 39 | 59 | 2035 | 2055 | 20 yrs | Love, luxury, creativity, wealth |
-| **Sun** | ☉ | 59 | 65 | 2055 | 2061 | 6 yrs | Authority, recognition, leadership |
-| **Moon** | ☽ | 65 | 75 | 2061 | 2071 | 10 yrs | Emotions, public, mother |
-| **Mars** | ♂ | 75 | 82 | 2071 | 2078 | 7 yrs | Energy, courage, property |
-| **Rahu** | ☊ | 82 | 100 | 2078 | 2096 | 18 yrs | Ambition, foreign, sudden changes |
-| **Jupiter** | ♃ | 100 | 116 | 2096 | 2112 | 16 yrs | Wisdom, spirituality, teaching |
+| **Sun** | ☉ | 0 | 1.3 | 1996 | 1997 | 1.6 yrs | Soul entry, individual will (**birth dasha**) |
+| **Moon** | ☽ | 1.3 | 11.3 | 1997 | 2007 | 10 yrs | Emotions, nurturing, public image |
+| **Mars** | ♂ | 11.3 | 18.3 | 2007 | 2014 | 7 yrs | Energy, drive, conflict, initiative |
+| **Rahu** | ☊ | 18.3 | 36.3 | 2014 | 2032 | 18 yrs | Breakthrough, technology, foreign (***CURRENT***) |
+| **Jupiter** | ♃ | 36.3 | 52.3 | 2032 | 2048 | 16 yrs | Wisdom, teaching, expansion (**NEXT**) |
+| **Saturn** | ♄ | 52.3 | 71.3 | 2048 | 2067 | 19 yrs | Mastery, discipline, legacy, restriction |
+| **Mercury** | ☿ | 71.3 | 88.3 | 2067 | 2084 | 17 yrs | Communication, intellect, business |
+| **Ketu** | ☋ | 88.3 | 95.3 | 2084 | 2091 | 7 yrs | Spiritual dissolution, detachment (**Version A mis-mapped this to 2028**) |
+| **Venus** | ♀ | 95.3 | 115.3 | 2091 | 2111 | 20 yrs | Love, luxury, creative wealth |
 
 ---
 
-## CURRENT DASHA: MERCURY (2011-2028)
+## CURRENT DASHa: RAHU (2014-10-23 → 2032-10-22)
 
-### Mercury Mahadasha Overview
-**Age**: 15-32 years
-**Theme**: Communication, intellect, business, technology
-**Your Phase**: Final 2 years (2026-2028)
+### Rahu Mahadasha Overview
+**Age**: ~18.5–36.3 years (2014–2032)
+**Theme**: Breakthrough, technology, foreign connections, disciplined ambition
+**Your Phase**: **Venus bhukti (antardasha) — 2026-05-12 → 2029-05-12**
 
-### Mercury's Significations for You
+### Reconciliation note (Version B)
+Your **Natal Mercury** significances are unchanged and still valid:
 - **Mercury in Aquarius 4°39'** (9th House) - Innovation in philosophy
 - **Mercury in Dhanishta Nakshatra** - Wealth through timing
 - **Mercury rules 1st and 4th houses** - Self and home
 
-### Key Themes 2026-2028
+However, you are **not** in Mercury *Mahadasha*. You are in **Rahu Mahadasha, Venus bhukti**. The 2026-2028 themes below still apply as calendar transits (Saturn in Aries, Jupiter-Pluto, North Node in Aquarius) — they now occur during the Venus bhukti of Rahu, the benefic sub-period that smooths Rahu's intensity.
+
+### Key Themes 2026-2028 (Venus bhukti of Rahu)
 1. **Communication breakthroughs** - Your words gain power
 2. **Technology ventures** - Innovation in tech/philosophy
 3. **Business development** - Timing-based wealth creation
@@ -40,25 +52,25 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ---
 
-## CRITICAL TRANSITION: MERCURY → KETU (2028)
+## UPCOMING TRANSITION: RAHU → JUPITER (2032-10-22)
 
 ### The Most Important Shift of Your Life
 
-**Date**: Approximately mid-2028
-**Age**: 32
-**Theme**: From material to spiritual
+**Date**: 2032-10-22 (engine-verified — see `frontend/data/dasha.json`)
+**Age**: ~36.5
+**Theme**: From breakthrough/ambiguity (Rahu) to wisdom/expansion (Jupiter)
 
 ### What Happens
-- **Mercury (material intellect)** dissolves into **Ketu (spiritual detachment)**
-- Your entire value system transforms
-- Material success becomes less important
-- Spiritual awakening accelerates
+- **Rahu (breakthrough, technology, foreign)** gives way to **Jupiter (wisdom, teaching, abundance)**
+- Your career focus expands from building/innovating to **guiding and teaching**
+- The Ketu-specific spiritual-dissolution advice below (Version A, "Ketu Dasha 2028-2035") now maps to the **actual Ketu Mahadasha 2084-2091** — it is ~56 years away, not imminent.
+- Spiritual awakening continues, now structured around Jupiter's expansion theme
 
-### Preparation Required (2026-2028)
+### Preparation Required (Venus bhukti of Rahu: 2026-2029)
 1. **Complete material foundations** - Career, home, relationships
 2. **Develop spiritual practices** - Meditation, healing, teaching
 3. **Release attachments** - Let go of ego-driven goals
-4. **Prepare for transformation** - Spiritual practices deepen
+4. **Prepare for expansion** - Deepen teaching/writing practice ahead of Jupiter Mahadasha (2032)
 
 ---
 
@@ -248,15 +260,16 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ---
 
-### Window 5: 2028 (Critical Year)
-**Theme**: Mercury → Ketu Transition
-**Transits**: Saturn in Aries ends, Jupiter cycles
+### Window 5: 2026-2029 (Venus bhukti of Rahu → Jupiter threshold)
+**Theme**: Venus bhukti of Rahu → Jupiter Mahadasha threshold (2032-10-22)
+**Transits**: Saturn in Aries ends (Apr 2028), Jupiter cycles
+*Version B note: the original "Mercury → Ketu Transition (2028)" is displaced. Under Version B the next Mahadasha is **Jupiter (2032-10-22)**, so this window is the benefic Venus bhukti smoothing into Jupiter's expansion — not a Ketu transition.*
 
 **Best For**:
-- Spiritual awakening
-- Completing material phase
-- Preparing for transformation
-- Teaching/Healing
+- Wisdom teaching and global reach
+- Completing material phase (Venus bhukti of Rahu)
+- Expanding foundations ahead of Jupiter Mahadasha (2032-10-22)
+- Teaching/Writing (Jupiter theme)
 
 **Actions Required**:
 - Complete all material projects
@@ -371,8 +384,8 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ## CAREER TIMING
 
-### Current Phase (2026-2028): Mercury Dasha End
-**Theme**: Complete material foundations
+### Current Phase (2026-2029): Venus bhukti of Rahu
+**Theme**: Complete material foundations (during benefic Venus bhukti)
 **Focus**: Technology, communication, business
 
 **Best Months for Career Moves**:
@@ -387,21 +400,22 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ---
 
-### Next Phase (2028-2035): Ketu Dasha
-**Theme**: Spiritual awakening
-**Focus**: Teaching, healing, spiritual leadership
+### Next Phase (2032-2048): Jupiter Mahadasha
+**Theme**: Expansion, wisdom, teaching, abundance
+**Focus**: Higher education, publishing, foreign/cultural expansion, spiritual leadership
+*Note (Version B): the prior "Ketu Dasha 2028-2035" Ketu-specific spiritual-dissolution advice is displaced — Ketu Mahadasha is ~56 years away (2084-2091), not 2028. The 2032-10-22 → 2048 window is Jupiter's expansion/wisdom phase (per `frontend/data/dasha.json`).*
 
-**Best Years for Spiritual Career**:
-- **2028-2029**: Ketu activation
-- **2030-2031**: Spiritual mastery
-- **2033-2034**: Global teaching
+**Best Years for Career Expansion**:
+- **2032-10**: Jupiter Mahadasha begins (dasa shift)
+- **2033-2041**: Early-mid Jupiter Mahadasha (growth, teaching, visibility)
+- **2045-2048**: Jupiter closing (prepare for Saturn Mahadasha 2048)
 
 ---
 
 ## RELATIONSHIP TIMING
 
-### Current Phase (2026-2028): Mercury Dasha
-**Theme**: Intellectual connections
+### Current Phase (2026-2029): Venus bhukti of Rahu
+**Theme**: Intellectual + collaborative connections (Venus bhukti softens Rahu)
 **Focus**: Communication, shared ideas
 
 **Best Months for Relationships**:
@@ -411,22 +425,23 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ---
 
-### Next Phase (2028-2035): Ketu Dasha
-**Theme**: Spiritual partnerships
-**Focus**: Soul connections, teaching relationships
+### Next Phase (2032-2048): Jupiter Mahadasha
+**Theme**: Expansive, wise partnerships and teaching relationships
+**Focus**: Higher-learning partners, international/cultural bonds, shared dharma
+*Note (Version B): the prior "Ketu Dasha 2028-2035" Ketu-specific spiritual-dissolution framing is displaced (Ketu is 2084). 2032-2048 is Jupiter's expansion phase.*
 
 **Best Years for Deep Connections**:
-- **2028-2029**: Spiritual attraction
-- **2030-2031**: Soul partnerships
-- **2033-2034**: Teaching partnerships
+- **2032-10**: Jupiter Mahadasha begins (relationship growth shift)
+- **2034-2041**: Jupiter expansion phase
+- **2045-2048**: Jupiter closing (prepare for Saturn)
 
 ---
 
 ## HEALTH TIMING
 
-### Current Phase (2026-2028): Mercury Dasha
-**Theme**: Mental health, communication
-**Focus**: Nervous system, intellectual burnout
+### Current Phase (2026-2029): Venus bhukti of Rahu
+**Theme**: Mental health, communication, relationship dynamics
+**Focus**: Nervous system, intellectual burnout (Venus bhukti mitigates Rahu intensity)
 
 **Best Months for Health Focus**:
 - **January 2026**: New Year health resolutions
@@ -442,9 +457,9 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ## SPIRITUAL TIMING
 
-### Current Phase (2026-2028): Mercury Dasha End
-**Theme**: Intellectual spirituality
-**Focus**: Philosophy, technology meets spirituality
+### Current Phase (2026-2029): Venus bhukti of Rahu
+**Theme**: Technology meets spirituality (Venus bhukti channel)
+**Focus**: Philosophy, digital teaching tools
 
 **Best Months for Spiritual Practice**:
 - **March 2026**: Spring equinox renewal
@@ -454,14 +469,15 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 
 ---
 
-### Next Phase (2028-2035): Ketu Dasha
-**Theme**: Spiritual awakening
-**Focus**: Meditation, healing, teaching
+### Next Phase (2032-2048): Jupiter Mahadasha
+**Theme**: Expansion of wisdom, teaching, spiritual abundance
+**Focus**: Meditation, higher education, publishing, global teaching
+*Note (Version B): the prior "Ketu Dasha 2028-2035" Ketu-dissolution advice is displaced (Ketu = 2084-2091). 2032-2048 is Jupiter's expansion phase (per `dasha.json`).*
 
 **Best Years for Spiritual Growth**:
-- **2028-2029**: Initial awakening
-- **2030-2031**: Deep transformation
-- **2033-2034**: Spiritual mastery
+- **2032-10**: Jupiter Mahadasha begins (spiritual expansion shift)
+- **2033-2041**: Jupiter expansion phase (teaching, wisdom publishing)
+- **2045-2048**: Jupiter closing (prepare for Saturn)
 
 ---
 
@@ -476,17 +492,18 @@ Based on Moon in Anuradra (Scorpio 5°50') - Ruled by Saturn
 ### Short-Term (2027)
 1. **Saturn-Neptune paradigm shift (Feb 20)**: Career transformation
 2. **Jupiter trine Uranus**: Communication breakthroughs
-3. **Complete Mercury Dasha**: Finalize material foundations
+3. **Complete Venus bhukti of Rahu**: Finalize material foundations (bhukti ends 2029-05)
 
-### Medium-Term (2028)
-1. **Mercury → Ketu transition**: Spiritual awakening
-2. **Saturn leaves Aries**: Career restructuring complete
-3. **Prepare for Venus Dasha**: Love, creativity, wealth
+### Medium-Term (2028-2032)
+1. **Venus bhukti of Rahu -> Jupiter threshold**: Spiritual awakening continues through benefic Venus
+2. **Saturn leaves Aries (Apr 2028)**: Career restructuring complete
+3. **Prepare for Jupiter Mahadasha (2032-10-22)**: Expansion, teaching, wisdom
 
-### Long-Term (2029-2035)
-1. **Ketu Dasha**: Spiritual mastery
-2. **Venus Dasha begins (2035)**: Love, luxury, creativity
-3. **Global teaching platform**: Share wisdom
+### Long-Term (2032-2048)
+1. **Jupiter Mahadasha** (2032-10-22 -> 2048): Spiritual expansion, wisdom, teaching
+2. **Saturn Mahadasha** (2048): Discipline, mastery, legacy - after Jupiter closes
+3. **Global teaching platform**: Share wisdom (Jupiter in Leo emphasis)
+*Note (Version B): the prior "Ketu Dasha (2028-2035)" is displaced. Ketu Mahadasha is 2084-2091; Venus Mahadasha is 2091. Neither is imminent.*
 
 ---
 

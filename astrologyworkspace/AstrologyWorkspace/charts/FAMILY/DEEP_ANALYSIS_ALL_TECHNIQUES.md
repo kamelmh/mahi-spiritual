@@ -160,7 +160,7 @@
 - Mother relationship is karmically significant
 - Property, real estate, vehicles are karmic themes
 
-**Ketu in 10th House (Pisces):**
+**Ketu in 10th House (Pisces): (Engine note, 2026-08-15):** Natal Ketu = Pisces 25°17' Revati (verified). The *house number* is **pending Lagna reconciliation** — engine `calculate_houses` currently emits degenerate equal-house cusps (all 12 at 3°05'); with Cancer Asc the cusping gives Ketu in 9th, with Gemini Asc in 10th. The Version-B **dasha** timing is unambiguous regardless (Rahu current; Jupiter 2032; Ketu Maha 2084). Do not treat "10th" as authoritative until the house system is fixed.
 - Past-life mastery of CAREER, PUBLIC REPUTATION
 - Must RELEASE attachment to career success
 - Public life should be SPIRITUAL, not material
@@ -170,10 +170,10 @@
 ### Rahu/Ketu Dasha Timing
 
 **Current Rahu Dasha:** Ended (was ~2005-2023)
-**Current Ketu Dasha:** Beginning (mid-2028-2035)
-**Key Transition:** Kamel is between dasha periods — Mercury (current) → Ketu (2028)
+**Current Mahadasha (Version B):** Kamel in Venus bhukti of Rahu Mahadasha (2026-05->2029-05); Jupiter Mahadasha begins 2032-10-22; Ketu Mahadasha 2084-2091 (not 2028-2035).
+**Key Transition (Version B):** Venus bhukti (current, 2026-05->2029-05) -> Jupiter Mahadasha 2032-10-22; Mercury Mahadasha is 2067-2084, Ketu Mahadasha 2084-2091 (not 2028).
 
-**Ketu Dasha (2028-2035) Will Bring:**
+**Jupiter Mahadasha (2032-10-22 -> 2048) Will Bring:** (Version B; Ketu Mahadasha 2084-2091)
 - Spiritual awakening
 - Career transformation (Ketu in 10th)
 - Release of worldly attachments

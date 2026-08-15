@@ -283,7 +283,7 @@ Within the Pisces chapter, each sub-period lasts 1-2 years:
 
 **2028 (Age 32)**:
 - Shift toward **teaching and philosophy** (9th house profection)
-- Publish and share wisdom (Ketu dasha begins)
+- Publish and share wisdom (Rahu Mahadasha / Venus bhukti — Version B; Ketu Mahadasha is 2084)
 - **Spiritual career** acceleration
 
 ---
@@ -428,25 +428,26 @@ Within the Pisces chapter, each sub-period lasts 1-2 years:
 
 ## RELATIONSHIP TIMING THROUGH DASHA
 
-### Mercury Mahadasha (2011-2028)
+### Current Mahadasha: Rahu (2014-10-23 -> 2032-10-22) — Venus bhukti active (2026-05 -> 2029-05)
 
-**Mercury rules**: 1st house (self) and 4th house (home)
+**Mercury rules**: 1st house (self) and 4th house (home) (natal fact, still active)
 
-**Relationship Implications**:
+**Relationship Implications** (via Venus bhukti of Rahu):
 - Relationships through **COMMUNICATION and INTELLECT**
 - Partners are **WRITERS, TEACHERS, or THINKERS**
 - Home and family are IMPORTANT in relationships
 - Mercury in 9th = relationships through **PHILOSOPHY**
 
-### Ketu Mahadasha (2028-2035)
+### Next Mahadasha: Jupiter (2032-10-22 -> 2048-10-22) — NOT Ketu 2028
 
-**Ketu in 10th house (Pisces)**
+**Jupiter in 10th house (Leo)**
 
 **Relationship Implications**:
-- Relationships become **SPIRITUAL** and **DETACHED**
-- Partners are **HEALERS, CREATIVES, or SPIRITUAL**
-- Career and relationship MERGE
-- **Past-life relationships** surface
+- Relationships become **EXPANSIVE** and **WISDOM-FOCUSED**
+- Partners are **TEACHERS, AUTHORS, or CULTURAL** figures
+- Career and relationship MERGE around **shared dharma / teaching**
+- **Global/foreign partnerships** emphasized (Jupiter theme)
+- *Ketu's 10th-house SPIRITUAL/DETACHED/past-life-relationships emphasis applies to the actual Ketu Mahadasha (2084-2091), not 2028 (Version A).*
 
 ---
 
@@ -517,9 +518,9 @@ Within the Pisces chapter, each sub-period lasts 1-2 years:
 - **Release old karma** - Kaal Sarpa activation
 
 **2028 (Age 32)**:
-- **Spiritual relationships** - Ketu dasha begins
-- **Career-relationship merge** - 10th house Ketu
-- **Detachment and transcendence** - Pisces themes
+- **Expansive partnerships** - Venus bhukti of Rahu, softening into Jupiter (Version B)
+- **Career-relationship merge** - Jupiter in 10th (D9 9th/12th); expand through partners
+- **Growth through teaching** - Jupiter theme (natal/transiting Ketu-in-12th below is separate from Ketu Mahadasha)
 
 ---
 

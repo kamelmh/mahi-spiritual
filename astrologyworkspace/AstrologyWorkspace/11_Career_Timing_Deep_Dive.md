@@ -1,16 +1,18 @@
-# Career Timing Deep Dive: 2026-2028
+# Career Timing Deep Dive: 2026-2028 (Venus bhukti of Rahu Mahadasha)
 
-## YOUR MERCURY DASHA: THE FINAL 2 YEARS
+> **Timing Reconciliation (2026-08-14, Version B):** You are currently in **Rahu Mahadasha (2014-2032) / Venus bhukti (2026-05-12 → 2029-05-12)**. The next Mahadasha is **Jupiter (2032-10-22 → 2048-10-22)**, NOT Ketu 2028 (Ketu is 2084-2091). The 2026-2028 calendar transits below (Saturn in Aries, Jupiter-Pluto, North Node in Aquarius) are retained as accurate; only the dasha framing shifts from "final Mercury → Ketu" to "Venus bhukti of Rahu → Jupiter."
+
+## YOUR CURRENT DASHa: RAHU / VENUS BHUKTI (2026-2029)
 
 ### The Big Picture
 
-You are in the **FINAL phase** of Mercury Mahadasha (2011-2028). This 17-year period has been about:
+You are in the **Venus bhukti of Rahu Mahadasha** (Rahu 2014-2032; Venus bhukti 2026-05-12 → 2029-05-12). *(Version A listed this as the "final 2 years of Mercury Mahadasha (2011-2028)" — dasha reconciled 2026-08-14 to Version B.)* This period is about:
 - Building intellectual foundations
 - Developing communication skills
 - Creating business networks
 - Mastering technology
 
-**Now, in the final 2 years (2026-2028), you must COMPLETE all material foundations before the great spiritual transition to Ketu Dasha.**
+**Now, during the Venus bhukti of Rahu (through May 2029), COMPLETE all material foundations before the Jupiter Mahadasha (2032-10-22). The next Mahadasha is Jupiter (wisdom/expansion), not Ketu — Ketu is 2084-2091.**
 
 ---
 

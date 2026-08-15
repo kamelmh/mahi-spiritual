@@ -139,7 +139,7 @@ But the chart reveals something deeper: **Sara is NOT Father's daughter**. She i
 2. Ghofran + Oumkeltoum innovate within those structures (Aquarius Saturn)
 3. Kamel spiritualizes the results (Pisces Saturn)
 
-**2028 Warning:** Both Kamel AND Kheireddine enter Ketu Mahadasha in 2028. This is the **dissolution** phase — structures built will be tested. The Saturn patterns suggest the family must **release attachment to form** while maintaining **spiritual foundation**.
+**Version B Update:** Neither Kamel nor Kheireddine enters Ketu Mahadasha in 2028. Kamel: Jupiter Mahadasha 2032-10-22 (Ketu Mahadasha 2084). Kheireddine: Rahu Mahadasha until 2031-11 (Ketu Mahadasha ~2083). The 2028-2032 window is a **Jupiter transition** (expansion, teaching) — not a Ketu dissolution; structures built are affirmed.
 
 ---
 
@@ -203,7 +203,7 @@ But the chart reveals something deeper: **Sara is NOT Father's daughter**. She i
 
 ## BREAKTHROUGH INSIGHT #8: The Hidden 2028 Event
 
-**Discovery:** Both Kamel AND Kheireddine enter Ketu Mahadasha in 2028.
+**Discovery (Version B):** Both brothers enter Jupiter's expansion phase ~2031-2032 — Kamel at 2032-10-22 (Jupiter Maha), Kheireddine at 2031-11 (Jupiter Maha following Rahu). Ketu Mahadasha (dissolution) is 2084 (Kamel) / ~2083 (Kheireddine).
 
 | Member | Current Dasha | 2028 Dasha |
 |--------|---------------|------------|

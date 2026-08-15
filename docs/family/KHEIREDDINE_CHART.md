@@ -205,7 +205,7 @@ Kheireddine is currently in his **Mercury Mahadasha** — a 17-year period ruled
 | Sub-Period | Start | End | Theme |
 |-----------|-------|-----|-------|
 | Mercury-Mercury | Oct 2011 | Jun 2014 | Intellectual foundation |
-| Mercury-Ketu | Jun 2014 | Jun 2015 | Spiritual questioning |
+| Venus bhukti of Rahu (2025-06 -> 2028-06) | 2025-06-06 | 2028-06-06 | Version B: no Mercury-Ketu sub-bhukti in 2028; closes into Sun bhukti under Rahu Maha | Jun 2015 | Spiritual questioning |
 | Mercury-Venus | Jun 2015 | Aug 2017 | Relationships, creativity |
 | Mercury-Sun | Aug 2017 | Jul 2018 | Identity, leadership |
 | Mercury-Moon | Jul 2018 | Dec 2019 | Emotional processing |
@@ -226,7 +226,7 @@ Kheireddine is currently in his **Mercury Mahadasha** — a 17-year period ruled
 |-----------|------|--------------|
 | Mercury-Jupiter → Mercury-Saturn | Sep 2025 | Shift from expansion to structure |
 | Mercury Mahadasha ends | Oct 2028 | End of 17-year communication cycle |
-| Ketu Mahadasha begins | Oct 2028 | 7-year spiritual dissolution period |
+| Jupiter Mahadasha begins | 2031-11 | 16-year expansion/teaching (Kheireddine, Version B) |
 
 ---
 

@@ -148,7 +148,7 @@
 - This is a MAJOR family event
 - Prepare by deepening spiritual practice NOW (2026-2027)
 
-### 2028-2035 — Ketu Period
+### 2032-10-22 -> 2048 — Jupiter Mahadasha (Version B)
 
 **For Kamel (7 years):**
 - Retreat from worldly pursuits
@@ -258,7 +258,7 @@ Father (Traditional) → Kamel (Innovative) → Future Students (Global)
 
 ### The 2026-2028 Window
 
-**Before Ketu Mahadasha (2028):**
+**Before Jupiter Mahadasha (2032-10-22) — Venus bhukti closing (2026-05->2029-05):**
 1. Complete CCA-F certification
 2. Establish freelancing income
 3. Build teaching platform
@@ -302,7 +302,7 @@ Father (Traditional) → Kamel (Innovative) → Future Students (Global)
 **Timing:**
 - 2026: Jupiter transiting 10th — career focus
 - 2027: Saturn settling — ready for commitment
-- 2028+: Ketu period — spiritual partnership needed
+- 2032+: Jupiter Mahadasha — teaching/expansion partnerships; Ketu Mahadasha (2084) spiritual dissolution comes much later.
 
 ---
 
