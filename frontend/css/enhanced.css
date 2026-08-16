@@ -2638,3 +2638,39 @@ body {
     .rl-flashcard-container { height: 300px; }
     .rl-card-question { font-size: 1rem; }
 }
+
+/* ========================
+   Hifdh Tracker
+   ======================== */
+.hifdh-strength-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 4px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.hifdh-strength-btn:hover {
+    border-color: var(--accent-gold);
+    background: rgba(212, 165, 116, 0.1);
+}
+.hifdh-strength-btn span {
+    font-size: 10px;
+    color: var(--text-secondary);
+}
+
+/* Surah grid tiles */
+#hifdhSurahGrid > div {
+    transition: all 0.2s;
+    font-weight: 600;
+}
+#hifdhSurahGrid > div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}

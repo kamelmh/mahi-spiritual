@@ -160,7 +160,7 @@
 - Mother relationship is karmically significant
 - Property, real estate, vehicles are karmic themes
 
-**Ketu in 10th House (Pisces): (Engine note, 2026-08-15):** Natal Ketu = Pisces 25°17' Revati (verified). The *house number* is **pending Lagna reconciliation** — engine `calculate_houses` currently emits degenerate equal-house cusps (all 12 at 3°05'); with Cancer Asc the cusping gives Ketu in 9th, with Gemini Asc in 10th. The Version-B **dasha** timing is unambiguous regardless (Rahu current; Jupiter 2032; Ketu Maha 2084). Do not treat "10th" as authoritative until the house system is fixed.
+**Ketu in 10th House (Pisces):** Natal Ketu = Pisces 25°17' Revati (verified). **House = 10th — RESOLVED (2026-08-16):** Whole-Sign Gemini Lagna (21°31') places Pisces as the 10th house; independently confirmed by the Astro-Seek Traditional Chart PDF (tropical Cancer ASC 15°19' = sidereal Gemini 21°28'; tropical 9th = Pisces). Engine `calculate_houses` degenerate-cusp bug is code-only and non-authoritative. Version-B dasha timing is unambiguous: Rahu Maha current; Jupiter 2032; Ketu Maha 2084-2091.
 - Past-life mastery of CAREER, PUBLIC REPUTATION
 - Must RELEASE attachment to career success
 - Public life should be SPIRITUAL, not material

@@ -478,62 +478,49 @@ def calculate_houses(year: int, month: int, day: int, hour: int = 12, minute: in
 
     ayanamsa = get_ayanamsa(year + (month - 1) / 12.0 + (day - 1) / 365.25)
 
-    try:
-        # Try swisseph Placidus first
-        import swisseph as swe
-        swe.set_ephe_path(None)
-        cusps, ascmc = swe.houses(t.tt, latitude, longitude, b'P')
-        houses = {}
-        signs = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces']
-        for i, cusp in enumerate(cusps[:12]):
-            sidereal_cusp = (cusp - ayanamsa) % 360
-            sign_idx = int(sidereal_cusp / 30) % 12
-            degree = sidereal_cusp % 30
-            houses[f"house_{i+1}"] = {
-                "cusp_degree": round(sidereal_cusp, 2),
-                "sign": signs[sign_idx],
-                "degree": round(degree, 2),
-            }
-        return houses
-    except ImportError:
-        pass
-    except Exception:
-        pass
+    # Sidereal Ascendant (Lahiri) via the verified pure-Python Placidus
+    # calculator in backend.houses (no pyswisseph dependency required).
+    from .houses import calculate_houses_placidus, get_sign_from_degree
 
-    # Fallback: Equal House system from Ascendant
-    try:
-        gst_val = t.gast  # Returns hours as float
-        lst_deg = gst_val * 15  # Convert hours to degrees
+    placidus = calculate_houses_placidus(
+        year, month, day, hour, minute, latitude, longitude
+    )
+    sidereal_asc = placidus["asc"]  # 0-360 sidereal
 
-        import math
-        lat_rad = math.radians(latitude)
-        obliquity = 23.44
-        obl_rad = math.radians(obliquity)
+    signs = [
+        "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+        "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces",
+    ]
+    asc_sign, asc_deg = get_sign_from_degree(sidereal_asc)
 
-        lst_rad = math.radians(lst_deg)
-        asc_rad = math.atan2(
-            math.cos(lst_rad),
-            -(math.sin(lst_rad) * math.cos(obl_rad) + math.tan(lat_rad) * math.sin(obl_rad))
-        )
-        tropical_asc = math.degrees(asc_rad) % 360
+    # Whole Sign houses: each sign = one house, 1st house = ASC sign.
+    asc_idx = signs.index(asc_sign)
+    asc_sign_start = (asc_idx * 30) % 360
+    houses: Dict = {}
+    for i in range(12):
+        cusp = (asc_sign_start + i * 30) % 360
+        csign, cdeg = get_sign_from_degree(cusp)
+        houses[f"house_{i + 1}"] = {
+            "cusp_degree": round(cusp, 2),
+            "sign": csign,
+            "degree": round(cdeg, 2),
+        }
 
-        # Apply Lahiri ayanamsa to get sidereal ASC
-        sidereal_asc = (tropical_asc - ayanamsa) % 360
-
-        signs = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces']
-        houses = {}
-        for i in range(12):
-            cusp = (sidereal_asc + i * 30) % 360
-            sign_idx = int(cusp / 30) % 12
-            degree = cusp % 30
-            houses[f"house_{i+1}"] = {
-                "cusp_degree": round(cusp, 2),
-                "sign": signs[sign_idx],
-                "degree": round(degree, 2),
-            }
-        return houses
-    except Exception as e:
-        return {"error": str(e)}
+    houses["ascendant"] = {
+        "lagna": asc_sign,
+        "sign": asc_sign,
+        "degree": round(asc_deg, 2),
+        "cusp_degree": round(sidereal_asc, 2),
+        "house": 1,
+    }
+    houses["mc"] = {
+        "sign": get_sign_from_degree(placidus["mc"])[0],
+        "cusp_degree": round(placidus["mc"], 2),
+    }
+    houses["system"] = "Whole Sign"
+    houses["lagna"] = asc_sign
+    houses["ayanamsa"] = round(ayanamsa, 4)
+    return houses
 
 
 def calculate_full_chart(name: str, year: int, month: int, day: int, hour: int = 12, minute: int = 0, latitude: float = 33.06, longitude: float = 1.00) -> Dict:

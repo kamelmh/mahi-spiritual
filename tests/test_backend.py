@@ -57,10 +57,30 @@ def test_frontend_files_exist():
     assert os.path.exists(os.path.join(frontend_dir, 'css', 'style.css'))
 
 
+def test_whole_sign_ketu_10th_house():
+    """Engine houses are Whole-Sign from the verified sidereal Ascendant.
+
+    Kamel (1996-03-06 14:00, El Bayadh) has Lagna Gemini 21d31m; Whole-Sign
+    house 10 from Gemini Lagna = Pisces, where natal Ketu (Pisces 25d17m Revati)
+    falls -> Ketu in 10th house (matches repo docs). This pins the engine fix
+    that removed the pyswisseph/GMST/Quadrant fallback whose Cancer 3d05m ASC
+    put Ketu in 9th.
+    """
+    from backend import engine
+
+    houses = engine.calculate_houses(1996, 3, 6, 14, 0, 34.07, 1.33)
+    assert houses["lagna"] == "Gemini", houses
+    assert houses["ascendant"]["sign"] == "Gemini", houses
+    assert houses["system"] == "Whole Sign", houses
+    # Whole-Sign house 10 from Gemini Lagna is Pisces -> Ketu (Pisces) is 10th.
+    assert houses["house_10"]["sign"] == "Pisces", houses
+
+
 if __name__ == '__main__':
     test_engine_imports()
     test_chart_generation()
     test_family_generation()
     test_spiritual_content_exists()
     test_frontend_files_exist()
+    test_whole_sign_ketu_10th_house()
     print("All tests passed!")

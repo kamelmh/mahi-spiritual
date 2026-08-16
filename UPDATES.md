@@ -7,6 +7,46 @@ When finishing work, append an entry below.
 
 ## Recent Changes
 
+### 2026-08-16 — Hifdh Tracker MVP + Engine ASC Fix
+- **What:** Built a complete Quran memorization (Hifdh) tracker integrated into the web dashboard, and fixed the broken `calculate_houses` Placidus calculator that was producing wrong Capricorn ASC.
+- **Hifdh Tracker (new feature):**
+  - `frontend/js/hifdh-engine.js` (468 lines): Modified Leitner spaced repetition (7 boxes: 1→3→7→14→30→60→120 days), ayah-level tracking, 1-5 strength rating, localStorage persistence, progress stats.
+  - `frontend/index.html`: Added sidebar nav "Hifdh Tracker", full page section with stats/review queue/session recorder/114-surah grid/Leitner box display.
+  - **Advanced Memorization Plan** with 4 tabbed views:
+    - 30-Day Lunar Plan: themed daily groups with ayah counts, "TODAY" marker
+    - Juz-by-Juz (30): progress % per juz with surah ranges
+    - Weekly Targets: 6-week plan with New/Recent/Cumulative breakdown
+    - Full Roadmap: clickable 114-surah grid
+  - Daily Session Template showing 3-pillar system (Wajh Jadid → Sabaq → Manzil)
+  - `frontend/css/enhanced.css`: strength buttons, surah grid hover styles
+- **Engine fix (`backend/houses.py`):**
+  - Fixed GMST calculation: was using full JD instead of JD at 0h UT, causing ~16° error in LST
+  - Fixed ASC formula sign convention (was computing descendant instead of ascendant)
+  - `calculate_houses` now returns correct Gemini ASC (previously returned Capricorn)
+- **All 6 tests pass**, JSON regenerated, build succeeds.
+- **Files:** `frontend/js/hifdh-engine.js` (new), `frontend/index.html`, `frontend/css/enhanced.css`, `backend/houses.py`, `frontend/data/*.json`.
+- **Impact / breaking:** None — additive feature + engine bugfix. Dashboard now shows Hifdh Tracker page.
+- **Alerts for other projects:** None.
+
+### 2026-08-16 — Astro-Seek Traditional Chart PDF: independent verification + fixed-star enrichment
+- **What:** Analyzed `C:\Users\Admin\Downloads\Traditional Birth Chart Calculator.pdf` (Astro-Seek "Traditional Chart Calculator" export: 6 Mar 1996 14:00 local, El Bayadh 33°41'N/1°01'E, **tropical** / Whole Sign / Egyptian terms, diurnal). It's a single-image jsPDF (no text layer) — rendered to bands, OCR'd via Windows OCR, then re-OCR'd data regions at 3x and cross-checked tropical↔sidereal (Lahiri ~23.85° for 1996).
+- **Independent verification (3rd source, agrees with engine):**
+  | Point | PDF tropical | → sidereal (Lahiri) | engine (skyfield) |
+  |-------|-------------|---------------------|-------------------|
+  | ASC | Cancer 15°19' | **Gemini 21°28'** | Gemini 21°31' ✓ |
+  | Sun | Pisces 16°01' | Aquarius 22°16' | Aquarius 22°30' ✓ |
+  | Moon | Virgo 29°38' | **Virgo 5°53'** | Virgo 6°23' UP ✓ |
+  | Venus | Taurus 0°30' | Aries 6°45' | Aries 6°46' ✓ |
+  | Jupiter | Capricorn 12°38' | Sagittarius 18°53' | Sagittarius 18°51' ✓ |
+  | Saturn | Pisces 26°04' | **Pisces 2°19'** | Pisces 2°17' ✓ |
+  → **Settles the Version A/B Moon discrepancy: Moon = Virgo 6°23' Uttara Phalguni — Version B is correct.** Confirms Whole-Sign + Gemini Lagna (Ketu Pisces = 10th) and kills the old engine fallback Lagna (sidereal Cancer 3°05') for good.
+- **Stale chart cells now disproven** (corrected in canonical docs): Moon Scorpio/Anuradha (was in `01_Birth_Chart_Analysis.md`, `KAMEL_WHOLE_SIGN_CORRECTED.md`), Venus Capricorn (was in `KAMEL_WHOLE_SIGN_CORRECTED.md`), Saturn Aquarius (was in `01_Birth_Chart_Analysis.md`). Engine + PDF both agree on Virgo Moon, Aries Venus, Pisces Saturn.
+- **Files:** `astrologyworkspace/AstrologyWorkspace/{01_Birth_Chart_Analysis.md, KAMEL_WHOLE_SIGN_CORRECTED.md}`, `UPDATES.md`.
+- **Fixed-star enrichment:** Added fixed-star section to `01_Birth_Chart_Analysis.md` — Behenian/major stars conjunct natal (10° orb, per Astro-Seek): 7th-house cluster (Vega, Nunki, Alnasl, Ascella, Manubrium, Alya, Arkab Prior/Posterior, Gienah Cygni, Achernar, Ankaa, Homam, Matar, Mufrid, Spiculum ≈ conjunct natal Jupiter in Capricorn), Kerb near MC (10th/Aries), Canopus + Mekbuda (1st), Mizar/Alcor (3rd), Markeb (4th), Mirach + Mira (11th). Classical meanings included.
+- **Verification:** docs-only; backend tests + `npm run build` green.
+- **Impact / breaking:** Chart-doc corrections only; engine + dashboard unchanged. The pending "Version A/B Moon discrepancy" item is now RESOLVED.
+- **Alerts for other projects:** Drive `06_...` natal block already Version B — no change. Teaching platform: Moon-Uttara-Phalguni narrative now triple-confirmed (engine + Astro.com-derived + Astro-Seek PDF).
+
 ### 2026-08-14 — Canonical Chart + Dasha Alignment Patch
 - **What:** Made the astrology engine and the generated `dasha.json` self-consistent and auditable. Birth time for Kamel corrected 12:47 → 14:00 (matches documented/rectified time in `FAMILY_RECALCULATION_2026` and `engine.py` test block).
 - **Files:** `backend/engine.py`, `backend/generate.py`
@@ -88,9 +128,10 @@ A 60° gap separates the two positions. Decision required from the owner before 
 - [x] Resolve Drive `13_Spiritual/06_...` transit-calendar natal block — DONE (ASC Gemini restored, Moon->UP, Ketu->Pisces Revati 10th + banner)
 - [x] Kamel natal positions + dasha timing reconciled to Version B — DONE
 - [X] Ketu house number resolved — Ketu = 10th house (Whole-Sign Gemini Lagna, per KAMEL_WHOLE_SIGN_CORRECTED.md); engine calculate_houses degenerate-cusp bug filed
+- [X] Version A/B Moon discrepancy RESOLVED — independent Astro-Seek PDF confirms Moon Virgo (UP), Saturn Pisces, Venus Aries, ASC Gemini (Version B)
 - [ ] Fix engine `calculate_houses` to use a real house system (install pyswisseph or skyfield-based ASC/cusps) — engine issue
 - [ ] Family astrology data collection
 - [ ] Web dashboard live deployment
 
 ---
-*Last updated: 2026-08-15*
+*Last updated: 2026-08-16*

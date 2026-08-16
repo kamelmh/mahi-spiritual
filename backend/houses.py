@@ -39,12 +39,15 @@ def get_local_sidereal_time(year: int, month: int, day: int, hour: float, longit
     Calculate Local Sidereal Time (LST) in degrees.
     longitude: in degrees (East positive, West negative)
     """
-    jd = get_julian_day(year, month, day, hour)
-    T = (jd - 2451545.0) / 36525.0
+    jd0 = get_julian_day(year, month, day, 0.0)
+    T0 = (jd0 - 2451545.0) / 36525.0
 
-    # Greenwich Mean Sidereal Time (GMST)
-    gmst = 280.46061837 + 360.98564736629 * (jd - 2451545.0) + 0.000387933 * T**2 - T**3 / 38710000.0
-    gmst = gmst % 360
+    # Greenwich Mean Sidereal Time at 0h UT
+    gmst0 = 280.46061837 + 360.98564736629 * (jd0 - 2451545.0) + 0.000387933 * T0**2 - T0**3 / 38710000.0
+    gmst0 = gmst0 % 360
+
+    # Add hour fraction using sidereal rate (1.00273790935 revolutions per solar day)
+    gmst = (gmst0 + hour * 15.04106864) % 360
 
     # Local Sidereal Time
     lst = (gmst + longitude) % 360
@@ -68,8 +71,8 @@ def get_ascendant(lst: float, obliquity: float, latitude: float) -> float:
     mc_deg = mc * RAD_TO_DEG % 360
 
     # Ascendant formula
-    y = -math.cos(lst_rad)
-    x = math.sin(obl_rad) * math.tan(lat_rad) + math.cos(obl_rad) * math.sin(lst_rad)
+    y = math.cos(lst_rad)
+    x = math.sin(obl_rad) * math.tan(lat_rad) - math.cos(obl_rad) * math.sin(lst_rad)
     asc = math.atan2(y, x) * RAD_TO_DEG % 360
 
     return asc
