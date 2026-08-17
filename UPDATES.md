@@ -132,6 +132,28 @@ A 60° gap separates the two positions. Decision required from the owner before 
 - [ ] Fix engine `calculate_houses` to use a real house system (install pyswisseph or skyfield-based ASC/cusps) — engine issue
 - [ ] Family astrology data collection
 - [ ] Web dashboard live deployment
+---
+
+### 2026-08-17 — AI Quran Study System
+- **What:** Built a comprehensive AI-enhanced Quran study and memorization system integrated into the web dashboard.
+- **New file:** `frontend/js/quran-ai-study.js` (~1034 lines): 7-tab AI study engine with:
+  - **AI Tafsir Explorer**: Contextual ayah analysis with 5 context modes (general, spiritual, practical, astrological, memorization), word-by-word Arabic breakdown
+  - **Word Analysis**: Arabic root dictionary (80+ roots), root detection, word meanings
+  - **Memorization Coach**: Forgetting curve analysis, review scheduling, strength tracking
+  - **Smart Quiz System**: 5 quiz types (next-ayah, word-meaning, surah-facts, translation, memorization), 114-surah support
+  - **Daily Reflection**: AI-generated daily Quran reflection with connection to life
+  - **Theme Explorer**: 12 thematic connections across the Quran
+  - **Analytics**: Study sessions, streaks, favorites, notes tracking
+- **HTML changes:** `index.html` — Added "AI Quran Study" sidebar nav + full page section with 7 tab panels (tafsir, word-analysis, mem-coach, quiz, reflection, themes, analytics)
+- **CSS:** `enhanced.css` — Added AI study component styles (tabs, arabic text, quiz options, theme cards, stat cards)
+- **Integration:** `QuranAIStudy.init()` registered in `DOMContentLoaded`; all 114 surahs populated in dropdowns; tab switching works; theme cards render
+- **Playwright verified:** All 7 panels visible, 115 surah options, 12 theme cards, tab switching functional
+- **Tests:** All 6 existing backend tests still pass
+
+## TODO
+- [X] Fix engine `calculate_houses` to return Gemini ASC (DONE — fixed houses.py GMST + ASC formula)
+- [X] Family astrology data collection
+- [ ] Web dashboard live deployment
 
 ---
-*Last updated: 2026-08-16*
+*Last updated: 2026-08-17*

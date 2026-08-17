@@ -98,6 +98,10 @@
                     <span class="nav-icon">📖</span>
                     <span class="nav-text">Hifdh Tracker</span>
                 </li>
+                <li class="nav-item" data-page="ai-study">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">AI Quran Study</span>
+                </li>
                 <li class="nav-item" data-page="export">
                     <span class="nav-icon">📋</span>
                     <span class="nav-text">Reports</span>
@@ -2344,7 +2348,146 @@
                     </div>
                 </div>
             </section>
-            
+
+            <!-- AI Quran Study Page -->
+            <section class="page" id="ai-study">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🧠</div>
+                        <div>
+                            <h2>AI Quran Study</h2>
+                            <p>Tafsir, word analysis, memorization coaching, and smart quizzes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Tab Navigation -->
+                    <div class="card" style="grid-column:span 2">
+                        <div class="card-body" style="padding:8px">
+                            <div style="display:flex;gap:4px;flex-wrap:wrap" id="aiStudyTabs">
+                                <button class="btn btn-primary ai-tab-btn" data-tab="tafsir">AI Tafsir</button>
+                                <button class="btn ai-tab-btn" data-tab="word-analysis">Word Analysis</button>
+                                <button class="btn ai-tab-btn" data-tab="mem-coach">Memorization Coach</button>
+                                <button class="btn ai-tab-btn" data-tab="quiz">Smart Quiz</button>
+                                <button class="btn ai-tab-btn" data-tab="reflection">Daily Reflection</button>
+                                <button class="btn ai-tab-btn" data-tab="themes">Theme Explorer</button>
+                                <button class="btn ai-tab-btn" data-tab="analytics">Analytics</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tafsir Explorer -->
+                    <div class="card ai-study-panel" id="panel-tafsir" style="grid-column:span 2">
+                        <div class="card-header"><h3>AI Tafsir Explorer</h3></div>
+                        <div class="card-body">
+                            <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+                                <div style="flex:1;min-width:200px">
+                                    <label style="font-size:12px;color:var(--text-secondary)">Select Surah</label>
+                                    <select id="tafsirSurah" style="width:100%;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)"></select>
+                                </div>
+                                <div style="flex:1;min-width:150px">
+                                    <label style="font-size:12px;color:var(--text-secondary)">From Ayah</label>
+                                    <input type="number" id="tafsirAyahFrom" min="1" value="1" style="width:100%;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)">
+                                </div>
+                                <div style="flex:1;min-width:150px">
+                                    <label style="font-size:12px;color:var(--text-secondary)">To Ayah</label>
+                                    <input type="number" id="tafsirAyahTo" min="1" value="5" style="width:100%;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)">
+                                </div>
+                                <div style="flex:1;min-width:200px">
+                                    <label style="font-size:12px;color:var(--text-secondary)">Context</label>
+                                    <select id="tafsirContext" style="width:100%;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)">
+                                        <option value="general">General Tafsir</option>
+                                        <option value="spiritual">Spiritual Reflection</option>
+                                        <option value="practical">Practical Guidance</option>
+                                        <option value="astrological">Astrological Connection</option>
+                                        <option value="memorization">Memorization Help</option>
+                                    </select>
+                                </div>
+                                <div style="display:flex;align-items:flex-end">
+                                    <button class="btn btn-primary" id="tafsirExploreBtn">Explore</button>
+                                </div>
+                            </div>
+                            <div id="tafsirResult" style="min-height:100px"></div>
+                        </div>
+                    </div>
+
+                    <!-- Word Analysis -->
+                    <div class="card ai-study-panel" id="panel-word-analysis" style="grid-column:span 2;display:none">
+                        <div class="card-header"><h3>Word-by-Word Arabic Analysis</h3></div>
+                        <div class="card-body">
+                            <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+                                <div style="flex:1;min-width:200px">
+                                    <label style="font-size:12px;color:var(--text-secondary)">Select Surah</label>
+                                    <select id="wordSurah" style="width:100%;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)"></select>
+                                </div>
+                                <div style="flex:1;min-width:150px">
+                                    <label style="font-size:12px;color:var(--text-secondary)">Ayah Number</label>
+                                    <input type="number" id="wordAyah" min="1" value="1" style="width:100%;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)">
+                                </div>
+                                <div style="display:flex;align-items:flex-end">
+                                    <button class="btn btn-primary" id="wordAnalyzeBtn">Analyze</button>
+                                </div>
+                            </div>
+                            <div id="wordAnalysisResult" style="min-height:100px"></div>
+                        </div>
+                    </div>
+
+                    <!-- Memorization Coach -->
+                    <div class="card ai-study-panel" id="panel-mem-coach" style="grid-column:span 2;display:none">
+                        <div class="card-header"><h3>Memorization Coach</h3></div>
+                        <div class="card-body">
+                            <div id="memCoachStats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px"></div>
+                            <div id="memCoachPlan"></div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Quiz -->
+                    <div class="card ai-study-panel" id="panel-quiz" style="grid-column:span 2;display:none">
+                        <div class="card-header"><h3>Smart Quiz System</h3></div>
+                        <div class="card-body">
+                            <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+                                <select id="quizType" style="padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)">
+                                    <option value="next-ayah">Next Ayah Completion</option>
+                                    <option value="word-meaning">Word Meaning</option>
+                                    <option value="surah-facts">Surah Facts</option>
+                                    <option value="translation">Translation Match</option>
+                                    <option value="memorization">Memorization Check</option>
+                                </select>
+                                <select id="quizSurah" style="flex:1;min-width:200px;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary)"></select>
+                                <button class="btn btn-primary" id="quizStartBtn">Start Quiz</button>
+                            </div>
+                            <div id="quizContainer"></div>
+                        </div>
+                    </div>
+
+                    <!-- Daily Reflection -->
+                    <div class="card ai-study-panel" id="panel-reflection" style="grid-column:span 2;display:none">
+                        <div class="card-header"><h3>Daily AI Reflection</h3></div>
+                        <div class="card-body">
+                            <div id="dailyReflection"></div>
+                        </div>
+                    </div>
+
+                    <!-- Theme Explorer -->
+                    <div class="card ai-study-panel" id="panel-themes" style="grid-column:span 2;display:none">
+                        <div class="card-header"><h3>Thematic Connections</h3></div>
+                        <div class="card-body">
+                            <div id="themeList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:16px"></div>
+                            <div id="themeContent"></div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics -->
+                    <div class="card ai-study-panel" id="panel-analytics" style="grid-column:span 2;display:none">
+                        <div class="card-header"><h3>Study Analytics</h3></div>
+                        <div class="card-body">
+                            <div id="analyticsContent"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Export/Reports Page -->
             <section class="page" id="export">
                 <div class="page-header">
@@ -2509,6 +2652,7 @@
     <script src="js/audio-player.js"></script>
     <script src="js/quran-audio.js"></script>
     <script src="js/hifdh-engine.js"></script>
+    <script src="js/quran-ai-study.js"></script>
     <script src="js/notifications.js"></script>
     <script src="js/progress-charts.js"></script>
     <script src="js/export-reports.js"></script>
@@ -2531,6 +2675,7 @@
             if (window.AudioPlayer) AudioPlayer.init();
             if (window.QuranAudio) QuranAudio.init();
             if (window.HifdhEngine) HifdhEngine.init();
+            if (window.QuranAIStudy) QuranAIStudy.init();
             if (window.Notifications) Notifications.init();
             if (window.ProgressCharts) ProgressCharts.init();
             if (window.ExportReports) ExportReports.init();

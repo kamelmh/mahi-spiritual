@@ -21,7 +21,7 @@ module.exports = defineConfig({
     trace: 'retain-on-failure',
   },
   webServer: {
-    command: 'python -m http.server 8000',
+    command: 'C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe -m http.server 8000',
     cwd: 'frontend',
     port: 8000,
     reuseExistingServer: true,
