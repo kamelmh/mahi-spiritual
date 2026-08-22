@@ -15,6 +15,60 @@ const QuranAIStudy = (function() {
 
     const STORAGE_KEY = 'mahi-quran-ai-study';
     const AL_QURAN_API = 'https://api.alquran.cloud/v1';
+    // ─── Offline cache ───
+    // Cache key format: 'quran-api:{endpoint}' -> JSON string + timestamp
+    // TTL: 24 hours (86400 seconds). Adjust as needed.
+    const CACHE_TTL = 86400;
+
+    // ─── Cache operations ───
+    function getFromCache(key) {
+        try {
+            const item = localStorage.getItem(key);
+            if (!item) return null;
+            const data = JSON.parse(item);
+            if (Date.now() - data.timestamp > CACHE_TTL * 1000) {
+                // Expired
+                localStorage.removeItem(key);
+                return null;
+            }
+            return data.value;
+        } catch { return null; }
+    }
+
+    function setToCache(key, value) {
+        try {
+            localStorage.setItem(key, JSON.stringify({ value, timestamp: Date.now() }));
+        } catch { /* ignore quota errors */ }
+    }
+
+    function fetchWithCache(endpoint, useGet=true) {
+        // endpoint is the API path, e.g. 'ayah/2:1/ar.alafasy'
+        const cacheKey = `quran-api:${endpoint}`;
+        const cached = getFromCache(cacheKey);
+        if (cached !== null) return Promise.resolve(cached);
+
+        // Fetch from API
+        const url = `${AL_QURAN_API}/${endpoint}`;
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                setToCache(cacheKey, data);
+                return data;
+            })
+            .catch(err => {
+                // If we have stale cache, return it; otherwise re-throw
+                const stale = getFromCache(cacheKey);
+                if (stale) return Promise.resolve(stale);
+                throw err;
+            });
+    }
+    // ─── Offline cache ───
+    // Cache key format: 'quran-api:{endpoint}' -> JSON string + timestamp
+    // TTL: 24 hours (86400 seconds). Adjust as needed.
+    const CACHE_TTL = 86400;
 
     // ─── Comprehensive Arabic Root Dictionary ───
     // Common Quranic roots with meanings, forms, and occurrences
@@ -258,13 +312,20 @@ const QuranAIStudy = (function() {
         return Math.round(baseInterval * easeFactor);
     }
 
-    // ─── Fetch Ayah Data from Al Quran Cloud ───
+    // ─── Fetch Ayah Data from Al Quran Cloud (with offline cache) ───
     async function fetchAyahText(surah, ayah) {
+        const edition = state.preferences.translation || 'en.sahih';
+        const endpoint = `ayah/${surah}:${ayah}/${edition}`;
+        const cached = getFromCache(`quran-api:${endpoint}`);
+        if (cached !== null) return cached;
+
+        const url = `${AL_QURAN_API}/${endpoint}`;
         try {
-            const edition = state.preferences.translation || 'en.sahih';
-            const res = await fetch(`${AL_QURAN_API}/ayah/${surah}:${ayah}/${edition}`);
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
             if (data.code === 200) {
+                setToCache(`quran-api:${endpoint}`, data);
                 return {
                     arabic: data.data.text,
                     numberInSurah: data.data.numberInSurah,
@@ -275,25 +336,54 @@ const QuranAIStudy = (function() {
                 };
             }
         } catch (e) { /* fallback */ }
+        const stale = getFromCache(`quran-api:${endpoint}`);
+        if (stale) return stale;
         return null;
     }
 
     async function fetchSurahText(surah, edition) {
+        const ed = edition || state.preferences.translation || 'en.sahih';
+        const endpoint = `surah/${surah}/${ed}`;
+        const cached = getFromCache(`quran-api:${endpoint}`);
+        if (cached !== null) return cached;
+
+        const url = `${AL_QURAN_API}/${endpoint}`;
         try {
-            const ed = edition || state.preferences.translation || 'en.sahih';
-            const res = await fetch(`${AL_QURAN_API}/surah/${surah}/${ed}`);
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
-            if (data.code === 200) return data.data.ayahs;
+            setToCache(`quran-api:${endpoint}`, data);
+            return {
+                arabic: data.data.arabic,
+                translation: data.data.translation,
+                ayahs: data.data.ayahs,
+            };
+        } catch (e) { /* fallback */ }
+        const stale = getFromCache(`quran-api:${endpoint}`);
+        if (stale) return stale;
+        return null;
+    }
         } catch (e) { /* fallback */ }
         return [];
     }
 
     async function fetchArabicText(surah) {
+        const endpoint = `surah/${surah}/ar.alafasy`;
+        const cached = getFromCache(`quran-api:${endpoint}`);
+        if (cached !== null) return cached;
+
+        const url = `${AL_QURAN_API}/${endpoint}`;
         try {
-            const res = await fetch(`${AL_QURAN_API}/surah/${surah}/ar.alafasy`);
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
-            if (data.code === 200) return data.data.ayahs;
+            if (data.code === 200) {
+                setToCache(`quran-api:${endpoint}`, data);
+                return data.data.ayahs;
+            }
         } catch (e) { /* fallback */ }
+        const stale = getFromCache(`quran-api:${endpoint}`);
+        if (stale) return stale;
         return [];
     }
 
