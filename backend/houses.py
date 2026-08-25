@@ -70,9 +70,10 @@ def get_ascendant(lst: float, obliquity: float, latitude: float) -> float:
     mc = math.atan2(math.sin(lst_rad), math.cos(lst_rad) * math.cos(obl_rad) - math.tan(0) * math.sin(obl_rad))
     mc_deg = mc * RAD_TO_DEG % 360
 
-    # Ascendant formula
+    # Ascendant formula (Placidus / Meeus corrected)
+    # y = cos(RAMC), x = -(sin(obl)*tan(lat) + cos(obl)*sin(RAMC))
     y = math.cos(lst_rad)
-    x = math.sin(obl_rad) * math.tan(lat_rad) - math.cos(obl_rad) * math.sin(lst_rad)
+    x = -math.sin(obl_rad) * math.tan(lat_rad) - math.cos(obl_rad) * math.sin(lst_rad)
     asc = math.atan2(y, x) * RAD_TO_DEG % 360
 
     return asc
@@ -141,18 +142,22 @@ def calculate_oblique_ascendant(ramc: float, obliquity: float, latitude: float, 
     return 0
 
 
-def calculate_houses_placidus(year: int, month: int, day: int, hour: int, minute: int, latitude: float, longitude: float) -> Dict:
+def calculate_houses_placidus(year: int, month: int, day: int, hour: int, minute: int, latitude: float, longitude: float, utc_offset: int = 1) -> Dict:
     """
     Calculate all 12 house cusps using Placidus system.
     Returns SIDEREAL cusps (tropical - Lahiri ayanamsa).
+
+    utc_offset: hours to subtract from local time to get UT.
+                Default 1 for CET (Central European Time, used in Algeria).
     """
     hour_decimal = hour + minute / 60.0
+    ut_hour = hour_decimal - utc_offset  # Convert local time to UT
 
-    # Get Local Sidereal Time
-    lst = get_local_sidereal_time(year, month, day, hour_decimal, longitude)
+    # Get Local Sidereal Time (requires UT hour)
+    lst = get_local_sidereal_time(year, month, day, ut_hour, longitude)
 
-    # Get obliquity
-    jd = get_julian_day(year, month, day, hour_decimal)
+    # Get obliquity (JD in UT)
+    jd = get_julian_day(year, month, day, ut_hour)
     obliquity = get_obliquity(jd)
 
     # Calculate all cusps (tropical)
@@ -248,8 +253,8 @@ HOUSE_MEANINGS = {
 if __name__ == "__main__":
     print("Testing Placidus House Calculator...")
 
-    # Test with Kamel (March 6, 1996, 14:00, El Bayadh)
-    result = calculate_houses_placidus(1996, 3, 6, 14, 0, 34.07, 1.33)
+    # Test with Kamel (March 6, 1996, 14:00 CET, El Bayadh 33.06N 1.00E)
+    result = calculate_houses_placidus(1996, 3, 6, 14, 0, 33.06, 1.00)
     print(f"\nKamel (March 6, 1996, 14:00):")
     print(f"  LST: {result['lst']:.2f}°")
     print(f"  MC: {result['mc']:.2f}°")

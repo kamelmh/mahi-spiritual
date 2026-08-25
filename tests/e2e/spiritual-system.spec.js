@@ -49,7 +49,7 @@ test.describe('MAHI Spiritual System - Dashboard', () => {
   });
 
   test('dashboard shows Today Practice card', async ({ page }) => {
-    await expect(page.locator('#dashboard .practice-card')).toBeVisible();
+    await expect(page.locator('#dashboard .practice-card').first()).toBeVisible();
     await expect(page.locator('#practiceList')).toBeVisible();
   });
 });
@@ -99,11 +99,11 @@ test.describe('MAHI Spiritual System - Theme Toggle', () => {
   test('theme toggle switches mode', async ({ page }) => {
     const toggle = page.locator('#themeToggle');
     await expect(toggle).toBeVisible();
-    const bodyBefore = await page.locator('body').getAttribute('class');
+    const themeBefore = await page.locator('html').getAttribute('data-theme');
     await toggle.click();
     await page.waitForTimeout(300);
-    const bodyAfter = await page.locator('body').getAttribute('class');
-    expect(bodyBefore).not.toEqual(bodyAfter);
+    const themeAfter = await page.locator('html').getAttribute('data-theme');
+    expect(themeBefore).not.toEqual(themeAfter);
   });
 
   test('theme toggle text updates on click', async ({ page }) => {

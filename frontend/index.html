@@ -26,90 +26,51 @@
             </div>
             
             <ul class="nav-menu">
+                <!-- Overview -->
                 <li class="nav-item active" data-page="dashboard">
                     <span class="nav-icon">✧</span>
                     <span class="nav-text">Dashboard</span>
                 </li>
-                <li class="nav-item" data-page="soul">
-                    <span class="nav-icon">☽</span>
-                    <span class="nav-text">Soul Blueprint</span>
-                </li>
-                <li class="nav-item" data-page="chart">
-                    <span class="nav-icon">☉</span>
-                    <span class="nav-text">Natal Chart</span>
-                </li>
-                <li class="nav-item" data-page="verses">
-                    <span class="nav-icon">﷽</span>
-                    <span class="nav-text">Quranic Verses</span>
-                </li>
-                <li class="nav-item" data-page="surahs">
-                    <span class="nav-icon">📖</span>
-                    <span class="nav-text">Surah Library</span>
-                </li>
-                <li class="nav-item" data-page="destiny">
-                    <span class="nav-icon">⭐</span>
-                    <span class="nav-text">Destiny Map</span>
-                </li>
-                <li class="nav-item" data-page="practice">
-                    <span class="nav-icon">📿</span>
-                    <span class="nav-text">Practice Tracker</span>
-                </li>
-                <li class="nav-item" data-page="lunar">
-                    <span class="nav-icon">☾</span>
-                    <span class="nav-text">Lunar Calendar</span>
-                </li>
-                <li class="nav-item" data-page="emergency">
-                    <span class="nav-icon">🔮</span>
-                    <span class="nav-text">Emergency Dhikr</span>
-                </li>
-                <li class="nav-item" data-page="ruqya">
-                    <span class="nav-icon">🕋</span>
-                    <span class="nav-text">Ruqya Guide</span>
-                </li>
-                <li class="nav-item" data-page="ruqya-learning">
-                    <span class="nav-icon">📖</span>
-                    <span class="nav-text">Ruqya Learning</span>
-                </li>
-                <li class="nav-item" data-page="daily-practice">
-                    <span class="nav-icon">🕐</span>
-                    <span class="nav-text">Daily Practice</span>
-                </li>
-                <li class="nav-item" data-page="learning">
-                    <span class="nav-icon">📚</span>
-                    <span class="nav-text">Learning Hub</span>
-                </li>
-                <li class="nav-item" data-page="settings">
-                    <span class="nav-icon">⚙</span>
-                    <span class="nav-text">Settings</span>
-                </li>
-                <li class="nav-item" data-page="prayer">
-                    <span class="nav-icon">🕌</span>
-                    <span class="nav-text">Prayer Times</span>
-                </li>
-                <li class="nav-item" data-page="progress">
-                    <span class="nav-icon">📊</span>
-                    <span class="nav-text">Progress</span>
-                </li>
-                <li class="nav-item" data-page="audio">
-                    <span class="nav-icon">🎧</span>
-                    <span class="nav-text">Quran Audio</span>
-                </li>
-                <li class="nav-item" data-page="hifdh">
-                    <span class="nav-icon">📖</span>
-                    <span class="nav-text">Hifdh Tracker</span>
-                </li>
-                <li class="nav-item" data-page="ai-study">
-                    <span class="nav-icon">🧠</span>
-                    <span class="nav-text">AI Quran Study</span>
-                </li>
-                <li class="nav-item" data-page="export">
-                    <span class="nav-icon">📋</span>
-                    <span class="nav-text">Reports</span>
-                </li>
-                <li class="nav-item" data-page="family">
-                    <span class="nav-icon">👪</span>
-                    <span class="nav-text">Family Charts</span>
-                </li>
+                <!-- Astrology -->
+                <li class="nav-section open" data-section="astrology"><span class="nav-section-arrow">▸</span> Astrology</li>
+                <div class="nav-submenu-wrapper open"><ul class="nav-submenu">
+                    <li class="nav-item" data-page="soul"><span class="nav-icon">☽</span><span class="nav-text">Soul Blueprint</span></li>
+                    <li class="nav-item" data-page="chart"><span class="nav-icon">☉</span><span class="nav-text">Natal Chart</span></li>
+                    <li class="nav-item" data-page="destiny"><span class="nav-icon">⭐</span><span class="nav-text">Destiny Map</span></li>
+                    <li class="nav-item" data-page="family"><span class="nav-icon">👪</span><span class="nav-text">Family Charts</span></li>
+                </ul></div>
+                <!-- Quran -->
+                <li class="nav-section open" data-section="quran"><span class="nav-section-arrow">▸</span> Quran & Study</li>
+                <div class="nav-submenu-wrapper open"><ul class="nav-submenu">
+                    <li class="nav-item" data-page="verses"><span class="nav-icon">﷽</span><span class="nav-text">Quranic Verses</span></li>
+                    <li class="nav-item" data-page="surahs"><span class="nav-icon">📖</span><span class="nav-text">Surah Library</span></li>
+                    <li class="nav-item" data-page="audio"><span class="nav-icon">🎧</span><span class="nav-text">Quran Audio</span></li>
+                    <li class="nav-item" data-page="hifdh"><span class="nav-icon">📖</span><span class="nav-text">Hifdh Tracker</span></li>
+                    <li class="nav-item" data-page="ai-study"><span class="nav-icon">🧠</span><span class="nav-text">AI Quran Study</span></li>
+                </ul></div>
+                <!-- Practice -->
+                <li class="nav-section open" data-section="practice"><span class="nav-section-arrow">▸</span> Daily Practice</li>
+                <div class="nav-submenu-wrapper open"><ul class="nav-submenu">
+                    <li class="nav-item" data-page="daily-practice"><span class="nav-icon">🕐</span><span class="nav-text">MAHI Method</span></li>
+                    <li class="nav-item" data-page="practice"><span class="nav-icon">📿</span><span class="nav-text">Practice Tracker</span></li>
+                    <li class="nav-item" data-page="lunar"><span class="nav-icon">☾</span><span class="nav-text">Lunar Calendar</span></li>
+                    <li class="nav-item" data-page="prayer"><span class="nav-icon">🕌</span><span class="nav-text">Prayer Times</span></li>
+                    <li class="nav-item" data-page="emergency"><span class="nav-icon">🔮</span><span class="nav-text">Emergency Dhikr</span></li>
+                </ul></div>
+                <!-- Spiritual -->
+                <li class="nav-section open" data-section="spiritual"><span class="nav-section-arrow">▸</span> Spiritual</li>
+                <div class="nav-submenu-wrapper open"><ul class="nav-submenu">
+                    <li class="nav-item" data-page="ruqya"><span class="nav-icon">🕋</span><span class="nav-text">Ruqya Guide</span></li>
+                    <li class="nav-item" data-page="ruqya-learning"><span class="nav-icon">📖</span><span class="nav-text">Ruqya Learning</span></li>
+                    <li class="nav-item" data-page="learning"><span class="nav-icon">📚</span><span class="nav-text">Learning Hub</span></li>
+                </ul></div>
+                <!-- Tools -->
+                <li class="nav-section open" data-section="tools"><span class="nav-section-arrow">▸</span> Tools</li>
+                <div class="nav-submenu-wrapper open"><ul class="nav-submenu">
+                    <li class="nav-item" data-page="progress"><span class="nav-icon">📊</span><span class="nav-text">Progress</span></li>
+                    <li class="nav-item" data-page="export"><span class="nav-icon">📋</span><span class="nav-text">Reports</span></li>
+                    <li class="nav-item" data-page="settings"><span class="nav-icon">⚙</span><span class="nav-text">Settings</span></li>
+                </ul></div>
             </ul>
             
             <div class="sidebar-footer">
@@ -1384,7 +1345,7 @@
                                             <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">14</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Chitra ⭐</td><td style="padding:5px;color:var(--text-secondary)">Mars</td><td style="padding:5px;color:var(--text-secondary)">Tvashtar (Architect)</td><td style="padding:5px;color:var(--text-secondary)">Brilliance, creativity, illusion</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">15</td><td style="padding:5px;color:var(--text-primary)">Swati</td><td style="padding:5px;color:var(--text-secondary)">Rahu</td><td style="padding:5px;color:var(--text-secondary)">Vayu (Wind)</td><td style="padding:5px;color:var(--text-secondary)">Independence, flexibility, coral</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">16</td><td style="padding:5px;color:var(--text-primary)">Vishakha</td><td style="padding:5px;color:var(--text-secondary)">Jupiter</td><td style="padding:5px;color:var(--text-secondary)">Indra-Agni</td><td style="padding:5px;color:var(--text-secondary)">Goal-oriented, determination</td></tr>
-                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">17</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Anuradha ⭐</td><td style="padding:5px;color:var(--text-secondary)">Saturn</td><td style="padding:5px;color:var(--text-secondary)">Mitra (Friend)</td><td style="padding:5px;color:var(--text-secondary)">Devotion, friendship, spiritual discipline</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">12</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Uttara Phalguni ⭐</td><td style="padding:5px;color:var(--text-secondary)">Sun</td><td style="padding:5px;color:var(--text-secondary)">Aryaman (Patronage)</td><td style="padding:5px;color:var(--text-secondary)">Rest after effort, generosity, partnerships</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">18</td><td style="padding:5px;color:var(--text-primary)">Jyeshtha</td><td style="padding:5px;color:var(--text-secondary)">Mercury</td><td style="padding:5px;color:var(--text-secondary)">Indra (King)</td><td style="padding:5px;color:var(--text-secondary)">Seniority, authority, protector</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:5px;color:var(--text-secondary)">19</td><td style="padding:5px;color:var(--text-primary)">Mula</td><td style="padding:5px;color:var(--text-secondary)">Ketu</td><td style="padding:5px;color:var(--text-secondary)">Nirrti (Destruction)</td><td style="padding:5px;color:var(--text-secondary)">Root cause, investigation, foundation</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color);background:rgba(0,204,102,0.08)"><td style="padding:5px;color:var(--text-secondary)">20</td><td style="padding:5px;font-weight:600;color:var(--accent-green)">Purva Ashadha ⭐</td><td style="padding:5px;color:var(--text-secondary)">Venus</td><td style="padding:5px;color:var(--text-secondary)">Apas (Water)</td><td style="padding:5px;color:var(--text-secondary)">Invincibility, purification, flow</td></tr>
@@ -1440,10 +1401,10 @@
                                         </div>
                                     </div>
                                     <div style="padding:14px;background:var(--bg-tertiary);border-radius:8px;border-left:3px solid var(--accent-green)">
-                                        <div style="font-weight:600;color:var(--accent-green);margin-bottom:6px">Anuradha (Moon 5°50' — corrected Vedic chart)</div>
+                                        <div style="font-weight:600;color:var(--accent-green);margin-bottom:6px">Uttara Phalguni (Moon 6°23' — Version B, skyfield-verified)</div>
                                         <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">
-                                            <strong>Lord:</strong> Saturn | <strong>Deity:</strong> Mitra (Friendship God)<br>
-                                            "Following Radha" — devotion, friendship, spiritual discipline. From the corrected Vedic chart, Moon in Anuradha creates deep capacity for devotion, strong friendships, and balance between material and spiritual. Transformative emotional connections.
+                                            <strong>Lord:</strong> Sun | <strong>Deity:</strong> Aryaman (God of Patronage)<br>
+                                            "The bed" — rest after effort, generosity, partnerships. Moon in Uttara Phalguni creates deep capacity for service through warmth, strong friendships built on generosity, and balance between giving and receiving. Transformative emotional connections through devoted service.
                                         </div>
                                     </div>
                                 </div>
@@ -1488,7 +1449,7 @@
                                         <strong>Definition:</strong> Two planets sitting in each other's signs, creating mutual support. The exchange can be powerful (Maha Parivartana) or casual (Laghu Parivartana) depending on house involvement.
                                     </div>
                                     <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
-                                        <strong>In Your Chart:</strong> Moon-Mercury exchange (Moon in Scorpio/Mercury's sign, Mercury in Cancer/Moon's sign in some systems). Emotional intelligence meets communication — your feelings inform your words, and your words process your emotions. A natural counselor's signature.
+                                        <strong>In Your Chart:</strong> Moon in Virgo (Mercury's sign) with Sun as nakshatra lord. Emotional intelligence meets analytical precision — your feelings inform your analysis, and your words process your emotions with clarity. A natural counselor's signature.
                                     </div>
                                 </div>
                                 <!-- Neecha Bhanga Raja Yoga -->
@@ -1498,7 +1459,7 @@
                                         <strong>Definition:</strong> When a debilitated planet's weakness is cancelled by specific conditions (lord of debilitation sign aspects, exalted planet aspects, or the debilitated planet is in the house of its exaltation). Weakness transforms into unexpected strength.
                                     </div>
                                     <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
-                                        <strong>In Your Chart:</strong> Moon debilitated in Scorpio but cancelled by Mercury exchange — emotional depth becomes wisdom rather than destruction. Venus debilitated in some systems but rescued by Ashwini's healing energy. Your challenges become your greatest gifts.
+                                        <strong>In Your Chart:</strong> Moon in Virgo (neutral dignity) with Sun as nakshatra lord — emotional depth becomes wisdom through service. Venus debilitated in Aries but rescued by Ashwini's healing energy. Your challenges become your greatest gifts.
                                     </div>
                                 </div>
                                 <!-- Gaja Kesari Yoga -->
@@ -1518,7 +1479,7 @@
                                         <strong>Definition:</strong> Moon without conjunction or aspect from benefic planets (Jupiter, Venus, Mercury). Creates emotional intensity, need for spiritual practices, and transformative emotional nature. Not always negative — can indicate deep emotional wisdom through solitude.
                                     </div>
                                     <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
-                                        <strong>In Your Chart:</strong> Moon in Scorpio (debilitated) with Pluto conjunction, no direct benefic aspects. Advice: daily meditation, healing arts, transform emotions into wisdom. Your emotional depth is your superpower when channeled through spiritual practice.
+                                        <strong>In Your Chart:</strong> Moon in Virgo (Uttara Phalguni) — analytical emotional nature with Sun as nakshatra lord. Advice: daily meditation, service-oriented practice, transform emotions into wisdom through analysis. Your emotional depth is your superpower when channeled through spiritual practice.
                                     </div>
                                 </div>
                             </div>
@@ -1537,7 +1498,7 @@
 
                             <!-- Your Dasha Timeline -->
                             <div style="margin-bottom:20px">
-                                <div style="font-weight:700;color:var(--accent-green);font-size:14px;margin-bottom:12px">Your Complete Dasha Timeline (Moon in Anuradha — Saturn ruled)</div>
+                                <div style="font-weight:700;color:var(--accent-green);font-size:14px;margin-bottom:12px">Your Complete Dasha Timeline (Moon in Uttara Phalguni — Sun ruled)</div>
                                 <div style="overflow-x:auto">
                                     <table style="width:100%;border-collapse:collapse;font-size:12px">
                                         <thead>
@@ -1603,7 +1564,7 @@
                                     </div>
                                     <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:2px solid var(--accent-green)">
                                         <div style="font-weight:600;color:var(--accent-green);font-size:12px;margin-bottom:6px">Step 2: Calculate Balance</div>
-                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.6">The fraction of the Nakshatra the Moon has passed determines how much of the first dasha remains at birth. Example: Moon at 5°50' in Anuradha = ~5.5 years of Saturn dasha remaining.</div>
+                                        <div style="font-size:11px;color:var(--text-secondary);line-height:1.6">The fraction of the Nakshatra the Moon has passed determines how much of the first dasha remains at birth. Example: Moon at 6°23' in Uttara Phalguni = ~6.4 years of Sun dasha remaining at birth.</div>
                                     </div>
                                     <div style="padding:12px;background:var(--bg-tertiary);border-radius:8px;border-left:2px solid var(--accent-blue)">
                                         <div style="font-weight:600;color:var(--accent-blue);font-size:12px;margin-bottom:6px">Step 3: Follow the Sequence</div>
@@ -1674,8 +1635,7 @@
                                     <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;line-height:1.7">
                                         Each planet has: a <strong>Domicile</strong> (sign it rules — maximum strength), an <strong>Exaltation</strong> (sign where it's honored — peak expression), a <strong>Detriment</strong> (opposite domicile — weakened), and a <strong>Fall</strong> (opposite exaltation — lowest expression). These four states determine a planet's essential dignity.
                                     </div>
-                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">
-                                        <strong>In Your Chart:</strong> Jupiter in Sagittarius = DOMICILE (maximum strength). Saturn in Aquarius = own sign (strong). Moon in Scorpio = DEBILITATION (weakened) but Neecha Bhanga (cancellation). Venus debilitated = challenged in relationships but Ashwini heals. Sun in Aquarius = neutral.
+                                    <div style="font-size:12px;color:var(--accent-blue);line-height:1.6">                                                <strong>In Your Chart:</strong> Jupiter in Sagittarius = DOMICILE (maximum strength). Saturn in Aquarius = own sign (strong). Moon in Virgo = NEUTRAL dignity, Sun as nakshatra lord (strong). Venus debilitated = challenged in relationships but Ashwini heals. Sun in Aquarius = neutral.
                                     </div>
                                 </div>
                             </div>
@@ -1710,7 +1670,7 @@
                                         <tbody>
                                             <tr style="border-bottom:1px solid var(--border-color);background:rgba(255,215,0,0.05)"><td style="padding:6px;font-weight:600;color:var(--accent-gold)">ASC</td><td style="padding:6px;color:var(--text-primary)">Gemini</td><td style="padding:6px;color:var(--text-secondary)">21°31'</td><td style="padding:6px;color:var(--text-secondary)">1st</td><td style="padding:6px;color:var(--text-secondary)">Punarvasu</td><td style="padding:6px;color:var(--accent-green)">—</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#FFD700">☉ Sun</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">22°26'</td><td style="padding:6px;color:var(--text-secondary)">9th</td><td style="padding:6px;color:var(--text-secondary)">Purva Bhadra</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
-                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#C0C0C0">☽ Moon</td><td style="padding:6px;color:var(--text-primary)">Scorpio</td><td style="padding:6px;color:var(--text-secondary)">5°50'</td><td style="padding:6px;color:var(--text-secondary)">4th*</td><td style="padding:6px;color:var(--text-secondary)">Anuradha</td><td style="padding:6px;color:#CC0000">Debilitated</td></tr>
+                                            <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#C0C0C0">☽ Moon</td><td style="padding:6px;color:var(--text-primary)">Virgo</td><td style="padding:6px;color:var(--text-secondary)">6°23'</td><td style="padding:6px;color:var(--text-secondary)">4th</td><td style="padding:6px;color:var(--text-secondary)">Uttara Phalguni</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#00CC66">☿ Mercury</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">4°39'</td><td style="padding:6px;color:var(--text-secondary)">9th</td><td style="padding:6px;color:var(--text-secondary)">Dhanishta</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#FF69B4">♀ Venus</td><td style="padding:6px;color:var(--text-primary)">Aries</td><td style="padding:6px;color:var(--text-secondary)">6°42'</td><td style="padding:6px;color:var(--text-secondary)">11th</td><td style="padding:6px;color:var(--text-secondary)">Ashwini</td><td style="padding:6px;color:#CC0000">Debilitated</td></tr>
                                             <tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px;font-weight:600;color:#FF4444">♂ Mars</td><td style="padding:6px;color:var(--text-primary)">Aquarius</td><td style="padding:6px;color:var(--text-secondary)">22°01'</td><td style="padding:6px;color:var(--text-secondary)">9th</td><td style="padding:6px;color:var(--text-secondary)">Purva Bhadra</td><td style="padding:6px;color:var(--text-secondary)">Neutral</td></tr>
@@ -1722,7 +1682,7 @@
                                     </table>
                                 </div>
                                 <div style="margin-top:8px;font-size:11px;color:var(--text-secondary)">
-                                    * Moon in Scorpio = 4th house from Gemini ASC (corrected Vedic chart) | † Saturn in Aquarius = 9th house (corrected Vedic chart)
+                                    * Moon in Virgo = 4th house from Gemini ASC (Version B, skyfield-verified) | † Saturn in Aquarius = 9th house (corrected Vedic chart)
                                 </div>
                             </div>
 

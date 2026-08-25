@@ -66,11 +66,11 @@
       birth: 'March 6, 1996 — 2:00 PM CET',
       location: 'El Bayadh, Algeria',
       ascendant: 'Gemini 21°31\' (Punarvasu Nakshatra)',
-      moon: 'Scorpio 5°50\' (Anuradha Nakshatra) — Debilitated with cancellation',
+      moon: 'Virgo 6°23\' (Uttara Phalguni Nakshatra) — Sun as nakshatra lord',
       sun: 'Aquarius 22°26\' (Purva Bhadra Nakshatra)',
       coreVerses: ['21:87 (Yunus)', '55:1-4 (Ar-Rahman)', '68:1-4 (Al-Qalam)'],
       divineNames: ['Ya Hafiz (The Protector)', 'Ya Rahman (The Merciful)', 'Ya Alim (The All-Knowing)'],
-      dasha: 'Mercury (2018–2028) — Communication, writing, teaching',
+      dasha: 'Rahu Maha (2016–2034), Mercury Bhukti — Communication, writing, teaching',
       powerDay: 'Thursday (Jupiter energy)',
       method: 'MAHI — Morning (Fajr), Afternoon (ASR), Hour (Maghrib), Isha'
     };

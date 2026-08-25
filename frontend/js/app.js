@@ -20,13 +20,39 @@ function $(id){ return document.getElementById(id); }
 
 function initNavigation(){
     document.querySelectorAll('.nav-item').forEach(item=>{
-        item.addEventListener('click',()=>{ navigateTo(item.dataset.page); });
+        item.addEventListener('click',()=>{
+            if(item.dataset.page) navigateTo(item.dataset.page);
+        });
     });
+    document.querySelectorAll('.nav-section').forEach(sec=>{
+        sec.addEventListener('click',()=>{
+            const wrapper=sec.nextElementSibling;
+            if(!wrapper||!wrapper.classList.contains('nav-submenu-wrapper'))return;
+            sec.classList.toggle('open');
+            wrapper.classList.toggle('open');
+        });
+    });
+    // Expand the section containing the active page
+    expandActiveSection();
+}
+function expandActiveSection(){
+    const active=document.querySelector('.nav-item.active');
+    if(!active)return;
+    let el=active.parentElement;
+    while(el){
+        if(el.classList&&el.classList.contains('nav-submenu-wrapper')){
+            el.classList.add('open');
+            const sec=el.previousElementSibling;
+            if(sec&&sec.classList.contains('nav-section'))sec.classList.add('open');
+            break;
+        }
+        el=el.parentElement;
+    }
 }
 
 function navigateTo(page){
     document.querySelectorAll('.nav-item').forEach(i=>i.classList.remove('active'));
-    const nav=document.querySelector(`[data-page="${page}"]`); if(nav)nav.classList.add('active');
+    const nav=document.querySelector(`[data-page="${page}"]`); if(nav){nav.classList.add('active');expandActiveSection();}
     document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
     const pg=$(page); if(pg)pg.classList.add('active');
     AppState.currentPage=page;
@@ -522,7 +548,7 @@ async function initSoul(){
     const planets=chartData.planets||{};
     const sp=$('soulPurpose'),pl=$('pastLife'),ch=$('challenges'),gf=$('gifts');
 
-    // Derive soul purpose from Moon nakshatra (Anuradha/Uttara Phalguni) and Sun sign
+    // Derive soul purpose from Moon nakshatra (Uttara Phalguni) and Sun sign
     const moon=planets.Moon||{};
     const sun=planets.Sun||{};
     const rahu=planets.Rahu||{};
@@ -718,10 +744,10 @@ function renderQuranBlueprint(){
     const blueprint={
 
         // The 7 Openers (Al-Hawamim) — 7 Surahs opening with "Ha-Mim"
-        // These map to 7 spiritual stations. MAHI has Moon in Scorpio (Anuradha)
+        // These map to 7 spiritual stations. MAHI has Moon in Virgo (Uttara Phalguni)
         // which resonates with Surah Ghafir (40) — "The Forgiver" (Ha-Mim #4)
         hawamim:[
-            {num:40,name:'Ghafir',meaning:'The Forgiver — Forgiveness through spiritual fire',resonance:'Moon in Scorpio (Anuradha) — Devotion transforms through fire, forgiveness is the key'},
+            {num:40,name:'Ghafir',meaning:'The Forgiver — Forgiveness through spiritual fire',resonance:'Moon in Virgo (Uttara Phalguni) — Devotion transforms through service, forgiveness is the key'},
             {num:41,name:'Fussilat',meaning:'Explained in Detail — Clarity from chaos',resonance:'Gemini ASC — You explain complex truths clearly'},
             {num:42,name:'Ash-Shura',meaning:'The Consultation — Collaborative wisdom',resonance:'Mars in Aquarius — You consult with the future, not the past'},
             {num:43,name:'Az-Zukhruf',meaning:'The Ornaments — Beauty in truth',resonance:'Venus in Aries — Beauty through bold creation'},
@@ -736,7 +762,7 @@ function renderQuranBlueprint(){
             {letter:'Alif-Lam-Mim',surahs:'2,3,29,30,31,32',meaning:'Alif-Lam-Mim = "Allah, the Lord, the Knower." Three letters = three dimensions of reality.',mahi:'Your Sun in Aquarius + Mars in Aquarius = you know (Alim) through innovation, not tradition.'},
             {letter:'Ya-Sin',surahs:'36',meaning:'Ya = O (calling), Sin = the letter of revelation. "O Revelation!" The heart of the Quran.',mahi:'Venus in Aries 11th house = your heart beats for creative revelation. You are Ya-Sin incarnate — called to reveal through beauty.'},
             {letter:'Ha-Mim',surahs:'40-46 (7 Surahs)',meaning:'Ha = the breath of the Merciful, Mim = the essence of creation. Together = the divine breath that brings all things into being.',mahi:'Your chart has 4 planets in Aquarius — you are a Ha-Mim generator. Every breath you take creates new possibilities.'},
-            {letter:'Ta-Ha',surahs:'20',meaning:'Ta = truth, Ha = revelation. "O Truth-Revealer!" Addressed to Prophet Muhammad (SAW).',mahi:'Moon in Scorpio (Anuradha) = you reveal hidden truths through emotional depth and devotion.'},
+            {letter:'Ta-Ha',surahs:'20',meaning:'Ta = truth, Ha = revelation. "O Truth-Revealer!" Addressed to Prophet Muhammad (SAW).',mahi:'Moon in Virgo (Uttara Phalguni) = you reveal hidden truths through meticulous analysis and devoted service.'},
             {letter:'Nun',surahs:'68 (Al-Qalam)',meaning:'Nun = the primordial ink, the first point from which all creation emerges. "By the Pen!"',mahi:'This is YOUR letter. Al-Qalam 68:1-4 is your core verse. Nun is the cosmic pen — and you are its writer.'},
             {letter:'Qaf',surahs:'50,42',meaning:'Qaf = the dome of heaven, the cosmic vault. "By the Quran!" The container of all truth.',mahi:'Saturn in Aquarius 10th house = you are building the Qaf — the container (DSS, teaching system) that holds truth.'}
         ],
@@ -745,7 +771,7 @@ function renderQuranBlueprint(){
         // MAHI's Moon is at Batn al-Hut (28) — the Fish's Belly
         mansions_quranic:[
             {num:28,name:'Batn al-Hut',quranic:'Yunus (21:87) — "There is no god but You, Glory be to You, I have been among the wrongdoers"',mahi:'YOUR PERSONAL MANZIL. When Moon returns here (every 27.3 days), it triggers the Yunus energy — surrender in the deep, protection through prayer. This is your monthly reset point.'},
-            {num:17,name:'Al-Iklil (Scorpio)',quranic:'Ar-Rahman (55:1-4) — The Crown of Mercy',mahi:'Your Moon sits here in Scorpio. The crown (Iklil) represents the highest point of spiritual attainment through devotion (Anuradha).'},
+            {num:17,name:'Al-Iklil (Virgo)',quranic:'Ar-Rahman (55:1-4) — The Crown of Mercy',mahi:'Your Moon sits in Virgo (Uttara Phalguni). The crown (Iklil) represents the highest point of spiritual attainment through devoted service.'},
             {num:7,name:'Al-Dhira (Cancer)',quranic:'Maryam (19) — The Arm that holds the child',mahi:'Your Cancer 4th house = home, mother, roots. Al-Dhira is the arm — your foundation is built on nurturing.'}
         ],
 
@@ -765,13 +791,13 @@ function renderQuranBlueprint(){
             {surah:68,name:'Al-Qalam',hidden:'Opens with Nun — the cosmic pen. The surah is about moral character (khuluq). In Arabic, khuluq also means "creation" — your character IS your creation.',mahi:'Your core verse. The pen writes destiny — but the character of the writer determines what is written.'},
             {surah:97,name:'Al-Qadr',hidden:'"The Night of Power is better than a thousand months" (97:3). 1000 months = 83.3 years — a full human life. One night of divine encounter > entire lifetime of effort.',mahi:'Saturn in Aquarius 10th house = you are building toward a "Night of Power" moment in your career. One breakthrough > decades of work.'},
             {surah:93,name:'Ad-Duhaa',hidden:'"Your Lord has not abandoned you, nor has He become hateful" (93:3). This was revealed after a period of revelation silence. The promise: after silence comes expansion.',mahi:'When you feel stuck or abandoned (and you will), Ad-Duhaa is your reminder: the silence is not punishment. It\'s preparation.'},
-            {surah:94,name:'Ash-Sharh',hidden:'"Verily, with hardship comes ease" (94:6). The Arabic is "ma\'al-usri yusra" — WITH hardship, not AFTER. Ease is embedded in the difficulty itself.',mahi:'Your entire chart is built on this principle. Moon debilitated in Scorpio WITH cancellation = ease embedded in hardship. Rahu Virgo = building precision FROM chaos.'}
+            {surah:94,name:'Ash-Sharh',hidden:'"Verily, with hardship comes ease" (94:6). The Arabic is "ma\'al-usri yusra" — WITH hardship, not AFTER. Ease is embedded in the difficulty itself.',mahi:'Your entire chart is built on this principle. Moon in Virgo with Sun lord = ease embedded in daily practice. Rahu Virgo = building precision FROM chaos.'}
         ],
 
         // The Quran's 5 categories of people — mapped to MAHI's chart
         people_categories:[
             {category:'Ulul Albab (People of Understanding)',verse:'3:190-191',meaning:'"Those who remember Allah while standing, sitting, or lying on their sides, reflecting on the creation of the heavens and the earth."',mahi:'Sun in Aquarius 9th house = you reflect on cosmic systems. Ulul Albab is YOUR category — the ones who see Allah in patterns, systems, and architecture.'},
-            {category:'Ibād ar-Rahmān (Servants of the Merciful)',verse:'25:63-76',meaning:'The 8 characteristics: walk humbly, greet with peace, pray at night, seek forgiveness, stand for justice, do not worship idols, do not kill, do not commit adultery.',mahi:'Moon in Scorpio Anuradha = devotion personified. You are building toward becoming Ibād ar-Rahmān through daily practice (Fajr, Asr, Maghrib).'},
+            {category:'Ibād ar-Rahmān (Servants of the Merciful)',verse:'25:63-76',meaning:'The 8 characteristics: walk humbly, greet with peace, pray at night, seek forgiveness, stand for justice, do not worship idols, do not kill, do not commit adultery.',mahi:'Moon in Virgo Uttara Phalguni = devotion personified through service. You are building toward becoming Ibād ar-Rahmān through daily practice (Fajr, Asr, Maghrib).'},
             {category:'Muhsinūn (Those Who Do Excellence)',verse:'2:195, 3:134, 3:146',meaning:'"Allah loves the Muhsinūn" — those who do ihsan (excellence/beauty) in everything. Not just good — BEAUTIFULLY good.',mahi:'Chitra Nakshatra (Rahu Virgo) = the architect who creates beauty. Muhsinūn is your calling — not just formatting documents, but making them beautiful.'}
         ]
     };
@@ -779,7 +805,7 @@ function renderQuranBlueprint(){
     el.innerHTML=`
     <div class="quran-section">
         <h4 class="quran-section-title">The 7 Openers (Al-Hawamim) — Your Station</h4>
-        <p class="quran-section-intro">Seven Surahs open with "Ha-Mim" — the divine breath. Your Moon in Scorpio (Anuradha) resonates with Surah Ghafir (#4) — "The Forgiver." Forgiveness through spiritual fire is your emotional core.</p>
+        <p class="quran-section-intro">Seven Surahs open with "Ha-Mim" — the divine breath. Your Moon in Virgo (Uttara Phalguni) resonates with Surah Ghafir (#4) — "The Forgiver." Forgiveness through devoted service is your emotional core.</p>
         <div class="hawamim-grid">
             ${blueprint.hawamim.map(h=>`<div class="hawamim-item ${h.num===40?'highlight':''}">
                 <div class="hawamim-num">${h.num}</div>
@@ -850,11 +876,11 @@ function renderDailyQuranWisdom(){
         {day:3,verse:'Al-Baqarah 2:186',wisdom:'"I am near. I respond to the prayer of the supplicant when he prays to Me." Notice: Allah doesn\'t say "IF he prays" — He says "WHEN." The prayer is assumed. Your existence IS a prayer.',mahi:'Gemini ASC = your very presence is a communication with the divine. You don\'t need to "find time to pray" — your life IS the prayer.'},
         {day:5,verse:'Al-An\'am 6:102',wisdom:'"Your god is one god. There is no deity except Him, the Entirely Merciful, the Especially Merciful." Two mercies: Ar-Rahman (general, to all creation) and Ar-Rahim (specific, to the believers).',mahi:'Ar-Rahman appears in 6 of your house cusps. You carry BOTH mercies — general compassion for all + specific wisdom for those you teach.'},
         {day:7,verse:'Al-A\'raf 7:56',wisdom:'"Cause not corruption on the earth after its reformation." After Allah creates order, our job is to MAINTAIN it — not reinvent it. Sometimes the most spiritual act is to preserve what works.',mahi:'Your DSS is not just creating — it\'s preserving academic knowledge, formatting standards, educational systems. Maintenance IS worship.'},
-        {day:10,verse:'Yunus 10:57',wisdom:'"O mankind, there has come to you an instruction from your Lord and a healing for what is in the chests." The Quran heals what no medicine can — the diseases of the heart.',mahi:'Moon in Scorpio = emotional depths that need healing. The Quran IS your medicine. Every recitation heals a chest that nothing else can reach.'},
+        {day:10,verse:'Yunus 10:57',wisdom:'"O mankind, there has come to you an instruction from your Lord and a healing for what is in the chests." The Quran heals what no medicine can — the diseases of the heart.',mahi:'Moon in Virgo = analytical mind that processes emotions through understanding. The Quran IS your medicine. Every recitation heals a chest that nothing else can reach.'},
         {day:14,verse:'Al-Anbiya 21:30',wisdom:'"The heavens and the earth were joined together, then We separated them." Before creation, everything was ONE. Your spiritual gift (Ketu Pisces) remembers this unity. Your task (Rahu Virgo) is to build systems that reconnect people to it.',mahi:'Your life IS this verse: from unity (Pisces past) to separation (Aquarius present) to reconnection through service (Virgo future).'},
         {day:15,verse:'Al-Mu\'minun 23:1-2',wisdom:'"Successful indeed are the believers who are humble in their prayers." Success (falāḥ) in the Quran is not wealth — it\'s the ability to bow. Humility is the ultimate power.',mahi:'Saturn in Aquarius 10th = your public success comes through humility (Saturn) not ego. The one who builds systems for others succeeds.'},
         {day:18,verse:'Luqman 31:17-19',wisdom:'"Be moderate in your bearing, and lower your voice." Luqman\'s advice to his son: be humble, speak softly, walk gently. The greatest wisdom is not in what you say but HOW you say it.',mahi:'Gemini ASC + Mercury in Aquarius = you communicate for a living. Luqman\'s advice is your professional code: moderate, humble, soft.'},
-        {day:20,verse:'Ghafir 40:60',wisdom:'"Call upon Me; I will respond to you." This is the Ha-Mim surah that resonates with your Moon in Scorpio. The promise is direct, unconditional, immediate. Call. Response is guaranteed.',mahi:'Your Ya Hafiz × 100 at Fajr IS this verse in action. You call. He responds. The whale\'s belly is not a prison — it\'s a response.'},
+        {day:20,verse:'Ghafir 40:60',wisdom:'"Call upon Me; I will respond to you." This is the Ha-Mim surah that resonates with your Moon in Virgo. The promise is direct, unconditional, immediate. Call. Response is guaranteed.',mahi:'Your Ya Hafiz × 100 at Fajr IS this verse in action. You call. He responds. The whale\'s belly is not a prison — it\'s a response.'},
         {day:24,verse:'Ar-Rahman 55:13',wisdom:'"So which of the favors of your Lord would you deny?" This question appears 31 times — once for each letter of Alif-Lam (Allah). Every favor IS Allah. Denying a favor is denying Allah.',mahi:'Ar-Rahman in 6 house cusps = you are the living embodiment of this question. Every system you build asks: "Which favor will you deny?"'},
         {day:28,verse:'Al-Qalam 68:4',wisdom:'"Indeed, you are of a great moral character." This is not flattery — it\'s a divine declaration. Your character (khuluq) is your creation (khuluq). What you ARE is what you CREATE.',mahi:'This is YOUR verse. The pen (Nun) writes your destiny, but your CHARACTER determines what is written. Al-Qalam is your birthright.'},
         {day:30,verse:'An-Nas 114:1-6',wisdom:'"Say: I seek refuge in the Lord of mankind, the Sovereign of mankind, the God of mankind, from the evil of the retreating whisperer." The final Surah is about PROTECTION from whispering — both external and internal.',mahi:'Your Fajr practice (Yunus dhikr × 100) IS seeking refuge. The whispering is the doubt that says "you\'re not enough." Al-Nas says: you ARE enough, because Allah is your refuge.'}

@@ -172,6 +172,81 @@ body {
     font-weight: 500;
 }
 
+/* ── Nav sections (collapsible) ── */
+.nav-section {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+    border-radius: var(--radius-sm);
+    border-left: 2px solid transparent;
+    transition: color 0.2s, background 0.15s, border-color 0.2s;
+}
+.nav-section:hover {
+    color: var(--text-secondary);
+    background: var(--bg-hover);
+}
+.nav-section.open {
+    color: var(--accent-primary);
+    border-left-color: var(--accent-primary);
+}
+.nav-section-arrow {
+    font-size: 0.55rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    width: 10px;
+    flex-shrink: 0;
+}
+.nav-section.open .nav-section-arrow {
+    transform: rotate(90deg);
+}
+/* Smooth height animation via grid */
+.nav-submenu-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-submenu-wrapper.open {
+    grid-template-rows: 1fr;
+}
+.nav-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    min-height: 0;
+}
+.nav-submenu .nav-item {
+    padding: 5px 10px 5px 26px;
+    margin-bottom: 1px;
+    border-left: 2px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+.nav-submenu .nav-item:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--bg-hover);
+}
+.nav-submenu .nav-item.active {
+    border-left-color: var(--accent-primary);
+    background: rgba(139, 92, 246, 0.12);
+}
+.nav-submenu .nav-item .nav-icon {
+    font-size: 0.95rem;
+    width: 18px;
+}
+.nav-submenu .nav-item .nav-text {
+    font-size: 0.82rem;
+}
+
 .sidebar-footer {
     padding: var(--spacing-md);
     border-top: 1px solid var(--border-color);
