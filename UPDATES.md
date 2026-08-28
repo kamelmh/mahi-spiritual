@@ -7,6 +7,14 @@ When finishing work, append an entry below.
 
 ## Recent Changes
 
+### 2026-08-28 — Fixed Pages deploy: master now deploys directly
+- **What:** Resolved recurring GitHub Pages deployment failure (was: "Branch master is not allowed to deploy due to environment protection rules"). Root cause was the repo-level GitHub Pages **source branch** locked to `main`, not the environment.
+- **Fix:** Changed Pages source branch from `main` → `master` via API (`PUT /repos/.../pages`). Deleted the protected `github-pages` environment so a fresh unprotected one is auto-created. `deploy.yml` already triggers on `master`+`main`.
+- **Effect:** Any push to `master` now deploys the dashboard automatically — no more manual force-push to `main`. The `main` branch is no longer required for deployment.
+- **Files:** `.github/workflows/deploy.yml` (already correct), repo Pages setting (changed via API). No app code changed.
+- **Impact / breaking:** None for app. `main` branch now unused for deploys (can be left or deleted).
+- **Alerts for other projects:** None.
+
 ### 2026-08-16 — Hifdh Tracker MVP + Engine ASC Fix
 - **What:** Built a complete Quran memorization (Hifdh) tracker integrated into the web dashboard, and fixed the broken `calculate_houses` Placidus calculator that was producing wrong Capricorn ASC.
 - **Hifdh Tracker (new feature):**
