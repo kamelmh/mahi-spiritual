@@ -312,6 +312,14 @@ async def get_weekly_pulse():
     )
 
 
+@app.get("/api/notifications")
+async def get_notifications():
+    """Get all smart notifications — transit alerts, dasha shifts, moon changes, practice reminders."""
+    from backend.notifications import generate_all_notifications
+    natal = _get_natal()
+    return generate_all_notifications(natal)
+
+
 @app.get("/api/pulse/quran")
 async def get_quran_sync():
     """Get today's Quran-Astro sync."""

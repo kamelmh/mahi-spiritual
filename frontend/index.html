@@ -75,10 +75,21 @@
             </ul>
             
             <div class="sidebar-footer">
-                <button class="theme-toggle" id="themeToggle">
-                    <span class="theme-icon">☾</span>
-                    <span class="theme-text">Dark Mode</span>
-                </button>
+                <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+                    <button id="notifBell" style="position:relative;background:none;border:none;color:var(--text-primary);font-size:18px;cursor:pointer;padding:4px 8px;border-radius:4px" title="Notifications">
+                        🔔
+                        <span id="notifBadge" style="position:absolute;top:0;right:0;background:var(--accent-red,#e74c3c);color:white;border-radius:50%;font-size:10px;min-width:16px;height:16px;display:flex;align-items:center;justify-content:center;display:none"></span>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">☾</span>
+                        <span class="theme-text">Dark Mode</span>
+                    </button>
+                </div>
+                <!-- Notification Center (hidden by default) -->
+                <div id="notifCenter" style="display:none;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:6px;padding:8px;max-height:300px;overflow-y:auto;margin-bottom:8px">
+                    <div style="font-size:11px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:6px;font-weight:600">Notifications</div>
+                    <div id="notifList"></div>
+                </div>
             </div>
         </nav>
         

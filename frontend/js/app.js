@@ -102,6 +102,7 @@ async function initDashboard(){
     renderQuranBlueprint();
     renderDailyQuranWisdom();
     await loadDailyPulse();
+    await loadNotifications();
 }
 
 function updateDate(){
@@ -907,6 +908,138 @@ function renderDailyQuranWisdom(){
         </div>
     </div>`;
 }
+
+// === SMART NOTIFICATIONS ===
+let _notifData = null;
+
+async function loadNotifications() {
+    try {
+        const resp = await fetch('api/notifications');
+        if (!resp.ok) {
+            // Fallback: load from pulse.json
+            const pulseResp = await fetch('data/pulse.json');
+            if (pulseResp.ok) {
+                const pulseData = await pulseResp.json();
+                renderNotificationsFromPulse(pulseData);
+            }
+            return;
+        }
+        _notifData = await resp.json();
+        renderNotifications(_notifData);
+    } catch(e) {
+        console.log('Notifications not available:', e.message);
+    }
+}
+
+function renderNotifications(data) {
+    const badge = document.getElementById('notifBadge');
+    const list = document.getElementById('notifList');
+    if (!badge || !list) return;
+
+    const urgent = data.summary?.urgent_count || 0;
+    const high = data.summary?.high_count || 0;
+    const total = data.summary?.total || 0;
+
+    // Badge
+    if (urgent + high > 0) {
+        badge.textContent = urgent + high;
+        badge.style.display = 'flex';
+    } else {
+        badge.style.display = 'none';
+    }
+
+    // List
+    let html = '';
+    const notifs = data.notifications || [];
+    const shown = notifs.slice(0, 15); // Show top 15
+
+    for (const n of shown) {
+        const borderLeft = n.priority === 'urgent' ? '3px solid var(--accent-red)'
+            : n.priority === 'high' ? '3px solid var(--accent-orange,#f39c12)'
+            : n.priority === 'medium' ? '3px solid var(--accent-gold)'
+            : '3px solid var(--border-color)';
+
+        html += `<div style="padding:6px 8px;margin-bottom:4px;background:var(--bg-primary);border-left:${borderLeft};border-radius:0 4px 4px 0;cursor:pointer;font-size:12px" onclick="showNotifDetail('${n.id}')" title="${(n.body||'').replace(/'/g, "\\'")}">
+            <div style="display:flex;align-items:center;gap:4px">
+                <span>${n.icon}</span>
+                <span style="font-weight:600;color:${n.priority==='urgent'?'var(--accent-red)':n.priority==='high'?'var(--accent-orange)':'var(--text-primary)'}">${n.title}</span>
+            </div>
+            ${n.action ? `<div style="color:var(--text-secondary);font-size:11px;margin-top:2px">${n.action.substring(0,60)}${n.action.length>60?'...':''}</div>` : ''}
+        </div>`;
+    }
+
+    if (notifs.length > 15) {
+        html += `<div style="text-align:center;color:var(--text-secondary);font-size:11px;padding:4px">+${notifs.length - 15} more notifications</div>`;
+    }
+
+    list.innerHTML = html || '<div style="color:var(--text-secondary);font-size:12px">No notifications</div>';
+}
+
+function renderNotificationsFromPulse(pulseData) {
+    // Fallback: build notifications from pulse data
+    const pulse = pulseData?.today;
+    if (!pulse) return;
+
+    const notifs = [];
+
+    // Transit alerts
+    if (pulse.transits?.major_active) {
+        for (const t of pulse.transits.major_active) {
+            notifs.push({
+                icon: t.orb < 0.5 ? '🔴' : '🟠',
+                priority: t.orb < 0.5 ? 'urgent' : 'high',
+                title: `${t.transit} (orb ${t.orb.toFixed(1)}°)`,
+                body: t.theme,
+                action: t.dua || t.theme,
+            });
+        }
+    }
+
+    // Practice reminder
+    if (pulse.practice) {
+        notifs.push({
+            icon: '📿',
+            priority: 'medium',
+            title: `Practice: ${pulse.practice.items?.[0] || 'Recite Al-Fatiha'}`,
+            body: `~${pulse.practice.total_time_minutes} min total`,
+            action: pulse.practice.primary,
+        });
+    }
+
+    // Moon
+    if (pulse.cosmic_weather?.moon_nakshatra) {
+        notifs.push({
+            icon: '🌙',
+            priority: 'low',
+            title: `Moon in ${pulse.cosmic_weather.moon_nakshatra.name}`,
+            body: `Phase: ${pulse.cosmic_weather.moon_phase?.name || ''}`,
+            action: pulse.quran?.dhikr || '',
+        });
+    }
+
+    renderNotifications({notifications: notifs, summary: {total: notifs.length, urgent_count: notifs.filter(n=>n.priority==='urgent').length, high_count: notifs.filter(n=>n.priority==='high').length}});
+}
+
+function toggleNotifCenter() {
+    const center = document.getElementById('notifCenter');
+    if (!center) return;
+    const isHidden = center.style.display === 'none';
+    center.style.display = isHidden ? 'block' : 'none';
+}
+
+function showNotifDetail(id) {
+    if (!_notifData) return;
+    const notif = _notifData.notifications?.find(n => n.id === id);
+    if (notif) {
+        alert(`${notif.icon} ${notif.title}\n\n${notif.body}\n\nAction: ${notif.action}`);
+    }
+}
+
+// Init notification bell click
+setTimeout(() => {
+    const bell = document.getElementById('notifBell');
+    if (bell) bell.addEventListener('click', toggleNotifCenter);
+}, 100);
 
 // === DAILY PULSE ===
 async function loadDailyPulse() {
