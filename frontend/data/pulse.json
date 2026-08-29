@@ -1,0 +1,888 @@
+{
+  "generated": "2026-08-29",
+  "today": {
+    "date": "2026-08-29",
+    "greeting": "Alhamdulillah. Full Moon illuminates Purva Bhadra. What you planted is ready.",
+    "cosmic_weather": {
+      "moon_phase": {
+        "name": "Full Moon",
+        "emoji": "🌕",
+        "theme": "Culmination & Illumination",
+        "practice": "Celebrate completion. Release what's done.",
+        "energy": "peak — harvest, celebrate, release"
+      },
+      "moon_nakshatra": {
+        "name": "Purva Bhadra",
+        "lord": "Jupiter",
+        "pada": 3
+      },
+      "moon_sign": "Aquarius",
+      "moon_degree": 27.76
+    },
+    "dasha": {
+      "maha": "Rahu",
+      "bhukti": "Mercury",
+      "maha_dates": "2016-04-22 to 2034-04-23",
+      "theme": {
+        "focus": "karmic growth, obsession, new direction, technology",
+        "practice": "Step into the unfamiliar. Embrace growth.",
+        "surah": "Al-Kahf (18) verse 60-82 (Musa & Khidr)",
+        "dhikr": "Ya Hadi (88x)",
+        "warning": "Growth without wisdom becomes obsession."
+      },
+      "modifier": "with communication and analytical study",
+      "focus": "karmic growth, obsession, new direction, technology",
+      "warning": "Growth without wisdom becomes obsession."
+    },
+    "transits": {
+      "major_active": [
+        {
+          "transit": "Rahu conjunction natal Mercury",
+          "orb": 0.48,
+          "theme": "Rahu pulls you toward what you fear. That's where growth is.",
+          "dua": "Ya Rabb, guide me through the unfamiliar"
+        },
+        {
+          "transit": "Saturn square natal Jupiter",
+          "orb": 0.75,
+          "theme": "Saturn is testing you. Stay disciplined. Don't start — finish.",
+          "dua": "Hasbiyallahu la ilaha illa Huwa, alayhi tawakkaltu"
+        }
+      ],
+      "total_aspects": 30,
+      "closest": [
+        {
+          "transit_planet": "Neptune",
+          "natal_planet": "Uranus",
+          "aspect_type": "sextile",
+          "symbol": "Sextile",
+          "angle": 60.3,
+          "exactness": 0.3,
+          "nature": "harmonious",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Capricorn",
+          "transit_house": 10,
+          "natal_house": 8,
+          "interpretation": "Transit Neptune sextile natal Uranus — spirituality, illusion, dissolution, opportunizes, encourages, gently activates Uranus themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Rahu",
+          "natal_planet": "Mercury",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 0.48,
+          "exactness": 0.48,
+          "nature": "strong",
+          "is_major": true,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Aquarius",
+          "transit_house": 9,
+          "natal_house": 9,
+          "interpretation": "Transit Rahu conjunction natal Mercury — karmic growth, obsession, new direction, intensifies, fuses, activates Mercury themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Ketu",
+          "natal_planet": "Mercury",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 179.52,
+          "exactness": 0.48,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Leo",
+          "natal_sign": "Aquarius",
+          "transit_house": 3,
+          "natal_house": 9,
+          "interpretation": "Transit Ketu opposition natal Mercury — release, detachment, past-life patterns, confronts, balances, polarizes Mercury themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Saturn",
+          "natal_planet": "Jupiter",
+          "aspect_type": "square",
+          "symbol": "Square",
+          "angle": 90.75,
+          "exactness": 0.75,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Sagittarius",
+          "transit_house": 10,
+          "natal_house": 7,
+          "interpretation": "Transit Saturn square natal Jupiter — discipline, restriction, responsibility, tests, creates tension, motivates Jupiter themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Mars",
+          "natal_planet": "Jupiter",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 178.74,
+          "exactness": 1.26,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Gemini",
+          "natal_sign": "Sagittarius",
+          "transit_house": 1,
+          "natal_house": 7,
+          "interpretation": "Transit Mars opposition natal Jupiter — action, energy, assertion, confronts, balances, polarizes Jupiter themes. [Minor transit]"
+        }
+      ]
+    },
+    "actions": {
+      "do_today": [
+        "nurture relationships",
+        "review old commitments",
+        "use assertive energy for creation",
+        "trust intuition but verify",
+        "meditate deeply",
+        "build lasting structures"
+      ],
+      "avoid_today": [
+        "power struggles",
+        "excess in pleasure",
+        "escapism",
+        "starting new ventures",
+        "direct confrontation",
+        "confusion"
+      ]
+    },
+    "quran": {
+      "theme": "Fire, Transformation & The Sword",
+      "surah": "Al-Qalam",
+      "surah_num": 68,
+      "ayahs": [
+        1,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "dhikr": "Ya Jabbar (105x) — the Compeller",
+      "practice": "Walk through fire. The sword cuts what binds you.",
+      "color": "orange"
+    },
+    "practice": {
+      "items": [
+        "Surah Ar-Rahman (1x) + gratitude journal + release ceremony",
+        "Rahu period: Surah Al-Kahf (Friday) or verses 60-82 (Musa & Khidr)",
+        "RAHU ALERT: Step into the unfamiliar. Question old patterns.",
+        "SATURN ALERT: Avoid contracts. Double down on discipline.",
+        "Today's dhikr: Ya Jabbar (105x) — the Compeller"
+      ],
+      "primary": "Surah Ar-Rahman (1x) + gratitude journal + release ceremony",
+      "total_time_minutes": 50
+    },
+    "transit_data": {
+      "positions": {
+        "Sun": {
+          "tropical": 156.18,
+          "sidereal": 131.96,
+          "sign": "Leo",
+          "degree": 11.96,
+          "minute": 57,
+          "nakshatra": "Magha",
+          "nakshatra_lord": "Ketu",
+          "pada": 4,
+          "dignity": "own_sign",
+          "d9": {
+            "sign": "Cancer",
+            "degree": 17.65
+          },
+          "d10": {
+            "sign": "Scorpio",
+            "degree": 29.61
+          }
+        },
+        "Moon": {
+          "tropical": 351.98,
+          "sidereal": 327.76,
+          "sign": "Aquarius",
+          "degree": 27.76,
+          "minute": 45,
+          "nakshatra": "Purva Bhadra",
+          "nakshatra_lord": "Jupiter",
+          "pada": 3,
+          "dignity": "neutral",
+          "d9": {
+            "sign": "Gemini",
+            "degree": 9.84
+          },
+          "d10": {
+            "sign": "Scorpio",
+            "degree": 7.6
+          }
+        },
+        "Mercury": {
+          "tropical": 157.93,
+          "sidereal": 133.72,
+          "sign": "Leo",
+          "degree": 13.72,
+          "minute": 42,
+          "nakshatra": "Purva Phalguni",
+          "nakshatra_lord": "Venus",
+          "pada": 1,
+          "dignity": "neutral",
+          "d9": {
+            "sign": "Leo",
+            "degree": 3.44
+          },
+          "d10": {
+            "sign": "Sagittarius",
+            "degree": 17.16
+          }
+        },
+        "Venus": {
+          "tropical": 201.14,
+          "sidereal": 176.92,
+          "sign": "Virgo",
+          "degree": 26.92,
+          "minute": 55,
+          "nakshatra": "Chitra",
+          "nakshatra_lord": "Mars",
+          "pada": 2,
+          "dignity": "debilitated",
+          "d9": {
+            "sign": "Virgo",
+            "degree": 2.3
+          },
+          "d10": {
+            "sign": "Capricorn",
+            "degree": 29.22
+          }
+        },
+        "Mars": {
+          "tropical": 101.8,
+          "sidereal": 77.59,
+          "sign": "Gemini",
+          "degree": 17.59,
+          "minute": 35,
+          "nakshatra": "Ardra",
+          "nakshatra_lord": "Rahu",
+          "pada": 4,
+          "dignity": "neutral",
+          "d9": {
+            "sign": "Pisces",
+            "degree": 8.28
+          },
+          "d10": {
+            "sign": "Scorpio",
+            "degree": 25.87
+          }
+        },
+        "Jupiter": {
+          "tropical": 133.17,
+          "sidereal": 108.96,
+          "sign": "Cancer",
+          "degree": 18.96,
+          "minute": 57,
+          "nakshatra": "Ashlesha",
+          "nakshatra_lord": "Mercury",
+          "pada": 1,
+          "dignity": "exalted",
+          "d9": {
+            "sign": "Sagittarius",
+            "degree": 20.61
+          },
+          "d10": {
+            "sign": "Virgo",
+            "degree": 9.56
+          }
+        },
+        "Saturn": {
+          "tropical": 13.82,
+          "sidereal": 349.6,
+          "sign": "Pisces",
+          "degree": 19.6,
+          "minute": 36,
+          "nakshatra": "Revati",
+          "nakshatra_lord": "Mercury",
+          "pada": 1,
+          "dignity": "neutral",
+          "d9": {
+            "sign": "Sagittarius",
+            "degree": 26.41
+          },
+          "d10": {
+            "sign": "Taurus",
+            "degree": 16.01
+          }
+        },
+        "Uranus": {
+          "tropical": 65.63,
+          "sidereal": 41.42,
+          "sign": "Taurus",
+          "degree": 11.42,
+          "minute": 24,
+          "nakshatra": "Rohini",
+          "nakshatra_lord": "Moon",
+          "pada": 1,
+          "dignity": "neutral",
+          "d9": {
+            "sign": "Aries",
+            "degree": 12.74
+          },
+          "d10": {
+            "sign": "Aries",
+            "degree": 24.16
+          }
+        },
+        "Neptune": {
+          "tropical": 3.73,
+          "sidereal": 339.51,
+          "sign": "Pisces",
+          "degree": 9.51,
+          "minute": 30,
+          "nakshatra": "Uttara Bhadra",
+          "nakshatra_lord": "Saturn",
+          "pada": 2,
+          "dignity": "neutral",
+          "d9": {
+            "sign": "Virgo",
+            "degree": 25.59
+          },
+          "d10": {
+            "sign": "Aquarius",
+            "degree": 5.1
+          }
+        },
+        "Rahu": {
+          "tropical": 329.43,
+          "sidereal": 305.22,
+          "sign": "Aquarius",
+          "degree": 5.22
+        },
+        "Ketu": {
+          "tropical": 149.43,
+          "sidereal": 125.22,
+          "sign": "Leo",
+          "degree": 5.22
+        }
+      },
+      "aspects": [
+        {
+          "transit_planet": "Neptune",
+          "natal_planet": "Uranus",
+          "aspect_type": "sextile",
+          "symbol": "Sextile",
+          "angle": 60.3,
+          "exactness": 0.3,
+          "nature": "harmonious",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Capricorn",
+          "transit_house": 10,
+          "natal_house": 8,
+          "interpretation": "Transit Neptune sextile natal Uranus — spirituality, illusion, dissolution, opportunizes, encourages, gently activates Uranus themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Rahu",
+          "natal_planet": "Mercury",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 0.48,
+          "exactness": 0.48,
+          "nature": "strong",
+          "is_major": true,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Aquarius",
+          "transit_house": 9,
+          "natal_house": 9,
+          "interpretation": "Transit Rahu conjunction natal Mercury — karmic growth, obsession, new direction, intensifies, fuses, activates Mercury themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Ketu",
+          "natal_planet": "Mercury",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 179.52,
+          "exactness": 0.48,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Leo",
+          "natal_sign": "Aquarius",
+          "transit_house": 3,
+          "natal_house": 9,
+          "interpretation": "Transit Ketu opposition natal Mercury — release, detachment, past-life patterns, confronts, balances, polarizes Mercury themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Saturn",
+          "natal_planet": "Jupiter",
+          "aspect_type": "square",
+          "symbol": "Square",
+          "angle": 90.75,
+          "exactness": 0.75,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Sagittarius",
+          "transit_house": 10,
+          "natal_house": 7,
+          "interpretation": "Transit Saturn square natal Jupiter — discipline, restriction, responsibility, tests, creates tension, motivates Jupiter themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Mars",
+          "natal_planet": "Jupiter",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 178.74,
+          "exactness": 1.26,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Gemini",
+          "natal_sign": "Sagittarius",
+          "transit_house": 1,
+          "natal_house": 7,
+          "interpretation": "Transit Mars opposition natal Jupiter — action, energy, assertion, confronts, balances, polarizes Jupiter themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Rahu",
+          "natal_planet": "Venus",
+          "aspect_type": "sextile",
+          "symbol": "Sextile",
+          "angle": 61.54,
+          "exactness": 1.54,
+          "nature": "harmonious",
+          "is_major": true,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Aries",
+          "transit_house": 9,
+          "natal_house": 11,
+          "interpretation": "Transit Rahu sextile natal Venus — karmic growth, obsession, new direction, opportunizes, encourages, gently activates Venus themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Ketu",
+          "natal_planet": "Venus",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 118.46,
+          "exactness": 1.54,
+          "nature": "harmonious",
+          "is_major": true,
+          "transit_sign": "Leo",
+          "natal_sign": "Aries",
+          "transit_house": 3,
+          "natal_house": 11,
+          "interpretation": "Transit Ketu trine natal Venus — release, detachment, past-life patterns, flows, supports, eases Venus themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Venus",
+          "natal_planet": "Rahu",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 1.75,
+          "exactness": 1.75,
+          "nature": "strong",
+          "is_major": false,
+          "transit_sign": "Virgo",
+          "natal_sign": "Virgo",
+          "transit_house": 4,
+          "natal_house": 4,
+          "interpretation": "Transit Venus conjunction natal Rahu — love, beauty, harmony, intensifies, fuses, activates Rahu themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Venus",
+          "natal_planet": "Ketu",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 178.25,
+          "exactness": 1.75,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Virgo",
+          "natal_sign": "Pisces",
+          "transit_house": 4,
+          "natal_house": 10,
+          "interpretation": "Transit Venus opposition natal Ketu — love, beauty, harmony, confronts, balances, polarizes Ketu themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Neptune",
+          "natal_planet": "Moon",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 176.87,
+          "exactness": 3.13,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Virgo",
+          "transit_house": 10,
+          "natal_house": 4,
+          "interpretation": "Transit Neptune opposition natal Moon — spirituality, illusion, dissolution, confronts, balances, polarizes Moon themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Moon",
+          "natal_planet": "Saturn",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 4.53,
+          "exactness": 4.53,
+          "nature": "strong",
+          "is_major": false,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Pisces",
+          "transit_house": 9,
+          "natal_house": 10,
+          "interpretation": "Transit Moon conjunction natal Saturn — emotions, intuition, nurturing, intensifies, fuses, activates Saturn themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Mars",
+          "natal_planet": "Sun",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 115.1,
+          "exactness": 4.9,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Gemini",
+          "natal_sign": "Aquarius",
+          "transit_house": 1,
+          "natal_house": 9,
+          "interpretation": "Transit Mars trine natal Sun — action, energy, assertion, flows, supports, eases Sun themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Uranus",
+          "natal_planet": "Moon",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 114.96,
+          "exactness": 5.04,
+          "nature": "harmonious",
+          "is_major": true,
+          "transit_sign": "Taurus",
+          "natal_sign": "Virgo",
+          "transit_house": 12,
+          "natal_house": 4,
+          "interpretation": "Transit Uranus trine natal Moon — breakthrough, change, liberation, flows, supports, eases Moon themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Mercury",
+          "natal_planet": "Jupiter",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 125.13,
+          "exactness": 5.13,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Leo",
+          "natal_sign": "Sagittarius",
+          "transit_house": 3,
+          "natal_house": 7,
+          "interpretation": "Transit Mercury trine natal Jupiter — communication, intellect, learning, flows, supports, eases Jupiter themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Sun",
+          "natal_planet": "Venus",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 125.2,
+          "exactness": 5.2,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Leo",
+          "natal_sign": "Aries",
+          "transit_house": 3,
+          "natal_house": 11,
+          "interpretation": "Transit Sun trine natal Venus — identity, vitality, ego, flows, supports, eases Venus themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Moon",
+          "natal_planet": "Sun",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 5.27,
+          "exactness": 5.27,
+          "nature": "strong",
+          "is_major": false,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Aquarius",
+          "transit_house": 9,
+          "natal_house": 9,
+          "interpretation": "Transit Moon conjunction natal Sun — emotions, intuition, nurturing, intensifies, fuses, activates Sun themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Moon",
+          "natal_planet": "Neptune",
+          "aspect_type": "sextile",
+          "symbol": "Sextile",
+          "angle": 54.58,
+          "exactness": 5.42,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Capricorn",
+          "transit_house": 9,
+          "natal_house": 8,
+          "interpretation": "Transit Moon sextile natal Neptune — emotions, intuition, nurturing, opportunizes, encourages, gently activates Neptune themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Saturn",
+          "natal_planet": "Rahu",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 174.43,
+          "exactness": 5.57,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Virgo",
+          "transit_house": 10,
+          "natal_house": 4,
+          "interpretation": "Transit Saturn opposition natal Rahu — discipline, restriction, responsibility, confronts, balances, polarizes Rahu themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Saturn",
+          "natal_planet": "Ketu",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 5.57,
+          "exactness": 5.57,
+          "nature": "strong",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Pisces",
+          "transit_house": 10,
+          "natal_house": 10,
+          "interpretation": "Transit Saturn conjunction natal Ketu — discipline, restriction, responsibility, intensifies, fuses, activates Ketu themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Moon",
+          "natal_planet": "Mars",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 5.7,
+          "exactness": 5.7,
+          "nature": "strong",
+          "is_major": false,
+          "transit_sign": "Aquarius",
+          "natal_sign": "Aquarius",
+          "transit_house": 9,
+          "natal_house": 9,
+          "interpretation": "Transit Moon conjunction natal Mars — emotions, intuition, nurturing, intensifies, fuses, activates Mars themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Jupiter",
+          "natal_planet": "Ketu",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 113.79,
+          "exactness": 6.21,
+          "nature": "harmonious",
+          "is_major": true,
+          "transit_sign": "Cancer",
+          "natal_sign": "Pisces",
+          "transit_house": 2,
+          "natal_house": 10,
+          "interpretation": "Transit Jupiter trine natal Ketu — expansion, wisdom, opportunity, flows, supports, eases Ketu themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Venus",
+          "natal_planet": "Neptune",
+          "aspect_type": "square",
+          "symbol": "Square",
+          "angle": 96.26,
+          "exactness": 6.26,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Virgo",
+          "natal_sign": "Capricorn",
+          "transit_house": 4,
+          "natal_house": 8,
+          "interpretation": "Transit Venus square natal Neptune — love, beauty, harmony, tests, creates tension, motivates Neptune themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Uranus",
+          "natal_planet": "Mercury",
+          "aspect_type": "square",
+          "symbol": "Square",
+          "angle": 96.68,
+          "exactness": 6.68,
+          "nature": "challenging",
+          "is_major": true,
+          "transit_sign": "Taurus",
+          "natal_sign": "Aquarius",
+          "transit_house": 12,
+          "natal_house": 9,
+          "interpretation": "Transit Uranus square natal Mercury — breakthrough, change, liberation, tests, creates tension, motivates Mercury themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Sun",
+          "natal_planet": "Jupiter",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 126.89,
+          "exactness": 6.89,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Leo",
+          "natal_sign": "Sagittarius",
+          "transit_house": 3,
+          "natal_house": 7,
+          "interpretation": "Transit Sun trine natal Jupiter — identity, vitality, ego, flows, supports, eases Jupiter themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Mercury",
+          "natal_planet": "Venus",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 126.96,
+          "exactness": 6.96,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Leo",
+          "natal_sign": "Aries",
+          "transit_house": 3,
+          "natal_house": 11,
+          "interpretation": "Transit Mercury trine natal Venus — communication, intellect, learning, flows, supports, eases Venus themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Sun",
+          "natal_planet": "Mercury",
+          "aspect_type": "opposition",
+          "symbol": "Opp",
+          "angle": 172.78,
+          "exactness": 7.22,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Leo",
+          "natal_sign": "Aquarius",
+          "transit_house": 3,
+          "natal_house": 9,
+          "interpretation": "Transit Sun opposition natal Mercury — identity, vitality, ego, confronts, balances, polarizes Mercury themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Neptune",
+          "natal_planet": "Saturn",
+          "aspect_type": "conjunction",
+          "symbol": "Conj",
+          "angle": 7.22,
+          "exactness": 7.22,
+          "nature": "strong",
+          "is_major": true,
+          "transit_sign": "Pisces",
+          "natal_sign": "Pisces",
+          "transit_house": 10,
+          "natal_house": 10,
+          "interpretation": "Transit Neptune conjunction natal Saturn — spirituality, illusion, dissolution, intensifies, fuses, activates Saturn themes. [Major transit]"
+        },
+        {
+          "transit_planet": "Mars",
+          "natal_planet": "Rahu",
+          "aspect_type": "square",
+          "symbol": "Square",
+          "angle": 97.58,
+          "exactness": 7.58,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Gemini",
+          "natal_sign": "Virgo",
+          "transit_house": 1,
+          "natal_house": 4,
+          "interpretation": "Transit Mars square natal Rahu — action, energy, assertion, tests, creates tension, motivates Rahu themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Mars",
+          "natal_planet": "Ketu",
+          "aspect_type": "square",
+          "symbol": "Square",
+          "angle": 82.42,
+          "exactness": 7.58,
+          "nature": "challenging",
+          "is_major": false,
+          "transit_sign": "Gemini",
+          "natal_sign": "Pisces",
+          "transit_house": 1,
+          "natal_house": 10,
+          "interpretation": "Transit Mars square natal Ketu — action, energy, assertion, tests, creates tension, motivates Ketu themes. [Minor transit]"
+        },
+        {
+          "transit_planet": "Venus",
+          "natal_planet": "Mercury",
+          "aspect_type": "trine",
+          "symbol": "Trine",
+          "angle": 127.82,
+          "exactness": 7.82,
+          "nature": "harmonious",
+          "is_major": false,
+          "transit_sign": "Virgo",
+          "natal_sign": "Aquarius",
+          "transit_house": 4,
+          "natal_house": 9,
+          "interpretation": "Transit Venus trine natal Mercury — love, beauty, harmony, flows, supports, eases Mercury themes. [Minor transit]"
+        }
+      ]
+    }
+  },
+  "week": [
+    {
+      "date": "2026-08-29",
+      "day_name": "Saturday",
+      "moon_phase": "Full Moon",
+      "moon_emoji": "🌕",
+      "moon_nakshatra": "Purva Bhadra",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Ar-Rahman (1x) + gratitude journal + release ceremony",
+      "urgent_count": 2
+    },
+    {
+      "date": "2026-08-30",
+      "day_name": "Sunday",
+      "moon_phase": "Waning Gibbous",
+      "moon_emoji": "🌖",
+      "moon_nakshatra": "Uttara Bhadra",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Al-Ma'un (7x) + give charity or share knowledge",
+      "urgent_count": 2
+    },
+    {
+      "date": "2026-08-31",
+      "day_name": "Monday",
+      "moon_phase": "Waning Gibbous",
+      "moon_emoji": "🌖",
+      "moon_nakshatra": "Revati",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Al-Ma'un (7x) + give charity or share knowledge",
+      "urgent_count": 2
+    },
+    {
+      "date": "2026-09-01",
+      "day_name": "Tuesday",
+      "moon_phase": "Waning Gibbous",
+      "moon_emoji": "🌖",
+      "moon_nakshatra": "Ashwini",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Al-Ma'un (7x) + give charity or share knowledge",
+      "urgent_count": 2
+    },
+    {
+      "date": "2026-09-02",
+      "day_name": "Wednesday",
+      "moon_phase": "Waning Gibbous",
+      "moon_emoji": "🌖",
+      "moon_nakshatra": "Bharani",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Al-Ma'un (7x) + give charity or share knowledge",
+      "urgent_count": 2
+    },
+    {
+      "date": "2026-09-03",
+      "day_name": "Thursday",
+      "moon_phase": "Last Quarter",
+      "moon_emoji": "🌗",
+      "moon_nakshatra": "Krittika",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Al-Inshirah (1x) + forgiveness practice",
+      "urgent_count": 2
+    },
+    {
+      "date": "2026-09-04",
+      "day_name": "Friday",
+      "moon_phase": "Last Quarter",
+      "moon_emoji": "🌗",
+      "moon_nakshatra": "Rohini",
+      "dasha_theme": "Rahu / Mercury",
+      "top_practice": "Surah Al-Inshirah (1x) + forgiveness practice",
+      "urgent_count": 2
+    }
+  ]
+}

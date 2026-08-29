@@ -101,6 +101,7 @@ async function initDashboard(){
     renderActionBigThree();
     renderQuranBlueprint();
     renderDailyQuranWisdom();
+    await loadDailyPulse();
 }
 
 function updateDate(){
@@ -905,6 +906,85 @@ function renderDailyQuranWisdom(){
             </div>`).join('')}
         </div>
     </div>`;
+}
+
+// === DAILY PULSE ===
+async function loadDailyPulse() {
+    const greetingEl = document.querySelector('#dashboard .greeting-text');
+    const pulseActionsEl = document.getElementById('pulseActions');
+    const pulsePracticeEl = document.getElementById('pulsePractice');
+    const pulseQuranEl = document.getElementById('pulseQuran');
+    const pulseWeekEl = document.getElementById('pulseWeek');
+    
+    try {
+        const resp = await fetch('data/pulse.json');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const pulse = data.today;
+        if (!pulse) return;
+        
+        // Greeting
+        if (greetingEl) {
+            greetingEl.textContent = pulse.greeting || '';
+        }
+        
+        // Actions
+        if (pulseActionsEl) {
+            let html = '';
+            if (pulse.actions && pulse.actions.do_today) {
+                html += '<div style="margin-bottom:8px"><strong style="color:var(--accent-green)">DO TODAY</strong></div>';
+                pulse.actions.do_today.forEach(item => {
+                    html += `<div style="padding:4px 0;font-size:13px">+ ${item}</div>`;
+                });
+            }
+            if (pulse.actions && pulse.actions.avoid_today) {
+                html += '<div style="margin:8px 0"><strong style="color:var(--accent-red)">AVOID TODAY</strong></div>';
+                pulse.actions.avoid_today.forEach(item => {
+                    html += `<div style="padding:4px 0;font-size:13px;color:var(--text-secondary)">- ${item}</div>`;
+                });
+            }
+            pulseActionsEl.innerHTML = html;
+        }
+        
+        // Practice
+        if (pulsePracticeEl && pulse.practice) {
+            let html = '';
+            pulse.practice.items.forEach(item => {
+                html += `<div style="padding:6px 0;font-size:13px;border-bottom:1px solid var(--border-color)">${item}</div>`;
+            });
+            html += `<div style="margin-top:6px;font-size:12px;color:var(--text-secondary)">~${pulse.practice.total_time_minutes} minutes</div>`;
+            pulsePracticeEl.innerHTML = html;
+        }
+        
+        // Quran
+        if (pulseQuranEl && pulse.quran) {
+            const q = pulse.quran;
+            pulseQuranEl.innerHTML = `
+                <div style="font-size:15px;font-weight:600;color:var(--accent-gold);margin-bottom:4px">Surah ${q.surah_num}: ${q.surah}</div>
+                <div style="font-size:13px;margin-bottom:4px">${q.theme}</div>
+                <div style="font-size:12px;color:var(--text-secondary)">${q.dhikr}</div>
+                <div style="font-size:13px;margin-top:6px;font-style:italic">${q.practice}</div>
+            `;
+        }
+        
+        // Week
+        if (pulseWeekEl && data.week) {
+            let html = '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px">';
+            data.week.forEach(day => {
+                const urgent = day.urgent_count > 0 ? 'border-left:3px solid var(--accent-red)' : '';
+                html += `<div style="padding:6px;background:var(--bg-secondary);border-radius:4px;font-size:11px;text-align:center;${urgent}">
+                    <div style="font-weight:600">${day.day_name.substring(0,3)}</div>
+                    <div style="font-size:16px;margin:2px 0">${day.moon_emoji || ''}</div>
+                    <div style="color:var(--text-secondary)">${day.moon_nakshatra || ''}</div>
+                    ${day.urgent_count > 0 ? `<div style="color:var(--accent-red)">${day.urgent_count}!</div>` : ''}
+                </div>`;
+            });
+            html += '</div>';
+            pulseWeekEl.innerHTML = html;
+        }
+    } catch(e) {
+        console.log('Daily pulse not available:', e.message);
+    }
 }
 
 // === TRANSITS PAGE ===
