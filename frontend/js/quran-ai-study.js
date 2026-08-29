@@ -68,7 +68,7 @@ const QuranAIStudy = (function() {
     // ─── Offline cache ───
     // Cache key format: 'quran-api:{endpoint}' -> JSON string + timestamp
     // TTL: 24 hours (86400 seconds). Adjust as needed.
-    const CACHE_TTL = 86400;
+    const CACHE_TTL2 = 86400;
 
     // ─── Comprehensive Arabic Root Dictionary ───
     // Common Quranic roots with meanings, forms, and occurrences
