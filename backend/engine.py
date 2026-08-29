@@ -557,6 +557,288 @@ def calculate_full_chart(name: str, year: int, month: int, day: int, hour: int =
     return chart
 
 
+def calculate_transits(
+    natal_positions: Dict,
+    target_year: int,
+    target_month: int,
+    target_day: int,
+    natal_asc: float = 0.0,
+    natal_asc_sign: str = "Gemini",
+) -> Dict:
+    """
+    Calculate transits for a target date against natal chart positions.
+    
+    Parameters:
+        natal_positions: dict of natal planetary positions (from calculate_planetary_positions)
+        target_year, target_month, target_day: date to calculate transits for
+        natal_asc: natal ascendant sidereal degree (for house placement)
+        natal_asc_sign: natal ascendant sign name (for Whole Sign house mapping)
+    
+    Returns:
+        dict with transit_positions, transit_aspects, and summary
+    """
+    # Calculate transit positions for the target date
+    transit_positions = calculate_planetary_positions(
+        target_year, target_month, target_day, hour=12, minute=0
+    )
+    
+    # Calculate transits for nodes too (use same method as natal)
+    # Rahu/Ketu for transit date
+    try:
+        t = ts.utc(target_year, target_month, target_day, 12, 0)
+        t_jd = t.tt
+        T = (t_jd - 2451545.0) / 36525.0
+        rahu_tropical = (125.0445 - 1934.1362 * T) % 360
+        ketu_tropical = (rahu_tropical + 180) % 360
+        rahu_sidereal = tropical_to_sidereal(rahu_tropical, target_year)
+        ketu_sidereal = tropical_to_sidereal(ketu_tropical, target_year)
+        
+        transit_positions["Rahu"] = {
+            "tropical": round(rahu_tropical, 2),
+            "sidereal": round(rahu_sidereal, 2),
+            "sign": get_sign(rahu_sidereal)[0],
+            "degree": round(get_sign(rahu_sidereal)[1], 2),
+        }
+        transit_positions["Ketu"] = {
+            "tropical": round(ketu_tropical, 2),
+            "sidereal": round(ketu_sidereal, 2),
+            "sign": get_sign(ketu_sidereal)[0],
+            "degree": round(get_sign(ketu_sidereal)[1], 2),
+        }
+    except Exception:
+        pass
+    
+    # Compute aspects between transiting and natal planets
+    transit_aspects = []
+    
+    # Aspect definitions with orbs
+    aspect_defs = [
+        {"name": "conjunction", "angle": 0, "orb": 8, "nature": "strong", "symbol": "Conj"},
+        {"name": "opposition", "angle": 180, "orb": 8, "nature": "challenging", "symbol": "Opp"},
+        {"name": "trine", "angle": 120, "orb": 8, "nature": "harmonious", "symbol": "Trine"},
+        {"name": "square", "angle": 90, "orb": 8, "nature": "challenging", "symbol": "Square"},
+        {"name": "sextile", "angle": 60, "orb": 6, "nature": "harmonious", "symbol": "Sextile"},
+    ]
+    
+    # Slow planets (Saturn, Jupiter, Uranus, Neptune, Rahu, Ketu) for major transits
+    slow_planets = ["Saturn", "Jupiter", "Uranus", "Neptune", "Rahu", "Ketu"]
+    # Fast planets (Sun, Moon, Mercury, Venus, Mars) for minor transits
+    fast_planets = ["Sun", "Moon", "Mercury", "Venus", "Mars"]
+    
+    for t_planet, t_data in transit_positions.items():
+        if "error" in t_data:
+            continue
+        t_lon = t_data["sidereal"]
+        
+        for n_planet, n_data in natal_positions.items():
+            if "error" in n_data:
+                continue
+            if t_planet == n_planet:
+                continue  # Skip same planet
+            
+            n_lon = n_data["sidereal"]
+            diff = abs(t_lon - n_lon)
+            if diff > 180:
+                diff = 360 - diff
+            
+            for asp in aspect_defs:
+                if abs(diff - asp["angle"]) <= asp["orb"]:
+                    exactness = abs(asp["angle"] - diff)
+                    
+                    # Determine if this is a major or minor transit
+                    is_major = t_planet in slow_planets
+                    
+                    # Calculate transit house (Whole Sign from natal ASC)
+                    if natal_asc > 0 or natal_asc_sign != "Unknown":
+                        signs_list = [
+                            "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+                            "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces",
+                        ]
+                        asc_idx = signs_list.index(natal_asc_sign)
+                        asc_sign_start = (asc_idx * 30) % 360
+                        transit_house = int(((t_lon - asc_sign_start) % 360) / 30) + 1
+                        natal_house = int(((n_lon - asc_sign_start) % 360) / 30) + 1
+                    else:
+                        transit_house = None
+                        natal_house = None
+                    
+                    transit_aspects.append({
+                        "transit_planet": t_planet,
+                        "natal_planet": n_planet,
+                        "aspect_type": asp["name"],
+                        "symbol": asp["symbol"],
+                        "angle": round(diff, 2),
+                        "exactness": round(exactness, 2),
+                        "nature": asp["nature"],
+                        "is_major": is_major,
+                        "transit_sign": t_data["sign"],
+                        "natal_sign": n_data["sign"],
+                        "transit_house": transit_house,
+                        "natal_house": natal_house,
+                        "interpretation": _transit_interpretation(
+                            t_planet, n_planet, asp["name"], is_major
+                        ),
+                    })
+    
+    # Sort by exactness (closest aspects first)
+    transit_aspects.sort(key=lambda x: x["exactness"])
+    
+    # Build summary
+    summary = {
+        "major_transits": [a for a in transit_aspects if a["is_major"] and a["exactness"] < 5],
+        "significant_transits": [a for a in transit_aspects if a["exactness"] < 3],
+        "active_transits": [a for a in transit_aspects if a["exactness"] < 8],
+    }
+    
+    return {
+        "date": f"{target_year}-{target_month:02d}-{target_day:02d}",
+        "transit_positions": transit_positions,
+        "transit_aspects": transit_aspects,
+        "summary": summary,
+    }
+
+
+def _transit_interpretation(t_planet: str, n_planet: str, aspect_name: str, is_major: bool) -> str:
+    """Generate interpretation for a transit-natal aspect."""
+    # Core meanings
+    t_meanings = {
+        "Saturn": "discipline, restriction, responsibility",
+        "Jupiter": "expansion, wisdom, opportunity",
+        "Uranus": "breakthrough, change, liberation",
+        "Neptune": "spirituality, illusion, dissolution",
+        "Rahu": "karmic growth, obsession, new direction",
+        "Ketu": "release, detachment, past-life patterns",
+        "Sun": "identity, vitality, ego",
+        "Moon": "emotions, intuition, nurturing",
+        "Mercury": "communication, intellect, learning",
+        "Venus": "love, beauty, harmony",
+        "Mars": "action, energy, assertion",
+    }
+    
+    asp_meanings = {
+        "conjunction": "intensifies, fuses, activates",
+        "opposition": "confronts, balances, polarizes",
+        "trine": "flows, supports, eases",
+        "square": "tests, creates tension, motivates",
+        "sextile": "opportunizes, encourages, gently activates",
+    }
+    
+    t = t_meanings.get(t_planet, t_planet)
+    a = asp_meanings.get(aspect_name, aspect_name)
+    n = n_planet
+    
+    level = "Major" if is_major else "Minor"
+    return f"Transit {t_planet} {aspect_name} natal {n} — {t}, {a} {n} themes. [{level} transit]"
+
+
+# ============== MONTHLY TRANSIT CALCULATOR ==============
+
+
+def calculate_monthly_transits(
+    natal_positions: Dict,
+    year: int,
+    month: int,
+    natal_asc: float = 0.0,
+    natal_asc_sign: str = "Gemini",
+) -> List[Dict]:
+    """
+    Calculate transits for each day of a month.
+    Returns list of daily transit summaries.
+    """
+    # Determine days in month
+    import calendar
+    days_in_month = calendar.monthrange(year, month)[1]
+    
+    daily_transits = []
+    for day in range(1, days_in_month + 1):
+        transit_data = calculate_transits(
+            natal_positions, year, month, day,
+            natal_asc, natal_asc_sign
+        )
+        # Filter to only significant aspects (orb < 3°)
+        significant = [a for a in transit_data["transit_aspects"] if a["exactness"] < 3]
+        if significant:
+            daily_transits.append({
+                "date": transit_data["date"],
+                "significant_aspects": significant,
+                "fast_transits": [a for a in significant if not a["is_major"]],
+            })
+    
+    return daily_transits
+
+
+def generate_transit_forecast(
+    natal_positions: Dict,
+    natal_asc: float = 0.0,
+    natal_asc_sign: str = "Gemini",
+    start_year: int = 2026,
+    start_month: int = 8,
+    end_year: int = 2027,
+    end_month: int = 12,
+) -> Dict:
+    """
+    Generate a month-by-month transit forecast for a date range.
+    
+    Returns dict with:
+      - key_events: all transit aspects where orb < 3° (exact hits)
+      - monthly_summary: per-month breakdown
+      - major_highlights: slow planet transits with orb < 5°
+    """
+    all_events = []
+    monthly = []
+    
+    year = start_year
+    month = start_month
+    
+    while (year, month) <= (end_year, end_month):
+        import calendar
+        days_in_month = calendar.monthrange(year, month)[1]
+        
+        month_events = []
+        for day in range(1, days_in_month + 1):
+            t = calculate_transits(
+                natal_positions, year, month, day,
+                natal_asc, natal_asc_sign
+            )
+            for asp in t["transit_aspects"]:
+                if asp["exactness"] < 3:  # Within 3° of exact
+                    asp_event = {**asp, "date": f"{year}-{month:02d}-{day:02d}"}
+                    month_events.append(asp_event)
+                    all_events.append(asp_event)
+        
+        if month_events:
+            monthly.append({
+                "year": year,
+                "month": month,
+                "events": month_events,
+                "major_transits": [e for e in month_events if e["is_major"]],
+                "minor_transits": [e for e in month_events if not e["is_major"]],
+            })
+        
+        # Advance month
+        month += 1
+        if month > 12:
+            month = 1
+            year += 1
+    
+    # Deduplicate: keep only first/last date for each transit pair within a window
+    major_highlights = []
+    seen = set()
+    for e in all_events:
+        if e["is_major"] and e["exactness"] < 1.0:
+            key = (e["transit_planet"], e["natal_planet"], e["aspect_type"])
+            if key not in seen:
+                seen.add(key)
+                major_highlights.append(e)
+    
+    return {
+        "key_events": all_events,
+        "monthly_summary": monthly,
+        "major_highlights": major_highlights,
+        "total_events": len(all_events),
+    }
+
+
 # ============== FAMILY MEMBER DATA ==============
 
 FAMILY_MEMBERS = {

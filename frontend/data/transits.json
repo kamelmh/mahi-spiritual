@@ -1,0 +1,1253 @@
+{
+  "generated": "2026-08-29",
+  "natal_asc": "Gemini 21.18",
+  "current_transits": {
+    "Sun": {
+      "tropical": 156.18,
+      "sidereal": 131.96,
+      "sign": "Leo",
+      "degree": 11.96,
+      "minute": 57,
+      "nakshatra": "Magha",
+      "nakshatra_lord": "Ketu",
+      "pada": 4,
+      "dignity": "own_sign",
+      "d9": {
+        "sign": "Cancer",
+        "degree": 17.65
+      },
+      "d10": {
+        "sign": "Scorpio",
+        "degree": 29.61
+      }
+    },
+    "Moon": {
+      "tropical": 351.98,
+      "sidereal": 327.76,
+      "sign": "Aquarius",
+      "degree": 27.76,
+      "minute": 45,
+      "nakshatra": "Purva Bhadra",
+      "nakshatra_lord": "Jupiter",
+      "pada": 3,
+      "dignity": "neutral",
+      "d9": {
+        "sign": "Gemini",
+        "degree": 9.84
+      },
+      "d10": {
+        "sign": "Scorpio",
+        "degree": 7.6
+      }
+    },
+    "Mercury": {
+      "tropical": 157.93,
+      "sidereal": 133.72,
+      "sign": "Leo",
+      "degree": 13.72,
+      "minute": 42,
+      "nakshatra": "Purva Phalguni",
+      "nakshatra_lord": "Venus",
+      "pada": 1,
+      "dignity": "neutral",
+      "d9": {
+        "sign": "Leo",
+        "degree": 3.44
+      },
+      "d10": {
+        "sign": "Sagittarius",
+        "degree": 17.16
+      }
+    },
+    "Venus": {
+      "tropical": 201.14,
+      "sidereal": 176.92,
+      "sign": "Virgo",
+      "degree": 26.92,
+      "minute": 55,
+      "nakshatra": "Chitra",
+      "nakshatra_lord": "Mars",
+      "pada": 2,
+      "dignity": "debilitated",
+      "d9": {
+        "sign": "Virgo",
+        "degree": 2.3
+      },
+      "d10": {
+        "sign": "Capricorn",
+        "degree": 29.22
+      }
+    },
+    "Mars": {
+      "tropical": 101.8,
+      "sidereal": 77.59,
+      "sign": "Gemini",
+      "degree": 17.59,
+      "minute": 35,
+      "nakshatra": "Ardra",
+      "nakshatra_lord": "Rahu",
+      "pada": 4,
+      "dignity": "neutral",
+      "d9": {
+        "sign": "Pisces",
+        "degree": 8.28
+      },
+      "d10": {
+        "sign": "Scorpio",
+        "degree": 25.87
+      }
+    },
+    "Jupiter": {
+      "tropical": 133.17,
+      "sidereal": 108.96,
+      "sign": "Cancer",
+      "degree": 18.96,
+      "minute": 57,
+      "nakshatra": "Ashlesha",
+      "nakshatra_lord": "Mercury",
+      "pada": 1,
+      "dignity": "exalted",
+      "d9": {
+        "sign": "Sagittarius",
+        "degree": 20.61
+      },
+      "d10": {
+        "sign": "Virgo",
+        "degree": 9.56
+      }
+    },
+    "Saturn": {
+      "tropical": 13.82,
+      "sidereal": 349.6,
+      "sign": "Pisces",
+      "degree": 19.6,
+      "minute": 36,
+      "nakshatra": "Revati",
+      "nakshatra_lord": "Mercury",
+      "pada": 1,
+      "dignity": "neutral",
+      "d9": {
+        "sign": "Sagittarius",
+        "degree": 26.41
+      },
+      "d10": {
+        "sign": "Taurus",
+        "degree": 16.01
+      }
+    },
+    "Uranus": {
+      "tropical": 65.63,
+      "sidereal": 41.42,
+      "sign": "Taurus",
+      "degree": 11.42,
+      "minute": 24,
+      "nakshatra": "Rohini",
+      "nakshatra_lord": "Moon",
+      "pada": 1,
+      "dignity": "neutral",
+      "d9": {
+        "sign": "Aries",
+        "degree": 12.74
+      },
+      "d10": {
+        "sign": "Aries",
+        "degree": 24.16
+      }
+    },
+    "Neptune": {
+      "tropical": 3.73,
+      "sidereal": 339.51,
+      "sign": "Pisces",
+      "degree": 9.51,
+      "minute": 30,
+      "nakshatra": "Uttara Bhadra",
+      "nakshatra_lord": "Saturn",
+      "pada": 2,
+      "dignity": "neutral",
+      "d9": {
+        "sign": "Virgo",
+        "degree": 25.59
+      },
+      "d10": {
+        "sign": "Aquarius",
+        "degree": 5.1
+      }
+    },
+    "Rahu": {
+      "tropical": 329.43,
+      "sidereal": 305.22,
+      "sign": "Aquarius",
+      "degree": 5.22
+    },
+    "Ketu": {
+      "tropical": 149.43,
+      "sidereal": 125.22,
+      "sign": "Leo",
+      "degree": 5.22
+    }
+  },
+  "active_aspects": [
+    {
+      "transit": "Neptune",
+      "natal": "Uranus",
+      "aspect_type": "sextile",
+      "angle": 60.3,
+      "exactness": 0.3,
+      "nature": "harmonious",
+      "interpretation": "Transit Neptune sextile natal Uranus \u2014 spirituality, illusion, dissolution, opportunizes, encourages, gently activates Uranus themes. [Major transit]"
+    },
+    {
+      "transit": "Rahu",
+      "natal": "Mercury",
+      "aspect_type": "conjunction",
+      "angle": 0.48,
+      "exactness": 0.48,
+      "nature": "strong",
+      "interpretation": "Transit Rahu conjunction natal Mercury \u2014 karmic growth, obsession, new direction, intensifies, fuses, activates Mercury themes. [Major transit]"
+    },
+    {
+      "transit": "Ketu",
+      "natal": "Mercury",
+      "aspect_type": "opposition",
+      "angle": 179.52,
+      "exactness": 0.48,
+      "nature": "challenging",
+      "interpretation": "Transit Ketu opposition natal Mercury \u2014 release, detachment, past-life patterns, confronts, balances, polarizes Mercury themes. [Major transit]"
+    },
+    {
+      "transit": "Saturn",
+      "natal": "Jupiter",
+      "aspect_type": "square",
+      "angle": 90.75,
+      "exactness": 0.75,
+      "nature": "challenging",
+      "interpretation": "Transit Saturn square natal Jupiter \u2014 discipline, restriction, responsibility, tests, creates tension, motivates Jupiter themes. [Major transit]"
+    },
+    {
+      "transit": "Mars",
+      "natal": "Jupiter",
+      "aspect_type": "opposition",
+      "angle": 178.74,
+      "exactness": 1.26,
+      "nature": "challenging",
+      "interpretation": "Transit Mars opposition natal Jupiter \u2014 action, energy, assertion, confronts, balances, polarizes Jupiter themes. [Minor transit]"
+    },
+    {
+      "transit": "Rahu",
+      "natal": "Venus",
+      "aspect_type": "sextile",
+      "angle": 61.54,
+      "exactness": 1.54,
+      "nature": "harmonious",
+      "interpretation": "Transit Rahu sextile natal Venus \u2014 karmic growth, obsession, new direction, opportunizes, encourages, gently activates Venus themes. [Major transit]"
+    },
+    {
+      "transit": "Ketu",
+      "natal": "Venus",
+      "aspect_type": "trine",
+      "angle": 118.46,
+      "exactness": 1.54,
+      "nature": "harmonious",
+      "interpretation": "Transit Ketu trine natal Venus \u2014 release, detachment, past-life patterns, flows, supports, eases Venus themes. [Major transit]"
+    },
+    {
+      "transit": "Venus",
+      "natal": "Rahu",
+      "aspect_type": "conjunction",
+      "angle": 1.75,
+      "exactness": 1.75,
+      "nature": "strong",
+      "interpretation": "Transit Venus conjunction natal Rahu \u2014 love, beauty, harmony, intensifies, fuses, activates Rahu themes. [Minor transit]"
+    },
+    {
+      "transit": "Venus",
+      "natal": "Ketu",
+      "aspect_type": "opposition",
+      "angle": 178.25,
+      "exactness": 1.75,
+      "nature": "challenging",
+      "interpretation": "Transit Venus opposition natal Ketu \u2014 love, beauty, harmony, confronts, balances, polarizes Ketu themes. [Minor transit]"
+    },
+    {
+      "transit": "Neptune",
+      "natal": "Moon",
+      "aspect_type": "opposition",
+      "angle": 176.87,
+      "exactness": 3.13,
+      "nature": "challenging",
+      "interpretation": "Transit Neptune opposition natal Moon \u2014 spirituality, illusion, dissolution, confronts, balances, polarizes Moon themes. [Major transit]"
+    },
+    {
+      "transit": "Moon",
+      "natal": "Saturn",
+      "aspect_type": "conjunction",
+      "angle": 4.53,
+      "exactness": 4.53,
+      "nature": "strong",
+      "interpretation": "Transit Moon conjunction natal Saturn \u2014 emotions, intuition, nurturing, intensifies, fuses, activates Saturn themes. [Minor transit]"
+    },
+    {
+      "transit": "Mars",
+      "natal": "Sun",
+      "aspect_type": "trine",
+      "angle": 115.1,
+      "exactness": 4.9,
+      "nature": "harmonious",
+      "interpretation": "Transit Mars trine natal Sun \u2014 action, energy, assertion, flows, supports, eases Sun themes. [Minor transit]"
+    },
+    {
+      "transit": "Uranus",
+      "natal": "Moon",
+      "aspect_type": "trine",
+      "angle": 114.96,
+      "exactness": 5.04,
+      "nature": "harmonious",
+      "interpretation": "Transit Uranus trine natal Moon \u2014 breakthrough, change, liberation, flows, supports, eases Moon themes. [Major transit]"
+    },
+    {
+      "transit": "Mercury",
+      "natal": "Jupiter",
+      "aspect_type": "trine",
+      "angle": 125.13,
+      "exactness": 5.13,
+      "nature": "harmonious",
+      "interpretation": "Transit Mercury trine natal Jupiter \u2014 communication, intellect, learning, flows, supports, eases Jupiter themes. [Minor transit]"
+    },
+    {
+      "transit": "Sun",
+      "natal": "Venus",
+      "aspect_type": "trine",
+      "angle": 125.2,
+      "exactness": 5.2,
+      "nature": "harmonious",
+      "interpretation": "Transit Sun trine natal Venus \u2014 identity, vitality, ego, flows, supports, eases Venus themes. [Minor transit]"
+    },
+    {
+      "transit": "Moon",
+      "natal": "Sun",
+      "aspect_type": "conjunction",
+      "angle": 5.27,
+      "exactness": 5.27,
+      "nature": "strong",
+      "interpretation": "Transit Moon conjunction natal Sun \u2014 emotions, intuition, nurturing, intensifies, fuses, activates Sun themes. [Minor transit]"
+    },
+    {
+      "transit": "Moon",
+      "natal": "Neptune",
+      "aspect_type": "sextile",
+      "angle": 54.58,
+      "exactness": 5.42,
+      "nature": "harmonious",
+      "interpretation": "Transit Moon sextile natal Neptune \u2014 emotions, intuition, nurturing, opportunizes, encourages, gently activates Neptune themes. [Minor transit]"
+    },
+    {
+      "transit": "Saturn",
+      "natal": "Rahu",
+      "aspect_type": "opposition",
+      "angle": 174.43,
+      "exactness": 5.57,
+      "nature": "challenging",
+      "interpretation": "Transit Saturn opposition natal Rahu \u2014 discipline, restriction, responsibility, confronts, balances, polarizes Rahu themes. [Major transit]"
+    },
+    {
+      "transit": "Saturn",
+      "natal": "Ketu",
+      "aspect_type": "conjunction",
+      "angle": 5.57,
+      "exactness": 5.57,
+      "nature": "strong",
+      "interpretation": "Transit Saturn conjunction natal Ketu \u2014 discipline, restriction, responsibility, intensifies, fuses, activates Ketu themes. [Major transit]"
+    },
+    {
+      "transit": "Moon",
+      "natal": "Mars",
+      "aspect_type": "conjunction",
+      "angle": 5.7,
+      "exactness": 5.7,
+      "nature": "strong",
+      "interpretation": "Transit Moon conjunction natal Mars \u2014 emotions, intuition, nurturing, intensifies, fuses, activates Mars themes. [Minor transit]"
+    }
+  ],
+  "forecast": [
+    {
+      "date": "2026-09-07",
+      "transit": "Rahu",
+      "natal": "Mercury",
+      "aspect_type": "conjunction",
+      "exactness": 0.0,
+      "nature": "strong",
+      "is_major": true,
+      "transit_sign": "Aquarius",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2026-09-07",
+      "transit": "Ketu",
+      "natal": "Mercury",
+      "aspect_type": "opposition",
+      "exactness": 0.0,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Leo",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2026-09-10",
+      "transit": "Neptune",
+      "natal": "Uranus",
+      "aspect_type": "sextile",
+      "exactness": 0.0,
+      "nature": "harmonious",
+      "is_major": true,
+      "transit_sign": "Pisces",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2026-09-26",
+      "transit": "Sun",
+      "natal": "Uranus",
+      "aspect_type": "trine",
+      "exactness": 0.0,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2026-09-09",
+      "transit": "Neptune",
+      "natal": "Uranus",
+      "aspect_type": "sextile",
+      "exactness": 0.02,
+      "nature": "harmonious",
+      "is_major": true,
+      "transit_sign": "Pisces",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2026-10-19",
+      "transit": "Venus",
+      "natal": "Uranus",
+      "aspect_type": "square",
+      "exactness": 0.1,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2026-10-11",
+      "transit": "Mercury",
+      "natal": "Jupiter",
+      "aspect_type": "sextile",
+      "exactness": 0.12,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2026-10-24",
+      "transit": "Sun",
+      "natal": "Venus",
+      "aspect_type": "opposition",
+      "exactness": 0.12,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Aries"
+    },
+    {
+      "date": "2026-10-22",
+      "transit": "Sun",
+      "natal": "Mercury",
+      "aspect_type": "trine",
+      "exactness": 0.15,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2026-10-29",
+      "transit": "Venus",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.17,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2026-11-02",
+      "transit": "Mars",
+      "natal": "Rahu",
+      "aspect_type": "sextile",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Cancer",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2026-11-02",
+      "transit": "Mars",
+      "natal": "Ketu",
+      "aspect_type": "trine",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Cancer",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2026-11-28",
+      "transit": "Mars",
+      "natal": "Venus",
+      "aspect_type": "trine",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Leo",
+      "natal_sign": "Aries"
+    },
+    {
+      "date": "2026-11-05",
+      "transit": "Sun",
+      "natal": "Jupiter",
+      "aspect_type": "sextile",
+      "exactness": 0.02,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2026-11-20",
+      "transit": "Moon",
+      "natal": "Uranus",
+      "aspect_type": "sextile",
+      "exactness": 0.03,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Pisces",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2026-12-22",
+      "transit": "Sun",
+      "natal": "Moon",
+      "aspect_type": "square",
+      "exactness": 0.05,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Sagittarius",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2026-12-24",
+      "transit": "Venus",
+      "natal": "Mars",
+      "aspect_type": "trine",
+      "exactness": 0.05,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2026-12-06",
+      "transit": "Moon",
+      "natal": "Mars",
+      "aspect_type": "trine",
+      "exactness": 0.06,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2026-12-11",
+      "transit": "Sun",
+      "natal": "Rahu",
+      "aspect_type": "sextile",
+      "exactness": 0.06,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2026-12-11",
+      "transit": "Sun",
+      "natal": "Ketu",
+      "aspect_type": "trine",
+      "exactness": 0.06,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-01-19",
+      "transit": "Moon",
+      "natal": "Sun",
+      "aspect_type": "square",
+      "exactness": 0.02,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Taurus",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-01-22",
+      "transit": "Venus",
+      "natal": "Mars",
+      "aspect_type": "square",
+      "exactness": 0.04,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-01-05",
+      "transit": "Moon",
+      "natal": "Rahu",
+      "aspect_type": "sextile",
+      "exactness": 0.07,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-01-05",
+      "transit": "Moon",
+      "natal": "Ketu",
+      "aspect_type": "trine",
+      "exactness": 0.07,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-01-31",
+      "transit": "Venus",
+      "natal": "Saturn",
+      "aspect_type": "square",
+      "exactness": 0.07,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Sagittarius",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-02-28",
+      "transit": "Saturn",
+      "natal": "Jupiter",
+      "aspect_type": "square",
+      "exactness": 0.06,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Pisces",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2027-02-08",
+      "transit": "Sun",
+      "natal": "Rahu",
+      "aspect_type": "trine",
+      "exactness": 0.09,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Capricorn",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-02-08",
+      "transit": "Sun",
+      "natal": "Ketu",
+      "aspect_type": "sextile",
+      "exactness": 0.09,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Capricorn",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-02-01",
+      "transit": "Moon",
+      "natal": "Mars",
+      "aspect_type": "square",
+      "exactness": 0.1,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-02-24",
+      "transit": "Mars",
+      "natal": "Mercury",
+      "aspect_type": "opposition",
+      "exactness": 0.12,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Leo",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-03-07",
+      "transit": "Neptune",
+      "natal": "Uranus",
+      "aspect_type": "sextile",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": true,
+      "transit_sign": "Pisces",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-03-19",
+      "transit": "Moon",
+      "natal": "Rahu",
+      "aspect_type": "sextile",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Cancer",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-03-19",
+      "transit": "Moon",
+      "natal": "Ketu",
+      "aspect_type": "trine",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Cancer",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-03-25",
+      "transit": "Venus",
+      "natal": "Mercury",
+      "aspect_type": "conjunction",
+      "exactness": 0.01,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Aquarius",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-03-25",
+      "transit": "Moon",
+      "natal": "Jupiter",
+      "aspect_type": "sextile",
+      "exactness": 0.02,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2027-04-21",
+      "transit": "Saturn",
+      "natal": "Rahu",
+      "aspect_type": "opposition",
+      "exactness": 0.0,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Pisces",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-04-21",
+      "transit": "Saturn",
+      "natal": "Ketu",
+      "aspect_type": "conjunction",
+      "exactness": 0.0,
+      "nature": "strong",
+      "is_major": true,
+      "transit_sign": "Pisces",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-04-05",
+      "transit": "Moon",
+      "natal": "Neptune",
+      "aspect_type": "sextile",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Pisces",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-04-09",
+      "transit": "Sun",
+      "natal": "Rahu",
+      "aspect_type": "opposition",
+      "exactness": 0.02,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Pisces",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-04-09",
+      "transit": "Sun",
+      "natal": "Ketu",
+      "aspect_type": "conjunction",
+      "exactness": 0.02,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Pisces",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-05-06",
+      "transit": "Moon",
+      "natal": "Mars",
+      "aspect_type": "sextile",
+      "exactness": 0.02,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Aries",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-05-23",
+      "transit": "Jupiter",
+      "natal": "Rahu",
+      "aspect_type": "sextile",
+      "exactness": 0.02,
+      "nature": "harmonious",
+      "is_major": true,
+      "transit_sign": "Cancer",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-05-23",
+      "transit": "Jupiter",
+      "natal": "Ketu",
+      "aspect_type": "trine",
+      "exactness": 0.02,
+      "nature": "harmonious",
+      "is_major": true,
+      "transit_sign": "Cancer",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-05-18",
+      "transit": "Sun",
+      "natal": "Neptune",
+      "aspect_type": "trine",
+      "exactness": 0.07,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Taurus",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-05-11",
+      "transit": "Mars",
+      "natal": "Mercury",
+      "aspect_type": "opposition",
+      "exactness": 0.1,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Leo",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-06-24",
+      "transit": "Mercury",
+      "natal": "Venus",
+      "aspect_type": "sextile",
+      "exactness": 0.0,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Gemini",
+      "natal_sign": "Aries"
+    },
+    {
+      "date": "2027-06-10",
+      "transit": "Sun",
+      "natal": "Rahu",
+      "aspect_type": "trine",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Taurus",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-06-10",
+      "transit": "Sun",
+      "natal": "Ketu",
+      "aspect_type": "sextile",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Taurus",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-06-20",
+      "transit": "Sun",
+      "natal": "Mercury",
+      "aspect_type": "trine",
+      "exactness": 0.01,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Gemini",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-06-13",
+      "transit": "Mars",
+      "natal": "Jupiter",
+      "aspect_type": "trine",
+      "exactness": 0.03,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Leo",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2027-07-17",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.0,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-07-13",
+      "transit": "Mercury",
+      "natal": "Moon",
+      "aspect_type": "square",
+      "exactness": 0.03,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Gemini",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-07-16",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.04,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-07-18",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.04,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-07-15",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.08,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-08-31",
+      "transit": "Mars",
+      "natal": "Mercury",
+      "aspect_type": "trine",
+      "exactness": 0.0,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Libra",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-08-16",
+      "transit": "Mars",
+      "natal": "Rahu",
+      "aspect_type": "conjunction",
+      "exactness": 0.02,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-08-16",
+      "transit": "Mars",
+      "natal": "Ketu",
+      "aspect_type": "opposition",
+      "exactness": 0.02,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-08-31",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.07,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-08-06",
+      "transit": "Mars",
+      "natal": "Jupiter",
+      "aspect_type": "square",
+      "exactness": 0.1,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2027-09-02",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.01,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-09-12",
+      "transit": "Mercury",
+      "natal": "Jupiter",
+      "aspect_type": "square",
+      "exactness": 0.01,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Sagittarius"
+    },
+    {
+      "date": "2027-09-14",
+      "transit": "Venus",
+      "natal": "Moon",
+      "aspect_type": "conjunction",
+      "exactness": 0.01,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-09-01",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.03,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-09-03",
+      "transit": "Saturn",
+      "natal": "Neptune",
+      "aspect_type": "square",
+      "exactness": 0.05,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Aries",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-10-14",
+      "transit": "Mars",
+      "natal": "Mercury",
+      "aspect_type": "square",
+      "exactness": 0.01,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-10-29",
+      "transit": "Mercury",
+      "natal": "Rahu",
+      "aspect_type": "conjunction",
+      "exactness": 0.01,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-10-29",
+      "transit": "Mercury",
+      "natal": "Ketu",
+      "aspect_type": "opposition",
+      "exactness": 0.01,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-10-27",
+      "transit": "Mercury",
+      "natal": "Rahu",
+      "aspect_type": "conjunction",
+      "exactness": 0.02,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-10-27",
+      "transit": "Mercury",
+      "natal": "Ketu",
+      "aspect_type": "opposition",
+      "exactness": 0.02,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Virgo",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-11-21",
+      "transit": "Sun",
+      "natal": "Mercury",
+      "aspect_type": "square",
+      "exactness": 0.03,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-11-26",
+      "transit": "Mars",
+      "natal": "Moon",
+      "aspect_type": "square",
+      "exactness": 0.06,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Sagittarius",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-11-14",
+      "transit": "Venus",
+      "natal": "Mars",
+      "aspect_type": "square",
+      "exactness": 0.07,
+      "nature": "challenging",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-11-24",
+      "transit": "Mars",
+      "natal": "Mercury",
+      "aspect_type": "sextile",
+      "exactness": 0.07,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Sagittarius",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-11-11",
+      "transit": "Mars",
+      "natal": "Rahu",
+      "aspect_type": "sextile",
+      "exactness": 0.1,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Scorpio",
+      "natal_sign": "Virgo"
+    },
+    {
+      "date": "2027-12-18",
+      "transit": "Jupiter",
+      "natal": "Saturn",
+      "aspect_type": "opposition",
+      "exactness": 0.03,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Virgo",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-12-17",
+      "transit": "Jupiter",
+      "natal": "Saturn",
+      "aspect_type": "opposition",
+      "exactness": 0.05,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Virgo",
+      "natal_sign": "Pisces"
+    },
+    {
+      "date": "2027-12-17",
+      "transit": "Mars",
+      "natal": "Sun",
+      "aspect_type": "sextile",
+      "exactness": 0.09,
+      "nature": "harmonious",
+      "is_major": false,
+      "transit_sign": "Sagittarius",
+      "natal_sign": "Aquarius"
+    },
+    {
+      "date": "2027-12-22",
+      "transit": "Venus",
+      "natal": "Uranus",
+      "aspect_type": "conjunction",
+      "exactness": 0.09,
+      "nature": "strong",
+      "is_major": false,
+      "transit_sign": "Capricorn",
+      "natal_sign": "Capricorn"
+    },
+    {
+      "date": "2027-12-19",
+      "transit": "Jupiter",
+      "natal": "Saturn",
+      "aspect_type": "opposition",
+      "exactness": 0.1,
+      "nature": "challenging",
+      "is_major": true,
+      "transit_sign": "Virgo",
+      "natal_sign": "Pisces"
+    }
+  ]
+}

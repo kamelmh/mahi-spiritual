@@ -38,6 +38,7 @@
                     <li class="nav-item" data-page="chart"><span class="nav-icon">☉</span><span class="nav-text">Natal Chart</span></li>
                     <li class="nav-item" data-page="destiny"><span class="nav-icon">⭐</span><span class="nav-text">Destiny Map</span></li>
                     <li class="nav-item" data-page="family"><span class="nav-icon">👪</span><span class="nav-text">Family Charts</span></li>
+                    <li class="nav-item" data-page="transits"><span class="nav-icon">🛞</span><span class="nav-text">Transits</span></li>
                 </ul></div>
                 <!-- Quran -->
                 <li class="nav-section open" data-section="quran"><span class="nav-section-arrow">▸</span> Quran & Study</li>
@@ -2593,6 +2594,86 @@
                         <div class="card-body">
                             <div class="missing-data-list" id="missingDataList">
                                 <!-- Missing data items -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Transits Page -->
+            <section class="page" id="transits">
+                <div class="page-header">
+                    <div class="mystic-header">
+                        <div class="header-symbol">🛞</div>
+                        <div>
+                            <h2>Planetary Transits</h2>
+                            <p>Current transits & upcoming aspects against your natal chart</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Transit Controls -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Select Date</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+                                <input type="date" id="transitDate" value="2026-08-29" style="padding:8px 12px;background:var(--bg-secondary);border:1px solid var(--border-color);color:var(--text-primary);border-radius:6px;font-size:14px">
+                                <button onclick="loadTransits()" style="padding:8px 20px;background:var(--accent-gold);color:var(--bg-primary);border:none;border-radius:6px;cursor:pointer;font-weight:600">Load Transits</button>
+                                <button onclick="loadTodayTransits()" style="padding:8px 16px;background:var(--bg-tertiary);color:var(--text-secondary);border:1px solid var(--border-color);border-radius:6px;cursor:pointer">Today</button>
+                                <button onclick="loadTransitForecast()" style="padding:8px 16px;background:var(--bg-tertiary);color:var(--text-secondary);border:1px solid var(--border-color);border-radius:6px;cursor:pointer">16-Month Forecast</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transit Positions -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Transit Positions</h3>
+                            <span class="badge" id="transitDateLabel">Today</span>
+                        </div>
+                        <div class="card-body">
+                            <div id="transitPositions" style="max-height:420px;overflow-y:auto">
+                                <p style="color:var(--text-secondary)">Click Load Transits to view current planetary positions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Active Aspects -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Active Aspects</h3>
+                            <span class="badge" id="transitAspectCount">0</span>
+                        </div>
+                        <div class="card-body">
+                            <div id="transitAspects" style="max-height:420px;overflow-y:auto">
+                                <p style="color:var(--text-secondary)">Active transit aspects will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Major Highlights -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Major Highlights</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="transitHighlights">
+                                <p style="color:var(--text-secondary)">Major slow-planet transits will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Forecast -->
+                    <div class="card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>16-Month Forecast</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="transitForecast" style="max-height:500px;overflow-y:auto">
+                                <p style="color:var(--text-secondary)">Click '16-Month Forecast' to generate your transit outlook.</p>
                             </div>
                         </div>
                     </div>

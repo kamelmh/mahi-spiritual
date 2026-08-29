@@ -76,6 +76,7 @@ function navigateTo(page){
         case 'audio': if(window.AudioPlayer)AudioPlayer.init(); if(window.QuranAudio)QuranAudio.init(); break;
         case 'export': if(window.ExportReports)ExportReports.init(); break;
         case 'family': if(window.Family)Family.init(); break;
+        case 'transits': initTransits(); break;
     }
 }
 
@@ -906,5 +907,145 @@ function renderDailyQuranWisdom(){
     </div>`;
 }
 
+// === TRANSITS PAGE ===
+let _transitData = null;
+
+async function loadTransits() {
+    const dateInput = document.getElementById('transitDate');
+    if (!dateInput) return;
+    const date = dateInput.value;
+    document.getElementById('transitDateLabel').textContent = date;
+    
+    // Try to fetch pre-computed transit data
+    try {
+        const resp = await fetch('data/transits.json');
+        if (resp.ok) {
+            const allData = await resp.json();
+            const dayData = allData.forecast?.find(d => d.date === date);
+            if (dayData) {
+                renderTransitDay(dayData);
+                return;
+            }
+        }
+    } catch(e) {}
+    
+    // Fallback: use client-side TransitEngine
+    await loadTransitsClientSide();
+}
+
+async function loadTodayTransits() {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('transitDate').value = today;
+    await loadTransits();
+}
+
+async function loadTransitsClientSide() {
+    const natalChart = window.chartData || null;
+    if (!natalChart || !window.TransitEngine) {
+        document.getElementById('transitPositions').innerHTML = '<p style="color:var(--text-secondary)">Load natal chart first (visit Natal Chart page).</p>';
+        return;
+    }
+    
+    const report = await TransitEngine.computeFullTransitReport(natalChart);
+    
+    // Render positions
+    let posHtml = '<table style="width:100%;border-collapse:collapse;font-size:13px">';
+    posHtml += '<tr style="border-bottom:1px solid var(--border-color)"><th style="text-align:left;padding:6px;color:var(--text-secondary)">Planet</th><th style="text-align:left;padding:6px;color:var(--text-secondary)">Sign</th><th style="text-align:right;padding:6px;color:var(--text-secondary)">Degree</th></tr>';
+    const symbols = {'Sun':'☉','Moon':'☽','Mercury':'☿','Venus':'♀','Mars':'♂','Jupiter':'♃','Saturn':'♄','Uranus':'♅','Neptune':'♆','Rahu':'☊','Ketu':'☋'};
+    for (const tp of report.transitNow) {
+        posHtml += `<tr style="border-bottom:1px solid var(--border-color)"><td style="padding:6px">${symbols[tp.name]||''} ${tp.name}</td><td style="padding:6px">${tp.sign}</td><td style="padding:6px;text-align:right">${tp.degree.toFixed(1)}°</td></tr>`;
+    }
+    posHtml += '</table>';
+    document.getElementById('transitPositions').innerHTML = posHtml;
+    
+    // Render aspects
+    document.getElementById('transitAspectCount').textContent = report.active.length;
+    let aspHtml = '';
+    if (report.active.length > 0) {
+        aspHtml += '<div style="margin-bottom:8px;font-size:11px;text-transform:uppercase;color:var(--accent-gold);font-weight:600">Active (orb < 3°)</div>';
+        for (const asp of report.active) {
+            aspHtml += `<div style="padding:8px 10px;border-left:3px solid ${asp.aspect.name==='Square'||asp.aspect.name==='Opposition'?'var(--accent-red,#e74c3c)':'var(--accent-green,#2ecc71)'};background:var(--bg-secondary);margin-bottom:4px;border-radius:0 4px 4px 0;font-size:13px">
+                <span style="color:var(--accent-gold)">${asp.transit.symbol} ${asp.transit.name}</span> 
+                <span style="color:var(--text-secondary)">${asp.aspect.symbol} ${asp.aspect.name}</span> 
+                <span style="color:var(--accent-gold)">${asp.natal.symbol} ${asp.natal.name}</span>
+                <span style="float:right;color:var(--text-secondary)">${asp.orb}° (${asp.intensity}%)</span>
+            </div>`;
+        }
+    }
+    if (report.building.length > 0) {
+        aspHtml += '<div style="margin:12px 0 8px;font-size:11px;text-transform:uppercase;color:var(--accent-gold);font-weight:600">Building (orb 3-5°)</div>';
+        for (const asp of report.building) {
+            aspHtml += `<div style="padding:6px 10px;border-left:3px solid var(--border-color);background:var(--bg-secondary);margin-bottom:3px;border-radius:0 4px 4px 0;font-size:12px;opacity:0.8">
+                ${asp.transit.symbol} ${asp.transit.name} ${asp.aspect.symbol} ${asp.aspect.name} ${asp.natal.symbol} ${asp.natal.name} <span style="color:var(--text-secondary)">${asp.orb}°</span>
+            </div>`;
+        }
+    }
+    document.getElementById('transitAspects').innerHTML = aspHtml || '<p style="color:var(--text-secondary)">No active aspects.</p>';
+    
+    // Render highlights
+    let hlHtml = '';
+    for (const line of report.summary) {
+        hlHtml += `<p style="padding:6px 10px;background:var(--bg-secondary);border-radius:4px;margin-bottom:4px;font-size:13px">${line}</p>`;
+    }
+    document.getElementById('transitHighlights').innerHTML = hlHtml;
+}
+
+async function loadTransitForecast() {
+    const container = document.getElementById('transitForecast');
+    if (!container) return;
+    container.innerHTML = '<p style="color:var(--text-secondary)">Loading forecast...</p>';
+    
+    try {
+        const resp = await fetch('data/transits.json');
+        if (!resp.ok) throw new Error('No forecast data');
+        const allData = await resp.json();
+        
+        if (allData.forecast && allData.forecast.length > 0) {
+            let html = '';
+            const monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const grouped = {};
+            for (const day of allData.forecast) {
+                const [y,m] = day.date.split('-');
+                const key = `${y}-${m}`;
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(day);
+            }
+            
+            for (const [ym, days] of Object.entries(grouped)) {
+                const [y,m] = ym.split('-');
+                const majorDays = days.filter(d => d.major_aspects && d.major_aspects.length > 0);
+                if (majorDays.length === 0) continue;
+                
+                html += `<div style="margin:12px 0 6px;font-size:14px;font-weight:600;color:var(--accent-gold);border-bottom:1px solid var(--border-color);padding-bottom:4px">${monthNames[parseInt(m)]} ${y}</div>`;
+                
+                for (const day of majorDays) {
+                    for (const asp of day.major_aspects) {
+                        const natureColor = asp.nature === 'challenging' ? 'var(--accent-red,#e74c3c)' : asp.nature === 'harmonious' ? 'var(--accent-green,#2ecc71)' : 'var(--accent-gold)';
+                        html += `<div style="padding:6px 10px;border-left:3px solid ${natureColor};background:var(--bg-secondary);margin-bottom:3px;border-radius:0 4px 4px 0;font-size:12px">
+                            <span style="color:var(--text-secondary)">${day.date}</span> 
+                            <strong>${asp.transit}</strong> ${asp.aspect_type} <strong>natal ${asp.natal}</strong> <span style="color:var(--text-secondary)">orb ${asp.exactness}°</span>
+                        </div>`;
+                    }
+                }
+            }
+            container.innerHTML = html || '<p style="color:var(--text-secondary)">No major aspects in forecast period.</p>';
+        } else {
+            container.innerHTML = '<p style="color:var(--text-secondary)">Forecast data not yet generated. Run the backend to create transits.json.</p>';
+        }
+    } catch(e) {
+        container.innerHTML = `<p style="color:var(--text-secondary)">Forecast unavailable: ${e.message}. Run the backend to generate data/transits.json.</p>`;
+    }
+}
+
+// Initialize transits page when navigating to it
+function initTransits() {
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('transitDate');
+    if (dateInput && !dateInput.value) dateInput.value = today;
+}
+
 window.navigateTo=navigateTo;
 window.toggleTheme=toggleTheme;
+window.loadTransits=loadTransits;
+window.loadTodayTransits=loadTodayTransits;
+window.loadTransitForecast=loadTransitForecast;
